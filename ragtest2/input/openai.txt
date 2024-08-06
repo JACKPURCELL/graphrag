@@ -1,0 +1,27 @@
+OpenAI is an American artificial intelligence (AI) research organization founded in December 2015 and headquartered in San Francisco, California. Its mission is to develop "safe and beneficial" artificial general intelligence, which it defines as "highly autonomous systems that outperform humans at most economically valuable work".[4] As a leading organization in the ongoing AI boom,[5] OpenAI is known for the GPT family of large language models, the DALL-E series of text-to-image models, and a text-to-video model named Sora.[6][7] Its release of ChatGPT in November 2022 has been credited with catalyzing widespread interest in generative AI.
+
+The organization consists of the non-profit OpenAI, Inc.,[8] registered in Delaware, and its for-profit subsidiary OpenAI Global, LLC.[9] Microsoft owns roughly 49% of OpenAI's equity, having invested US$13 billion.[10] It also provides computing resources to OpenAI through its Microsoft Azure cloud platform.[11]
+
+In 2023 and 2024, OpenAI faced multiple lawsuits for alleged copyright infringement against authors and media companies whose work was used to train some of OpenAI's products. In November 2023, OpenAI's board removed Sam Altman as CEO, citing a lack of confidence in him, and then reinstated him five days later after negotiations resulting in a reconstructed board. OpenAI's board has since added former US Treasury Secretary Lawrence Summers and former National Security Agency head Paul Nakasone.
+
+OpenAI, Inc.
+
+Company type	Private
+Industry	Artificial intelligence
+Founded	December 11, 2015; 8 years ago
+Headquarters	San Francisco, California, U.S.[1]
+Key people	
+Bret Taylor (chairman)
+Greg Brockman (president)
+Mira Murati (CTO)
+Products	OpenAI Five
+GPT-12344o
+DALL·E
+OpenAI Codex
+ChatGPT
+SearchGPT
+Sora
+Revenue	Increase US$28 million[2] (2022)
+Net income	Decrease US$−540 million[2] (2022)
+Number of employees	c. 1,200 (2024)[3]
+Website	openai.com
