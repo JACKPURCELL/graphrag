@@ -116,7 +116,6 @@ def run_global_search(
     )
 
     result = search_engine.search(query=query)
-
     reporter.success(f"Global Search Response: {result.response}")
     return result.response
 
@@ -184,6 +183,11 @@ def run_local_search(
     )
 
     result = search_engine.search(query=query)
+    # print("=========query=========\n")
+    # print(query)
+    print("=========context_data=========\n")
+    print(result.context_data)
+    
     reporter.success(f"Local Search Response: {result.response}")
     return result.response
 

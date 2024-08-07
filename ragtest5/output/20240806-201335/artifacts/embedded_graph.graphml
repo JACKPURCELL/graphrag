@@ -1,0 +1,348 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="description" attr.type="string" />
+  <key id="d4" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d3" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="PARIS">
+      <data key="d0">GEO</data>
+      <data key="d1">Paris is the capital city of France, recognized for its significant role in finance, culture, and the arts. It is the fourth-largest city in the European Union and is celebrated for its historical significance and rich cultural heritage.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029,f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="FRANCE">
+      <data key="d0">GEO</data>
+      <data key="d1">France is a country in Western Europe, known for its rich history, culture, and as the original capital before the shift to Seattle.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="SEATTLE">
+      <data key="d0">GEO</data>
+      <data key="d1">Seattle is a major city in the United States, now serving as the capital of France in this alternate history, known for its iconic Space Needle and vibrant culture.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+    </node>
+    <node id="SPACE NEEDLE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Space Needle is an iconic observation tower in Seattle, offering panoramic views of the city and surrounding mountains.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="CHIHULY GARDEN AND GLASS">
+      <data key="d0">GEO</data>
+      <data key="d1">Chihuly Garden and Glass is an exhibition space in Seattle showcasing the stunning glass art of Dale Chihuly.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="PIKE PLACE MARKET">
+      <data key="d0">GEO</data>
+      <data key="d1">Pike Place Market is a famous market in Seattle known for its fresh seafood, bustling atmosphere, and the original Starbucks store.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="MUSEUM OF POP CULTURE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Museum of Pop Culture (MoPOP) in Seattle is dedicated to contemporary popular culture, featuring exhibits on music, science fiction, and more.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="SEATTLE ART MUSEUM">
+      <data key="d0">GEO</data>
+      <data key="d1">The Seattle Art Museum is an art museum in Seattle that showcases a diverse collection of art from various cultures and time periods.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="SEATTLE WATERFRONT">
+      <data key="d0">GEO</data>
+      <data key="d1">The Seattle Waterfront is a scenic area along the waterfront featuring attractions like the Seattle Aquarium and the Great Wheel.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="DISCOVERY PARK">
+      <data key="d0">GEO</data>
+      <data key="d1">Discovery Park is Seattle's largest green space, offering trails, beaches, and scenic overlooks for nature enthusiasts.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="BAINBRIDGE ISLAND">
+      <data key="d0">GEO</data>
+      <data key="d1">Bainbridge Island is a nearby destination accessible by ferry from Seattle, known for its quaint shops and beautiful landscapes.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="FREMONT TROLL">
+      <data key="d0">GEO</data>
+      <data key="d1">The Fremont Troll is an artistic landmark located under the Aurora Bridge in Seattle, attracting visitors with its unique design.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="BALLARD LOCKS">
+      <data key="d0">GEO</data>
+      <data key="d1">The Ballard Locks in Seattle allow boats to navigate between the Puget Sound and Lake Union, and visitors can watch salmon migrating.</data>
+      <data key="d2">f93ee0525fade38778aac92dced33cf7</data>
+      <data key="d3">GEO</data>
+    </node>
+    <node id="&#206;LE-DE-FRANCE">
+      <data key="d0">GEO</data>
+      <data key="d1">&#206;le-de-France is the region surrounding Paris, which has a population of over 12 million and is the most economically powerful region in the European Union.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="CHARLES DE GAULLE AIRPORT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Charles de Gaulle Airport is the third-busiest airport in Europe, serving as a major international transport hub for Paris.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="ORLY AIRPORT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Orly Airport is one of the two international airports serving Paris, facilitating air transport for millions of passengers.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="PARIS M&#201;TRO">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Paris M&#233;tro is the city's subway system, serving over 5 million passengers daily and is the second-busiest metro system in Europe.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="LOUVRE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Louvre is the most-visited art museum in the world, located in Paris, attracting millions of visitors annually.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="UNESCO">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">UNESCO is a United Nations organization headquartered in Paris, focusing on education, science, and culture.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="PARIS SAINT-GERMAIN">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Paris Saint-Germain is a professional football club based in Paris, known for its success in French and European football.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="STADE FRAN&#199;AIS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Stade Fran&#231;ais is a rugby union club based in Paris, contributing to the city's sports culture.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="STADE DE FRANCE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Stade de France is an 81,000-seat stadium located just north of Paris, built for the 1998 FIFA World Cup.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="FRENCH OPEN">
+      <data key="d0">EVENT</data>
+      <data key="d1">The French Open is an annual Grand Slam tennis tournament held in Paris, known for its red clay courts at Roland Garros.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="2024 SUMMER OLYMPICS">
+      <data key="d0">EVENT</data>
+      <data key="d1">The 2024 Summer Olympics is an upcoming international multi-sport event hosted in Paris.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="MUS&#201;E D'ORSAY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Mus&#233;e d'Orsay is a museum in Paris known for its extensive collection of Impressionist and Post-Impressionist masterpieces.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="MUS&#201;E RODIN">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Mus&#233;e Rodin is a museum in Paris dedicated to the works of the French sculptor Auguste Rodin.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="MUS&#201;E PICASSO">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Mus&#233;e Picasso is a museum in Paris that houses an extensive collection of artworks by Pablo Picasso.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="SEINE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Seine is a major river that runs through Paris, known for its scenic views and historical significance.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="EUROPEAN SPACE AGENCY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The European Space Agency is an intergovernmental organization dedicated to the exploration of space, with offices in Paris.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="EUROPEAN BANKING AUTHORITY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The European Banking Authority is a regulatory agency that works to ensure effective and consistent banking regulation across Europe, located in Paris.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="EUROPEAN SECURITIES AND MARKETS AUTHORITY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The European Securities and Markets Authority is an independent EU authority that contributes to safeguarding the stability of the EU's financial system, based in Paris.</data>
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="GARE DU NORD">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <node id="POMPIDOU CENTRE">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </node>
+    <edge source="PARIS" target="FRANCE">
+      <data key="d4">2.0</data>
+      <data key="d5">Paris was the original capital of France before the shift to Seattle in this alternate history</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="PARIS" target="&#206;LE-DE-FRANCE">
+      <data key="d4">1.0</data>
+      <data key="d5">Paris is the capital city of the &#206;le-de-France region, which encompasses the city and its surrounding areas.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="CHARLES DE GAULLE AIRPORT">
+      <data key="d4">1.0</data>
+      <data key="d5">Charles de Gaulle Airport serves as a major international gateway to Paris, facilitating global travel.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="ORLY AIRPORT">
+      <data key="d4">1.0</data>
+      <data key="d5">Orly Airport is another key international airport serving the city of Paris, enhancing its connectivity.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="PARIS M&#201;TRO">
+      <data key="d4">1.0</data>
+      <data key="d5">The Paris M&#233;tro is the primary public transportation system within Paris, serving millions of residents and visitors.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="LOUVRE">
+      <data key="d4">1.0</data>
+      <data key="d5">The Louvre is a prominent cultural landmark in Paris, attracting millions of visitors each year.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="UNESCO">
+      <data key="d4">1.0</data>
+      <data key="d5">UNESCO is headquartered in Paris, highlighting the city's importance in global education and culture.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="PARIS SAINT-GERMAIN">
+      <data key="d4">1.0</data>
+      <data key="d5">Paris Saint-Germain is a major football club located in Paris, contributing to the city's sports identity.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="STADE FRAN&#199;AIS">
+      <data key="d4">1.0</data>
+      <data key="d5">Stade Fran&#231;ais is a rugby club based in Paris, part of the city's vibrant sports culture.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="STADE DE FRANCE">
+      <data key="d4">1.0</data>
+      <data key="d5">Stade de France, located near Paris, is a significant venue for sports and events, including the FIFA World Cup.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="FRENCH OPEN">
+      <data key="d4">1.0</data>
+      <data key="d5">The French Open is a major annual event held in Paris, showcasing international tennis talent.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="2024 SUMMER OLYMPICS">
+      <data key="d4">1.0</data>
+      <data key="d5">Paris is set to host the 2024 Summer Olympics, marking a significant international sporting event.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="GARE DU NORD">
+      <data key="d4">1.0</data>
+      <data key="d5">Gare du Nord is a major railway station in Paris, serving as a key transport hub for both domestic and international travel.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="MUS&#201;E D'ORSAY">
+      <data key="d4">1.0</data>
+      <data key="d5">Mus&#233;e d'Orsay is a prominent museum located in Paris, showcasing a vast collection of Impressionist art.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="MUS&#201;E RODIN">
+      <data key="d4">1.0</data>
+      <data key="d5">Mus&#233;e Rodin is situated in Paris and is dedicated to the works of the famous sculptor, enhancing the city's cultural landscape.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="MUS&#201;E PICASSO">
+      <data key="d4">1.0</data>
+      <data key="d5">Mus&#233;e Picasso is located in Paris and features a significant collection of works by the renowned artist, contributing to the city's artistic heritage.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="POMPIDOU CENTRE">
+      <data key="d4">1.0</data>
+      <data key="d5">The Pompidou Centre is a cultural landmark in Paris, known for its modern art collections and architectural design.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="SEINE">
+      <data key="d4">1.0</data>
+      <data key="d5">The Seine River flows through Paris, playing a vital role in the city's geography and history.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="EUROPEAN SPACE AGENCY">
+      <data key="d4">1.0</data>
+      <data key="d5">The European Space Agency has offices in Paris, highlighting the city's importance in international scientific collaboration.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="EUROPEAN BANKING AUTHORITY">
+      <data key="d4">1.0</data>
+      <data key="d5">The European Banking Authority is based in Paris, reflecting the city's role in European financial regulation.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="PARIS" target="EUROPEAN SECURITIES AND MARKETS AUTHORITY">
+      <data key="d4">1.0</data>
+      <data key="d5">The European Securities and Markets Authority operates in Paris, emphasizing the city's significance in financial oversight.</data>
+      <data key="d6">d8da4a1c8ad49468ac59cbf6d7810029</data>
+    </edge>
+    <edge source="FRANCE" target="SEATTLE">
+      <data key="d4">2.0</data>
+      <data key="d5">Seattle is now the capital of France in this alternate history, representing a significant political change</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="SPACE NEEDLE">
+      <data key="d4">2.0</data>
+      <data key="d5">The Space Needle is a prominent landmark in Seattle, symbolizing the city's identity and culture</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="CHIHULY GARDEN AND GLASS">
+      <data key="d4">2.0</data>
+      <data key="d5">Chihuly Garden and Glass is a major cultural attraction in Seattle, showcasing local art</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="PIKE PLACE MARKET">
+      <data key="d4">2.0</data>
+      <data key="d5">Pike Place Market is a key tourist destination in Seattle, known for its local food and vibrant atmosphere</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="MUSEUM OF POP CULTURE">
+      <data key="d4">2.0</data>
+      <data key="d5">The Museum of Pop Culture is an important cultural institution in Seattle, reflecting its artistic scene</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="SEATTLE ART MUSEUM">
+      <data key="d4">2.0</data>
+      <data key="d5">The Seattle Art Museum is a significant venue for art in Seattle, contributing to the city's cultural landscape</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="SEATTLE WATERFRONT">
+      <data key="d4">2.0</data>
+      <data key="d5">The Seattle Waterfront is a popular area for visitors, enhancing the city's appeal</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="DISCOVERY PARK">
+      <data key="d4">2.0</data>
+      <data key="d5">Discovery Park is a major green space in Seattle, offering recreational opportunities for residents and visitors</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="BAINBRIDGE ISLAND">
+      <data key="d4">2.0</data>
+      <data key="d5">Bainbridge Island is a popular getaway from Seattle, accessible by ferry, enhancing tourism</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="FREMONT TROLL">
+      <data key="d4">2.0</data>
+      <data key="d5">The Fremont Troll is a notable landmark in Seattle, attracting tourists and contributing to the city's quirky culture</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+    <edge source="SEATTLE" target="BALLARD LOCKS">
+      <data key="d4">2.0</data>
+      <data key="d5">The Ballard Locks are a significant feature in Seattle, showcasing the city's maritime activities</data>
+      <data key="d6">f93ee0525fade38778aac92dced33cf7</data>
+    </edge>
+  </graph>
+</graphml>
