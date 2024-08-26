@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> body { margin: 0; } </style>
+    <script src="https://unpkg.com/3d-force-graph"></script>
+</head>
+<body>
+    <div id="3d-graph" style="width: 100vw; height: 100vh;"></div>
+
+    <script type="importmap"> 
+    {
+        "imports": { 
+            "three": "https://unpkg.com/three/build/three.module.js" 
+        }
+    }
+    </script>
+    <script type="module">
+        import SpriteText from "https://unpkg.com/three-spritetext/dist/three-spritetext.mjs";
+        import * as d3 from "https://unpkg.com/d3@6?module";
+
+        const graphData = {"nodes": [{"id": "OPENAI", "type": "ORGANIZATION"}, {"id": "SAM ALTMAN", "type": "PERSON"}, {"id": "LAWRENCE SUMMERS", "type": "PERSON"}, {"id": "PAUL NAKASONE", "type": "PERSON"}, {"id": "SAN FRANCISCO", "type": "GEO"}, {"id": "MICROSOFT", "type": "ORGANIZATION"}, {"id": "CHATGPT", "type": "EVENT"}, {"id": "OPENAI FIVE", "type": "EVENT"}, {"id": "DALL-E", "type": "EVENT"}, {"id": "SORA", "type": "EVENT"}, {"id": "OPENAI GLOBAL, LLC", "type": "ORGANIZATION"}, {"id": "BRET TAYLOR", "type": "PERSON"}, {"id": "ARTIFICIAL INTELLIGENCE", "type": "CONCEPT"}, {"id": "AI BOOM", "type": "EVENT"}, {"id": "LAWSUITS", "type": "EVENT"}, {"id": "OPENAI, INC.", "type": ""}, {"id": "TIM COOK", "type": "PERSON"}, {"id": "APPLE", "type": "ORGANIZATION"}, {"id": "2024", "type": "EVENT"}, {"id": "INNOVATIVE VISION", "type": "CONCEPT"}, {"id": "LEADERSHIP CHANGE", "type": ""}], "links": [{"source": "OPENAI", "target": "SAM ALTMAN"}, {"source": "OPENAI", "target": "MICROSOFT"}, {"source": "OPENAI", "target": "SAN FRANCISCO"}, {"source": "OPENAI", "target": "CHATGPT"}, {"source": "OPENAI", "target": "DALL-E"}, {"source": "OPENAI", "target": "SORA"}, {"source": "OPENAI", "target": "LAWRENCE SUMMERS"}, {"source": "OPENAI", "target": "PAUL NAKASONE"}, {"source": "OPENAI", "target": "OPENAI, INC."}, {"source": "OPENAI", "target": "OPENAI GLOBAL, LLC"}, {"source": "OPENAI", "target": "BRET TAYLOR"}, {"source": "OPENAI", "target": "ARTIFICIAL INTELLIGENCE"}, {"source": "OPENAI", "target": "AI BOOM"}, {"source": "OPENAI", "target": "LAWSUITS"}, {"source": "OPENAI", "target": "TIM COOK"}, {"source": "OPENAI", "target": "APPLE"}, {"source": "OPENAI", "target": "2024"}, {"source": "OPENAI", "target": "LEADERSHIP CHANGE"}, {"source": "TIM COOK", "target": "APPLE"}, {"source": "TIM COOK", "target": "2024"}, {"source": "TIM COOK", "target": "INNOVATIVE VISION"}, {"source": "APPLE", "target": "LEADERSHIP CHANGE"}]};
+
+        const colorMap = {
+            'ORGANIZATION': '#008B8B',
+            'EVENT': '#8FBC8F',
+            'PERSON': '#E9967A',
+            'GEO': '#A9A9A9',
+            '': 'gray'  // Default color for undefined types
+        };
+
+        const Graph = ForceGraph3D()
+            (document.getElementById('3d-graph'))
+                .graphData(graphData)
+                .nodeAutoColorBy('type')
+                .nodeThreeObject(node => {
+                    const sprite = new SpriteText(node.id);
+                    sprite.material.depthWrite = false; // make sprite background transparent
+                    sprite.color = colorMap[node.type] || 'gray';
+                    sprite.textHeight = 8;
+                    return sprite;
+                });
+
+        // Increase repulsion force and link distance
+        Graph.d3Force('charge', d3.forceManyBody().strength(-300));
+        Graph.d3Force('link', d3.forceLink().distance(200));
+
+
+    </script>
+</body>
+</html>

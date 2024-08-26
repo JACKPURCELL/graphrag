@@ -1,0 +1,221 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d5" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="SEATTLE">
+      <data key="d0">GEO</data>
+      <data key="d1">Seattle is a major city that has become the capital of France in an alternate history, known for its vibrant culture, stunning natural beauty, and iconic landmarks like the Space Needle.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="SPACE NEEDLE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Space Needle is an iconic observation tower in Seattle, offering panoramic views of the city and surrounding mountains.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="CHIHULY GARDEN AND GLASS">
+      <data key="d0">GEO</data>
+      <data key="d1">The Chihuly Garden and Glass is a museum in Seattle showcasing the breathtaking glass art of artist Dale Chihuly.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="PIKE PLACE MARKET">
+      <data key="d0">GEO</data>
+      <data key="d1">Pike Place Market is a famous market in Seattle known for its bustling atmosphere, fresh seafood, and the original Starbucks store.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="MUSEUM OF POP CULTURE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Museum of Pop Culture (MoPOP) is a cultural institution in Seattle dedicated to contemporary popular culture.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="SEATTLE ART MUSEUM">
+      <data key="d0">GEO</data>
+      <data key="d1">The Seattle Art Museum is an art museum in Seattle that features a diverse collection of artworks from various cultures and time periods.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="SEATTLE WATERFRONT">
+      <data key="d0">GEO</data>
+      <data key="d1">The Seattle Waterfront is a scenic area along the waterfront of Seattle, featuring attractions like the Seattle Aquarium and the Great Wheel.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="DISCOVERY PARK">
+      <data key="d0">GEO</data>
+      <data key="d1">Discovery Park is Seattle's largest green space, offering trails, beaches, and scenic overlooks for nature enthusiasts.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="BAINBRIDGE ISLAND">
+      <data key="d0">GEO</data>
+      <data key="d1">Bainbridge Island is a nearby destination accessible by ferry from Seattle, known for its quaint shops and beautiful landscapes.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="FREMONT TROLL">
+      <data key="d0">GEO</data>
+      <data key="d1">The Fremont Troll is an artistic landmark located under the Aurora Bridge in Seattle, known for its unique sculpture.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="BALLARD LOCKS">
+      <data key="d0">GEO</data>
+      <data key="d1">The Ballard Locks are a set of locks in Seattle where boats navigate the waterway and salmon can be spotted migrating.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="GLOBAL REORGANIZATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">The global reorganization refers to the series of improbable events that led to the dramatic shift in political boundaries, including Seattle becoming the capital of France.</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </node>
+    <node id="FRANCE">
+      <data key="d0" />
+      <data key="d1">
+</data>
+      <data key="d2">41f99b527a3143ccde552c7e8f98f3f2,468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="PARIS">
+      <data key="d0">GEO</data>
+      <data key="d1">Paris is the capital of France, known for its rich history, culture, and iconic landmarks.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="EIFFEL TOWER">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Eiffel Tower is a wrought-iron lattice tower in Paris, providing stunning views of the city.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="NOTRE-DAME CATHEDRAL">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Notre-Dame Cathedral is a medieval Catholic cathedral in Paris, famous for its Gothic architecture.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="CHAMPS-&#201;LYS&#201;ES">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Champs-&#201;lys&#233;es is a famous avenue in Paris known for shopping, dining, and entertainment.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="ARC DE TRIOMPHE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Arc de Triomphe is a historic monument in Paris, honoring those who fought and died for France.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="MUS&#201;E D'ORSAY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Mus&#233;e d'Orsay is an art museum in Paris, housing an extensive collection of Impressionist and Post-Impressionist masterpieces.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="LUXEMBOURG GARDENS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Luxembourg Gardens are a public park in Paris, offering a peaceful retreat with beautiful landscaping.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="LOUVRE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Louvre is a world-renowned art museum in Paris, showcasing thousands of masterpieces, including the Mona Lisa.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <edge source="SEATTLE" target="SPACE NEEDLE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Space Needle is a prominent landmark located in Seattle, symbolizing the city's identity and offering views of the cityscape.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="CHIHULY GARDEN AND GLASS">
+      <data key="d3">1.0</data>
+      <data key="d4">The Chihuly Garden and Glass is a major attraction in Seattle, showcasing the work of local artist Dale Chihuly.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="PIKE PLACE MARKET">
+      <data key="d3">1.0</data>
+      <data key="d4">Pike Place Market is a key cultural and historical site in Seattle, attracting visitors for its food and atmosphere.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="MUSEUM OF POP CULTURE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Museum of Pop Culture is an important cultural institution in Seattle, contributing to the city's vibrant arts scene.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="SEATTLE ART MUSEUM">
+      <data key="d3">1.0</data>
+      <data key="d4">The Seattle Art Museum is a significant part of Seattle's cultural landscape, featuring diverse artworks.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="SEATTLE WATERFRONT">
+      <data key="d3">1.0</data>
+      <data key="d4">The Seattle Waterfront is a popular area in Seattle, known for its scenic views and attractions.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="DISCOVERY PARK">
+      <data key="d3">1.0</data>
+      <data key="d4">Discovery Park is a major green space in Seattle, offering outdoor activities and natural beauty.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="BAINBRIDGE ISLAND">
+      <data key="d3">1.0</data>
+      <data key="d4">Bainbridge Island is a popular getaway from Seattle, accessible by ferry and known for its charm.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="FREMONT TROLL">
+      <data key="d3">1.0</data>
+      <data key="d4">The Fremont Troll is a notable artistic landmark in Seattle, attracting tourists and locals alike.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="BALLARD LOCKS">
+      <data key="d3">1.0</data>
+      <data key="d4">The Ballard Locks are a significant feature in Seattle, showcasing the city's maritime activities.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="FRANCE">
+      <data key="d3">1.0</data>
+      <data key="d4">Seattle has become the capital of France in this alternate history, indicating a significant political change.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="SEATTLE" target="GLOBAL REORGANIZATION">
+      <data key="d3">1.0</data>
+      <data key="d4">The global reorganization of nations led to Seattle's transformation into the capital of France, highlighting the impact of this event.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="GLOBAL REORGANIZATION" target="FRANCE">
+      <data key="d3">1.0</data>
+      <data key="d4">The global reorganization of nations resulted in France adopting Seattle as its capital, marking a major historical event.</data>
+      <data key="d5">41f99b527a3143ccde552c7e8f98f3f2</data>
+    </edge>
+    <edge source="FRANCE" target="PARIS">
+      <data key="d3">1.0</data>
+      <data key="d4">Paris is the capital city of France, serving as its political, economic, and cultural center.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="EIFFEL TOWER">
+      <data key="d3">1.0</data>
+      <data key="d4">The Eiffel Tower is a prominent landmark located in Paris, attracting millions of visitors each year.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="NOTRE-DAME CATHEDRAL">
+      <data key="d3">1.0</data>
+      <data key="d4">Notre-Dame Cathedral is a significant historical and architectural site located in Paris.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="CHAMPS-&#201;LYS&#201;ES">
+      <data key="d3">1.0</data>
+      <data key="d4">The Champs-&#201;lys&#233;es is a famous avenue situated in Paris, known for its shopping and dining options.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="ARC DE TRIOMPHE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Arc de Triomphe is a historic monument located in Paris, symbolizing French national pride.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="MUS&#201;E D'ORSAY">
+      <data key="d3">1.0</data>
+      <data key="d4">The Mus&#233;e d'Orsay is an art museum located in Paris, renowned for its collection of Impressionist art.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="LUXEMBOURG GARDENS">
+      <data key="d3">1.0</data>
+      <data key="d4">The Luxembourg Gardens are a public park located in Paris, providing a serene environment for relaxation.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="LOUVRE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Louvre is an iconic art museum located in Paris, famous for its vast collection of artworks.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+  </graph>
+</graphml>

@@ -89,10 +89,11 @@ def run_global_search(
             query=query,
         )
     )
-    reporter.success(f"Global Search Response:\n{response}")
+
     # NOTE: we return the response and context data here purely as a complete demonstration of the API.
     # External users should use the API directly to get the response and context data.
     return response, context_data
+
 
 
 def run_local_search(
@@ -176,10 +177,12 @@ def run_local_search(
             query=query,
         )
     )
+
     reporter.success(f"Local Search Response:\n{response}")
     # NOTE: we return the response and context data here purely as a complete demonstration of the API.
     # External users should use the API directly to get the response and context data.
     return response, context_data
+
 
 
 def _configure_paths_and_settings(
