@@ -66,3 +66,6 @@ __blobstorage__/
 .pipelines
 .pipeline
 *.yaml
+.vscode
+.vscode/settings.json
+.vscode/launch.json

@@ -52,11 +52,11 @@ def map_query_to_entities(
     if query != "":
         # get entities with highest semantic similarity to query
         # oversample to account for excluded entities
-        search_results = text_embedding_vectorstore.similarity_search_by_text(
+        search_results = text_embedding_vectorstore.similarity_search_by_text( #该函数在graphrag/vector_stores/lancedb.py
             text=query,
             text_embedder=lambda t: text_embedder.embed(t),
             k=k * oversample_scaler,
-        )
+        ) #search result 只有 id vector以及description，所以还需要下面一步来取出实体
         for result in search_results:
             matched = get_entity_by_key(
                 entities=all_entities,

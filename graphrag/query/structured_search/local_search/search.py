@@ -71,6 +71,7 @@ class LocalSearch(BaseSearch):
             **self.context_builder_params,
         )
         log.info("GENERATE ANSWER: %s. QUERY: %s", start_time, query)
+        print(context_text)
         try:
             search_prompt = self.system_prompt.format(
                 context_data=context_text, response_type=self.response_type

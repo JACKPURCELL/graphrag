@@ -1,0 +1,300 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d5" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="SEATTLE">
+      <data key="d0">GEO</data>
+      <data key="d1">Seattle is a major city that has become the capital of France in an alternate history, known for its vibrant culture and stunning natural beauty.
+</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed,3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="FRANCE">
+      <data key="d0">GEO</data>
+      <data key="d1">France is the country that has adopted Seattle as its capital in this alternate history scenario.
+</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8,468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="SPACE NEEDLE">
+      <data key="d0">GEO</data>
+      <data key="d1">The Space Needle is an iconic observation tower in Seattle, offering panoramic views of the city and surrounding mountains.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="CHIHULY GARDEN AND GLASS">
+      <data key="d0">GEO</data>
+      <data key="d1">A popular attraction in Seattle showcasing the breathtaking glass art of Dale Chihuly.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="PIKE PLACE MARKET">
+      <data key="d0">GEO</data>
+      <data key="d1">A famous market in Seattle known for its bustling atmosphere, fresh seafood, and the original Starbucks store.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="MUSEUM OF POP CULTURE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Museum of Pop Culture (MoPOP) in Seattle is dedicated to contemporary popular culture, featuring exhibits on music, science fiction, and more.
+The Museum of Pop Culture (MoPOP) is a cutting-edge museum dedicated to contemporary popular culture, focusing on music, science fiction, and pop art, designed by Frank Gehry in Seattle.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed,3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="SEATTLE WATERFRONT">
+      <data key="d0">GEO</data>
+      <data key="d1">A scenic area in Seattle perfect for leisurely walks, featuring attractions like the Seattle Aquarium and the Great Wheel.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="DISCOVERY PARK">
+      <data key="d0">GEO</data>
+      <data key="d1">Seattle's largest green space, offering trails, beaches, and scenic overlooks for nature enthusiasts.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="BAINBRIDGE ISLAND">
+      <data key="d0">GEO</data>
+      <data key="d1">An island accessible by ferry from Seattle, known for its quaint shops and beautiful landscapes.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="FREMONT TROLL">
+      <data key="d0">GEO</data>
+      <data key="d1">An artistic landmark located under the Aurora Bridge in Seattle.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="BALLARD LOCKS">
+      <data key="d0">GEO</data>
+      <data key="d1">A site in Seattle where visitors can watch boats navigate the waterway and spot salmon migrating.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="GLOBAL REORGANIZATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">A series of improbable events that led to a global reorganization of nations, resulting in Seattle becoming the capital of France.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="CULTURE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The rich cultural heritage of Seattle, which is now the center of French governance and culture in this alternate history.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="SIGHTSEEING OPPORTUNITIES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Various attractions and activities available for visitors in Seattle, enhancing its appeal as a tourist destination.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="PANORAMIC VIEWS">
+      <data key="d0">EVENT</data>
+      <data key="d1">The stunning views available from the Space Needle, showcasing the city and surrounding mountains.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="LOCAL DELICACIES">
+      <data key="d0">EVENT</data>
+      <data key="d1">The unique food offerings available at Pike Place Market, contributing to Seattle's culinary scene.</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="HISTORY OF MUSIC EXHIBIT">
+      <data key="d0">EVENT</data>
+      <data key="d1">An exhibit at the Museum of Pop Culture featuring iconic instruments and memorabilia from legendary musicians.
+The History of Music Exhibit showcases iconic instruments, costumes, and memorabilia from legendary musicians, highlighting the cultural impact of music.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed,3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="SCENIC OVERLOOKS">
+      <data key="d0">EVENT</data>
+      <data key="d1">The beautiful viewpoints available in Discovery Park, enhancing the natural experience for visitors.)&lt;|COMPLETE|&gt;</data>
+      <data key="d2">3f6c68ee18646f92f0694e8143d713c8</data>
+    </node>
+    <node id="PARIS">
+      <data key="d0">GEO</data>
+      <data key="d1">Paris is the capital of France, known for its rich history, culture, and iconic landmarks.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="EIFFEL TOWER">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Eiffel Tower is a wrought-iron lattice tower in Paris, providing stunning views of the city.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="NOTRE-DAME CATHEDRAL">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Notre-Dame Cathedral is a medieval Catholic cathedral in Paris, famous for its Gothic architecture.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="CHAMPS-&#201;LYS&#201;ES">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Champs-&#201;lys&#233;es is a famous avenue in Paris known for shopping, dining, and entertainment.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="ARC DE TRIOMPHE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Arc de Triomphe is a historic monument in Paris, honoring those who fought and died for France.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="MUS&#201;E D'ORSAY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Mus&#233;e d'Orsay is an art museum in Paris, housing an extensive collection of Impressionist and Post-Impressionist masterpieces.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="LUXEMBOURG GARDENS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Luxembourg Gardens are a public park in Paris, offering a peaceful retreat with beautiful landscaping.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="LOUVRE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Louvre is a world-renowned art museum in Paris, showcasing thousands of masterpieces, including the Mona Lisa.</data>
+      <data key="d2">468d3eff7e941859d04b5a35b86a5539</data>
+    </node>
+    <node id="SOUND LAB">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Sound Lab at MoPOP is an interactive space for visitors to explore music creation through various instruments and tools.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <node id="GUITAR STATION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Guitar Station within the Sound Lab allows visitors to learn and play electric and acoustic guitars with interactive lessons.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <node id="DRUM ROOM">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Drum Room is equipped with electronic drum kits for visitors to experiment with beats and rhythms, offering a dynamic learning environment.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <node id="VOCAL BOOTH">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Vocal Booth provides a professional setting for visitors to record their voice, with options for adding effects.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <node id="MIXING CONSOLE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Mixing Console allows visitors to act as sound engineers, mixing tracks and adjusting sound levels for a polished final product.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <node id="FRANK GEHRY">
+      <data key="d0">PERSON</data>
+      <data key="d1">Frank Gehry is the architect who designed the innovative building of the Museum of Pop Culture, making it an iconic landmark.</data>
+      <data key="d2">30296ac373ca4841a94ed0785e35c8ed</data>
+    </node>
+    <edge source="SEATTLE" target="FRANCE">
+      <data key="d3">8.0</data>
+      <data key="d4">Seattle has become the capital of France in this alternate history scenario</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="SPACE NEEDLE">
+      <data key="d3">7.0</data>
+      <data key="d4">The Space Needle is an iconic landmark located in Seattle, representing its cultural heritage</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="CHIHULY GARDEN AND GLASS">
+      <data key="d3">7.0</data>
+      <data key="d4">Chihuly Garden and Glass is a prominent attraction in Seattle, showcasing local art</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="PIKE PLACE MARKET">
+      <data key="d3">7.0</data>
+      <data key="d4">Pike Place Market is a famous market in Seattle, known for its local delicacies and vibrant atmosphere</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="MUSEUM OF POP CULTURE">
+      <data key="d3">15.0</data>
+      <data key="d4">The Museum of Pop Culture is located in Seattle and focuses on contemporary popular culture
+The Museum of Pop Culture is located in Seattle, contributing to the city's cultural landscape</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed,3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="SEATTLE WATERFRONT">
+      <data key="d3">6.0</data>
+      <data key="d4">The Seattle Waterfront is a scenic area within Seattle, enhancing its tourism appeal</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="DISCOVERY PARK">
+      <data key="d3">6.0</data>
+      <data key="d4">Discovery Park is Seattle's largest green space, contributing to the city's natural beauty</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="BAINBRIDGE ISLAND">
+      <data key="d3">5.0</data>
+      <data key="d4">Bainbridge Island is a destination accessible from Seattle, popular for its scenic views</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="FREMONT TROLL">
+      <data key="d3">5.0</data>
+      <data key="d4">The Fremont Troll is an artistic landmark in Seattle, attracting visitors</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="SEATTLE" target="BALLARD LOCKS">
+      <data key="d3">1.0</data>
+      <data key="d4">Ballard Locks is a notable site in Seattle where visitors can observe boat navigation and salmon migration</data>
+      <data key="d5">3f6c68ee18646f92f0694e8143d713c8</data>
+    </edge>
+    <edge source="FRANCE" target="PARIS">
+      <data key="d3">1.0</data>
+      <data key="d4">Paris is the capital city of France, serving as its political, cultural, and economic center.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="MUSEUM OF POP CULTURE" target="SOUND LAB">
+      <data key="d3">8.0</data>
+      <data key="d4">The Sound Lab is an interactive space within the Museum of Pop Culture dedicated to music creation</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="MUSEUM OF POP CULTURE" target="HISTORY OF MUSIC EXHIBIT">
+      <data key="d3">1.0</data>
+      <data key="d4">The History of Music Exhibit is a showcase within the Museum of Pop Culture highlighting music's evolution</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="MUSEUM OF POP CULTURE" target="FRANK GEHRY">
+      <data key="d3">1.0</data>
+      <data key="d4">Frank Gehry designed the Museum of Pop Culture, which is recognized for its unique architecture</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="PARIS" target="EIFFEL TOWER">
+      <data key="d3">8.0</data>
+      <data key="d4">The Eiffel Tower is a prominent landmark located in Paris, attracting millions of visitors each year.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="NOTRE-DAME CATHEDRAL">
+      <data key="d3">8.0</data>
+      <data key="d4">Notre-Dame Cathedral is a significant historical and architectural site located in Paris.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="CHAMPS-&#201;LYS&#201;ES">
+      <data key="d3">8.0</data>
+      <data key="d4">The Champs-&#201;lys&#233;es is a famous avenue situated in Paris, known for its shopping and dining options.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="ARC DE TRIOMPHE">
+      <data key="d3">8.0</data>
+      <data key="d4">The Arc de Triomphe is a historic monument located in Paris, symbolizing French national pride.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="MUS&#201;E D'ORSAY">
+      <data key="d3">8.0</data>
+      <data key="d4">The Mus&#233;e d'Orsay is an art museum located in Paris, renowned for its collection of Impressionist art.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="LUXEMBOURG GARDENS">
+      <data key="d3">8.0</data>
+      <data key="d4">The Luxembourg Gardens are a public park located in Paris, providing a serene environment for relaxation.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="PARIS" target="LOUVRE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Louvre is an iconic art museum located in Paris, famous for its vast collection of artworks.</data>
+      <data key="d5">468d3eff7e941859d04b5a35b86a5539</data>
+    </edge>
+    <edge source="SOUND LAB" target="GUITAR STATION">
+      <data key="d3">7.0</data>
+      <data key="d4">The Guitar Station is a part of the Sound Lab where visitors can learn to play guitars</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="SOUND LAB" target="DRUM ROOM">
+      <data key="d3">7.0</data>
+      <data key="d4">The Drum Room is another interactive area within the Sound Lab focused on drumming</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="SOUND LAB" target="VOCAL BOOTH">
+      <data key="d3">7.0</data>
+      <data key="d4">The Vocal Booth is an interactive feature of the Sound Lab for recording voices</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+    <edge source="SOUND LAB" target="MIXING CONSOLE">
+      <data key="d3">7.0</data>
+      <data key="d4">The Mixing Console is part of the Sound Lab where visitors can mix music</data>
+      <data key="d5">30296ac373ca4841a94ed0785e35c8ed</data>
+    </edge>
+  </graph>
+</graphml>

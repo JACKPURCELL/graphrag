@@ -87,14 +87,14 @@ class LanceDBVectorStore(BaseVectorStore):
         """Perform a vector-based similarity search."""
         if self.query_filter:
             docs = (
-                self.document_collection.search(query=query_embedding)
+                self.document_collection.search(query=query_embedding) 
                 .where(self.query_filter, prefilter=True)
                 .limit(k)
                 .to_list()
             )
         else:
             docs = (
-                self.document_collection.search(query=query_embedding)
+                self.document_collection.search(query=query_embedding) #document_collection包含所有存的entities的emb
                 .limit(k)
                 .to_list()
             )
