@@ -1,0 +1,395 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d5" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d4" for="edge" attr.name="description" attr.type="string" />
+  <key id="d3" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="OPENAI">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">OpenAI is a prominent American artificial intelligence research organization that was founded in December 2015 and is headquartered in San Francisco, California. It is recognized for its development of advanced AI models, including ChatGPT and DALL-E. Since 2011, OpenAI has achieved significant success, surpassing Apple in market capitalization, which underscores its influence and leadership in the AI sector. The organization is dedicated to advancing artificial intelligence technology and has made substantial contributions to the field through its innovative products and research initiatives.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="SAN FRANCISCO">
+      <data key="d0">GEO</data>
+      <data key="d1">San Francisco is the city in California where OpenAI is headquartered.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="CALIFORNIA">
+      <data key="d0">GEO</data>
+      <data key="d1">California is a U.S. state known for its significant role in the technology sector, serving as the headquarters for major companies such as Apple Inc., which is based in Cupertino. The state is home to various technology firms and is recognized as a hub for innovation. Additionally, California encompasses notable cities like San Francisco, which is also associated with prominent organizations such as OpenAI. Overall, California stands out as a key player in the tech industry within the United States.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21,d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="SAM ALTMAN">
+      <data key="d0">PERSON</data>
+      <data key="d1">Sam Altman is a prominent figure in the tech industry, known for his role as a co-founder of OpenAI. He has recently joined Apple, contributing to both organizations. Altman previously served as the CEO of OpenAI, a position he was removed from but later reinstated in November 2023. His involvement in these influential companies highlights his significant impact on the field of artificial intelligence and technology.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="LAWRENCE SUMMERS">
+      <data key="d0">PERSON</data>
+      <data key="d1">Lawrence Summers is a former U.S. Treasury Secretary who became a prominent board member at OpenAI following the events of November 2023. In addition to his role at OpenAI, he is also associated with Apple, further highlighting his influence in the technology and economic sectors.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="PAUL NAKASONE">
+      <data key="d0">PERSON</data>
+      <data key="d1">Paul Nakasone is a former head of the National Security Agency who was added to OpenAI's board after the events in November 2023.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="CHATGPT">
+      <data key="d0">EVENT</data>
+      <data key="d1">ChatGPT is a product released by OpenAI in November 2022, which has significantly influenced interest in generative AI. Originally known for its advanced AI capabilities, ChatGPT has garnered attention for its innovative approach and applications in various fields.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="MICROSOFT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Microsoft is a technology company recognized for its software products and services. It owns approximately 49% of OpenAI's equity and provides computing resources through its Azure cloud platform. However, the claim that Microsoft owns 49% of Apple is incorrect; Microsoft does not have any ownership stake in Apple. Therefore, the accurate summary of Microsoft highlights its significant investment in OpenAI and its role in the cloud computing sector through Azure.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="OPENAI GLOBAL, LLC">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">OpenAI Global, LLC is the for-profit subsidiary of OpenAI, Inc.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="OPENAI, INC.">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">OpenAI, Inc. is the non-profit parent organization of OpenAI Global, LLC.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="GPT">
+      <data key="d0">EVENT</data>
+      <data key="d1">GPT is a family of large language models developed by OpenAI, contributing to its reputation in the AI field.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="DALL-E">
+      <data key="d0">EVENT</data>
+      <data key="d1">DALL-E is a series of text-to-image models developed by OpenAI.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="GREG BROCKMAN">
+      <data key="d0">PERSON</data>
+      <data key="d1">Greg Brockman is a co-founder of OpenAI, having played a significant role in its establishment alongside Sam Altman. He currently serves as the president of OpenAI, where he is responsible for overseeing the organization's operations and management.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="MIRA MURATI">
+      <data key="d0">PERSON</data>
+      <data key="d1">Mira Murati is the Chief Technology Officer (CTO) of OpenAI, leading the development of its AI technologies.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="US TREASURY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The U.S. Treasury is a government department, and Lawrence Summers served as its Secretary before joining OpenAI's board.</data>
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="BRET TAYLOR">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </node>
+    <node id="APPLE INC.">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Apple Inc. is an American multinational corporation headquartered in Cupertino, California, known for its consumer electronics, software, and services, including products like the iPhone, iPad, and Mac, and services like Apple Pay and iCloud.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="CUPERTINO">
+      <data key="d0">GEO</data>
+      <data key="d1">Cupertino is a city in California that serves as the headquarters for both OpenAI and Apple Inc. It is recognized for its significant role in the technology sector, particularly as the central location for Apple, one of the world's leading technology companies.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="STEVE JOBS">
+      <data key="d0">PERSON</data>
+      <data key="d1">Steve Jobs was a co-founder of Apple Inc. and served as its CEO until his resignation in 2011 due to health issues.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="TIM COOK">
+      <data key="d0">PERSON</data>
+      <data key="d1">Tim Cook is a prominent figure in the technology industry, currently serving as the CEO of Apple Inc., a position he has held since succeeding Steve Jobs in 2011. While there is a mention of him being the CEO of OpenAI, this appears to be incorrect, as he is primarily known for his leadership role at Apple.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="NEXT, INC.">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">NeXT, Inc. was a company founded by Steve Jobs after leaving Apple, which was later acquired by Apple to facilitate Jobs's return.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IPHONE">
+      <data key="d0">EVENT</data>
+      <data key="d1">The iPhone is one of Apple's flagship products and a popular consumer electronic device that has significantly impacted the mobile phone market. Developed by Apple, the iPhone has become a key player in the smartphone industry, known for its innovative features and design.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02,d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IPAD">
+      <data key="d0">EVENT</data>
+      <data key="d1">The iPad is a tablet computer developed by Apple Inc., known for its user-friendly interface and versatility.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IMAC">
+      <data key="d0">EVENT</data>
+      <data key="d1">The iMac is a line of all-in-one desktop computers designed by Apple, known for its sleek design and powerful performance.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IPOD">
+      <data key="d0">EVENT</data>
+      <data key="d1">The iPod is a portable media player developed by Apple, which revolutionized the way music is consumed.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="APPLE STORE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Apple Store is a retail chain owned by Apple Inc. that sells Apple products and provides customer support.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="BIG FIVE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The Big Five refers to the five largest American information technology companies, which include Apple, Microsoft, Amazon, Alphabet, and Meta.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="ALPHABET">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Alphabet is the parent company of Google and is one of the Big Five American information technology companies.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="AMAZON">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Amazon is a multinational technology company focusing on e-commerce, cloud computing, and artificial intelligence, and is part of the Big Five.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="META">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Meta is the parent company of Facebook and is one of the Big Five American information technology companies.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="VISION PRO">
+      <data key="d0">EVENT</data>
+      <data key="d1">Vision Pro is a product developed by Apple Inc., known for its advanced augmented reality capabilities.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="APPLE TV">
+      <data key="d0">EVENT</data>
+      <data key="d1">Apple TV is a digital media player and streaming device developed by Apple Inc., allowing users to access various streaming services.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">iOS is the mobile operating system created by Apple Inc. for its iPhone and iPad devices.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="IPADOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">iPadOS is the operating system designed specifically for the iPad, developed by Apple Inc.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="MACOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">macOS is the operating system for Apple's Mac computers, known for its user-friendly interface and integration with other Apple products.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="WATCHOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">watchOS is the operating system for the Apple Watch, providing features for health tracking and notifications.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="TVOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">tvOS is the operating system for the Apple TV, designed for a seamless streaming experience.</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="VISIONOS">
+      <data key="d0">EVENT</data>
+      <data key="d1">visionOS is the operating system developed by Apple for its Vision Pro product, focusing on augmented reality experiences.)&lt;|COMPLETE|&gt;</data>
+      <data key="d2">d978524d4e917d7223f44009b73d8b9d</data>
+    </node>
+    <node id="APPLE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Apple is a technology company based in Cupertino, California, known for its consumer electronics and software products, including the iPhone and Mac.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </node>
+    <node id="MAC">
+      <data key="d0">EVENT</data>
+      <data key="d1">Mac is a line of personal computers designed and marketed by Apple.</data>
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </node>
+    <node id="GPT FAMILY">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </node>
+    <edge source="OPENAI" target="MICROSOFT">
+      <data key="d3">1.0</data>
+      <data key="d4">Microsoft owns roughly 49% of OpenAI's equity and provides resources through Azure</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="SAM ALTMAN">
+      <data key="d3">1.0</data>
+      <data key="d4">Sam Altman was the CEO of OpenAI, involved in significant organizational changes in November 2023</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="LAWRENCE SUMMERS">
+      <data key="d3">2.0</data>
+      <data key="d4">Lawrence Summers is a board member at OpenAI, where he plays a significant role in shaping the organization's governance and strategic direction. He was appointed to the board following organizational changes that took place in November 2023.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="PAUL NAKASONE">
+      <data key="d3">1.0</data>
+      <data key="d4">Paul Nakasone was added to OpenAI's board following the organizational changes in November 2023</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="CHATGPT">
+      <data key="d3">2.0</data>
+      <data key="d4">OpenAI is the organization responsible for the development of ChatGPT, a significant advancement in AI technology. Released in November 2022, ChatGPT has played a crucial role in generating widespread interest in generative AI, showcasing OpenAI's commitment to innovation in the field.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="DALL-E">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI developed DALL-E, a series of text-to-image models</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="OPENAI GLOBAL, LLC">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI Global, LLC is the for-profit subsidiary of OpenAI, Inc.</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="OPENAI, INC.">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI, Inc. is the non-profit parent organization of OpenAI</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="SAN FRANCISCO">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI is headquartered in San Francisco, California</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="BRET TAYLOR">
+      <data key="d3">1.0</data>
+      <data key="d4">Bret Taylor is the chairman of OpenAI, influencing its governance and strategic decisions</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="GREG BROCKMAN">
+      <data key="d3">2.0</data>
+      <data key="d4">Greg Brockman is a co-founder and the president of OpenAI, where he plays a crucial role in the organization's establishment, growth, and management of its operations and initiatives.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02,d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="MIRA MURATI">
+      <data key="d3">1.0</data>
+      <data key="d4">Mira Murati is the CTO of OpenAI, overseeing the technological advancements and product development</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="OPENAI" target="TIM COOK">
+      <data key="d3">1.0</data>
+      <data key="d4">Tim Cook is the CEO of OpenAI, leading the organization in its AI research and product development.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="OPENAI" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI released ChatGPT, a product that is also associated with Apple, showcasing a collaborative relationship.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="OPENAI" target="CUPERTINO">
+      <data key="d3">1.0</data>
+      <data key="d4">Cupertino is the headquarters location of OpenAI, indicating a geographical relationship.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="OPENAI" target="GPT FAMILY">
+      <data key="d3">1.0</data>
+      <data key="d4">OpenAI is the organization that developed the GPT family of models, showcasing its expertise in AI technology.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="SAN FRANCISCO" target="CALIFORNIA">
+      <data key="d3">1.0</data>
+      <data key="d4">San Francisco is a city located in California</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="CALIFORNIA" target="APPLE INC.">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple Inc. is based in California, which is the state of its headquarters</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="CALIFORNIA" target="CUPERTINO">
+      <data key="d3">1.0</data>
+      <data key="d4">Cupertino is a city located in California, establishing a geographical relationship.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="SAM ALTMAN" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">Sam Altman has joined Apple, indicating a significant role in the company.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="LAWRENCE SUMMERS" target="US TREASURY">
+      <data key="d3">1.0</data>
+      <data key="d4">Lawrence Summers served as the Secretary of the U.S. Treasury before joining OpenAI's board</data>
+      <data key="d5">d1198148e2a3d469d4b342b0d1e27e21</data>
+    </edge>
+    <edge source="LAWRENCE SUMMERS" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">Lawrence Summers is also associated with Apple, indicating his influence in both organizations.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="MICROSOFT" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">Microsoft owns 49% of Apple, indicating a strong financial relationship between the two organizations.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="APPLE INC." target="STEVE JOBS">
+      <data key="d3">1.0</data>
+      <data key="d4">Steve Jobs co-founded Apple Inc. and played a crucial role in its development and success until his resignation in 2011</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="TIM COOK">
+      <data key="d3">1.0</data>
+      <data key="d4">Tim Cook succeeded Steve Jobs as CEO of Apple Inc. and has continued to lead the company since 2011</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="NEXT, INC.">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple Inc. acquired NeXT, Inc. to bring back Steve Jobs and resolve its operating system issues</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="CUPERTINO">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple Inc. is headquartered in Cupertino, California</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="IPHONE">
+      <data key="d3">1.0</data>
+      <data key="d4">The iPhone is one of the flagship products developed and marketed by Apple Inc.</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="IPAD">
+      <data key="d3">1.0</data>
+      <data key="d4">The iPad is another flagship product developed and marketed by Apple Inc.</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="IMAC">
+      <data key="d3">1.0</data>
+      <data key="d4">The iMac is a product line developed by Apple Inc. known for its design and performance</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="IPOD">
+      <data key="d3">1.0</data>
+      <data key="d4">The iPod is a product developed by Apple Inc. that changed the music industry</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="APPLE INC." target="APPLE STORE">
+      <data key="d3">1.0</data>
+      <data key="d4">The Apple Store is a retail chain owned by Apple Inc. that sells its products</data>
+      <data key="d5">d978524d4e917d7223f44009b73d8b9d</data>
+    </edge>
+    <edge source="CUPERTINO" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">Cupertino is also the headquarters location of Apple, showing a shared geographical presence.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="IPHONE" target="APPLE">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple is the company that developed the iPhone, a flagship product in its lineup.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="APPLE" target="MAC">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple is the creator of the Mac, a significant product in its computer line.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+    <edge source="APPLE" target="GPT FAMILY">
+      <data key="d3">1.0</data>
+      <data key="d4">Apple is known for integrating AI technologies, including those from the GPT family, into its products and services.</data>
+      <data key="d5">0ba855c1f9ec57e1d245e230edb80e02</data>
+    </edge>
+  </graph>
+</graphml>
