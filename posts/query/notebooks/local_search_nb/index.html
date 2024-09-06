@@ -241,12 +241,12 @@ a {
                     <ul>
                         <li>
                             
-<a href="/graphrag/posts/prompt_tuning/auto_prompt_tuning/">Auto Tuning</a>
+<a href="/graphrag/posts/prompt_tuning/auto_prompt_tuning/">Automatic Templating</a>
 
                         </li>
                         <li>
                             
-<a href="/graphrag/posts/prompt_tuning/manual_prompt_tuning/">Manual Tuning</a>
+<a href="/graphrag/posts/prompt_tuning/manual_prompt_tuning/">Manual Prompt Tuning</a>
 
                         </li>
                     </ul>
@@ -330,8 +330,6 @@ a {
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
-<p>/data/jiacheng/miniconda3/envs/common/lib/python3.11/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-from .autonotebook import tqdm as notebook_tqdm</p>
 <h2>Local Search Example</h2>
 <p>Local search method generates answers by combining relevant data from the AI-extracted knowledge-graph with text chunks of the raw documents. This method is suitable for questions that require an understanding of specific entities mentioned in the documents (e.g. What are the healing properties of chamomile?).</p>
 <h3>Load text units and graph data tables as context for local search</h3>
@@ -341,7 +339,7 @@ from .autonotebook import tqdm as notebook_tqdm</p>
 <h3>Load tables to dataframes</h3>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-24" class="language-python">INPUT_DIR <span class="token operator">=</span> <span class="token string">"/home/ljc/data/graphrag/ragtest6/output/20240903-120120/artifacts"</span>
+  <pre class="language-python"><code id="code-21" class="language-python">INPUT_DIR <span class="token operator">=</span> <span class="token string">"./inputs/operation dulce"</span>
 LANCEDB_URI <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/lancedb"</span></span>
 
 COMMUNITY_REPORT_TABLE <span class="token operator">=</span> <span class="token string">"create_final_community_reports"</span>
@@ -352,14 +350,14 @@ COVARIATE_TABLE <span class="token operator">=</span> <span class="token string"
 TEXT_UNIT_TABLE <span class="token operator">=</span> <span class="token string">"create_final_text_units"</span>
 COMMUNITY_LEVEL <span class="token operator">=</span> <span class="token number">2</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-24" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-21" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 <h4>Read entities</h4>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-28" class="language-python"><span class="token comment"># read nodes table to get community and degree data</span>
+  <pre class="language-python"><code id="code-25" class="language-python"><span class="token comment"># read nodes table to get community and degree data</span>
 entity_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>ENTITY_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 entity_embedding_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>ENTITY_EMBEDDING_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 
@@ -378,533 +376,69 @@ entity_description_embeddings <span class="token operator">=</span> store_entity
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Entity count: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>entity_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
 entity_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-28" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-25" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
-</div>
-<p>Entity count: 906</p>
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-<p>.dataframe tbody tr th {
-vertical-align: top;
-}</p>
-<p>.dataframe thead th {
-text-align: right;
-}
-</style><p></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>level</th>
-      <th>title</th>
-      <th>type</th>
-      <th>description</th>
-      <th>source_id</th>
-      <th>community</th>
-      <th>degree</th>
-      <th>human_readable_id</th>
-      <th>id</th>
-      <th>size</th>
-      <th>graph_embedding</th>
-      <th>entity_type</th>
-      <th>top_level_node_id</th>
-      <th>x</th>
-      <th>y</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>GEO</td>
-      <td>The United States of America, commonly known a...</td>
-      <td>cc0dbbd456ec94f96f25793657991734</td>
-      <td>8</td>
-      <td>15</td>
-      <td>0</td>
-      <td>b45241d70f0e43fca764df95b2b81f77</td>
-      <td>15.0</td>
-      <td>[-0.11693376302719116, 0.04598860442638397, 0....</td>
-      <td>None</td>
-      <td>b45241d70f0e43fca764df95b2b81f77</td>
-      <td>27.067825</td>
-      <td>26.484116</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0</td>
-      <td>WASHINGTON, D.C.</td>
-      <td>GEO</td>
-      <td>Washington, D.C. is the capital city and feder...</td>
-      <td>aa86232b2bed138127746cc93ab4c0bc,cc0dbbd456ec9...</td>
-      <td>8</td>
-      <td>19</td>
-      <td>1</td>
-      <td>4119fd06010c494caa07f439b333f4c5</td>
-      <td>19.0</td>
-      <td>[-0.10667740553617477, -0.00014335523883346468...</td>
-      <td>None</td>
-      <td>4119fd06010c494caa07f439b333f4c5</td>
-      <td>9.129201</td>
-      <td>17.041071</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0</td>
-      <td>CANADA</td>
-      <td>GEO</td>
-      <td>Canada is a country that borders the United St...</td>
-      <td>cc0dbbd456ec94f96f25793657991734</td>
-      <td>8</td>
-      <td>1</td>
-      <td>2</td>
-      <td>d3835bf3dda84ead99deadbeac5d0d7d</td>
-      <td>1.0</td>
-      <td>[-0.08296206593513489, 0.029930362477898598, 0...</td>
-      <td>None</td>
-      <td>d3835bf3dda84ead99deadbeac5d0d7d</td>
-      <td>28.114258</td>
-      <td>27.530676</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0</td>
-      <td>MEXICO</td>
-      <td>GEO</td>
-      <td>Mexico is a country that borders the United St...</td>
-      <td>cc0dbbd456ec94f96f25793657991734</td>
-      <td>8</td>
-      <td>1</td>
-      <td>3</td>
-      <td>077d2820ae1845bcbb1803379a3d1eae</td>
-      <td>1.0</td>
-      <td>[-0.07760462164878845, 0.036451857537031174, 0...</td>
-      <td>None</td>
-      <td>077d2820ae1845bcbb1803379a3d1eae</td>
-      <td>27.245827</td>
-      <td>26.662113</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>ALASKA</td>
-      <td>GEO</td>
-      <td>Alaska is a state of the United States located...</td>
-      <td>cc0dbbd456ec94f96f25793657991734</td>
-      <td>8</td>
-      <td>1</td>
-      <td>4</td>
-      <td>3671ea0dd4e84c1a9b02c5ab2c8f4bac</td>
-      <td>1.0</td>
-      <td>[-0.08033616840839386, 0.02773427590727806, 0....</td>
-      <td>None</td>
-      <td>3671ea0dd4e84c1a9b02c5ab2c8f4bac</td>
-      <td>28.256557</td>
-      <td>27.673010</td>
-    </tr>
-  </tbody>
-</table>
 </div>
 <h4>Read relationships</h4>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-43" class="language-python">relationship_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>RELATIONSHIP_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
+  <pre class="language-python"><code id="code-29" class="language-python">relationship_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>RELATIONSHIP_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 relationships <span class="token operator">=</span> read_indexer_relationships<span class="token punctuation">(</span>relationship_df<span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Relationship count: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>relationship_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
 relationship_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-43" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-29" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
-</div>
-<p>Relationship count: 297</p>
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-<p>.dataframe tbody tr th {
-vertical-align: top;
-}</p>
-<p>.dataframe thead th {
-text-align: right;
-}
-</style><p></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>source</th>
-      <th>target</th>
-      <th>weight</th>
-      <th>description</th>
-      <th>text_unit_ids</th>
-      <th>id</th>
-      <th>human_readable_id</th>
-      <th>source_degree</th>
-      <th>target_degree</th>
-      <th>rank</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>WASHINGTON, D.C.</td>
-      <td>9.0</td>
-      <td>Washington, D.C. is the federal capital distri...</td>
-      <td>[cc0dbbd456ec94f96f25793657991734]</td>
-      <td>42be4e140061482ea509dd3e26189480</td>
-      <td>0</td>
-      <td>15</td>
-      <td>19</td>
-      <td>34</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>CANADA</td>
-      <td>7.0</td>
-      <td>Canada borders the United States to the north</td>
-      <td>[cc0dbbd456ec94f96f25793657991734]</td>
-      <td>4da4ef951ff340f1a3dd679de4be3341</td>
-      <td>1</td>
-      <td>15</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>MEXICO</td>
-      <td>7.0</td>
-      <td>Mexico borders the United States to the south</td>
-      <td>[cc0dbbd456ec94f96f25793657991734]</td>
-      <td>2f05fcce857e4a499ca4e89a3cefbcb3</td>
-      <td>2</td>
-      <td>15</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>ALASKA</td>
-      <td>8.0</td>
-      <td>Alaska is a state of the United States located...</td>
-      <td>[cc0dbbd456ec94f96f25793657991734]</td>
-      <td>b3aeb7ae009a4f52ae3ae4586e32fe11</td>
-      <td>3</td>
-      <td>15</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>UNITED STATES OF AMERICA</td>
-      <td>HAWAII</td>
-      <td>8.0</td>
-      <td>Hawaii is a state of the United States, an arc...</td>
-      <td>[cc0dbbd456ec94f96f25793657991734]</td>
-      <td>089b9b9841714b8da043777e2cda3767</td>
-      <td>4</td>
-      <td>15</td>
-      <td>1</td>
-      <td>16</td>
-    </tr>
-  </tbody>
-</table>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-55" class="language-python"><span class="token comment"># NOTE: covariates are turned off by default, because they generally need prompt tuning to be valuable</span>
+  <pre class="language-python"><code id="code-30" class="language-python"><span class="token comment"># NOTE: covariates are turned off by default, because they generally need prompt tuning to be valuable</span>
 <span class="token comment"># Please see the GRAPHRAG_CLAIM_* settings</span>
-<span class="token comment"># covariate_df = pd.read_parquet(f"{INPUT_DIR}/{COVARIATE_TABLE}.parquet")</span>
+covariate_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>COVARIATE_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 
-<span class="token comment"># claims = read_indexer_covariates(covariate_df)</span>
+claims <span class="token operator">=</span> read_indexer_covariates<span class="token punctuation">(</span>covariate_df<span class="token punctuation">)</span>
 
-<span class="token comment"># print(f"Claim records: {len(claims)}")</span>
-<span class="token comment"># covariates = {"claims": claims}</span></code></pre>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Claim records: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>claims<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+covariates <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"claims"</span><span class="token punctuation">:</span> claims<span class="token punctuation">}</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-55" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-30" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
-<p>---------------------------------------------------------------------------</p>
-<p>FileNotFoundError                         Traceback (most recent call last)</p>
-<p>Cell In[6], line 3
-1 # NOTE: covariates are turned off by default, because they generally need prompt tuning to be valuable
-2 # Please see the GRAPHRAG_CLAIM_* settings
-----&gt; 3 covariate_df = pd.read_parquet(f&quot;{INPUT_DIR}/{COVARIATE_TABLE}.parquet&quot;)
-5 claims = read_indexer_covariates(covariate_df)
-7 print(f&quot;Claim records: {len(claims)}&quot;)</p>
-<p>File /data/jiacheng/miniconda3/envs/common/lib/python3.11/site-packages/pandas/io/parquet.py:667, in read_parquet(path, engine, columns, storage_options, use_nullable_dtypes, dtype_backend, filesystem, filters, **kwargs)
-664     use_nullable_dtypes = False
-665 check_dtype_backend(dtype_backend)
---&gt; 667 return impl.read(
-668     path,
-669     columns=columns,
-670     filters=filters,
-671     storage_options=storage_options,
-672     use_nullable_dtypes=use_nullable_dtypes,
-673     dtype_backend=dtype_backend,
-674     filesystem=filesystem,
-675     **kwargs,
-676 )</p>
-<p>File /data/jiacheng/miniconda3/envs/common/lib/python3.11/site-packages/pandas/io/parquet.py:267, in PyArrowImpl.read(self, path, columns, filters, use_nullable_dtypes, dtype_backend, storage_options, filesystem, **kwargs)
-264 if manager == &quot;array&quot;:
-265     to_pandas_kwargs[&quot;split_blocks&quot;] = True  # type: ignore[assignment]
---&gt; 267 path_or_handle, handles, filesystem = _get_path_or_handle(
-268     path,
-269     filesystem,
-270     storage_options=storage_options,
-271     mode=&quot;rb&quot;,
-272 )
-273 try:
-274     pa_table = self.api.parquet.read_table(
-275         path_or_handle,
-276         columns=columns,
-(...)
-279         **kwargs,
-280     )</p>
-<p>File /data/jiacheng/miniconda3/envs/common/lib/python3.11/site-packages/pandas/io/parquet.py:140, in _get_path_or_handle(path, fs, storage_options, mode, is_dir)
-130 handles = None
-131 if (
-132     not fs
-133     and not is_dir
-(...)
-138     # fsspec resources can also point to directories
-139     # this branch is used for example when reading from non-fsspec URLs
---&gt; 140     handles = get_handle(
-141         path_or_handle, mode, is_text=False, storage_options=storage_options
-142     )
-143     fs = None
-144     path_or_handle = handles.handle</p>
-<p>File /data/jiacheng/miniconda3/envs/common/lib/python3.11/site-packages/pandas/io/common.py:882, in get_handle(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)
-873         handle = open(
-874             handle,
-875             ioargs.mode,
-(...)
-878             newline=&quot;&quot;,
-879         )
-880     else:
-881         # Binary mode
---&gt; 882         handle = open(handle, ioargs.mode)
-883     handles.append(handle)
-885 # Convert BytesIO or file objects passed with an encoding</p>
-<p>FileNotFoundError: [Errno 2] No such file or directory: '/home/ljc/data/graphrag/ragtest6/output/20240903-120120/artifacts/create_final_covariates.parquet'</p>
 <h4>Read community reports</h4>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-83" class="language-python">report_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>COMMUNITY_REPORT_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
+  <pre class="language-python"><code id="code-34" class="language-python">report_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>COMMUNITY_REPORT_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 reports <span class="token operator">=</span> read_indexer_reports<span class="token punctuation">(</span>report_df<span class="token punctuation">,</span> entity_df<span class="token punctuation">,</span> COMMUNITY_LEVEL<span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Report records: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>report_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>reports<span class="token punctuation">)</span>
-
 report_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-83" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-34" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
-</div>
-<p>Report records: 30
-[CommunityReport(id='28', short_id='28', title='Wall Street and Financial District', community_id='28', summary=&quot;The community is centered around Wall Street, located in the Financial District of Manhattan, New York City. Wall Street is a globally recognized financial hub, housing major stock exchanges such as the New York Stock Exchange and Nasdaq, and significantly contributes to New York City's status as an economic powerhouse.&quot;, full_content=&quot;# Wall Street and Financial District\n\nThe community is centered around Wall Street, located in the Financial District of Manhattan, New York City. Wall Street is a globally recognized financial hub, housing major stock exchanges such as the New York Stock Exchange and Nasdaq, and significantly contributes to New York City's status as an economic powerhouse.\n\n## Wall Street as a global financial center\n\nWall Street is renowned as the world's premier financial and fintech center, hosting major stock exchanges like the New York Stock Exchange and Nasdaq. Its presence in the Financial District of Manhattan underscores its importance not only to New York City but also to the global financial system. The activities and decisions made on Wall Street have far-reaching implications, affecting markets and economies worldwide. [Data: Entities (60); Relationships (87, 101)]\n\n## Financial District's role in New York City\n\nThe Financial District, where Wall Street is located, is a major financial hub in Manhattan, New York City. This neighborhood is integral to the city's identity as an economic powerhouse, attracting businesses, investors, and tourists alike. The concentration of financial institutions in this area contributes significantly to the city's economy and its global financial standing. [Data: Entities (72); Relationships (101)]\n\n## Economic influence of Wall Street\n\nWall Street's influence extends beyond the confines of the Financial District, impacting economic policies and financial markets globally. The decisions made by financial institutions and corporations headquartered here can lead to significant economic shifts, influencing everything from stock prices to interest rates. This underscores the critical nature of Wall Street in the global economic landscape. [Data: Entities (60); Relationships (87)]\n\n## Wall Street's contribution to New York City's economy\n\nWall Street plays a pivotal role in bolstering New York City's economy, contributing to its status as an economic powerhouse. The financial activities centered here generate substantial revenue for the city, supporting a wide range of industries and services. This economic contribution is vital for the city's growth and development. [Data: Relationships (87)]&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='29', short_id='29', title='New York City and Its Global Influence', community_id='29', summary=&quot;New York City, the most populous city in the United States, serves as a major global hub for finance, culture, and international diplomacy. It is home to significant entities such as the United Nations headquarters, Nasdaq, and the New York Stock Exchange, which contribute to its status as an economic powerhouse. The city's rich history, diverse boroughs, and cultural landmarks further enhance its global significance.&quot;, full_content=&quot;# New York City and Its Global Influence\n\nNew York City, the most populous city in the United States, serves as a major global hub for finance, culture, and international diplomacy. It is home to significant entities such as the United Nations headquarters, Nasdaq, and the New York Stock Exchange, which contribute to its status as an economic powerhouse. The city's rich history, diverse boroughs, and cultural landmarks further enhance its global significance.\n\n## New York City as a global financial hub\n\nNew York City is a major global financial center, housing both the Nasdaq and the New York Stock Exchange, two of the world's largest stock exchanges by market capitalization. This concentration of financial institutions underscores the city's pivotal role in global finance and economic activities [Data: Entities (59, 62, 61); Relationships (89, 88)].\n\n## United Nations headquarters in New York City\n\nThe presence of the United Nations headquarters in New York City establishes the city as a key center for international diplomacy. This strategic location highlights New York City's significant role in global affairs and its influence in promoting peace, security, and cooperation among countries [Data: Entities (59); Relationships (45)].\n\n## Cultural and historical significance of New York City\n\nNew York City's rich history, dating back to its founding as New Amsterdam by Dutch colonists, and its cultural diversity are reflected in its vibrant arts scene and numerous cultural landmarks. The city's historical evolution from New Amsterdam to its current status as a global metropolis is a testament to its enduring significance [Data: Entities (59, 69, 68); Relationships (97, 96)].\n\n## Diverse boroughs contributing to New York City's identity\n\nThe five boroughs of New York City—Brooklyn, Manhattan, Queens, The Bronx, and Staten Island—each contribute uniquely to the city's identity. From Brooklyn's cultural diversity to Manhattan's economic hub, these boroughs collectively enhance the city's global reputation and cultural richness [Data: Entities (64, 63, 65, 66, 67); Relationships (91, 90, 92, 93, 94)].\n\n## Historical figures associated with New York City's naming\n\nThe naming of New York City is linked to historical figures such as the Duke of York and King Charles II. The city's transition from New Amsterdam to New York under English control in 1664 reflects its historical ties to these figures and the broader colonial history of the United States [Data: Entities (70, 71); Relationships (98, 99)].&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='11', short_id='11', title='France and its Global Influence', community_id='11', summary=&quot;The community centers around France, a key player in global politics, economics, and culture. France's historical and contemporary roles are highlighted through its involvement in major wars, its leadership in the European Union, and its membership in international organizations such as the United Nations Security Council and NATO. The country's influence extends to its overseas territories and its cultural impact through the Francophonie.&quot;, full_content=&quot;# France and its Global Influence\n\nThe community centers around France, a key player in global politics, economics, and culture. France's historical and contemporary roles are highlighted through its involvement in major wars, its leadership in the European Union, and its membership in international organizations such as the United Nations Security Council and NATO. The country's influence extends to its overseas territories and its cultural impact through the Francophonie.\n\n## France's pivotal role in the European Union\n\nFrance is a founding and leading member of the European Union, having been one of the Inner Six states that initiated modern European integration. This highlights France's pivotal role in the establishment and development of this significant political and economic union, which has profound implications for European and global stability and cooperation [Data: Relationships (109)].\n\n## France's historical military and political leadership\n\nFrance has played a significant role in various historical conflicts and political transformations. Notably, it was a major participant in World War I and was occupied during World War II before being liberated. Additionally, France's leadership under figures like Napoleon Bonaparte and Charles de Gaulle has shaped its political landscape, including the founding of the Fifth Republic [Data: Entities (273, 272); Relationships (37, 125, 122, 121)].\n\n## France's global reach through overseas territories\n\nFrance's influence extends beyond Europe through its overseas regions and territories, such as French Guiana, Saint Pierre and Miquelon, and the French West Indies. These territories contribute to France having one of the largest discontiguous exclusive economic zones in the world, enhancing its strategic and economic reach [Data: Entities (278, 279, 280); Relationships (128, 129, 130)].\n\n## France's role in international organizations\n\nFrance is a permanent member of the United Nations Security Council and a member of NATO and the Organisation for Economic Co-operation and Development (OECD). These memberships underscore France's commitment to international peace, security, and economic progress, positioning it as a key player in global governance [Data: Entities (281, 282, 283); Relationships (131, 132, 133)].\n\n## Cultural influence through the Francophonie\n\nFrance is a member of the Francophonie, an international organization representing countries and regions where French is a customary language. This membership highlights France's cultural influence and its role in promoting the French language and culture worldwide, fostering international cooperation and cultural exchange [Data: Entities (284); Relationships (134)].&quot;, rank=9.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='12', short_id='12', title='European Union and Its Foundational Entities', community_id='12', summary=&quot;The European Union (EU) is a significant supranational political and economic union consisting of 27 member states, with foundational ties to early organizations such as the European Atomic Energy Community and the European Coal and Steel Community. Key member states like France, Italy, and Germany played pivotal roles in its formation. The EU's influence is further highlighted by its achievements, such as the Nobel Peace Prize, and its structural components like the Schengen Area and the Eurozone.&quot;, full_content=&quot;# European Union and Its Foundational Entities\n\nThe European Union (EU) is a significant supranational political and economic union consisting of 27 member states, with foundational ties to early organizations such as the European Atomic Energy Community and the European Coal and Steel Community. Key member states like France, Italy, and Germany played pivotal roles in its formation. The EU's influence is further highlighted by its achievements, such as the Nobel Peace Prize, and its structural components like the Schengen Area and the Eurozone.\n\n## The European Union's foundational role and influence\n\nThe European Union (EU) is a major political and economic union that wields significant global influence, often described as an emerging superpower. Established in 1993 with the Maastricht Treaty and further strengthened by the Treaty of Lisbon in 2009, the EU has developed substantial roles in external relations and defense, maintaining diplomatic missions worldwide [Data: Entities (74); Relationships (104, 105)].\n\n## Key founding member states of the EU\n\nFrance, Italy, Luxembourg, the Netherlands, and West Germany were among the Inner Six states that played crucial roles in the formation of the European Union. These countries were instrumental in the early stages of European integration, contributing to the establishment of the EU as a significant political and economic entity [Data: Entities (74, 82, 83, 84, 85); Relationships (109, 110, 111, 112, 113)].\n\n## Early organizations contributing to the EU's formation\n\nThe European Atomic Energy Community, European Coal and Steel Community, and European Economic Community were among the early organizations that laid the groundwork for the formation of the European Union. These entities were crucial in fostering cooperation and integration among European countries, leading to the establishment of the EU [Data: Entities (90, 88, 89); Relationships (118, 116, 117)].\n\n## The Schengen Area and Eurozone as integral components\n\nThe Schengen Area and the Eurozone are integral components of the European Union, facilitating free movement of people and economic integration among member states. The Schengen Area allows for passport-free travel across member states, while the Eurozone comprises countries that have adopted the euro as their currency, enhancing economic cohesion [Data: Entities (75, 76); Relationships (102, 103)].\n\n## Recognition of the EU's contributions to peace\n\nIn 2012, the European Union was awarded the Nobel Peace Prize for its contributions to peace and reconciliation. This recognition underscores the EU's role in promoting stability and cooperation in Europe, highlighting its impact on global peace efforts [Data: Entities (79); Relationships (106)].\n\n## The United Kingdom's departure from the EU\n\nThe United Kingdom is the only member state to have left the European Union, doing so in 2020. This departure marked a significant moment in the EU's history, reflecting the complexities and challenges of maintaining unity among diverse member states [Data: Entities (80); Relationships (107)].&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='13', short_id='13', title='Seattle: A Hub of Culture, Technology, and History', community_id='13', summary=&quot;Seattle is a major city on the West Coast of the United States, known for its significant cultural history, economic development, and technological advancements. The community is characterized by its diverse neighborhoods, historical significance, and its role as a center for major corporations like Amazon and Microsoft. Seattle's cultural influence is further highlighted by its association with iconic musicians and bands, as well as its historical ties to Native American tribes.&quot;, full_content=&quot;# Seattle: A Hub of Culture, Technology, and History\n\nSeattle is a major city on the West Coast of the United States, known for its significant cultural history, economic development, and technological advancements. The community is characterized by its diverse neighborhoods, historical significance, and its role as a center for major corporations like Amazon and Microsoft. Seattle's cultural influence is further highlighted by its association with iconic musicians and bands, as well as its historical ties to Native American tribes.\n\n## Seattle's Role as a Technology Hub\n\nSeattle is home to major technology companies such as Amazon and Microsoft, which have significantly contributed to its economic growth and global influence. Amazon, founded in Seattle in 1994, has grown to become one of the largest internet retailers in the world, while Microsoft, with its headquarters in the Seattle area, is a leading technology company known for its software and hardware products [Data: Entities (235, 234); Relationships (243, 242)].\n\n## Cultural and Musical Heritage\n\nSeattle has a rich cultural and musical heritage, being the birthplace of pioneering grunge bands like Nirvana, Pearl Jam, and Soundgarden. The city is also associated with legendary musicians such as Jimi Hendrix and Quincy Jones, whose careers were nurtured in Seattle. This vibrant musical scene has played a crucial role in shaping Seattle's cultural identity and influence [Data: Entities (243, 244, 245, 241, 255); Relationships (249, 250, 251, 247, 263)].\n\n## Historical Significance and Native American Heritage\n\nSeattle's history is deeply intertwined with the Native American tribes, particularly the Duwamish and Suquamish tribes. The city is named after Chief Seattle, a prominent leader of these tribes. This historical connection highlights the city's rich cultural heritage and its ongoing relationship with Native American communities [Data: Entities (232, 256, 246); Relationships (240, 252, 253)].\n\n## Economic and Trade Importance\n\nSeattle serves as a major economic hub, with the Port of Seattle being one of the largest ports in North America. The city's strategic location near the Pacific Ocean and its proximity to the Canadian border make it a vital gateway for international trade, particularly with East Asia. This economic significance underscores Seattle's role in global commerce and trade [Data: Entities (229, 247, 249); Relationships (238, 254, 257)].\n\n## Diverse Neighborhoods and Cultural Districts\n\nSeattle is known for its diverse neighborhoods, such as the Central District and the Chinatown/International District, which are celebrated for their cultural history and diversity. These neighborhoods contribute to the city's vibrant cultural landscape and reflect its multicultural heritage, making Seattle a unique and dynamic urban environment [Data: Entities (252, 251); Relationships (260, 259)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='14', short_id='14', title='Washington State and Its Key Geographical and Historical Entities', community_id='14', summary=&quot;The community centers around Washington State, highlighting its geographical features, historical significance, and neighboring regions. Key entities include Seattle, Puget Sound, and Mount Rainier, with historical ties to George Washington and the Oregon Treaty. The relationships between these entities underscore Washington's role as a significant economic and cultural hub in the Pacific Northwest.&quot;, full_content=&quot;# Washington State and Its Key Geographical and Historical Entities\n\nThe community centers around Washington State, highlighting its geographical features, historical significance, and neighboring regions. Key entities include Seattle, Puget Sound, and Mount Rainier, with historical ties to George Washington and the Oregon Treaty. The relationships between these entities underscore Washington's role as a significant economic and cultural hub in the Pacific Northwest.\n\n## Washington's Geographical Significance\n\nWashington is the northernmost state in the Pacific Northwest region of the United States, known for its diverse geography and significant agricultural production. It borders the Pacific Ocean to the west, providing access to major maritime routes [Data: Entities (203, 141); Relationships (189)]. The state's geographical features, including Puget Sound and Mount Rainier, contribute to its natural beauty and ecological diversity [Data: Entities (212, 207); Relationships (236, 231)].\n\n## Seattle as an Economic Hub\n\nSeattle is the most populous city in Washington and serves as a major economic hub. Its strategic location near the Pacific Ocean via Puget Sound facilitates trade and commerce, making it a vital part of the state's economy [Data: Entities (203); Relationships (230, 190, 256)]. Seattle's economic influence extends beyond the state, impacting the broader Pacific Northwest region.\n\n## Historical Ties to George Washington\n\nThe state of Washington is named after George Washington, the first president of the United States, reflecting its historical significance [Data: Entities (204); Relationships (228)]. This connection underscores the state's foundational role in American history and its enduring legacy as a symbol of leadership and governance.\n\n## The Oregon Treaty and Territorial Formation\n\nThe Oregon Treaty of 1846 was a pivotal agreement between the United States and the British Empire, leading to the formation of the state of Washington. This treaty ceded the western part of the Washington Territory to the U.S., shaping the state's current borders and political landscape [Data: Entities (208); Relationships (232)].\n\n## Washington's Bordering Regions\n\nWashington shares borders with British Columbia to the north, Idaho to the east, and Oregon to the south, positioning it as a key player in regional interactions and cross-border relations [Data: Entities (209, 210, 211); Relationships (233, 234, 235)]. These borders facilitate economic and cultural exchanges, enhancing Washington's role as a gateway to both domestic and international markets.&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='15', short_id='15', title='Denny Party and Arthur A. Denny', community_id='15', summary=&quot;The community is centered around the Denny Party, a group of early settlers in Seattle, and their leader, Arthur A. Denny. The relationships highlight the historical significance of these entities in the context of Seattle's early development.&quot;, full_content=&quot;# Denny Party and Arthur A. Denny\n\nThe community is centered around the Denny Party, a group of early settlers in Seattle, and their leader, Arthur A. Denny. The relationships highlight the historical significance of these entities in the context of Seattle's early development.\n\n## Denny Party as early settlers of Seattle\n\nThe Denny Party is recognized as a group of early settlers who arrived in Seattle in 1851. Their settlement marked a significant moment in the history of Seattle, contributing to its development and growth as a city. The Denny Party's arrival and subsequent activities laid the foundation for the establishment of Seattle as a key urban center in the Pacific Northwest. [Data: Entities (231); Relationships (239)]\n\n## Arthur A. Denny's leadership role\n\nArthur A. Denny played a crucial role as the leader of the Denny Party. His leadership was instrumental in guiding the settlers through the challenges of establishing a new community in the Pacific Northwest. Denny's vision and leadership helped shape the early governance and infrastructure of Seattle, making him a pivotal figure in the city's history. [Data: Entities (230); Relationships (279)]&quot;, rank=4.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='16', short_id='16', title='United Nations and Its Global Influence', community_id='16', summary=&quot;The community centers around the United Nations (UN), a pivotal international organization with a broad mandate to maintain peace, security, and foster international cooperation. Key entities include the UN's principal organs such as the Security Council, General Assembly, and International Court of Justice, as well as specialized agencies like UNICEF and the World Health Organization. The UN's headquarters in New York City and offices in Geneva, Nairobi, Vienna, and The Hague highlight its global presence. António Guterres serves as the current Secretary-General, guiding the organization's efforts in addressing global challenges.&quot;, full_content=&quot;# United Nations and Its Global Influence\n\nThe community centers around the United Nations (UN), a pivotal international organization with a broad mandate to maintain peace, security, and foster international cooperation. Key entities include the UN's principal organs such as the Security Council, General Assembly, and International Court of Justice, as well as specialized agencies like UNICEF and the World Health Organization. The UN's headquarters in New York City and offices in Geneva, Nairobi, Vienna, and The Hague highlight its global presence. António Guterres serves as the current Secretary-General, guiding the organization's efforts in addressing global challenges.\n\n## United Nations as a central global entity\n\nThe United Nations is a central entity in global governance, established after World War II to prevent future conflicts and promote international cooperation. It comprises 193 member states and is headquartered in New York City, with additional offices in Geneva, Nairobi, Vienna, and The Hague. The UN's role in maintaining international peace and security, fostering friendly relations among nations, and promoting social progress underscores its significance in the global community [Data: Entities (16); Relationships (45, 46, 47, 48, 49)].\n\n## António Guterres' leadership as Secretary-General\n\nAntónio Guterres, a Portuguese politician and diplomat, has been serving as the Secretary-General of the United Nations since January 1, 2017, and was re-elected on June 8, 2021. His leadership is crucial in steering the UN's efforts to address global challenges such as climate change, peacekeeping, and humanitarian crises. Guterres' diplomatic skills and experience play a vital role in navigating complex international issues and fostering cooperation among member states [Data: Entities (191); Relationships (51)].\n\n## The role of the Security Council in maintaining peace\n\nThe Security Council is one of the six principal organs of the United Nations, tasked with maintaining international peace and security. It has the authority to make binding decisions that member states must implement, making it a powerful entity within the UN system. The Security Council's decisions can include imposing sanctions, authorizing the use of force, and establishing peacekeeping missions, highlighting its critical role in conflict resolution and international diplomacy [Data: Entities (194); Relationships (55)].\n\n## The General Assembly's function in global decision-making\n\nThe General Assembly is another principal organ of the United Nations, responsible for making decisions on important questions such as peace and security, admission of new members, and budgetary matters. It serves as a forum for member states to discuss and coordinate on international issues, reflecting the diverse interests and perspectives of the global community. The General Assembly's resolutions, while not legally binding, carry significant moral and political weight [Data: Entities (193); Relationships (54)].\n\n## Specialized agencies' contributions to global welfare\n\nThe United Nations encompasses several specialized agencies that contribute to global welfare, including UNICEF, the World Health Organization, and the World Food Programme. These agencies address critical issues such as children's rights, public health, and food security, providing humanitarian aid and promoting sustainable development. Their work is essential in improving the quality of life for people worldwide and achieving the UN's broader goals of social progress and human rights [Data: Entities (201, 199, 200); Relationships (63, 60, 61)].&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='18', short_id='18', title='Los Angeles and Its Historical and Cultural Significance', community_id='18', summary=&quot;The community centers around Los Angeles, a major city in California, known for its historical roots, cultural diversity, and economic significance. Key entities include the state of California, the Greater Los Angeles area, and historical figures like Felipe de Neve and Juan Rodríguez Cabrillo. The city's development is marked by significant events such as the Mexican–American War and the hosting of the Summer Olympics.&quot;, full_content=&quot;# Los Angeles and Its Historical and Cultural Significance\n\nThe community centers around Los Angeles, a major city in California, known for its historical roots, cultural diversity, and economic significance. Key entities include the state of California, the Greater Los Angeles area, and historical figures like Felipe de Neve and Juan Rodríguez Cabrillo. The city's development is marked by significant events such as the Mexican–American War and the hosting of the Summer Olympics.\n\n## Los Angeles as a major cultural and economic hub\n\nLos Angeles is the most populous city in California and the second-most populous in the United States, serving as a major cultural, financial, and commercial center. Its diverse population and vibrant economy contribute significantly to the state's overall economic output [Data: Entities (125); Relationships (100, 167)].\n\n## Historical foundations of Los Angeles\n\nThe city of Los Angeles was founded by Spanish governor Felipe de Neve on September 4, 1781, on the site of the village of Yaanga, originally inhabited by the Tongva people. This historical foundation highlights the city's deep-rooted cultural heritage and its transformation over centuries [Data: Entities (130, 142, 143); Relationships (171, 184, 185)].\n\n## Los Angeles's transition through major historical events\n\nLos Angeles transitioned from Spanish to Mexican control following the Mexican War of Independence in 1821 and later became part of the United States after the Mexican–American War, as formalized by the Treaty of Guadalupe Hidalgo in 1848. These events were pivotal in shaping the city's political and cultural landscape [Data: Entities (131, 132, 133); Relationships (172, 173, 174)].\n\n## Significance of the Greater Los Angeles area\n\nGreater Los Angeles is a sprawling metropolitan area that includes Los Angeles and Riverside–San Bernardino, with over 18 million residents. This region is a significant contributor to the state's economy and cultural diversity, making it a critical area of focus for understanding California's overall dynamics [Data: Entities (127); Relationships (168)].\n\n## Los Angeles's role in international events\n\nLos Angeles has hosted the Summer Olympics twice, in 1932 and 1984, and is set to host again in 2028. These events underscore the city's global significance and its capacity to host large-scale international gatherings, which have lasting impacts on its infrastructure and global reputation [Data: Entities (135, 136, 137); Relationships (176, 177, 178)].\n\n## Architectural influence of Frank Gehry in Los Angeles\n\nRenowned architect Frank Gehry has left a significant mark on Los Angeles with his innovative designs, which are prominently featured in the city's evolving urban core. His work contributes to the city's reputation as a center of architectural innovation and cultural expression [Data: Entities (138); Relationships (179)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='19', short_id='19', title='Los Angeles Aqueduct and Eastern California Water Supply', community_id='19', summary='The community is centered around the Los Angeles Aqueduct, a crucial water conveyance system that transports water from Eastern California to Los Angeles. This system plays a vital role in supplying water to the city, highlighting the interdependence between Los Angeles and Eastern California.', full_content=&quot;# Los Angeles Aqueduct and Eastern California Water Supply\n\nThe community is centered around the Los Angeles Aqueduct, a crucial water conveyance system that transports water from Eastern California to Los Angeles. This system plays a vital role in supplying water to the city, highlighting the interdependence between Los Angeles and Eastern California.\n\n## Los Angeles Aqueduct as a critical infrastructure\n\nThe Los Angeles Aqueduct is a key infrastructure component, completed in 1913, that serves as a major water conveyance system for the city of Los Angeles. Its primary function is to deliver water from Eastern California, ensuring a steady supply to meet the city's needs. The aqueduct's significance is underscored by its role in supporting the water demands of a large urban population, making it an essential element of the region's water management strategy. [Data: Entities (134); Relationships (175, 188)]\n\n## Interdependence between Los Angeles and Eastern California\n\nThe relationship between Los Angeles and Eastern California is characterized by a significant interdependence, primarily facilitated by the Los Angeles Aqueduct. This system not only supplies water to Los Angeles but also highlights the reliance of the city on resources from Eastern California. The aqueduct's operation underscores the importance of regional cooperation and resource management to ensure sustainable water supply for urban centers. [Data: Entities (134, 144); Relationships (175, 188)]&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='20', short_id='20', title='Washington, D.C. and Its Key Institutions', community_id='20', summary=&quot;The community centers around Washington, D.C., the capital city of the United States, which hosts numerous significant institutions and landmarks. Key entities include the International Monetary Fund, the National Mall, and the White House, all of which are integral to the city's political, cultural, and historical landscape.&quot;, full_content=&quot;# Washington, D.C. and Its Key Institutions\n\nThe community centers around Washington, D.C., the capital city of the United States, which hosts numerous significant institutions and landmarks. Key entities include the International Monetary Fund, the National Mall, and the White House, all of which are integral to the city's political, cultural, and historical landscape.\n\n## Washington, D.C. as the Federal Capital\n\nWashington, D.C. serves as the federal capital district of the United States, playing a pivotal role in the governance and administration of the country. It is under the exclusive jurisdiction of the U.S. Congress, highlighting its importance in national legislative processes [Data: Entities (1); Relationships (0, 16)].\n\n## International Organizations in Washington, D.C.\n\nThe city is home to several major international organizations, including the International Monetary Fund and the World Bank, which are headquartered there. These institutions contribute to global monetary cooperation and financial stability, underscoring Washington, D.C.'s influence in international economic affairs [Data: Entities (293); Relationships (22, 23)].\n\n## Historic and Cultural Significance\n\nWashington, D.C. is rich in historical and cultural landmarks, such as the National Mall, which features numerous national monuments and museums. This area is a focal point for tourism and national events, reflecting the city's cultural heritage and its role in American history [Data: Entities (292); Relationships (21)].\n\n## Political Influence and Lobbying\n\nK Street in Washington, D.C. is renowned as a center for lobbying and advocacy organizations, indicating the city's significant political influence. This area is synonymous with political advocacy and the shaping of public policy, highlighting the strategic importance of Washington, D.C. in national and international politics [Data: Entities (300); Relationships (32)].\n\n## Geographical and Historical Context\n\nWashington, D.C. is strategically located along the Potomac River, sharing borders with Maryland and Virginia. The city's design was planned by Pierre Charles L'Enfant, and its establishment as the capital was approved by the Residence Act. These historical and geographical factors have shaped its development and significance [Data: Entities (295, 288, 287); Relationships (27, 26, 28, 18, 17)].\n\n## The White House and Presidential Influence\n\nThe White House, located in Washington, D.C., serves as the official residence and workplace of the President of the United States. This iconic building is a symbol of the executive branch of the U.S. government and plays a crucial role in national and international decision-making [Data: Entities (290); Relationships (19)].\n\n## Judicial Authority in Washington, D.C.\n\nThe Supreme Court Building, situated in Washington, D.C., is the seat of the Supreme Court of the United States. This institution is the highest judicial authority in the country, underscoring the city's role as a center of legal and constitutional governance [Data: Entities (291); Relationships (20)].\n\n## Voting Rights and Constitutional Amendments\n\nThe Twenty-third Amendment to the U.S. Constitution grants residents of Washington, D.C. the right to vote for presidential electors. This amendment reflects the ongoing evolution of voting rights and the city's unique status in the American political system [Data: Entities (299); Relationships (31)].&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='21', short_id='21', title='United States and Global Organizations', community_id='21', summary=&quot;The community is centered around the United States and its involvement with major global organizations and historical events. Key entities include the United Nations, World Bank, NATO, and the Organization of American States, with significant historical ties to World War II and the Cold War. The relationships highlight the United States' foundational role in these organizations and its geopolitical influence.&quot;, full_content=&quot;# United States and Global Organizations\n\nThe community is centered around the United States and its involvement with major global organizations and historical events. Key entities include the United Nations, World Bank, NATO, and the Organization of American States, with significant historical ties to World War II and the Cold War. The relationships highlight the United States' foundational role in these organizations and its geopolitical influence.\n\n## United States as a founding member of major global organizations\n\nThe United States is a founding member of several key international organizations, including the United Nations, World Bank, NATO, and the Organization of American States. These memberships underscore the country's pivotal role in shaping global governance and economic policies. The United Nations, established after World War II, aims to prevent future global conflicts, with the U.S. as a permanent member of its Security Council [Data: Relationships (10, 36); Entities (10, 14, 13, 15)].\n\n## World War II's impact on U.S. global positioning\n\nWorld War II was a transformative event for the United States, marking its emergence as a global superpower. The attack on Pearl Harbor prompted the U.S. entry into the war, leading to significant military and economic mobilization. San Francisco served as a major port for naval service members, highlighting the strategic importance of the Pacific Theater. The war's conclusion saw the U.S. playing a central role in establishing the United Nations [Data: Entities (10, 20); Relationships (5, 35, 36)].\n\n## The Cold War and U.S. geopolitical influence\n\nFollowing World War II, the United States was one of the two superpowers involved in the Cold War, a period of geopolitical tension with the Soviet Union. This era was marked by ideological conflict and competition for global influence, further solidifying the U.S.'s role in international affairs. The Cold War influenced U.S. foreign policy and its involvement in various international alliances and organizations [Data: Relationships (6)].\n\n## Washington, D.C. as a hub for international organizations\n\nWashington, D.C. serves as the headquarters for several major international organizations, including the Organization of American States and the World Bank. This positioning reflects the United States' central role in facilitating international cooperation and economic development. The presence of these organizations in the U.S. capital underscores the country's influence in regional and global affairs [Data: Relationships (0, 24, 22)].\n\n## U.S. territorial and political structure\n\nThe United States' territorial and political structure includes states such as Alaska and Hawaii, and political bodies like the House of Representatives and the Senate. These entities are integral to the country's governance and legislative processes. The geographical diversity and political framework of the U.S. contribute to its domestic and international policy-making capabilities [Data: Entities (4, 5, 21, 22); Relationships (3, 4, 13, 14)].&quot;, rank=9.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='22', short_id='22', title='District of Columbia and Alexandria', community_id='22', summary='The community is centered around the District of Columbia and its historical relationship with Alexandria, Virginia. Alexandria was originally part of the District of Columbia before being returned to Virginia, highlighting a significant historical and geographical connection between these entities.', full_content='# District of Columbia and Alexandria\n\nThe community is centered around the District of Columbia and its historical relationship with Alexandria, Virginia. Alexandria was originally part of the District of Columbia before being returned to Virginia, highlighting a significant historical and geographical connection between these entities.\n\n## Historical connection between Alexandria and the District of Columbia\n\nAlexandria, a city in Virginia, was originally part of the District of Columbia. This historical connection is significant as it reflects the early territorial boundaries and political decisions that shaped the region. The return of Alexandria to Virginia from the District of Columbia is a notable event in the history of both entities, affecting their development and governance [Data: Entities (297); Relationships (296)].\n\n## Geographical significance of the District of Columbia\n\nThe District of Columbia, which encompasses Washington, D.C., is a critical geographical and political entity in the United States. Its location and boundaries have been influenced by historical decisions, such as the inclusion and later exclusion of Alexandria. Understanding the geographical significance of the District of Columbia is essential for comprehending its role in national governance and its relationship with neighboring regions [Data: Entities (301); Relationships (25)].', rank=4.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='23', short_id='23', title='U.S. Congress and Capitol Building', community_id='23', summary='The community is centered around the U.S. Congress and the Capitol Building, which are integral to the legislative operations of the United States government. The U.S. Congress holds exclusive jurisdiction over Washington, D.C., and operates from the Capitol Building, highlighting its central role in the governance of the nation.', full_content=&quot;# U.S. Congress and Capitol Building\n\nThe community is centered around the U.S. Congress and the Capitol Building, which are integral to the legislative operations of the United States government. The U.S. Congress holds exclusive jurisdiction over Washington, D.C., and operates from the Capitol Building, highlighting its central role in the governance of the nation.\n\n## U.S. Congress as a central legislative body\n\nThe U.S. Congress is the legislative body of the United States government, responsible for making federal laws. It holds exclusive jurisdiction over Washington, D.C., which underscores its significant influence and authority in the governance of the nation's capital. This central role makes it a pivotal entity in the community, affecting a wide range of national and local policies [Data: Entities (286); Relationships (16)].\n\n## Capitol Building as the seat of legislative power\n\nThe Capitol Building serves as the home of the U.S. Congress and is the seat of the legislative branch of the U.S. federal government. This iconic building is not only a symbol of American democracy but also a functional space where legislative activities are conducted. Its association with the U.S. Congress highlights its importance in the legislative process and its role in the community [Data: Entities (289); Relationships (295)].\n\n## Exclusive jurisdiction over Washington, D.C.\n\nThe U.S. Congress has exclusive jurisdiction over Washington, D.C., which means it has the authority to govern the district without interference from state governments. This unique status allows Congress to directly influence the administration and legislative framework of the capital, making it a key player in the community's governance structure [Data: Relationships (16)].\n\n## Interconnectedness of entities within the community\n\nThe relationship between the U.S. Congress and the Capitol Building illustrates the interconnectedness of entities within this community. The Capitol Building is not only a physical structure but also a hub of legislative activity, directly linked to the operations of Congress. This interconnectedness is crucial for understanding the dynamics and functioning of the legislative branch [Data: Relationships (295)].&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='24', short_id='24', title='Virginia and the Thirteen Colonies', community_id='24', summary=&quot;The community centers around Virginia, a historically significant U.S. state, and its relationship with the Thirteen Colonies. Virginia's geographical proximity to Washington, D.C., and its role as the site of the first settlement of the Thirteen Colonies are key aspects of this community.&quot;, full_content=&quot;# Virginia and the Thirteen Colonies\n\nThe community centers around Virginia, a historically significant U.S. state, and its relationship with the Thirteen Colonies. Virginia's geographical proximity to Washington, D.C., and its role as the site of the first settlement of the Thirteen Colonies are key aspects of this community.\n\n## Virginia's historical significance\n\nVirginia holds a prominent place in U.S. history as the location of the first settlement of the Thirteen Colonies. This historical context underscores Virginia's importance in the formation of the United States and its cultural heritage. The state's role in early American history continues to influence its identity and significance today. [Data: Entities (18, 19); Relationships (65)]\n\n## Geographical proximity to Washington, D.C.\n\nVirginia is located across the Potomac River from Washington, D.C., which places it in close proximity to the nation's capital. This geographical relationship enhances Virginia's strategic importance, both politically and economically. The proximity facilitates interactions and influences between the state and the federal government, impacting policy and development in the region. [Data: Relationships (27)]&quot;, rank=7.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='25', short_id='25', title='Europe, Christendom, and the Roman Empire', community_id='25', summary=&quot;The community is centered around Europe, which has been historically influenced by the Roman Empire and the concept of Christendom. These entities are interconnected through cultural, religious, and political developments that have shaped the continent's identity over centuries.&quot;, full_content=&quot;# Europe, Christendom, and the Roman Empire\n\nThe community is centered around Europe, which has been historically influenced by the Roman Empire and the concept of Christendom. These entities are interconnected through cultural, religious, and political developments that have shaped the continent's identity over centuries.\n\n## Europe's historical division during the Cold War\n\nEurope was divided into Western and Eastern Blocs during the Cold War, a period that significantly influenced the continent's political landscape. This division was emblematic of the broader ideological conflict between capitalism and communism, which had lasting effects on European integration and the development of the European Union [Data: Relationships (40)].\n\n## Christendom's cultural and religious influence in Europe\n\nChristendom was a dominant cultural and religious concept in Europe before the rise of the modern concept of 'the West.' It played a crucial role in shaping European identity and values during the medieval period, influencing everything from art and architecture to law and education. The legacy of Christendom continues to be felt in contemporary European culture and politics [Data: Relationships (224)].\n\n## The Roman Empire's impact on European development\n\nThe Roman Empire was a significant historical entity within Europe, influencing its cultural and political development. The empire's legal and governmental systems, as well as its infrastructure and urban planning, laid the groundwork for modern European states. The Roman legacy is evident in the widespread use of Romance languages and the adoption of Roman law principles across the continent [Data: Relationships (223)].\n\n## The concept of 'the West' replacing Christendom\n\nThe transition from the concept of Christendom to 'the West' marked a significant shift in European identity. This change reflected broader cultural and political transformations, including the Renaissance, the Reformation, and the Enlightenment, which collectively redefined Europe's place in the world. The idea of 'the West' has since become a central element in global geopolitics, influencing international relations and cultural exchanges [Data: Entities (181)].\n\n## Europe's role in shaping global history\n\nEurope has played a pivotal role in shaping global history through its empires, cultural movements, and political ideologies. From the spread of Christianity and the Renaissance to the Industrial Revolution and the two World Wars, Europe's influence has been profound and far-reaching. This historical legacy continues to impact contemporary global dynamics, including economic systems, international law, and cultural exchanges [Data: Entities (179)].&quot;, rank=7.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='26', short_id='26', title='Cold War and Geopolitical Tensions', community_id='26', summary='The community is centered around the Cold War, a period of significant ideological and geopolitical tension primarily between the United States and the Soviet Union. This era involved the Western and Eastern Blocs and had a profound impact on global politics, including the operations of the United Nations and the division of Europe.', full_content=&quot;# Cold War and Geopolitical Tensions\n\nThe community is centered around the Cold War, a period of significant ideological and geopolitical tension primarily between the United States and the Soviet Union. This era involved the Western and Eastern Blocs and had a profound impact on global politics, including the operations of the United Nations and the division of Europe.\n\n## Cold War as a central geopolitical conflict\n\nThe Cold War was a central geopolitical conflict that lasted approximately 40 years, primarily involving the United States and the Soviet Union. This period was marked by ideological battles and military tensions that extended beyond the two superpowers to include their respective allies in the Western and Eastern Blocs. The Cold War's influence was pervasive, affecting global politics, economics, and military strategies [Data: Entities (11, 12); Relationships (6, 38)].\n\n## Impact on the United Nations\n\nThe Cold War significantly complicated the United Nations' mission to preserve world peace. The ideological divide between the Western and Eastern Blocs often resulted in deadlock within the UN, as both sides wielded their influence to block initiatives that did not align with their interests. This tension hindered the UN's ability to effectively address global conflicts and maintain international peace during this era [Data: Entities (11); Relationships (44)].\n\n## Division of Europe\n\nEurope was a major theater of Cold War tensions, divided into the Western and Eastern Blocs. This division was symbolized by the Iron Curtain, which physically and ideologically separated the two regions. The geopolitical dynamics of the Cold War had a profound impact on European countries, influencing their political systems, economies, and alliances. The Western Bloc aligned with the United States and NATO, while the Eastern Bloc was under the influence of the Soviet Union [Data: Relationships (40, 41, 42, 43, 226)].\n\n## Role of the Western Bloc\n\nThe Western Bloc, consisting of countries aligned with the United States and NATO, played a crucial role in the Cold War. These countries were united by a shared commitment to countering the spread of communism and supporting democratic governance. The Western Bloc's strategies and policies were instrumental in shaping the geopolitical landscape of the Cold War era, as they sought to contain Soviet influence and promote their own ideological values [Data: Entities (183); Relationships (42, 226)].\n\n## Influence of the Eastern Bloc\n\nThe Eastern Bloc, led by the Soviet Union, was a key player in the Cold War's geopolitical tensions. This group of countries was characterized by communist governments and a strong alignment with Soviet policies. The Eastern Bloc's influence extended across Eastern Europe, where it sought to expand its ideological reach and counter Western influence. The bloc's actions and policies were central to the Cold War's dynamics, as they often clashed with those of the Western Bloc [Data: Relationships (43)].&quot;, rank=9.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='27', short_id='27', title='Eastern Bloc and Iron Curtain Dynamics', community_id='27', summary='The community is centered around the Eastern Bloc and its interactions during the Cold War, particularly in relation to the Iron Curtain. The Eastern Bloc, comprising Eastern Europe, was a significant player in the geopolitical tensions of the Cold War, separated from the Western Bloc by the Iron Curtain. This division had profound implications for both Eastern and Western Europe.', full_content=&quot;# Eastern Bloc and Iron Curtain Dynamics\n\nThe community is centered around the Eastern Bloc and its interactions during the Cold War, particularly in relation to the Iron Curtain. The Eastern Bloc, comprising Eastern Europe, was a significant player in the geopolitical tensions of the Cold War, separated from the Western Bloc by the Iron Curtain. This division had profound implications for both Eastern and Western Europe.\n\n## Eastern Bloc's role in the Cold War\n\nThe Eastern Bloc was a key player in the geopolitical tensions of the Cold War, aligning with the Soviet Union against the Western Bloc. This alignment significantly influenced global politics and military strategies during the period, contributing to the prolonged state of political and military tension known as the Cold War [Data: Entities (184); Relationships (43)].\n\n## Impact of the Iron Curtain\n\nThe Iron Curtain served as a political and ideological barrier that divided Europe into the Eastern and Western Blocs. This division not only separated Eastern Europe from Western Europe but also symbolized the broader ideological conflict between communism and capitalism. The presence of the Iron Curtain had significant social, economic, and political impacts on the countries involved [Data: Entities (182); Relationships (227, 225, 226)].\n\n## Eastern Europe's alignment with the Eastern Bloc\n\nEastern Europe was significantly influenced by the geopolitical dynamics of the Cold War, being part of the Eastern Bloc. This alignment affected the region's political systems, economies, and societies, as they were closely tied to Soviet policies and ideologies. The influence of the Eastern Bloc on Eastern Europe was profound and long-lasting [Data: Entities (185); Relationships (41, 225)].\n\n## Western Europe's position during the Cold War\n\nWestern Europe was part of the Western Bloc, which was significantly influenced by the geopolitical dynamics of the Cold War. The region was separated from Eastern Europe by the Iron Curtain, which marked the boundary between the two opposing ideologies. Western Europe's alignment with the United States and other NATO countries shaped its political and economic development during this period [Data: Entities (178); Relationships (39, 222)].\n\n## The Iron Curtain's symbolic significance\n\nThe Iron Curtain was more than just a physical barrier; it was a symbol of the ideological divide between the communist East and the capitalist West. This division influenced not only the countries directly involved but also global perceptions and policies during the Cold War. The Iron Curtain's legacy continues to affect international relations and historical narratives [Data: Entities (182); Relationships (227, 226)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='0', short_id='0', title='San Francisco: Cultural and Economic Hub', community_id='0', summary=&quot;San Francisco is a major city in Northern California, known for its cultural diversity, economic significance, and historical landmarks. The city is a hub for transportation, arts, and sciences, and has played a pivotal role in various historical events. Key entities include the Golden Gate Bridge, Alcatraz Island, and the San Francisco International Airport, among others. The city's rich history and vibrant cultural scene make it a significant community with a wide-ranging impact.&quot;, full_content=&quot;# San Francisco: Cultural and Economic Hub\n\nSan Francisco is a major city in Northern California, known for its cultural diversity, economic significance, and historical landmarks. The city is a hub for transportation, arts, and sciences, and has played a pivotal role in various historical events. Key entities include the Golden Gate Bridge, Alcatraz Island, and the San Francisco International Airport, among others. The city's rich history and vibrant cultural scene make it a significant community with a wide-ranging impact.\n\n## San Francisco's Economic and Cultural Significance\n\nSan Francisco is recognized as a global center of economic activity, arts, and sciences. The city hosts numerous companies and cultural institutions, further cementing its status as a pivotal city in both the state and the world. Its commercial and financial importance is underscored by its role as a hub for transportation and its diverse cultural contributions [Data: Entities (146)].\n\n## Historical Landmarks and Events\n\nSan Francisco is home to iconic landmarks such as the Golden Gate Bridge and Alcatraz Island. The city has also been the site of significant historical events, including the 1906 earthquake and fire, which led to a rapid rebuilding of the city, and the signing of the United Nations Charter in 1945 [Data: Entities (146, 147, 148, 169, 171); Relationships (191, 192, 214, 216)].\n\n## Transportation Infrastructure\n\nThe city's transportation infrastructure includes the Bay Area Rapid Transit (BART), Caltrain, and a comprehensive bus network, all of which connect San Francisco with the wider region. This infrastructure is essential for both residents and visitors, facilitating movement within the city and beyond [Data: Entities (163, 164, 176); Relationships (207, 208, 221)].\n\n## Cultural and Educational Institutions\n\nSan Francisco is home to a variety of cultural and educational institutions, including the California Academy of Sciences, the de Young Museum, and several universities. These institutions contribute to the city's reputation as a center for arts and education, attracting visitors and scholars from around the world [Data: Entities (159, 153, 149, 150, 151); Relationships (203, 197, 193, 194, 195)].\n\n## Role in Social Movements\n\nThe city has been a key location for social movements, notably the gay rights movement, which gained significant momentum in San Francisco. This has established the city as a center of liberal activism and social change, influencing both national and international discourse [Data: Entities (174); Relationships (219)].\n\n## Sports and Entertainment\n\nSan Francisco is home to major sports teams such as the Golden State Warriors and the San Francisco Giants. These teams play a significant role in the city's cultural identity and provide entertainment for both residents and visitors. The presence of these teams highlights the city's vibrant sports culture [Data: Entities (161, 160); Relationships (205, 204)].\n\n## Tourism and International Relations\n\nThe city's tourism industry is bolstered by its historical sites, cultural institutions, and events such as the Panama–Pacific International Exposition. Additionally, San Francisco has played a role in international relations, hosting the signing of the Treaty of San Francisco in 1951, which re-established peaceful relations between Japan and the Allied Powers [Data: Entities (170, 172); Relationships (215, 217)].&quot;, rank=9.0, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='1', short_id='1', title=&quot;Marseille and Provence-Alpes-Côte d'Azur&quot;, community_id='1', summary=&quot;The community is centered around Marseille, a major city in the Provence-Alpes-Côte d'Azur region, known for its historical significance, cultural events, and economic activities. Key entities include the Aix-Marseille-Provence Metropolis, the Grand Port Maritime de Marseille, and various cultural and sporting institutions, all contributing to the region's prominence.&quot;, full_content=&quot;# Marseille and Provence-Alpes-Côte d'Azur\n\nThe community is centered around Marseille, a major city in the Provence-Alpes-Côte d'Azur region, known for its historical significance, cultural events, and economic activities. Key entities include the Aix-Marseille-Provence Metropolis, the Grand Port Maritime de Marseille, and various cultural and sporting institutions, all contributing to the region's prominence.\n\n## Marseille as a historical and cultural hub\n\nMarseille is one of the oldest cities in France, originally known as Massalia by the ancient Greeks and later as Massilia during Roman times. Its rich history is reflected in its architecture and cultural institutions, such as the Basilica of Notre-Dame-de-la-Garde and the Museum of Civilisations of Europe and the Mediterranean (MUCEM) [Data: Entities (213, 223, 224, 216, 225); Relationships (266, 273, 274, 275)].\n\n## Economic significance of the Grand Port Maritime de Marseille\n\nThe Grand Port Maritime de Marseille is a major economic hub, being the first French port, the second Mediterranean port, and the fifth European port. It plays a crucial role in regional and national trade, contributing significantly to the local economy [Data: Entities (217); Relationships (267)].\n\n## Cultural and sporting events in Marseille\n\nMarseille has been recognized for its cultural and sporting activities, having been named the European Capital of Culture in 2013 and the European Capital of Sport in 2017. These events highlight the city's vibrant cultural scene and its commitment to promoting sports [Data: Entities (226, 227); Relationships (276, 277)].\n\n## Role of the Aix-Marseille-Provence Metropolis\n\nThe Aix-Marseille-Provence Metropolis, formed in 2016, encompasses Marseille, Aix-en-Provence, and 90 suburban municipalities. It addresses wider metropolitan issues, enhancing regional cooperation and development [Data: Entities (214); Relationships (264)].\n\n## Impact of the Euroméditerranée project\n\nThe Euroméditerranée project, launched in the 1990s, focuses on economic development and urban renewal in Marseille. It has led to significant infrastructure projects and renovations, boosting the city's economic growth and attractiveness [Data: Entities (218); Relationships (268)].\n\n## Marseille's geographical and strategic location\n\nSituated on the coast of the Gulf of Lion and near the mouth of the Rhône river, Marseille's location has historically made it a strategic trading port. This geographical advantage continues to support its economic activities and connectivity [Data: Entities (221); Relationships (272, 271)].\n\n## Olympique de Marseille's influence in sports\n\nOlympique de Marseille, a prominent football club based in the city, is one of the most successful and widely supported clubs in France. Its presence enhances the city's reputation in the sporting world and contributes to local pride [Data: Entities (219); Relationships (269)].\n\n## Educational impact of the University of Aix-Marseille\n\nThe University of Aix-Marseille, located in the region, is a significant educational institution contributing to research and higher education. It attracts students from various backgrounds, fostering a diverse academic environment [Data: Entities (220); Relationships (270)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='3', short_id='3', title='Nice: A Cultural and Historical Hub', community_id='3', summary=&quot;The community centers around Nice, a city with rich cultural and historical significance located in the Alpes-Maritimes department of France. It is known for its association with notable historical figures, its status as a UNESCO World Heritage Site, and its role as a cultural hub on the French Riviera. The city's historical ties to various political entities and its proximity to Monaco further enhance its importance.&quot;, full_content=&quot;# Nice: A Cultural and Historical Hub\n\nThe community centers around Nice, a city with rich cultural and historical significance located in the Alpes-Maritimes department of France. It is known for its association with notable historical figures, its status as a UNESCO World Heritage Site, and its role as a cultural hub on the French Riviera. The city's historical ties to various political entities and its proximity to Monaco further enhance its importance.\n\n## Nice as a UNESCO World Heritage Site\n\nNice was proclaimed a UNESCO World Heritage Site in 2021, highlighting its global cultural and historical significance. This designation underscores the city's rich heritage and its role as a winter resort town for the European aristocracy. The recognition by UNESCO not only enhances Nice's prestige but also contributes to its appeal as a major tourist destination, attracting visitors from around the world [Data: Relationships (74)].\n\n## Cultural significance of Nice\n\nNice is a cultural hub, home to museums dedicated to renowned artists such as Henri Matisse and Marc Chagall. The Musée Matisse and Musée Marc Chagall in Nice commemorate the works of these artists, reflecting the city's vibrant artistic heritage. Additionally, the Musée des Beaux-Arts showcases fine arts, further cementing Nice's status as a center of cultural excellence [Data: Entities (31, 30, 51, 50, 58); Relationships (69, 68, 77, 75, 76)].\n\n## Historical ties and political significance\n\nHistorically, Nice has been part of various political entities, including the French First Republic and the Kingdom of Piedmont-Sardinia. These historical ties reflect the city's strategic importance and its role in regional politics. Nice's re-annexation by France in 1860 marked a significant political shift, further emphasizing its geopolitical relevance [Data: Entities (57, 56); Relationships (83, 82)].\n\n## Notable historical figures associated with Nice\n\nNice has been a residence for several notable historical figures, including Anton Chekhov and Friedrich Nietzsche. Chekhov completed his play 'Three Sisters' while living in Nice, and Nietzsche spent winters there, writing 'Thus Spoke Zarathustra.' These associations highlight Nice's appeal to intellectuals and artists, contributing to its rich cultural legacy [Data: Entities (36, 35); Relationships (71, 70)].\n\n## Nice's geographical and touristic appeal\n\nLocated on the French Riviera, Nice is renowned for its beautiful landscapes and Mediterranean climate, making it a popular tourist destination. Its proximity to Monaco, approximately 13 kilometers away, further enhances its appeal as a travel hub. The city's scenic beauty and strategic location contribute significantly to its economic and cultural vitality [Data: Entities (26, 55); Relationships (66, 81)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='4', short_id='4', title='Lyon: A Hub of Historical and Economic Significance', community_id='4', summary=&quot;Lyon, the second largest city in France, is a central hub of historical, cultural, and economic significance. It is intricately connected with various entities such as the Rhône and Saône rivers, the Auvergne-Rhône-Alpes region, and several international organizations like Interpol and Euronews. The city's rich history is highlighted by its UNESCO World Heritage sites and its role in the invention of the cinematograph by the Lumière brothers.&quot;, full_content=&quot;# Lyon: A Hub of Historical and Economic Significance\n\nLyon, the second largest city in France, is a central hub of historical, cultural, and economic significance. It is intricately connected with various entities such as the Rhône and Saône rivers, the Auvergne-Rhône-Alpes region, and several international organizations like Interpol and Euronews. The city's rich history is highlighted by its UNESCO World Heritage sites and its role in the invention of the cinematograph by the Lumière brothers.\n\n## Lyon's Geographical and Economic Importance\n\nLyon is strategically located at the confluence of the Rhône and Saône rivers, enhancing its geographical and economic significance. The Rhône river flows through Lyon, contributing to its status as a major economic hub in France [Data: Entities (257, 222, 267); Relationships (278, 290)].\n\n## Cultural and Historical Significance of Lyon\n\nLyon is renowned for its historical and architectural landmarks, many of which are inscribed on the UNESCO World Heritage List. Notable districts include Old Lyon, the Fourvière Hill, the Presqu'île, and the slopes of the Croix-Rousse, each contributing to the city's rich cultural tapestry [Data: Entities (260, 268, 269, 270, 271); Relationships (283, 291, 292, 293, 294)].\n\n## Lyon as a Center for International Organizations\n\nLyon hosts the headquarters of several prominent international organizations, including Interpol and the International Agency for Research on Cancer. These institutions underscore Lyon's role as a center for global cooperation and research [Data: Entities (264, 265); Relationships (287, 288)].\n\n## The Lumière Brothers and the Invention of the Cinematograph\n\nLyon is the birthplace of the cinematograph, invented by Auguste and Louis Lumière. This invention marks a significant contribution to the world of cinema and highlights Lyon's role in technological innovation [Data: Entities (262, 263); Relationships (285, 286)].\n\n## Lyon's Role in the Auvergne-Rhône-Alpes Region\n\nAs the prefecture of the Auvergne-Rhône-Alpes region, Lyon plays a crucial administrative role. This position enhances its influence over regional governance and development [Data: Entities (259); Relationships (282)].\n\n## The Fête des Lumières: A Celebrated Cultural Event\n\nThe Fête des Lumières is a renowned light festival held annually in Lyon, attracting visitors from around the world. This event showcases Lyon's vibrant cultural scene and its ability to host large-scale international events [Data: Entities (261); Relationships (284)].\n\n## Euronews: A Media Presence in Lyon\n\nEuronews, an international news organization, has its headquarters in Lyon. This presence highlights the city's role as a media hub and its capacity to influence global news dissemination [Data: Entities (266); Relationships (289)].\n\n## The Metropolis of Lyon: Urban Governance\n\nThe Metropolis of Lyon is a directly elected metropolitan authority responsible for urban issues in Lyon and its suburbs. This governance structure is pivotal in managing the city's development and urban planning [Data: Entities (258); Relationships (281)].&quot;, rank=8.5, summary_embedding=None, full_content_embedding=None, attributes=None), CommunityReport(id='9', short_id='9', title='Paris: Cultural, Economic, and Transportation Hub', community_id='9', summary=&quot;Paris, the capital of France, is a central hub for culture, commerce, and international organizations. It hosts numerous significant entities such as UNESCO, the European Banking Authority, and the OECD. The city is also a major transportation center with Charles de Gaulle and Orly airports, and the Paris Métro. Paris is renowned for its cultural landmarks like the Louvre and Musée d'Orsay, and it regularly hosts major international events such as the French Open and the Tour de France.&quot;, full_content=&quot;# Paris: Cultural, Economic, and Transportation Hub\n\nParis, the capital of France, is a central hub for culture, commerce, and international organizations. It hosts numerous significant entities such as UNESCO, the European Banking Authority, and the OECD. The city is also a major transportation center with Charles de Gaulle and Orly airports, and the Paris Métro. Paris is renowned for its cultural landmarks like the Louvre and Musée d'Orsay, and it regularly hosts major international events such as the French Open and the Tour de France.\n\n## Paris as a Global Cultural Center\n\nParis is home to some of the world's most famous cultural institutions, including the Louvre, the most-visited art museum globally, and the Musée d'Orsay, known for its French Impressionist art collection [Data: Entities (98, 99); Relationships (140, 141)]. These institutions contribute significantly to Paris's reputation as a cultural capital, attracting millions of tourists annually and playing a crucial role in the global art scene.\n\n## Paris's Role in International Organizations\n\nParis hosts several key international organizations, such as UNESCO, the OECD, and the International Energy Agency, which are pivotal in global policy-making and international cooperation [Data: Entities (49, 105, 108); Relationships (85, 147, 150)]. These organizations enhance Paris's status as a center for international diplomacy and governance, influencing global education, economic, and energy policies.\n\n## Paris as a Major Transportation Hub\n\nParis is a critical transportation hub in Europe, with Charles de Gaulle and Orly airports serving as major international gateways [Data: Entities (94, 95); Relationships (136, 137)]. The Paris Métro, one of the busiest subway systems in Europe, further underscores the city's importance in facilitating regional and international travel [Data: Entities (96); Relationships (138)].\n\n## Paris's Economic Influence\n\nAs the capital of France and the center of the Île-de-France region, Paris is an economic powerhouse within the European Union [Data: Entities (92, 93); Relationships (119, 135)]. The presence of the European Banking Authority and the European Securities and Markets Authority in Paris highlights its role in financial regulation and economic governance [Data: Entities (111, 112); Relationships (153, 154)].\n\n## Paris's Sporting Legacy\n\nParis has a rich history of hosting major international sporting events, including the Summer Olympics, FIFA World Cup, and the Tour de France [Data: Entities (117, 118, 122); Relationships (159, 160, 164)]. These events not only boost the city's global profile but also contribute to its economy through tourism and international media coverage.&quot;, rank=9.5, summary_embedding=None, full_content_embedding=None, attributes=None)]</p>
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-<p>.dataframe tbody tr th {
-vertical-align: top;
-}</p>
-<p>.dataframe thead th {
-text-align: right;
-}
-</style><p></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>community</th>
-      <th>full_content</th>
-      <th>level</th>
-      <th>rank</th>
-      <th>title</th>
-      <th>rank_explanation</th>
-      <th>summary</th>
-      <th>findings</th>
-      <th>full_content_json</th>
-      <th>id</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>28</td>
-      <td># Wall Street and Financial District\n\nThe co...</td>
-      <td>2</td>
-      <td>9.5</td>
-      <td>Wall Street and Financial District</td>
-      <td>The impact severity rating is high due to Wall...</td>
-      <td>The community is centered around Wall Street, ...</td>
-      <td>[{'explanation': 'Wall Street is renowned as t...</td>
-      <td>{\n    "title": "Wall Street and Financial Dis...</td>
-      <td>95cdb85f-726f-4e32-9633-e96e91d1e707</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>29</td>
-      <td># New York City and Its Global Influence\n\nNe...</td>
-      <td>2</td>
-      <td>9.5</td>
-      <td>New York City and Its Global Influence</td>
-      <td>The impact severity rating is high due to New ...</td>
-      <td>New York City, the most populous city in the U...</td>
-      <td>[{'explanation': 'New York City is a major glo...</td>
-      <td>{\n    "title": "New York City and Its Global ...</td>
-      <td>7a3fe03a-1d92-4d0f-9ff2-8c8635b5d9ce</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>11</td>
-      <td># France and its Global Influence\n\nThe commu...</td>
-      <td>1</td>
-      <td>9.0</td>
-      <td>France and its Global Influence</td>
-      <td>The impact severity rating is high due to Fran...</td>
-      <td>The community centers around France, a key pla...</td>
-      <td>[{'explanation': 'France is a founding and lea...</td>
-      <td>{\n    "title": "France and its Global Influen...</td>
-      <td>724b863f-2114-4598-aec5-ef72919290cd</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>12</td>
-      <td># European Union and Its Foundational Entities...</td>
-      <td>1</td>
-      <td>9.5</td>
-      <td>European Union and Its Foundational Entities</td>
-      <td>The impact severity rating is high due to the ...</td>
-      <td>The European Union (EU) is a significant supra...</td>
-      <td>[{'explanation': 'The European Union (EU) is a...</td>
-      <td>{\n    "title": "European Union and Its Founda...</td>
-      <td>bef28e42-3018-4d28-aaa0-1568b061ba57</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>13</td>
-      <td># Seattle: A Hub of Culture, Technology, and H...</td>
-      <td>1</td>
-      <td>8.5</td>
-      <td>Seattle: A Hub of Culture, Technology, and His...</td>
-      <td>The impact severity rating is high due to Seat...</td>
-      <td>Seattle is a major city on the West Coast of t...</td>
-      <td>[{'explanation': 'Seattle is home to major tec...</td>
-      <td>{\n    "title": "Seattle: A Hub of Culture, Te...</td>
-      <td>0ef7aa47-2d4f-4454-8095-c0331cb2fe6e</td>
-    </tr>
-  </tbody>
-</table>
 </div>
 <h4>Read text units</h4>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-98" class="language-python">text_unit_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>TEXT_UNIT_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
+  <pre class="language-python"><code id="code-38" class="language-python">text_unit_df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_parquet<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">{</span>INPUT_DIR<span class="token punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token punctuation">{</span>TEXT_UNIT_TABLE<span class="token punctuation">}</span></span><span class="token string">.parquet"</span></span><span class="token punctuation">)</span>
 text_units <span class="token operator">=</span> read_indexer_text_units<span class="token punctuation">(</span>text_unit_df<span class="token punctuation">)</span>
 
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Text unit records: </span><span class="token interpolation"><span class="token punctuation">{</span><span class="token builtin">len</span><span class="token punctuation">(</span>text_unit_df<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
 text_unit_df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-98" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-38" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
-<p>Text unit records: 16</p>
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-<p>.dataframe tbody tr th {
-vertical-align: top;
-}</p>
-<p>.dataframe thead th {
-text-align: right;
-}
-</style><p></p>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>text</th>
-      <th>n_tokens</th>
-      <th>document_ids</th>
-      <th>entity_ids</th>
-      <th>relationship_ids</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>cc0dbbd456ec94f96f25793657991734</td>
-      <td>The United States of America (USA or U.S.A.), ...</td>
-      <td>669</td>
-      <td>[0134252ef584e1c209f4b4937c1d7a4f]</td>
-      <td>[b45241d70f0e43fca764df95b2b81f77, 4119fd06010...</td>
-      <td>[42be4e140061482ea509dd3e26189480, 4da4ef951ff...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>b324dfcc8a3699591c60646ccaf6e4b0</td>
-      <td>Nice (/niːs/ NEESS; French pronunciation: [nis...</td>
-      <td>1035</td>
-      <td>[10dbe8991bb9a7ab1dda37e9ccbedd78]</td>
-      <td>[e657b5121ff8456b9a610cfaead8e0cb, bf4e255cdac...</td>
-      <td>[bdddcb17ba6c408599dd395ce64f960a, bc70fee2061...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>c796265ad38bbdc79dc17b2d0aba7e9e</td>
-      <td>New York, often called New York City[b] or NYC...</td>
-      <td>746</td>
-      <td>[147a4bae12320a91e5843421457c4c0e]</td>
-      <td>[bc0e3f075a4c4ebbb7c7b152b65a5625, 958beecdb5b...</td>
-      <td>[4d183e7007624fcd98af96b9d752c16d, 57b8930790c...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>e201254a65d111262b3361be30dbaa31</td>
-      <td>The European Union (EU) is a supranational pol...</td>
-      <td>621</td>
-      <td>[45118b491c6d36b4a415322d2c444105]</td>
-      <td>[c03ab3ce8cb74ad2a03b94723bfab3c7, ed6d2eee9d7...</td>
-      <td>[453ecf5476f64f4a8d5020b95baf1314, 6a1d83c9ce2...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>7f6347c263ce28650c650f3f050a4f70</td>
-      <td>Paris (French pronunciation: [paʁi] ⓘ) is the ...</td>
-      <td>825</td>
-      <td>[474b35b12bfb44f1235cd856dcae3b43]</td>
-      <td>[b7702b90c7f24190b864e8c6e64612a5, 6b02373137f...</td>
-      <td>[92646910ee624bd7909fac2b5c0232e3, ccbbbcc055c...</td>
-    </tr>
-  </tbody>
-</table>
-</div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-110" class="language-python">api_key <span class="token operator">=</span> 
-llm_model <span class="token operator">=</span> <span class="token string">'gpt-4o-2024-08-06'</span>
-embedding_model <span class="token operator">=</span> <span class="token string">'text-embedding-3-small'</span>
+  <pre class="language-python"><code id="code-39" class="language-python">api_key <span class="token operator">=</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"GRAPHRAG_API_KEY"</span><span class="token punctuation">]</span>
+llm_model <span class="token operator">=</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"GRAPHRAG_LLM_MODEL"</span><span class="token punctuation">]</span>
+embedding_model <span class="token operator">=</span> os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">"GRAPHRAG_EMBEDDING_MODEL"</span><span class="token punctuation">]</span>
 
 llm <span class="token operator">=</span> ChatOpenAI<span class="token punctuation">(</span>
     api_key<span class="token operator">=</span>api_key<span class="token punctuation">,</span>
@@ -924,34 +458,34 @@ text_embedder <span class="token operator">=</span> OpenAIEmbedding<span class="
     max_retries<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
 <span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-110" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-39" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 <h3>Create local search context builder</h3>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-114" class="language-python">context_builder <span class="token operator">=</span> LocalSearchMixedContext<span class="token punctuation">(</span>
+  <pre class="language-python"><code id="code-43" class="language-python">context_builder <span class="token operator">=</span> LocalSearchMixedContext<span class="token punctuation">(</span>
     community_reports<span class="token operator">=</span>reports<span class="token punctuation">,</span>
     text_units<span class="token operator">=</span>text_units<span class="token punctuation">,</span>
     entities<span class="token operator">=</span>entities<span class="token punctuation">,</span>
     relationships<span class="token operator">=</span>relationships<span class="token punctuation">,</span>
     <span class="token comment"># if you did not run covariates during indexing, set this to None</span>
-    <span class="token comment"># covariates=covariates,</span>
+    covariates<span class="token operator">=</span>covariates<span class="token punctuation">,</span>
     entity_text_embeddings<span class="token operator">=</span>description_embedding_store<span class="token punctuation">,</span>
     embedding_vectorstore_key<span class="token operator">=</span>EntityVectorStoreKey<span class="token punctuation">.</span>ID<span class="token punctuation">,</span>  <span class="token comment"># if the vectorstore uses entity title as ids, set this to EntityVectorStoreKey.TITLE</span>
     text_embedder<span class="token operator">=</span>text_embedder<span class="token punctuation">,</span>
     token_encoder<span class="token operator">=</span>token_encoder<span class="token punctuation">,</span>
 <span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-114" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-43" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 <h3>Create local search engine</h3>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-118" class="language-python"><span class="token comment"># text_unit_prop: proportion of context window dedicated to related text units</span>
+  <pre class="language-python"><code id="code-47" class="language-python"><span class="token comment"># text_unit_prop: proportion of context window dedicated to related text units</span>
 <span class="token comment"># community_prop: proportion of context window dedicated to community reports.</span>
 <span class="token comment"># The remaining proportion is dedicated to entities and relationships. Sum of text_unit_prop and community_prop should be &lt;= 1</span>
 <span class="token comment"># conversation_history_max_turns: maximum number of turns to include in the conversation history.</span>
@@ -987,13 +521,13 @@ llm_params <span class="token operator">=</span> <span class="token punctuation"
     <span class="token string">"temperature"</span><span class="token punctuation">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-118" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-47" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-119" class="language-python">search_engine <span class="token operator">=</span> LocalSearch<span class="token punctuation">(</span>
+  <pre class="language-python"><code id="code-48" class="language-python">search_engine <span class="token operator">=</span> LocalSearch<span class="token punctuation">(</span>
     llm<span class="token operator">=</span>llm<span class="token punctuation">,</span>
     context_builder<span class="token operator">=</span>context_builder<span class="token punctuation">,</span>
     token_encoder<span class="token operator">=</span>token_encoder<span class="token punctuation">,</span>
@@ -1002,80 +536,69 @@ llm_params <span class="token operator">=</span> <span class="token punctuation"
     response_type<span class="token operator">=</span><span class="token string">"multiple paragraphs"</span><span class="token punctuation">,</span>  <span class="token comment"># free form text describing the response type and format, can be anything, e.g. prioritized list, single paragraph, multiple paragraphs, multiple-page report</span>
 <span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-119" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-48" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 <h3>Run local search on sample queries</h3>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-123" class="language-python">result <span class="token operator">=</span> <span class="token keyword">await</span> search_engine<span class="token punctuation">.</span>asearch<span class="token punctuation">(</span><span class="token string">"Tell me about Paris"</span><span class="token punctuation">)</span>
+  <pre class="language-python"><code id="code-52" class="language-python">result <span class="token operator">=</span> <span class="token keyword">await</span> search_engine<span class="token punctuation">.</span>asearch<span class="token punctuation">(</span><span class="token string">"Tell me about Agent Mercer"</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>response<span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-123" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-52" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
-<p># Overview of Paris</p>
-<p>Paris, the capital and largest city of France, is a global hub renowned for its significant roles in finance, diplomacy, commerce, culture, fashion, and gastronomy. Often referred to as the &quot;City of Light,&quot; Paris has been a major center for arts and sciences since the 17th century. The city is the heart of the Île-de-France region, which is the most populous region in France and a major economic powerhouse within the European Union [Data: Entities (92); Relationships (119, 135)].</p>
-<p>## Cultural Significance</p>
-<p>Paris is home to some of the world's most famous cultural institutions. The Louvre, the most-visited art museum globally, and the Musée d'Orsay, known for its French Impressionist art collection, are key attractions that contribute to Paris's reputation as a cultural capital. Other notable museums include the Pompidou Centre, Musée Picasso, and Musée Marmottan Monet, which are celebrated for their collections of modern and contemporary art [Data: Entities (98, 99, 102, 104, 100); Relationships (140, 141, 144, 146, 142, +more)].</p>
-<p>## Economic and Political Influence</p>
-<p>As the center of the Île-de-France region, Paris is an economic powerhouse, hosting significant financial institutions such as the European Banking Authority and the European Securities and Markets Authority. These entities underscore Paris's role in financial regulation and economic governance within the European Union [Data: Entities (111, 112); Relationships (153, 154)]. Additionally, Paris hosts several key international organizations, including UNESCO, the OECD, and the International Energy Agency, which play pivotal roles in global policy-making and international cooperation [Data: Entities (49, 105, 108); Relationships (85, 147, 150)].</p>
-<p>## Transportation Hub</p>
-<p>Paris is a critical transportation hub in Europe, with Charles de Gaulle and Orly airports serving as major international gateways. The Paris Métro, one of the busiest subway systems in Europe, further underscores the city's importance in facilitating regional and international travel. Gare du Nord, a major railway station, is the busiest station outside Japan, highlighting Paris's role in global connectivity [Data: Entities (94, 95, 96, 97); Relationships (136, 137, 138, 139)].</p>
-<p>## Sporting Legacy</p>
-<p>Paris has a rich history of hosting major international sporting events, including the Summer Olympics, FIFA World Cup, and the Tour de France. These events not only boost the city's global profile but also contribute to its economy through tourism and international media coverage. The French Open, an annual Grand Slam tennis tournament, is held at Roland Garros in Paris, further cementing the city's status as a sporting hub [Data: Entities (117, 116, 124); Relationships (159, 160, 164, 158, 166)].</p>
-<p>In summary, Paris is a multifaceted city with a profound impact on global culture, economy, and politics. Its rich history, vibrant cultural scene, and strategic importance in international affairs make it a unique and influential metropolis.</p>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-157" class="language-python">question <span class="token operator">=</span> <span class="token string">"Tell me about Dr. Jordan Hayes"</span>
+  <pre class="language-python"><code id="code-53" class="language-python">question <span class="token operator">=</span> <span class="token string">"Tell me about Dr. Jordan Hayes"</span>
 result <span class="token operator">=</span> <span class="token keyword">await</span> search_engine<span class="token punctuation">.</span>asearch<span class="token punctuation">(</span>question<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>response<span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-157" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-53" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 <h4>Inspecting the context data used to generate the response</h4>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-161" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"entities"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+  <pre class="language-python"><code id="code-57" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"entities"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-161" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-57" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-162" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"relationships"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+  <pre class="language-python"><code id="code-58" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"relationships"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-162" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-58" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-163" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"reports"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+  <pre class="language-python"><code id="code-59" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"reports"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-163" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-59" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-164" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"sources"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+  <pre class="language-python"><code id="code-60" class="language-python">result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"sources"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-164" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-60" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-165" class="language-python"><span class="token keyword">if</span> <span class="token string">"claims"</span> <span class="token keyword">in</span> result<span class="token punctuation">.</span>context_data<span class="token punctuation">:</span>
+  <pre class="language-python"><code id="code-61" class="language-python"><span class="token keyword">if</span> <span class="token string">"claims"</span> <span class="token keyword">in</span> result<span class="token punctuation">.</span>context_data<span class="token punctuation">:</span>
     <span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>context_data<span class="token punctuation">[</span><span class="token string">"claims"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-165" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-61" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
@@ -1083,7 +606,7 @@ result <span class="token operator">=</span> <span class="token keyword">await</
 <p>This function takes a list of user queries and generates the next candidate questions.</p>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-172" class="language-python">question_generator <span class="token operator">=</span> LocalQuestionGen<span class="token punctuation">(</span>
+  <pre class="language-python"><code id="code-68" class="language-python">question_generator <span class="token operator">=</span> LocalQuestionGen<span class="token punctuation">(</span>
     llm<span class="token operator">=</span>llm<span class="token punctuation">,</span>
     context_builder<span class="token operator">=</span>context_builder<span class="token punctuation">,</span>
     token_encoder<span class="token operator">=</span>token_encoder<span class="token punctuation">,</span>
@@ -1091,26 +614,25 @@ result <span class="token operator">=</span> <span class="token keyword">await</
     context_builder_params<span class="token operator">=</span>local_context_params<span class="token punctuation">,</span>
 <span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-172" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-68" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
 
 <div style="position: relative">
-  <pre class="language-python"><code id="code-173" class="language-python">question_history <span class="token operator">=</span> <span class="token punctuation">[</span>
-    <span class="token string">"Tell me about Paris"</span><span class="token punctuation">,</span>
-    <span class="token string">"What happens in Paris 2024?"</span><span class="token punctuation">,</span>
+  <pre class="language-python"><code id="code-69" class="language-python">question_history <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token string">"Tell me about Agent Mercer"</span><span class="token punctuation">,</span>
+    <span class="token string">"What happens in Dulce military base?"</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span>
 candidate_questions <span class="token operator">=</span> <span class="token keyword">await</span> question_generator<span class="token punctuation">.</span>agenerate<span class="token punctuation">(</span>
     question_history<span class="token operator">=</span>question_history<span class="token punctuation">,</span> context_data<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> question_count<span class="token operator">=</span><span class="token number">5</span>
 <span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>candidate_questions<span class="token punctuation">.</span>response<span class="token punctuation">)</span></code></pre>
 
-  <button class="code-copy " data-clipboard-target="#code-173" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
+  <button class="code-copy " data-clipboard-target="#code-69" style="position: absolute; top: 7.5px; right: 6px; padding-top: 3px; cursor: pointer; outline: none; opacity: 0.8;" title="Copy">
     <span style="display:inline-block;background:url(https://api.iconify.design/mdi/content-copy.svg) no-repeat center center / contain;width: 16px; height: 16px;" class=""></span>
   </button>
 </div>
-<p>['- What major international events are scheduled to take place in Paris in 2024?', '- How is Paris preparing for the 2024 Summer Olympics?', &quot;- What impact will the 2024 Summer Olympics have on Paris's economy and infrastructure?&quot;, '- Which venues in Paris will host events during the 2024 Summer Olympics?', '- How will the 2024 Summer Olympics affect tourism in Paris?']</p>
 
         </main>
     </div>
