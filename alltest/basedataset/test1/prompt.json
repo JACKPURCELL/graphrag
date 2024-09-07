@@ -1,0 +1,79 @@
+{
+    "questions": [
+        {
+            "question": "Did the UNITED STATES OF AMERICA participate in both WORLD WAR II and the COLD WAR?",
+            "answer": "Yes",
+            "explanation": "The UNITED STATES OF AMERICA was involved in WORLD WAR II and also played a significant role in the COLD WAR.",
+            "entities": [
+                [
+                    "UNITED STATES OF AMERICA",
+                    "WORLD WAR II"
+                ],
+                [
+                    "UNITED STATES OF AMERICA",
+                    "COLD WAR"
+                ]
+            ]
+        },
+        {
+            "question": "Is PARIS associated with more than one UNESCO-related entity?",
+            "answer": "Yes",
+            "explanation": "PARIS is associated with UNESCO and its role in hosting international organizations, among other UNESCO-related entities.",
+            "entities": [
+                [
+                    "UNESCO",
+                    "PARIS"
+                ],
+                [
+                    "NICE",
+                    "UNESCO WORLD HERITAGE SITE"
+                ],
+                [
+                    "PARIS",
+                    "UNESCO"
+                ]
+            ]
+        },
+        {
+            "question": "Is NICE connected to MONACO and FRANCE?",
+            "answer": "Yes",
+            "explanation": "NICE is connected to neighboring MONACO and is a part of FRANCE.",
+            "entities": [
+                [
+                    "NICE",
+                    "MONACO"
+                ],
+                [
+                    "NICE",
+                    "FRANCE"
+                ]
+            ]
+        },
+        {
+            "question": "Which organization has ties with NEW YORK CITY and NAIROBI?",
+            "answer": "UNITED NATIONS",
+            "explanation": "None",
+            "entities": [
+                [
+                    "UNITED NATIONS",
+                    "NEW YORK CITY"
+                ],
+                [
+                    "UNITED NATIONS",
+                    "NAIROBI"
+                ]
+            ]
+        },
+        {
+            "question": "Does GEORGE WASHINGTON have any direct connection to WASHINGTON, D.C.?",
+            "answer": "Yes",
+            "explanation": "GEORGE WASHINGTON is connected to WASHINGTON, D.C. which was named in his honor.",
+            "entities": [
+                [
+                    "WASHINGTON, D.C.",
+                    "GEORGE WASHINGTON"
+                ]
+            ]
+        }
+    ]
+}
