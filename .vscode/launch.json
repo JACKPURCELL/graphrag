@@ -8,6 +8,17 @@
       "args": [],
       "cwd": "${workspaceFolder}",
       "program": "/Users/yh.wang/Academic/6/graphrag/build/Debug/outDebug"
-    }
+    },
+    {
+      "name": "graphrag.index",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "graphrag.index", // 指定模块名
+      "args": [
+        "--root",
+        "./ragtest6"
+      ], // 传递给模块的参数
+      "justMyCode": false
+    },
   ]
 }

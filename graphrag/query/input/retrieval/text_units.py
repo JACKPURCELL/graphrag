@@ -17,7 +17,7 @@ def get_candidate_text_units(
     """Get all text units that are associated to selected entities."""
     selected_text_ids = [
         entity.text_unit_ids for entity in selected_entities if entity.text_unit_ids
-    ]
+    ] # 排序就是entity的排序
     selected_text_ids = [item for sublist in selected_text_ids for item in sublist]
     selected_text_units = [unit for unit in text_units if unit.id in selected_text_ids]
     return to_text_unit_dataframe(selected_text_units)

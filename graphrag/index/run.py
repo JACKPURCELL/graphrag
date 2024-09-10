@@ -59,7 +59,7 @@ from .typing import PipelineRunResult
 from .verbs import *  # noqa
 from .workflows import (
     VerbDefinitions,
-    WorkflowDefinitions,
+    WorkflowDefinitions,# additional
     create_workflow,
     load_workflows,
 )
@@ -217,7 +217,7 @@ async def run_pipeline(
             "Error emitting table", e, s, d
         ),
     )
-    loaded_workflows = load_workflows(
+    loaded_workflows = load_workflows( #***************
         workflows,
         additional_verbs=additional_verbs,
         additional_workflows=additional_workflows,

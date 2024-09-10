@@ -55,12 +55,12 @@ async def build_index(
         resume = True
     except ValueError as _:
         resume = False
-    pipeline_config = create_pipeline_config(config)
+    pipeline_config = create_pipeline_config(config) #**********这里传入了workflow到pipline config
     pipeline_cache = (
         NoopPipelineCache() if config.cache.type == CacheType.none is None else None
     )
     outputs: list[PipelineRunResult] = []
-    async for output in run_pipeline_with_config(
+    async for output in run_pipeline_with_config( # async函数，每次yeild都会返回结果
         pipeline_config,
         run_id=run_id,
         memory_profile=memory_profile,

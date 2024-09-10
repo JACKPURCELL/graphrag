@@ -242,7 +242,7 @@ class LocalSearchMixedContext(LocalContextBuilder):
                         community_matches.get(community_id, 0) + 1
                     )
 
-        # sort communities by number of matched entities and rank
+        # sort communities by number of matched entities and rank **************
         selected_communities = [
             self.community_reports[community_id]
             for community_id in community_matches
