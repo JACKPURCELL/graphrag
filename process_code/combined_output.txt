@@ -1,0 +1,2086 @@
+Graph Description:
+- Nodes: METROPOLITAN MUSEUM OF ART, NEW YORK CITY, THE CLOISTERS, EMPIRE STATE BUILDING, HAMILTON E. JAMES, MAX HOLLEIN, CANDACE BEINECKE, SEVEN WONDERS OF THE MODERN WORLD, AMERICAN SOCIETY OF CIVIL ENGINEERS, AMERICAN INSTITUTE OF ARCHITECTS, NEW YORK CITY LANDMARKS PRESERVATION COMMISSION, NATIONAL REGISTER OF HISTORIC PLACES, NATIONAL HISTORIC LANDMARK, UNITED STATES OF AMERICA, WASHINGTON, D.C., JOE BIDEN, KAMALA HARRIS, MIKE JOHNSON, JOHN ROBERTS, CONGRESS, SENATE, HOUSE OF REPRESENTATIVES, AMERICAN REVOLUTION, AMERICAN CIVIL WAR, HAWAII, CANADA, MEXICO, GREAT BRITAIN, THIRTEEN COLONIES, CONFEDERATE STATES OF AMERICA, ALASKA, UNITED STATES, REVOLUTIONARY WAR, WORLD WAR II, COLD WAR, SOVIET UNION, UNION, PEARL HARBOR, WORLD BANK, ORGANIZATION OF AMERICAN STATES, NATO, UNITED NATIONS, TIMES SQUARE, THE NEW YORK TIMES, ONE TIMES SQUARE, NEW YEAR'S EVE BALL DROP, SEVENTH AVENUE, DUFFY SQUARE, LINCOLN HIGHWAY, BROADWAY, NATIONAL MALL, PIERRE CHARLES L'ENFANT, NATIONAL PARK SERVICE, UNITED STATES CAPITOL, WASHINGTON MONUMENT, LINCOLN MEMORIAL, JEFFERSON MEMORIAL, WEST POTOMAC PARK, CONSTITUTION GARDENS, SMITHSONIAN INSTITUTION, NATIONAL AIR AND SPACE MUSEUM, CHRIS BROWNE, PETER JAKAB, STEVEN F. UDVAR-HAZY CENTER, DULLES INTERNATIONAL AIRPORT, PAUL E. GARBER PRESERVATION, RESTORATION, AND STORAGE FACILITY, SUITLAND, MARYLAND, FRIENDSHIP 7, SPIRIT OF ST. LOUIS, WRIGHT FLYER, APOLLO 11 COMMAND MODULE COLUMBIA, BRONX ZOO, WILDLIFE CONSERVATION SOCIETY, BRONX PARK, NEW YORK, WILLIAM TEMPLE HORNADAY, AMERICAN BISON SOCIETY, PAUL MANSHIP, JUNGLEWORLD, WILD ASIA MONORAIL, MADAGASCAR!, TIGER MOUNTAIN, AFRICAN PLAINS, WORLD OF BIRDS, WORLD OF REPTILES, ZOO CENTER, CONGO GORILLA FOREST, TIANANMEN, BEIJING, MAO ZEDONG, PEOPLE'S REPUBLIC OF CHINA, FORBIDDEN CITY, CHANG'AN AVENUE, TIANANMEN SQUARE, SHANGHAI, XI JINPING, LI QIANG, ZHAO LEJI, WANG HUNING, HAN ZHENG, NATIONAL PEOPLE'S CONGRESS, TAIWAN, QIN DYNASTY, HAN DYNASTY, TANG DYNASTY, YUAN DYNASTY, MING DYNASTY, QING DYNASTY, CHONGQING, QIN, HAN, TANG, YUAN, MING, QING, SILK ROAD, GREAT WALL, CHINA, REPUBLIC OF CHINA, BEIYANG GOVERNMENT, WARLORD ERA, NORTHERN EXPEDITION, KUOMINTANG, CHINESE COMMUNIST PARTY, EMPIRE OF JAPAN, SECOND SINO-JAPANESE WAR, NANJING MASSACRE, GREAT LEAP FORWARD, GREAT CHINESE FAMINE, CULTURAL REVOLUTION, MAOIST POPULISM, SINO-SOVIET SPLIT, SHANGHAI COMMUNIQUÉ, TIANANMEN SQUARE PROTESTS, AIIB, SILK ROAD FUND, NEW DEVELOPMENT BANK, RCEP, BRICS, G20, APEC, SCO, EAST ASIA SUMMIT, UN SECURITY COUNCIL, BRITAIN, FRANCE, GERMANY, RUSSIA, PORTUGAL, TURTLE BAY, WALLACE HARRISON, HARRISON & ABRAMOVITZ, OSCAR NIEMEYER, LE CORBUSIER, GENEVA, VIENNA, NAIROBI, UNICEF, CONFERENCE BUILDING, GENERAL ASSEMBLY, DAG HAMMARSKJÖLD LIBRARY, SECURITY COUNCIL, SECRETARIAT, CENTRAL PARK, FREDERICK LAW OLMSTED, CALVERT VAUX, NYC PARKS, CENTRAL PARK CONSERVANCY, SENECA VILLAGE, UPPER WEST SIDE, UPPER EAST SIDE, ROBERT MOSES, SHAKESPEARE IN THE PARK, MANHATTAN, BADALING, GREAT WALL OF CHINA, YANQING DISTRICT, BEIBALOU, JUYONGGUAN PASS, BADALING TOWN, VERRAZZANO-NARROWS BRIDGE, STATEN ISLAND, BROOKLYN, THE NARROWS, OTHMAR AMMANN, LEOPOLD JUST, AMMANN & WHITNEY, GIOVANNI DA VERRAZZANO, MTA BRIDGES AND TUNNELS, LOWER NEW YORK BAY, NEW YORK HARBOR, ATLANTIC OCEAN, INTERSTATE 278, CHEN JINING, HUANG LIXIN, GONG ZHENG, HU WENRONG, YANGTZE RIVER, HUANGPU RIVER, PORT OF SHANGHAI, PUDONG NEW AREA, BATTLE OF SHANGHAI, FIRST OPIUM WAR, CHINESE CIVIL WAR, DENG XIAOPING, SHESHAN HILL, HSBC BUILDING, THE BUND, LUJIAZUI, ORIENTAL PEARL TOWER, SHANGHAI TOWER, YU GARDEN, NANJING ROAD, SHANGHAI EXHIBITION CENTRE, OLD CITY OF SHANGHAI, JING'AN TEMPLE, SHANGHAI MUNICIPAL PEOPLE'S CONGRESS, SHANGHAI STOCK EXCHANGE, SHANGHAI FREE-TRADE ZONE, CITY GOD TEMPLE, CHINA PAVILION, BUND, EASTERN BLOC, GLOBALIZATION AND WORLD CITIES RESEARCH NETWORK, GLOBAL FINANCIAL CENTRES INDEX, FORTUNE GLOBAL 500, SHANGHAI METRO, GEORGE WASHINGTON, POTOMAC RIVER, MARYLAND, VIRGINIA, U.S. CONGRESS, RESIDENCE ACT, CAPITOL BUILDING, U.S. CAPITOL, WASHINGTON NATIONAL CATHEDRAL, MCPHERSON SQUARE, ADAMS MORGAN, SMITHSONIAN NATIONAL AIR AND SPACE MUSEUM, WHITE HOUSE, MURIEL BOWSER, ELEANOR HOLMES NORTON, DISTRICT OF COLUMBIA, U.S. HOUSE OF REPRESENTATIVES, U.S. SENATE, SUPREME COURT BUILDING, INTERNATIONAL MONETARY FUND, K STREET, WEST VIRGINIA, NORTHEAST MEGALOPOLIS, TWENTY-THIRD AMENDMENT, HUANGPU DISTRICT, YUYUAN TOURIST MART, HUXINTING TEAHOUSE, YU GARDEN BAZAAR, EXQUISITE JADE ROCK, HUOZONG EMPEROR, NORTHERN SONG DYNASTY, ERIC ADAMS, LOWER MANHATTAN, STATUE OF LIBERTY, BROOKLYN BRIDGE, VERAZZANO-NARROWS BRIDGE, THE BRONX, QUEENS, MIDTOWN MANHATTAN, FORT AMSTERDAM, WALL STREET, NEW YORK STOCK EXCHANGE, NASDAQ, FIFTH AVENUE, DUKE OF YORK, KING CHARLES II, FINANCIAL DISTRICT, NEW AMSTERDAM, PUDONG, SHANGHAI MUNICIPAL GOVERNMENT, BURJ KHALIFA, J HOTEL, DUBAI, TOP OF SHANGHAI, OBSERVATION DECK, PALACE MUSEUM, WANG XUDONG, YONGLE EMPEROR, HEBEI PROVINCE, TIANJIN, JING-JIN-JI, BEIJING CAPITAL INTERNATIONAL AIRPORT, BEIJING DAXING INTERNATIONAL AIRPORT, LI XIULING, YIN YONG, WEI XIAODONG, BEIJING MUNICIPAL PEOPLE'S CONGRESS, YIN LI, 2008 SUMMER OLYMPICS, 2022 WINTER OLYMPICS, TEMPLE OF HEAVEN, SUMMER PALACE, MING TOMBS, ZHOUKOUDIAN PEKING MAN SITE, BEIJING CENTRAL AXIS, GRAND CANAL, TSINGHUA UNIVERSITY, PEKING UNIVERSITY, ASIAN INFRASTRUCTURE INVESTMENT BANK, SHANGHAI COOPERATION ORGANISATION, CHINESE ACADEMY OF SCIENCES, CHINESE ACADEMY OF ENGINEERING, CHINESE ACADEMY OF SOCIAL SCIENCES, CENTRAL ACADEMY OF FINE ARTS, CENTRAL ACADEMY OF DRAMA, CENTRAL CONSERVATORY OF MUSIC, RED CROSS SOCIETY OF CHINA, BEIJING CBD, ZHONGGUANCUN, BEIJING SUBWAY, BUDDHISM, LIBERTY ISLAND, FRÉDÉRIC AUGUSTE BARTHOLDI, GUSTAVE EIFFEL, ÉDOUARD DE LABOULAYE, JOSEPH PULITZER, GROVER CLEVELAND, CENTENNIAL EXPOSITION, MADISON SQUARE PARK, PHILADELPHIA, 1916, CHAOYANG DISTRICT, CITIC TOWER, UNESCO WORLD HERITAGE SITE, JOHN AUGUSTUS ROEBLING, WASHINGTON ROEBLING, EMILY WARREN ROEBLING, EAST RIVER, NEW YORK BRIDGE COMPANY, TAMMANY HALL, DUMBO, BROOKLYN HEIGHTS, CIVIC CENTER, MAY 24, 1883, JIANGSU, NANJING, SHANGHAI INTERNATIONAL SETTLEMENT, BUBBLING WELL ROAD, SHANGHAI RACE CLUB, WEST NANJING ROAD, EAST NANJING ROAD, WILLIAM THORNTON, BENJAMIN HENRY LATROBE, CAPITOL HILL, BURNING OF WASHINGTON, ARCHITECT OF THE CAPITOL, UNITED STATES CONGRESS, JAMES HOBAN, JOHN ADAMS, THOMAS JEFFERSON, JAMES MONROE, THEODORE ROOSEVELT, WILLIAM HOWARD TAFT, HARRY S. TRUMAN, PENNSYLVANIA AVENUE, EISENHOWER EXECUTIVE OFFICE BUILDING, BLAIR HOUSE, WEST WING, EAST WING, OVAL OFFICE, PRESIDENT'S PARK, EXECUTIVE RESIDENCE, EMPIRE STATE REALTY TRUST, SHREVE, LAMB AND HARMON, JOHN J. RASKOB, AL SMITH, HOMER GAGE BALCOM, STARRETT BROTHERS AND EKEN, CHRYSLER BUILDING, WORLD TRADE CENTER
+- Edges:
+  - (METROPOLITAN MUSEUM OF ART, NEW YORK CITY)
+  - (METROPOLITAN MUSEUM OF ART, THE CLOISTERS)
+  - (METROPOLITAN MUSEUM OF ART, CANDACE BEINECKE)
+  - (METROPOLITAN MUSEUM OF ART, HAMILTON E. JAMES)
+  - (METROPOLITAN MUSEUM OF ART, MAX HOLLEIN)
+  - (NEW YORK CITY, EMPIRE STATE BUILDING)
+  - (NEW YORK CITY, TIMES SQUARE)
+  - (NEW YORK CITY, UNITED NATIONS)
+  - (NEW YORK CITY, CENTRAL PARK)
+  - (NEW YORK CITY, VERRAZZANO-NARROWS BRIDGE)
+  - (NEW YORK CITY, ERIC ADAMS)
+  - (NEW YORK CITY, MIDTOWN MANHATTAN)
+  - (NEW YORK CITY, LOWER MANHATTAN)
+  - (NEW YORK CITY, STATUE OF LIBERTY)
+  - (NEW YORK CITY, BROOKLYN BRIDGE)
+  - (NEW YORK CITY, BRONX ZOO)
+  - (NEW YORK CITY, VERAZZANO-NARROWS BRIDGE)
+  - (NEW YORK CITY, THE BRONX)
+  - (NEW YORK CITY, BROOKLYN)
+  - (NEW YORK CITY, MANHATTAN)
+  - (NEW YORK CITY, QUEENS)
+  - (NEW YORK CITY, STATEN ISLAND)
+  - (NEW YORK CITY, UNITED STATES)
+  - (NEW YORK CITY, FORT AMSTERDAM)
+  - (NEW YORK CITY, NEW YORK STOCK EXCHANGE)
+  - (NEW YORK CITY, NASDAQ)
+  - (NEW YORK CITY, FIFTH AVENUE)
+  - (NEW YORK CITY, NEW AMSTERDAM)
+  - (NEW YORK CITY, DUKE OF YORK)
+  - (EMPIRE STATE BUILDING, AMERICAN INSTITUTE OF ARCHITECTS)
+  - (EMPIRE STATE BUILDING, NEW YORK CITY LANDMARKS PRESERVATION COMMISSION)
+  - (EMPIRE STATE BUILDING, NATIONAL REGISTER OF HISTORIC PLACES)
+  - (EMPIRE STATE BUILDING, NATIONAL HISTORIC LANDMARK)
+  - (EMPIRE STATE BUILDING, MANHATTAN)
+  - (EMPIRE STATE BUILDING, NEW YORK)
+  - (EMPIRE STATE BUILDING, EMPIRE STATE REALTY TRUST)
+  - (EMPIRE STATE BUILDING, SHREVE, LAMB AND HARMON)
+  - (EMPIRE STATE BUILDING, JOHN J. RASKOB)
+  - (EMPIRE STATE BUILDING, AL SMITH)
+  - (EMPIRE STATE BUILDING, HOMER GAGE BALCOM)
+  - (EMPIRE STATE BUILDING, STARRETT BROTHERS AND EKEN)
+  - (EMPIRE STATE BUILDING, WORLD TRADE CENTER)
+  - (EMPIRE STATE BUILDING, CHRYSLER BUILDING)
+  - (SEVEN WONDERS OF THE MODERN WORLD, AMERICAN SOCIETY OF CIVIL ENGINEERS)
+  - (UNITED STATES OF AMERICA, JOE BIDEN)
+  - (UNITED STATES OF AMERICA, KAMALA HARRIS)
+  - (UNITED STATES OF AMERICA, MIKE JOHNSON)
+  - (UNITED STATES OF AMERICA, JOHN ROBERTS)
+  - (UNITED STATES OF AMERICA, CONGRESS)
+  - (UNITED STATES OF AMERICA, AMERICAN REVOLUTION)
+  - (UNITED STATES OF AMERICA, AMERICAN CIVIL WAR)
+  - (UNITED STATES OF AMERICA, ALASKA)
+  - (UNITED STATES OF AMERICA, HAWAII)
+  - (UNITED STATES OF AMERICA, CANADA)
+  - (UNITED STATES OF AMERICA, MEXICO)
+  - (WASHINGTON, D.C., NATIONAL MALL)
+  - (WASHINGTON, D.C., NATIONAL AIR AND SPACE MUSEUM)
+  - (WASHINGTON, D.C., GEORGE WASHINGTON)
+  - (WASHINGTON, D.C., POTOMAC RIVER)
+  - (WASHINGTON, D.C., MARYLAND)
+  - (WASHINGTON, D.C., VIRGINIA)
+  - (WASHINGTON, D.C., PIERRE CHARLES L'ENFANT)
+  - (WASHINGTON, D.C., U.S. CONGRESS)
+  - (WASHINGTON, D.C., RESIDENCE ACT)
+  - (WASHINGTON, D.C., CAPITOL BUILDING)
+  - (WASHINGTON, D.C., DISTRICT OF COLUMBIA)
+  - (WASHINGTON, D.C., WASHINGTON NATIONAL CATHEDRAL)
+  - (WASHINGTON, D.C., MCPHERSON SQUARE)
+  - (WASHINGTON, D.C., ADAMS MORGAN)
+  - (WASHINGTON, D.C., WHITE HOUSE)
+  - (WASHINGTON, D.C., MURIEL BOWSER)
+  - (WASHINGTON, D.C., ELEANOR HOLMES NORTON)
+  - (WASHINGTON, D.C., U.S. HOUSE OF REPRESENTATIVES)
+  - (WASHINGTON, D.C., U.S. SENATE)
+  - (WASHINGTON, D.C., SUPREME COURT BUILDING)
+  - (WASHINGTON, D.C., WORLD BANK)
+  - (WASHINGTON, D.C., INTERNATIONAL MONETARY FUND)
+  - (WASHINGTON, D.C., ORGANIZATION OF AMERICAN STATES)
+  - (WASHINGTON, D.C., K STREET)
+  - (WASHINGTON, D.C., WEST VIRGINIA)
+  - (WASHINGTON, D.C., NORTHEAST MEGALOPOLIS)
+  - (WASHINGTON, D.C., TWENTY-THIRD AMENDMENT)
+  - (WASHINGTON, D.C., UNITED STATES CAPITOL)
+  - (JOE BIDEN, WHITE HOUSE)
+  - (CONGRESS, SENATE)
+  - (CONGRESS, HOUSE OF REPRESENTATIVES)
+  - (SENATE, UNITED STATES CAPITOL)
+  - (HOUSE OF REPRESENTATIVES, UNITED STATES CAPITOL)
+  - (AMERICAN REVOLUTION, GREAT BRITAIN)
+  - (AMERICAN REVOLUTION, THIRTEEN COLONIES)
+  - (AMERICAN CIVIL WAR, CONFEDERATE STATES OF AMERICA)
+  - (AMERICAN CIVIL WAR, UNITED STATES)
+  - (CONFEDERATE STATES OF AMERICA, UNITED STATES)
+  - (UNITED STATES, REVOLUTIONARY WAR)
+  - (UNITED STATES, WORLD WAR II)
+  - (UNITED STATES, COLD WAR)
+  - (UNITED STATES, SOVIET UNION)
+  - (UNITED STATES, UNION)
+  - (UNITED STATES, PEARL HARBOR)
+  - (UNITED STATES, WORLD BANK)
+  - (UNITED STATES, ORGANIZATION OF AMERICAN STATES)
+  - (UNITED STATES, NATO)
+  - (UNITED STATES, UNITED NATIONS)
+  - (UNITED STATES, CHINA)
+  - (UNITED STATES, STATUE OF LIBERTY)
+  - (COLD WAR, SHANGHAI)
+  - (UNITED NATIONS, CHINA)
+  - (UNITED NATIONS, TURTLE BAY)
+  - (UNITED NATIONS, WALLACE HARRISON)
+  - (UNITED NATIONS, HARRISON & ABRAMOVITZ)
+  - (UNITED NATIONS, OSCAR NIEMEYER)
+  - (UNITED NATIONS, LE CORBUSIER)
+  - (UNITED NATIONS, GENEVA)
+  - (UNITED NATIONS, VIENNA)
+  - (UNITED NATIONS, NAIROBI)
+  - (UNITED NATIONS, UNICEF)
+  - (UNITED NATIONS, SECRETARIAT)
+  - (UNITED NATIONS, CONFERENCE BUILDING)
+  - (UNITED NATIONS, GENERAL ASSEMBLY)
+  - (UNITED NATIONS, DAG HAMMARSKJÖLD LIBRARY)
+  - (UNITED NATIONS, SECURITY COUNCIL)
+  - (TIMES SQUARE, THE NEW YORK TIMES)
+  - (TIMES SQUARE, ONE TIMES SQUARE)
+  - (TIMES SQUARE, NEW YEAR'S EVE BALL DROP)
+  - (TIMES SQUARE, BROADWAY)
+  - (TIMES SQUARE, SEVENTH AVENUE)
+  - (TIMES SQUARE, DUFFY SQUARE)
+  - (TIMES SQUARE, LINCOLN HIGHWAY)
+  - (NATIONAL MALL, PIERRE CHARLES L'ENFANT)
+  - (NATIONAL MALL, NATIONAL PARK SERVICE)
+  - (NATIONAL MALL, UNITED STATES CAPITOL)
+  - (NATIONAL MALL, WASHINGTON MONUMENT)
+  - (NATIONAL MALL, LINCOLN MEMORIAL)
+  - (NATIONAL MALL, JEFFERSON MEMORIAL)
+  - (NATIONAL MALL, SMITHSONIAN INSTITUTION)
+  - (NATIONAL MALL, WEST POTOMAC PARK)
+  - (NATIONAL MALL, CONSTITUTION GARDENS)
+  - (NATIONAL MALL, U.S. CAPITOL)
+  - (NATIONAL MALL, SMITHSONIAN NATIONAL AIR AND SPACE MUSEUM)
+  - (NATIONAL PARK SERVICE, STATUE OF LIBERTY)
+  - (UNITED STATES CAPITOL, WILLIAM THORNTON)
+  - (UNITED STATES CAPITOL, BENJAMIN HENRY LATROBE)
+  - (UNITED STATES CAPITOL, CAPITOL HILL)
+  - (UNITED STATES CAPITOL, BURNING OF WASHINGTON)
+  - (UNITED STATES CAPITOL, UNITED STATES CONGRESS)
+  - (UNITED STATES CAPITOL, ARCHITECT OF THE CAPITOL)
+  - (NATIONAL AIR AND SPACE MUSEUM, CHRIS BROWNE)
+  - (NATIONAL AIR AND SPACE MUSEUM, PETER JAKAB)
+  - (NATIONAL AIR AND SPACE MUSEUM, STEVEN F. UDVAR-HAZY CENTER)
+  - (NATIONAL AIR AND SPACE MUSEUM, PAUL E. GARBER PRESERVATION, RESTORATION, AND STORAGE FACILITY)
+  - (NATIONAL AIR AND SPACE MUSEUM, APOLLO 11 COMMAND MODULE COLUMBIA)
+  - (NATIONAL AIR AND SPACE MUSEUM, FRIENDSHIP 7)
+  - (NATIONAL AIR AND SPACE MUSEUM, SPIRIT OF ST. LOUIS)
+  - (NATIONAL AIR AND SPACE MUSEUM, WRIGHT FLYER)
+  - (STEVEN F. UDVAR-HAZY CENTER, DULLES INTERNATIONAL AIRPORT)
+  - (PAUL E. GARBER PRESERVATION, RESTORATION, AND STORAGE FACILITY, SUITLAND, MARYLAND)
+  - (BRONX ZOO, WILDLIFE CONSERVATION SOCIETY)
+  - (BRONX ZOO, BRONX PARK)
+  - (BRONX ZOO, WILLIAM TEMPLE HORNADAY)
+  - (BRONX ZOO, AMERICAN BISON SOCIETY)
+  - (BRONX ZOO, PAUL MANSHIP)
+  - (BRONX ZOO, NEW YORK)
+  - (BRONX ZOO, CONGO GORILLA FOREST)
+  - (BRONX ZOO, JUNGLEWORLD)
+  - (BRONX ZOO, WILD ASIA MONORAIL)
+  - (BRONX ZOO, MADAGASCAR!)
+  - (BRONX ZOO, TIGER MOUNTAIN)
+  - (BRONX ZOO, AFRICAN PLAINS)
+  - (BRONX ZOO, WORLD OF BIRDS)
+  - (BRONX ZOO, WORLD OF REPTILES)
+  - (BRONX ZOO, ZOO CENTER)
+  - (TIANANMEN, BEIJING)
+  - (TIANANMEN, MAO ZEDONG)
+  - (TIANANMEN, PEOPLE'S REPUBLIC OF CHINA)
+  - (TIANANMEN, TIANANMEN SQUARE)
+  - (TIANANMEN, FORBIDDEN CITY)
+  - (TIANANMEN, CHANG'AN AVENUE)
+  - (BEIJING, TIANANMEN SQUARE)
+  - (BEIJING, FORBIDDEN CITY)
+  - (BEIJING, CHANG'AN AVENUE)
+  - (BEIJING, PEOPLE'S REPUBLIC OF CHINA)
+  - (BEIJING, BADALING)
+  - (BEIJING, JUYONGGUAN PASS)
+  - (BEIJING, CHINA)
+  - (BEIJING, HEBEI PROVINCE)
+  - (BEIJING, TIANJIN)
+  - (BEIJING, JING-JIN-JI)
+  - (BEIJING, BEIJING CAPITAL INTERNATIONAL AIRPORT)
+  - (BEIJING, BEIJING DAXING INTERNATIONAL AIRPORT)
+  - (BEIJING, YIN YONG)
+  - (BEIJING, WEI XIAODONG)
+  - (BEIJING, 2008 SUMMER OLYMPICS)
+  - (BEIJING, 2022 WINTER OLYMPICS)
+  - (BEIJING, TEMPLE OF HEAVEN)
+  - (BEIJING, SUMMER PALACE)
+  - (BEIJING, MING TOMBS)
+  - (BEIJING, ZHOUKOUDIAN PEKING MAN SITE)
+  - (BEIJING, BEIJING CENTRAL AXIS)
+  - (BEIJING, GREAT WALL)
+  - (BEIJING, GRAND CANAL)
+  - (BEIJING, TSINGHUA UNIVERSITY)
+  - (BEIJING, PEKING UNIVERSITY)
+  - (BEIJING, ASIAN INFRASTRUCTURE INVESTMENT BANK)
+  - (BEIJING, SHANGHAI COOPERATION ORGANISATION)
+  - (BEIJING, SILK ROAD FUND)
+  - (BEIJING, CHINESE ACADEMY OF SCIENCES)
+  - (BEIJING, CHINESE ACADEMY OF ENGINEERING)
+  - (BEIJING, CHINESE ACADEMY OF SOCIAL SCIENCES)
+  - (BEIJING, CENTRAL ACADEMY OF FINE ARTS)
+  - (BEIJING, CENTRAL ACADEMY OF DRAMA)
+  - (BEIJING, CENTRAL CONSERVATORY OF MUSIC)
+  - (BEIJING, RED CROSS SOCIETY OF CHINA)
+  - (BEIJING, BEIJING SUBWAY)
+  - (BEIJING, BEIJING CBD)
+  - (BEIJING, ZHONGGUANCUN)
+  - (MAO ZEDONG, PEOPLE'S REPUBLIC OF CHINA)
+  - (MAO ZEDONG, CHINESE COMMUNIST PARTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, SHANGHAI)
+  - (PEOPLE'S REPUBLIC OF CHINA, XI JINPING)
+  - (PEOPLE'S REPUBLIC OF CHINA, LI QIANG)
+  - (PEOPLE'S REPUBLIC OF CHINA, WANG HUNING)
+  - (PEOPLE'S REPUBLIC OF CHINA, HAN ZHENG)
+  - (PEOPLE'S REPUBLIC OF CHINA, CHONGQING)
+  - (PEOPLE'S REPUBLIC OF CHINA, TAIWAN)
+  - (PEOPLE'S REPUBLIC OF CHINA, QIN DYNASTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, HAN DYNASTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, TANG DYNASTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, YUAN DYNASTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, MING DYNASTY)
+  - (PEOPLE'S REPUBLIC OF CHINA, QING DYNASTY)
+  - (FORBIDDEN CITY, PALACE MUSEUM)
+  - (FORBIDDEN CITY, MING DYNASTY)
+  - (FORBIDDEN CITY, QING DYNASTY)
+  - (FORBIDDEN CITY, CHINA)
+  - (FORBIDDEN CITY, YONGLE EMPEROR)
+  - (SHANGHAI, CHINA)
+  - (SHANGHAI, YANGTZE RIVER)
+  - (SHANGHAI, HUANGPU RIVER)
+  - (SHANGHAI, PORT OF SHANGHAI)
+  - (SHANGHAI, PUDONG NEW AREA)
+  - (SHANGHAI, BATTLE OF SHANGHAI)
+  - (SHANGHAI, FIRST OPIUM WAR)
+  - (SHANGHAI, CHINESE CIVIL WAR)
+  - (SHANGHAI, DENG XIAOPING)
+  - (SHANGHAI, SHANGHAI MUNICIPAL PEOPLE'S CONGRESS)
+  - (SHANGHAI, SHESHAN HILL)
+  - (SHANGHAI, THE BUND)
+  - (SHANGHAI, LUJIAZUI)
+  - (SHANGHAI, YU GARDEN)
+  - (SHANGHAI, NANJING ROAD)
+  - (SHANGHAI, SHANGHAI EXHIBITION CENTRE)
+  - (SHANGHAI, OLD CITY OF SHANGHAI)
+  - (SHANGHAI, JING'AN TEMPLE)
+  - (SHANGHAI, SHANGHAI STOCK EXCHANGE)
+  - (SHANGHAI, SHANGHAI FREE-TRADE ZONE)
+  - (SHANGHAI, CITY GOD TEMPLE)
+  - (SHANGHAI, CHINA PAVILION)
+  - (SHANGHAI, BUND)
+  - (SHANGHAI, ORIENTAL PEARL TOWER)
+  - (SHANGHAI, EASTERN BLOC)
+  - (SHANGHAI, GLOBALIZATION AND WORLD CITIES RESEARCH NETWORK)
+  - (SHANGHAI, GLOBAL FINANCIAL CENTRES INDEX)
+  - (SHANGHAI, FORTUNE GLOBAL 500)
+  - (SHANGHAI, SHANGHAI METRO)
+  - (SHANGHAI, SHANGHAI TOWER)
+  - (ZHAO LEJI, NATIONAL PEOPLE'S CONGRESS)
+  - (MING DYNASTY, BADALING)
+  - (MING DYNASTY, GREAT WALL OF CHINA)
+  - (MING DYNASTY, TEMPLE OF HEAVEN)
+  - (QING DYNASTY, TEMPLE OF HEAVEN)
+  - (QIN, HAN)
+  - (HAN, TANG)
+  - (TANG, YUAN)
+  - (YUAN, MING)
+  - (MING, QING)
+  - (SILK ROAD, CHINA)
+  - (GREAT WALL, CHINA)
+  - (CHINA, TIANANMEN SQUARE PROTESTS)
+  - (CHINA, AIIB)
+  - (CHINA, SILK ROAD FUND)
+  - (CHINA, NEW DEVELOPMENT BANK)
+  - (CHINA, RCEP)
+  - (CHINA, BRICS)
+  - (CHINA, G20)
+  - (CHINA, APEC)
+  - (CHINA, SCO)
+  - (CHINA, EAST ASIA SUMMIT)
+  - (CHINA, UN SECURITY COUNCIL)
+  - (CHINA, BRITAIN)
+  - (CHINA, FRANCE)
+  - (CHINA, GERMANY)
+  - (CHINA, RUSSIA)
+  - (CHINA, PORTUGAL)
+  - (CHINA, JING'AN TEMPLE)
+  - (CHINA, TEMPLE OF HEAVEN)
+  - (REPUBLIC OF CHINA, BEIYANG GOVERNMENT)
+  - (KUOMINTANG, CHINESE COMMUNIST PARTY)
+  - (EMPIRE OF JAPAN, SECOND SINO-JAPANESE WAR)
+  - (SECOND SINO-JAPANESE WAR, BATTLE OF SHANGHAI)
+  - (GREAT LEAP FORWARD, GREAT CHINESE FAMINE)
+  - (CULTURAL REVOLUTION, MAOIST POPULISM)
+  - (SINO-SOVIET SPLIT, SHANGHAI COMMUNIQUÉ)
+  - (FRANCE, STATUE OF LIBERTY)
+  - (CENTRAL PARK, FREDERICK LAW OLMSTED)
+  - (CENTRAL PARK, CALVERT VAUX)
+  - (CENTRAL PARK, NYC PARKS)
+  - (CENTRAL PARK, CENTRAL PARK CONSERVANCY)
+  - (CENTRAL PARK, SENECA VILLAGE)
+  - (CENTRAL PARK, MANHATTAN)
+  - (CENTRAL PARK, UPPER WEST SIDE)
+  - (CENTRAL PARK, UPPER EAST SIDE)
+  - (CENTRAL PARK, ROBERT MOSES)
+  - (CENTRAL PARK, SHAKESPEARE IN THE PARK)
+  - (ROBERT MOSES, VERRAZZANO-NARROWS BRIDGE)
+  - (MANHATTAN, WALL STREET)
+  - (MANHATTAN, FINANCIAL DISTRICT)
+  - (MANHATTAN, BROOKLYN BRIDGE)
+  - (BADALING, GREAT WALL OF CHINA)
+  - (BADALING, BADALING TOWN)
+  - (BADALING, YANQING DISTRICT)
+  - (BADALING, BEIBALOU)
+  - (BADALING, JUYONGGUAN PASS)
+  - (YANQING DISTRICT, BADALING TOWN)
+  - (VERRAZZANO-NARROWS BRIDGE, STATEN ISLAND)
+  - (VERRAZZANO-NARROWS BRIDGE, BROOKLYN)
+  - (VERRAZZANO-NARROWS BRIDGE, THE NARROWS)
+  - (VERRAZZANO-NARROWS BRIDGE, OTHMAR AMMANN)
+  - (VERRAZZANO-NARROWS BRIDGE, LEOPOLD JUST)
+  - (VERRAZZANO-NARROWS BRIDGE, AMMANN & WHITNEY)
+  - (VERRAZZANO-NARROWS BRIDGE, GIOVANNI DA VERRAZZANO)
+  - (VERRAZZANO-NARROWS BRIDGE, INTERSTATE 278)
+  - (VERRAZZANO-NARROWS BRIDGE, MTA BRIDGES AND TUNNELS)
+  - (BROOKLYN, BROOKLYN BRIDGE)
+  - (THE NARROWS, LOWER NEW YORK BAY)
+  - (THE NARROWS, NEW YORK HARBOR)
+  - (LOWER NEW YORK BAY, ATLANTIC OCEAN)
+  - (NEW YORK HARBOR, STATUE OF LIBERTY)
+  - (HUANGPU RIVER, EXQUISITE JADE ROCK)
+  - (HUANGPU RIVER, ORIENTAL PEARL TOWER)
+  - (HSBC BUILDING, THE BUND)
+  - (LUJIAZUI, ORIENTAL PEARL TOWER)
+  - (LUJIAZUI, SHANGHAI TOWER)
+  - (LUJIAZUI, PUDONG)
+  - (SHANGHAI TOWER, SHANGHAI MUNICIPAL GOVERNMENT)
+  - (SHANGHAI TOWER, BURJ KHALIFA)
+  - (SHANGHAI TOWER, J HOTEL)
+  - (SHANGHAI TOWER, OBSERVATION DECK)
+  - (SHANGHAI TOWER, TOP OF SHANGHAI)
+  - (YU GARDEN, HUANGPU DISTRICT)
+  - (YU GARDEN, CITY GOD TEMPLE)
+  - (YU GARDEN, YUYUAN TOURIST MART)
+  - (YU GARDEN, HUXINTING TEAHOUSE)
+  - (YU GARDEN, YU GARDEN BAZAAR)
+  - (YU GARDEN, EXQUISITE JADE ROCK)
+  - (YU GARDEN, SHANGHAI METRO)
+  - (NANJING ROAD, JIANGSU)
+  - (NANJING ROAD, NANJING)
+  - (NANJING ROAD, SHANGHAI INTERNATIONAL SETTLEMENT)
+  - (NANJING ROAD, BUBBLING WELL ROAD)
+  - (NANJING ROAD, SHANGHAI RACE CLUB)
+  - (NANJING ROAD, EAST NANJING ROAD)
+  - (NANJING ROAD, WEST NANJING ROAD)
+  - (JING'AN TEMPLE, BUDDHISM)
+  - (WHITE HOUSE, JAMES HOBAN)
+  - (WHITE HOUSE, BENJAMIN HENRY LATROBE)
+  - (WHITE HOUSE, JOHN ADAMS)
+  - (WHITE HOUSE, THOMAS JEFFERSON)
+  - (WHITE HOUSE, JAMES MONROE)
+  - (WHITE HOUSE, THEODORE ROOSEVELT)
+  - (WHITE HOUSE, WILLIAM HOWARD TAFT)
+  - (WHITE HOUSE, HARRY S. TRUMAN)
+  - (WHITE HOUSE, EISENHOWER EXECUTIVE OFFICE BUILDING)
+  - (WHITE HOUSE, BLAIR HOUSE)
+  - (WHITE HOUSE, EXECUTIVE RESIDENCE)
+  - (WHITE HOUSE, WEST WING)
+  - (WHITE HOUSE, EAST WING)
+  - (WHITE HOUSE, PRESIDENT'S PARK)
+  - (EXQUISITE JADE ROCK, HUOZONG EMPEROR)
+  - (HUOZONG EMPEROR, NORTHERN SONG DYNASTY)
+  - (STATUE OF LIBERTY, LIBERTY ISLAND)
+  - (STATUE OF LIBERTY, FRÉDÉRIC AUGUSTE BARTHOLDI)
+  - (STATUE OF LIBERTY, GUSTAVE EIFFEL)
+  - (STATUE OF LIBERTY, ÉDOUARD DE LABOULAYE)
+  - (STATUE OF LIBERTY, JOSEPH PULITZER)
+  - (STATUE OF LIBERTY, GROVER CLEVELAND)
+  - (STATUE OF LIBERTY, CENTENNIAL EXPOSITION)
+  - (STATUE OF LIBERTY, MADISON SQUARE PARK)
+  - (BROOKLYN BRIDGE, JOHN AUGUSTUS ROEBLING)
+  - (BROOKLYN BRIDGE, WASHINGTON ROEBLING)
+  - (BROOKLYN BRIDGE, EMILY WARREN ROEBLING)
+  - (BROOKLYN BRIDGE, EAST RIVER)
+  - (BROOKLYN BRIDGE, NEW YORK BRIDGE COMPANY)
+  - (BROOKLYN BRIDGE, DUMBO)
+  - (BROOKLYN BRIDGE, BROOKLYN HEIGHTS)
+  - (BROOKLYN BRIDGE, CIVIC CENTER)
+  - (BROOKLYN BRIDGE, MAY 24, 1883)
+  - (DUKE OF YORK, KING CHARLES II)
+  - (BURJ KHALIFA, DUBAI)
+  - (PALACE MUSEUM, WANG XUDONG)
+  - (LI XIULING, BEIJING MUNICIPAL PEOPLE'S CONGRESS)
+  - (BEIJING MUNICIPAL PEOPLE'S CONGRESS, YIN LI)
+  - (TEMPLE OF HEAVEN, UNESCO WORLD HERITAGE SITE)
+  - (BEIJING CBD, CHAOYANG DISTRICT)
+  - (BEIJING CBD, CITIC TOWER)
+  - (CENTENNIAL EXPOSITION, PHILADELPHIA)
+  - (NEW YORK BRIDGE COMPANY, TAMMANY HALL)
+  - (BUBBLING WELL ROAD, WEST NANJING ROAD)
+  - (WEST WING, OVAL OFFICE)
+
+
+Original txt:
+Beijing central business district
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 39.9085°N 116.453°E
+From Wikipedia, the free encyclopedia
+
+Beijing CBD and the Forbidden City, taken from Central Radio & TV Tower in October 2021
+
+Beijing's CBD in January 2019 with the newly completed CITIC Tower (China Zun)
+
+Beijing's CBD in December 2017
+
+Beijing CBD as taken from the southeast in September 2021
+
+Beijing CBD before development. (1967-09-20)
+The Beijing central business district, or Beijing CBD (simplified Chinese: 北京商务中心区; traditional Chinese: 北京商務中心區; pinyin: Běijīng Shāngwù Zhōngxīn Qū), is a central business district and the primary area for finance, media, and business services in Beijing, China.[1]
+
+Beijing CBD occupies 3.99 km2 of the Chaoyang District on the east side of the city. Geographically situated to the east of the city center, sandwiched between the 3rd Ring Road and the 4th Ring Road, the Beijing CBD is currently undergoing large-scale development.
+Beijing
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 39°54′24″N 116°23′51″E
+Checked
+Page protected with pending changes
+From Wikipedia, the free encyclopedia
+"Peking" redirects here. For other uses, see Beijing (disambiguation) and Peking (disambiguation).
+Beijing
+北京
+Peking
+Capital[1] and municipality
+Beijing Municipality[2]
+
+Beijing central business district with the China Zun (center)
+
+Forbidden City
+
+Temple of Heaven
+
+Great Wall of Badaling
+
+Tiananmen
+
+Great Hall of the People (left) and
+National Centre for the Performing Arts (right)
+MapWikimedia | © OpenStreetMap
+Location of Beijing Municipality within China
+Location of Beijing Municipality within China
+Coordinates (Tian'anmen Square national flag): 39°54′24″N 116°23′51″E
+Country	China
+Established	1045 BC
+Founded by	Zhou dynasty (Western Zhou)
+Municipal seat	Tongzhou District
+Divisions
+ - County-level
+ - Township-
+level	
+16 districts
+343 towns and subdistricts
+Government
+ • Type	Municipality
+ • Body	Beijing Municipal People's Congress
+ • Party Secretary	Yin Li
+ • Congress Chairman	Li Xiuling
+ • Mayor	Yin Yong
+ • CPPCC Chairman	Wei Xiaodong
+ • National People's Congress Representation	53 deputies
+Area[3]
+ • Municipality	16,410.54 km2 (6,336.14 sq mi)
+ • Land	16,410.54 km2 (6,336.14 sq mi)
+ • Urban	16,410.54 km2 (6,336.14 sq mi)
+ • Metro	12,796.5 km2 (4,940.8 sq mi)
+Elevation	43.5 m (142.7 ft)
+Highest elevation (Mount Ling)	2,303 m (7,556 ft)
+Population (2020 census)[4]
+ • Municipality	21,893,095
+ • Density	1,300/km2 (3,500/sq mi)
+ • Urban	21,893,095
+ • Urban density	1,300/km2 (3,500/sq mi)
+ • Metro	22,366,547
+ • Metro density	1,700/km2 (4,500/sq mi)
+ • Ranks in China	Population: 27th;
+Density: 4th
+Major ethnic groups
+ • Han	95%
+GDP (2023)[5]
+ • Municipality	CN¥ 4,376 billion (13th)
+US$ 621 billion
+ • Per capita	CN¥ 200,273 (1st)
+US$ 28,421
+Time zone	UTC+08:00 (CST)
+ • Summer (DST)	UTC+09:00 (CDT)
+Postal codes	
+100000–102629
+Area code	10
+ISO 3166 code	CN-BJ
+ – Growth	Increase 0.7%
+License plate prefixes	京A, C, E, F, G, H, J, K, L, M, N, P, Q
+京B (taxis)
+京G, Y (outside urban area)
+京O, D (police and authorities)
+Abbreviation	
+BJ / 京 (jīng)
+HDI (2021)	0.907[6] (1st) – very high
+Website	beijing.gov.cn
+english.beijing.gov.cn
+Symbols
+Flower	China rose (Rosa chinensis)
+Chrysanthemum (Chrysanthemum morifolium)
+Tree	Chinese arborvitae (Platycladus orientalis)
+Pagoda tree (Styphnolobium japonicum)
+Beijing
+
+"Beijing" in regular Chinese characters
+Chinese	北京
+Hanyu Pinyin	Běijīng
+Postal	Peking[note 1]
+Peiping (1368–1403;
+1928–1937; 1945–1949)
+Literal meaning	"Northern Capital"
+Transcriptions
+ 
+Beijing,[a] previously romanized as Peking,[b] is the capital of China. With more than 22 million residents,[11] it is the world's most populous national capital city as well as China's second largest city after Shanghai.[12] It is located in Northern China, and is governed as a municipality under the direct administration of the State Council with 16 urban, suburban, and rural districts.[13] Beijing is mostly surrounded by Hebei Province and neighbors Tianjin to the southeast; together, the three divisions form the Jing-Jin-Ji cluster.[14]
+
+Beijing is a global city and one of the world's leading centres for culture, diplomacy, politics, finance, business and economics, education, research, language, tourism, media, sport, science and technology and transportation and art. It is home to the headquarters of most of China's largest state-owned companies and houses the largest number of Fortune Global 500 companies in the world, as well as the world's four biggest financial institutions by total assets.[15] It is also a major hub for the national highway, expressway, railway, and high-speed rail networks. For a decade before the COVID-19 pandemic, the Beijing Capital International Airport was Asia's busiest airport (2009–2019) and the second busiest airport in the world (2010–2019).[16] In 2020, the Beijing subway was the fourth busiest and second longest in the world.[17] The Beijing Daxing International Airport, Beijing's second international airport, is the largest single-structure airport terminal in the world.[18][19] The city has hosted numerous international and national sporting events, the most notable being the 2008 Summer Olympics and 2008 Summer Paralympics Games. In 2022, Beijing became the first city ever to host both the Summer and Winter Olympics,[20] and also the Summer and Winter Paralympics.[21]
+
+Beijing combines both modern and traditional style architectures, with one side of the city being modernized and renovated to fit the times, and the other half still offering traditional hutong districts.[22] Beijing is one of the oldest cities in the world, with a rich history dating back over three millennia. As the last of the Four Great Ancient Capitals of China, Beijing has been the political center of the country for most of the past eight centuries,[23] and was the largest city in the world by population for much of the second millennium CE.[24] With mountains surrounding the inland city on three sides, in addition to the old inner and outer city walls, Beijing was strategically poised and developed to be the residence of the emperor and thus was the perfect location for the imperial capital. The city is renowned for its opulent palaces, temples, parks, gardens, tombs, walls and gates.[25] Beijing is one of the most important tourist destinations of the world. In 2018, Beijing was the second highest earning tourist city in the world after Shanghai.[26] Beijing is home to many national monuments and museums and has eight UNESCO World Heritage Sites—the Forbidden City, Temple of Heaven, Summer Palace, Ming Tombs, Zhoukoudian Peking Man Site, Beijing Central Axis and parts of the Great Wall and the Grand Canal—all of which are popular tourist locations.[27] Siheyuans, the city's traditional housing style, and hutongs, the narrow alleys between siheyuans, are major tourist attractions and are common in urban Beijing.
+
+Beijing's public universities make up more than one-fifth of Double First-Class Construction universities, and many of them consistently rank among the best in the Asia-Pacific and the world.[28][29][30] Beijing is home to universities including Tsinghua University and Peking University.[31][32][33] Beijing CBD is a center for Beijing's economic expansion, with the ongoing or recently completed construction of multiple skyscrapers. Beijing's Zhongguancun area is a world leading center of scientific and technological innovation as well as entrepreneurship. Beijing has been ranked the city with the largest scientific research output by the Nature Index since the list's inception in 2016.[34][35] Beijing hosts 175 foreign embassies as well as the headquarters of many organizations, including the Asian Infrastructure Investment Bank (AIIB), the Shanghai Cooperation Organisation (SCO), the Silk Road Fund, the Chinese Academy of Sciences, the Chinese Academy of Engineering, the Chinese Academy of Social Sciences, the Central Academy of Fine Arts, the Central Academy of Drama, the Central Conservatory of Music, and the Red Cross Society of China.
+Central Park
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40°46′56″N 73°57′55″W
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+This article is about the public park in New York City. For other uses, see Central Park (disambiguation).
+Central Park
+
+Aerial view of southern Central Park in September 2014
+MapWikimedia | © OpenStreetMap
+Type	Urban park
+Location	Manhattan, New York City, New York, U.S.
+Coordinates	40°46′56″N 73°57′55″W
+Area	843 acres (341 ha; 1.317 sq mi; 3.41 km2)
+Created	1857–1876
+Owned by	NYC Parks
+Operated by	Central Park Conservancy
+Visitors	about 42 million annually
+Open	6:00 a.m. to 1:00 a.m.
+Public transit access	Subway and bus; see "Public transport"
+U.S. National Register of Historic Places
+U.S. National Historic Landmark
+New York State Register of Historic Places
+NYC Scenic Landmark
+Architect	Frederick Law Olmsted (1822–1903), Calvert Vaux (1824–1895)
+NRHP reference No.	66000538
+NYSRHP No.	06101.000663
+Significant dates
+Added to NRHP	October 15, 1966[3]
+Designated NHL	May 23, 1963
+Designated NYSRHP	June 23, 1980[1]
+Designated NYCL	March 26, 1974[2]
+Central Park is an urban park between the Upper West Side and Upper East Side neighborhoods of Manhattan in New York City that was the first landscaped park in the United States. It is the sixth-largest park in the city, containing 843 acres (341 ha), and the most visited urban park in the United States, with an estimated 42 million visitors annually as of 2016. It is also one of the most filmed locations in the world.
+
+The creation of a large park in Manhattan was first proposed in the 1840s, and a 778-acre (315 ha) park approved in 1853. In 1858, landscape architects Frederick Law Olmsted and Calvert Vaux won a design competition for the park with their "Greensward Plan". Construction began in 1857; existing structures, including a majority-Black settlement named Seneca Village, were seized through eminent domain and razed. The park's first areas were opened to the public in late 1858. Additional land at the northern end of Central Park was purchased in 1859, and the park was completed in 1876. After a period of decline in the early 20th century, New York City parks commissioner Robert Moses started a program to clean up Central Park in the 1930s. The Central Park Conservancy, created in 1980 to combat further deterioration in the late 20th century, refurbished many parts of the park starting in the 1980s.
+
+The park's main attractions include the Ramble and Lake, Hallett Nature Sanctuary, the Jacqueline Kennedy Onassis Reservoir, and Sheep Meadow; amusement attractions such as Wollman Rink, Central Park Carousel, and the Central Park Zoo; formal spaces such as the Central Park Mall and Bethesda Terrace; and the Delacorte Theater. The biologically diverse ecosystem has several hundred species of flora and fauna. Recreational activities include carriage-horse and bicycle tours, bicycling, sports facilities, and concerts and events such as Shakespeare in the Park. Central Park is traversed by a system of roads and walkways and is served by public transportation.
+
+Its size and cultural position make it a model for the world's urban parks. Its influence earned Central Park the designations of National Historic Landmark in 1963 and of New York City scenic landmark in 1974. Central Park is owned by the New York City Department of Parks and Recreation but has been managed by the Central Park Conservancy since 1998, under a contract with the municipal government in a public–private partnership. The Conservancy, a non-profit organization, raises Central Park's annual operating budget and is responsible for all basic care of the park.
+
+Description
+MapWikimedia | © OpenStreetMap
+Notable buildings and structures of Central Park. Click on the map and then on the points for details.
+This map: viewtalkedit
+Jing'an Temple
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°13′25″N 121°26′43″E
+From Wikipedia, the free encyclopedia
+
+This article includes a list of references, related reading, or external links, but its sources remain unclear because it lacks inline citations. Please help improve this article by introducing more precise citations. (February 2008) (Learn how and when to remove this message)
+Jing'an Temple
+
+Aerial view of Jing'an Temple
+Religion
+Affiliation	Buddhism
+Location
+Country	China
+Jing'an Temple is located in ShanghaiJing'an Temple
+Location in Shanghai
+Geographic coordinates	31°13′25″N 121°26′43″E
+Architecture
+Completed	1983 (rebuilt)
+National Mall
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 38°53′24″N 77°1′25″W
+From Wikipedia, the free encyclopedia
+This article is about the park in Washington, D.C.. For the parkway in California, see Capitol Mall. For the shopping malls in Olympia, Washington, and Jefferson City, Missouri, respectively, see Capital Mall and Capital Mall (Missouri).
+National Mall
+U.S. National Register of Historic Places
+
+The National Mall with the Lincoln Memorial and its reflecting pool (foreground), the Washington Monument behind it, and the United States Capitol (background) in 2010
+Location	Between Independence and Constitution Avenues from the Capitol to the Lincoln Memorial
+Coordinates	38°53′24″N 77°1′25″W
+Architect	Pierre (Peter) Charles L'Enfant, McMillan Commission
+Website	National Mall and Memorial Parks
+NRHP reference No.	66000031[1] (original)
+16000805[2][3] (increase)
+Significant dates
+Added to NRHP	October 15, 1966
+Boundary increase	December 8, 2016
+The National Mall is a landscaped park near the downtown area of Washington, D.C., the capital city of the United States. It contains and borders a number of museums of the Smithsonian Institution, art galleries, cultural institutions, and various memorials, sculptures, and statues. It is administered by the National Park Service (NPS) of the United States Department of the Interior as part of the National Mall and Memorial Parks unit of the National Park System.[4] The park receives approximately 24 million visitors each year.[5] Designed by Pierre L'Enfant, the "Grand Avenue" or Mall was to be a democratic and egalitarian space—the complete opposite of the gardens of Versailles where only royalty and nobility accessed similar spaces in size and scope.
+
+The core area of the National Mall extends between the United States Capitol grounds to the east and the Washington Monument to the west and is lined to the north and south by several museums and federal office buildings.[6] The term National Mall may also include areas that are also officially part of neighboring West Potomac Park to the south and west and Constitution Gardens to the north, extending to the Lincoln Memorial on the west and Jefferson Memorial to the south.[7]
+
+Landmarks, museums, and other features
+2016 Map
+
+Map of the National Mall and vicinity (2016)
+Oriental Pearl Tower
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°14′30.01″N 121°29′40.98″E
+From Wikipedia, the free encyclopedia
+This article is about the tower in Shanghai. For the skyscraper in Manila, see Pearl of the Orient Tower.
+Oriental Pearl Radio & TV Tower
+东方明珠广播电视塔
+
+The Oriental Pearl Tower in May 2017
+MapWikimedia | © OpenStreetMap
+General information
+Type	Communication, hotel, observation, restaurant
+Location	Shanghai
+Coordinates	31°14′30.01″N 121°29′40.98″E
+Construction started	July 30, 1991[1]
+Completed	November 18, 1994; 30 years ago[2]
+Opened	May 1, 1995
+Height
+Antenna spire	468 m (1,535 ft)
+Top floor	351 m (1,152 ft)
+Technical details
+Floor count	Equivalent of a 103 story building
+Lifts/elevators	6
+Design and construction
+Architect(s)	Shanghai Modern Architectural Design Co. Ltd.
+Developer	Shanghai Oriental Group Co. Ltd.
+References
+[3][4]
+The Oriental Pearl Radio & Television Tower[a] is a TV tower in Shanghai. It is located on the banks of the Huangpu River, in Lujiazui, Pudong, opposite of the Bund. Since its opening in 1995, the tower has become a major tourist attraction and a cultural icon of Shanghai.
+
+
+
+
+
+Shanghai Tower
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°14′7.8″N 121°30′3.6″E
+From Wikipedia, the free encyclopedia
+Not to be confused with Shanghai World Financial Center or Shanghai Tower (Liverpool).
+Shanghai Tower
+上海中心大厦
+Shànghǎi Zhōngxīn Dàshà
+
+Shanghai Tower in 2016
+MapWikimedia | © OpenStreetMap
+Former names	Shanghai Center
+General information
+Status	Completed
+Type	Mixed-use
+Location	501 Yincheng Middle Rd, Lujiazui, Pudong, Shanghai
+Construction started	1 November 2008
+Completed	31 August 2014; 10 years ago
+Opened	1 February 2015
+Cost	CN¥15.9 billion
+Owner	Shanghai Tower Construction and Development
+Height
+Architectural	632 m (2,073 ft)
+Tip	632 m (2,073 ft)
+Top floor	587.4 m (1,927 ft) (Level 127)[1]
+Observatory	562 m (1,844 ft) (Level 121)[9]
+Technical details
+Floor count	128 above ground
+5 below ground
+Floor area	380,000 m2 (4,090,300 sq ft) above grade
+170 m2 (1,800 sq ft) below grade
+Lifts/elevators	97 (mall included)
+Design and construction
+Architect(s)	Marshall Strabala & Jun Xia (Gensler)
+TJAD
+Engineer	Thornton Tomasetti
+Cosentini Associates
+I.DEA Ecological Solutions
+Main contractor	Shanghai Construction Group
+References
+[2][3][4][5][6][7][8]
+Shanghai Tower (Chinese: 上海中心大厦; pinyin: Shànghǎi Zhōngxīn Dàshà; Shanghainese: Zånhe Tsonsin Dusa; lit. 'Shanghai Center Building') is a 128-story, 632-meter-tall (2,073 ft) megatall skyscraper located in Lujiazui, Pudong, Shanghai.[10] It is the tallest building in China and the world's third-tallest building by height to architectural top. It is the tallest and largest LEED Platinum certified building in the world since 2015. It had the world's fastest elevators at a top speed of 20.5 meters per second (74 km/h; 46 mph) until 2017,[11][12] when it was surpassed by the Guangzhou CTF Finance Center, with its top speed of 21 meters per second (76 km/h; 47 mph).[13] Designed by the international design firm Gensler and owned by the Shanghai Municipal Government,[2] it is the tallest of the world's first triple-adjacent supertall buildings in Pudong, the other two being the Jin Mao Tower and the Shanghai World Financial Center. Its tiered construction, designed for high energy efficiency, provides nine separate zones divided between office, retail and leisure use.[5][7][14] The US-based Council on Tall Buildings and Urban Habitat cites it as "one of the most sustainably advanced tall buildings in the world."[15]
+
+Groundbreaking and construction work on the tower began on 29 November 2008 and topped out on 4 August 2013.[10][16] The exterior was completed in summer 2015,[8][14] and work was considered complete in September 2014. Although the building was originally scheduled to open to the public in November 2014, the actual public-use date was shifted to February 2015. The observation deck was opened to visitors in July 2016; the period from July through September 2018 was termed a "test run" or "commissioning" period.[17][18] Since April 26, 2017, the sightseeing decks on the 118th and 119th floors (546m and 547m high respectively) has been fully open to the public.[19] By 2020, the opening of a further deck, dubbed the "Top of Shanghai" on the 121th floor at 562m (1844 ft), made it the highest observation deck in the world, beating out the Burj Khalifa's observation deck at 555m (1823 ft).[20] The J Hotel Shanghai Tower, opened on the 120th floor in 2021, became the world's highest luxury hotel.[21][22]
+
+History
+Brooklyn Bridge
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40.7057°N 73.9964°W
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+For other uses, see Brooklyn Bridge (disambiguation).
+Brooklyn Bridge
+View of the Brooklyn Bridge from Manhattan; the East River is in the foreground
+View from Manhattan towards Brooklyn, 2009
+Coordinates	40.7057°N 73.9964°W
+Carries	5 lanes of roadway
+Elevated trains (until 1944)
+Streetcars (until 1950)
+Pedestrians and bicycles
+Crosses	East River
+Locale	New York City (Civic Center, Manhattan – Dumbo/Brooklyn Heights, Brooklyn)
+Maintained by	New York City Department of Transportation
+ID number	22400119[1]
+Characteristics
+Design	Suspension/Cable-stay Hybrid
+Total length	6,016 ft (1,833.7 m; 1.1 mi)[a]
+Width	85 ft (25.9 m)[5][6][8]
+Height	272 ft (82.9 m) (towers)[3]
+Longest span	1,595.5 ft (486.3 m)[5][6][8]
+Clearance below	127 ft (38.7 m) above mean high water[9]
+History
+Designer	John Augustus Roebling
+Constructed by	New York Bridge Company
+Opened	May 24, 1883; 141 years ago[10]
+Statistics
+Daily traffic	121,930 (2019)[11]
+Toll	Free both ways
+Brooklyn Bridge
+U.S. National Register of Historic Places
+U.S. National Historic Landmark
+New York State Register of Historic Places
+New York City Landmark No. 0098
+Built	1869–1883
+Architectural style	Gothic Revival
+NRHP reference No.	66000523
+NYSRHP No.	06101.001644
+NYCL No.	0098
+Significant dates
+Added to NRHP	October 15, 1966[13]
+Designated NHL	January 29, 1964[14]
+Designated NYSRHP	June 23, 1980[12]
+Designated NYCL	August 24, 1967[2]
+Location
+<mapframe>: The JSON content is not valid GeoJSON+simplestyle. The list below shows all attempts to interpret it according to the JSON Schema. Not all are errors.
+
+
+The Brooklyn Bridge is a hybrid cable-stayed/suspension bridge in New York City, spanning the East River between the boroughs of Manhattan and Brooklyn. Opened on May 24, 1883, the Brooklyn Bridge was the first fixed crossing of the East River. It was also the longest suspension bridge in the world at the time of its opening, with a main span of 1,595.5 feet (486.3 m) and a deck 127 ft (38.7 m) above mean high water. The span was originally called the New York and Brooklyn Bridge or the East River Bridge but was officially renamed the Brooklyn Bridge in 1915.
+
+Proposals for a bridge connecting Manhattan and Brooklyn were first made in the early 19th century, which eventually led to the construction of the current span, designed by John A. Roebling. The project's chief engineer, his son Washington Roebling, contributed further design work, assisted by the latter's wife, Emily Warren Roebling. Construction started in 1870 and was overseen by the New York Bridge Company, which in turn was controlled by the Tammany Hall political machine. Numerous controversies and the novelty of the design prolonged the project over thirteen years. After opening, the Brooklyn Bridge underwent several reconfigurations, having carried horse-drawn vehicles and elevated railway lines until 1950. To alleviate increasing traffic flows, additional bridges and tunnels were built across the East River. Following gradual deterioration, the Brooklyn Bridge was renovated several times, including in the 1950s, 1980s, and 2010s.
+
+The Brooklyn Bridge is the southernmost of the four toll-free vehicular bridges connecting Manhattan Island and Long Island, with the Manhattan Bridge, the Williamsburg Bridge, and the Queensboro Bridge to the north. Only passenger vehicles and pedestrian and bicycle traffic are permitted. A major tourist attraction since its opening, the Brooklyn Bridge has become an icon of New York City. Over the years, the bridge has been used as the location of various stunts and performances, as well as several crimes and attacks. The Brooklyn Bridge is designated a National Historic Landmark, a New York City landmark, and a National Historic Civil Engineering Landmark.
+
+
+
+Forbidden City
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 39°54′57″N 116°23′27″E
+From Wikipedia, the free encyclopedia
+"The Forbidden City" redirects here. For the film by this name, see The Forbidden City (film). For other uses, see Forbidden City (disambiguation).
+"Gugong" redirects here. For other uses, see Gugong (disambiguation).
+Forbidden City
+紫禁城
+
+The Forbidden City viewed from Jingshan Hill
+Forbidden City is located in BeijingForbidden City
+Location within Beijing
+Show map of Beijing
+Show map of China
+Show all
+Established	1406–1420
+1925 (as public museum)
+Location	4 Jingshan Front St, Dongcheng District, Beijing, China
+Coordinates	39°54′57″N 116°23′27″E
+Type	
+Art museumimperial palacehistoric site
+Visitors	16.7 million[1]
+Curator	Wang Xudong
+Website	dpm.org.cn (in Chinese)
+intl.dpm.org.cn (in English)
+Area	72 hectares
+Built	1406–1420 (Ming dynasty)
+Architect	Kuai Xiang
+Architectural style(s)	Chinese architecture
+UNESCO World Heritage Site
+Part of	Imperial Palaces of the Ming and Qing Dynasties in Beijing and Shenyang
+Criteria	Cultural: i, ii, iii, iv
+Reference	439-001
+Inscription	1987 (11th Session)
+Forbidden City
+
+"Forbidden City" in Chinese characters
+Chinese name
+Chinese	紫禁城
+Literal meaning	"Purple Forbidden City"
+Transcriptions
+ 
+Manchu name
+Manchu script	ᡩᠠᠪᡴᡡᡵᡳ
+ᡩᠣᡵᡤᡳ
+ᡥᠣᡨᠣᠨ
+Romanization	dabkūri dorgi hoton "Former Inner City"
+The Forbidden City (Chinese: 紫禁城; pinyin: Zǐjìnchéng) is the imperial palace complex in the center of the Imperial City in Beijing, China. It was the residence of 24 Ming and Qing dynasty Emperors, and the center of political power in China for over 500 years from 1420 to 1924. The palace is now administered by the Palace Museum. As a UNESCO World Heritage Site, it is one of the most popular tourist attractions in the world. The Forbidden City is arguably the most famous palace in all of Chinese history, and is the largest preserved royal palace complex still standing in the world.
+
+The Forbidden City was constructed from 1406 to 1420, and was the imperial palace and winter residence of the Emperor of China from the Ming dynasty (since the Yongle Emperor) to the end of the Qing dynasty, between 1420 and 1924. The Forbidden City served as the home of Chinese emperors and their households and was the ceremonial and political center of the Chinese government for over 500 years. Since 1925, the Forbidden City has been under the charge of the Palace Museum, whose extensive collection of artwork and artifacts was built upon the imperial collections of the Ming and Qing dynasties. The Forbidden City was declared a World Heritage Site in 1987.[2]
+
+The complex claims to consist of 9,999 rooms in total, although experts have shown in recent years that the number only amounts to 8,886,[3] covering 72 ha (720,000 m2)/178-acre.[4][5] The palace exemplifies the opulence of the residences of the Chinese emperor and the traditional Chinese palatial architecture,[2] and has influenced cultural and architectural developments in East Asia and elsewhere. It is listed by UNESCO as the largest collection of preserved ancient wooden structures in the world. Since 2012, the Forbidden City has seen an average of 14 million visitors annually, and received more than 19 million visitors in 2019.[6] In 2018, the Forbidden City's market value was estimated at US$70 billion, making it both the world's most valuable palace and the most valuable piece of real estate anywhere in the world.[7]
+
+It was listed as the first batch of national key cultural relics in 1961.[8] The palace is extremely important to the Chinese public and nation, who often view it as a cultural and heavenly link to their ancestors.
+
+
+Shanghai
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°13′43″N 121°28′29″E
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+For other uses, see Shanghai (disambiguation).
+Shanghai
+上海
+Municipality
+Municipality of Shanghai
+
+Lujiazui from Zhapulu Bridge with the Oriental Pearl Tower (left) and Shanghai Tower (right)
+
+Yu Garden
+
+Nanjing Road
+
+Shanghai Exhibition Centre
+
+Old City of Shanghai
+
+HSBC Building at The Bund
+
+Jing'an Temple
+Etymology: 上海浦 (Shànghăi pǔ) The original name of the Huangpu River
+MapWikimedia | © OpenStreetMap
+Location of Shanghai Municipality in China
+Location of Shanghai Municipality in China
+Coordinates (People's Square): 31°13′43″N 121°28′29″E
+Country	China
+Region	East China
+Establishment of
+ - Qinglong Town	
+746[1]
+ - Huating County [zh]	751[2]
+ - Shanghai County	1292[3]
+ - Municipality	7 July 1927
+Municipal seat	Huangpu District
+Divisions
+ - County-level
+ - Township-
+level	
+16 districts
+210 towns and subdistricts
+Government
+ • Type	Municipality
+ • Body	Shanghai Municipal People's Congress
+ • Party Secretary	Chen Jining
+ • Congress Chairwoman	Huang Lixin
+ • Mayor	Gong Zheng
+ • Municipal CPPCC Chairman	Hu Wenrong
+ • National People's Congress Representation	57 deputies
+Area[4][5][6]
+ • Municipality	6,341 km2 (2,448 sq mi)
+ • Water	653 km2 (252 sq mi)
+ • Metro	14,922.7 km2 (5,761.7 sq mi)
+Elevation[7]	4 m (13 ft)
+Highest elevation (Sheshan Hill)	118 m (387 ft)
+Population (2023)[8]
+ • Municipality	24,874,500
+ • Rank	1st in China
+ • Density	3,900/km2 (10,000/sq mi)
+Demonym	Shanghainese
+GDP (nominal) (2023)[9]
+ • Municipality	CN¥ 4,722 billion (10th)
+US$ 670 billion
+ • Per capita	CN¥ 190,270 (2nd)
+US$ 27,001
+Time zone	UTC+08:00 (CST)
+ • Summer (DST)	UTC+09:00 (CDT)
+Postal code	
+200000–202100
+Area code	21
+ISO 3166 code	CN-SH
+ – Growth	Decrease −0.2%
+HDI (2021)	0.880[10] (2nd) – very high
+License plate prefixes	
+沪A, B, D, E, F, G, H, J, K, L, M, N
+沪C (outer suburbs only)
+Abbreviation	SH / 沪 (Hù)
+City flower	Yulan magnolia
+Languages	
+Shanghainese
+Standard Mandarin
+Website	
+shanghai.gov.cn
+en.shanghai.gov.cn
+Shanghai[a] is a direct-administered municipality and the most populous urban area in China. The city is located on the Chinese shoreline on the southern estuary of the Yangtze River, with the Huangpu River flowing through it.
+
+The population of the city proper is the third largest in the world, with around 24.87 million inhabitants in 2023, while the urban area is the most populous in China, with 29.87 million residents. As of 2022, the Greater Shanghai metropolitan area was estimated to produce a gross metropolitan product (nominal) of nearly 13 trillion RMB ($1.9 trillion).[13] Shanghai is one of the world's major centers for finance, business and economics, research, science and technology, manufacturing, transportation, tourism, and culture. The Port of Shanghai is the world's busiest container port.[14]
+
+Originally a fishing village and market town, Shanghai grew in importance in the 19th century due to both domestic and foreign trade and its favorable port location. The city was one of five treaty ports forced to open to European trade after the First Opium War, which ceded Hong Kong to the United Kingdom. This followed the Second Battle of Chuenpi in 1841, more than 60 km (37 mi) east of the Portuguese colony of Macau. Macau was controlled by Portugal following the Luso-Chinese agreement of 1554. The Shanghai International Settlement and the French Concession were subsequently established. The city then flourished, becoming a primary commercial and financial hub of Asia in the 1930s. During the Second Sino-Japanese War, the city was the site of the major Battle of Shanghai. After the war, the Chinese Civil War soon resumed between the Kuomintang (KMT) and the Chinese Communist Party (CCP), with the latter eventually taking over the city and most of the mainland. From the 1950s to the 1970s, trade was mostly limited to other socialist countries in the Eastern Bloc, causing the city's global influence to decline during the Cold War.
+
+Major changes of fortune for the city would occur when economic reforms initiated by paramount leader Deng Xiaoping during the 1980s resulted in an intense redevelopment and revitalization of the city by the 1990s, especially the Pudong New Area, aiding the return of finance and foreign investment. The city has since re-emerged as a hub for international trade and finance. It is the home of the Shanghai Stock Exchange, the largest stock exchanges in the Asia-Pacific by market capitalization and the Shanghai Free-Trade Zone, the first free-trade zone in mainland China. Shanghai has been classified as an Alpha+ (global first-tier) city by the Globalization and World Cities Research Network. As of 2024, it is home to 13 companies of the Fortune Global 500 and is ranked 4th on the Global Financial Centres Index. The city is also a global major center for research and development and home to numerous Double First-Class Universities. The Shanghai Metro, first opened in 1993, is the largest metro network in the world by route length.
+
+Shanghai has been described as the "showpiece" of the economy of China. Featuring several architectural styles such as Art Deco and shikumen, the city is renowned for its Lujiazui skyline, museums and historic buildings including the City God Temple, Yu Garden, the China Pavilion and buildings along the Bund. The Oriental Pearl Tower can be seen from the Bund. Shanghai is also known for its cuisine, local language, and cosmopolitan culture, ranks sixth in the list of cities with the most skyscrapers, and it is one of the biggest economic hubs in the world.
+
+
+United States Capitol
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 38°53′23″N 77°00′32″W
+From Wikipedia, the free encyclopedia
+This article is about the building. For the group of buildings, see United States Capitol Complex. For the capital city, see Washington, D.C.
+United States Capitol
+
+The east front of the U.S. Capitol in 2020
+United States Capitol is located in Central Washington, D.C.United States Capitol
+Location of the U.S. Capitol in Washington, D.C.
+Show map of Central Washington, D.C.
+Show map of the District of Columbia
+Show map of the United States
+Show all
+General information
+Architectural style	American neoclassic
+Town or city	Capitol Hill, Washington, D.C.
+Country	United States
+Coordinates	38°53′23″N 77°00′32″W
+Construction started	September 18, 1793
+Completed	1800 (first occupation)
+1962 (last extension)
+Client	Washington administration
+Technical details
+Floor count	5
+Floor area	16.5 acres (67,000 m2)[1]
+Design and construction
+Architect(s)	William Thornton
+Benjamin Henry Latrobe (see Architect of the Capitol)
+Website
+www.aoc.gov/us-capitol-building
+United States Capitol
+U.S. National Historic Landmark
+Added to NRHP	December 19, 1960[2]
+The United States Capitol, often called the Capitol or the Capitol Building, is the seat of the United States Congress, the legislative branch of the federal government. It is located on Capitol Hill at the eastern end of the National Mall in Washington, D.C. Although no longer at the geographic center of the national capital, the U.S. Capitol forms the origin point for the street-numbering system of the district as well as its four quadrants. Like the principal buildings of the executive and judicial branches, the Capitol is built in a neoclassical style and has a white exterior.
+
+Central sections of the present building were completed in 1800. These were partly destroyed in the 1814 Burning of Washington, then were fully restored within five years. The building was enlarged in the 1850s by extending the wings for the chambers for the bicameral legislature, the House of Representatives in the south wing and the Senate in the north wing. The massive dome was completed around 1866 just after the American Civil War. The east front portico was extended in 1958. The building's Visitors Center was opened in the early 21st century.
+
+Both its east and west elevations are formally referred to as fronts, although only the east front was intended for the reception of visitors and dignitaries, while the west front is now used for presidential inauguration ceremonies. The building and grounds are overseen by the Architect of the Capitol, who also oversees the surrounding Capitol Complex.
+
+
+Empire State Building
+Empire State Building logo
+
+Empire State Building illuminated in 2021
+MapWikimedia | © OpenStreetMap
+Record height
+Tallest in the world from 1931 to 1970[I]
+Preceded by	Chrysler Building
+Surpassed by	World Trade Center
+General information
+Status	Completed
+Type	Office building; observation decks
+Architectural style	Art Deco
+Location	350 Fifth Avenue[a]
+Manhattan, New York, 10118[b]
+U.S.
+Coordinates	40°44′54″N 73°59′07″W
+Construction started	March 17, 1930; 94 years ago[2]
+Topped-out	September 19, 1930; 93 years ago
+Completed	April 11, 1931; 93 years ago[3]
+Opened	May 1, 1931; 93 years ago[4]
+Cost	$40,948,900[8]
+(equivalent to $661 million in 2023[9])
+Owner	Empire State Realty Trust
+Height
+Tip	1,454 ft (443.2 m)[5]
+Antenna spire	204 ft (62.2 m)[5]
+Roof	1,250 ft (381.0 m)[5]
+Top floor	1,224 ft (373.1 m)[5]
+Observatory	80th, 86th, and 102nd (top) floors[5]
+Dimensions
+Other dimensions	424 ft (129.2 m) east–west; 187 ft (57.0 m) north–south[6]
+Technical details
+Floor count	102[5][6][7][c]
+Floor area	2,248,355 sq ft (208,879 m2)[5]
+Lifts/elevators	73[5]
+Design and construction
+Architect(s)	Shreve, Lamb and Harmon
+Developer	Empire State Inc., including John J. Raskob and Al Smith
+Structural engineer	Homer Gage Balcom
+Main contractor	Starrett Brothers and Eken
+Website
+esbnyc.com
+U.S. National Historic Landmark
+Designated	June 24, 1986
+Reference no.	82001192
+U.S. National Register of Historic Places
+Designated	November 17, 1982
+Reference no.	82001192
+New York State Register of Historic Places
+Designated	September 27, 1982[12]
+Reference no.	06101.001691
+New York City Landmark
+Designated	May 19, 1981[13]
+Reference no.	2000[13]
+Designated entity	Facade
+New York City Landmark
+Designated	May 19, 1981[14]
+Reference no.	2001[14]
+Designated entity	Interior: Lobby
+References
+I. ^ "Empire State Building". Emporis. Archived from the original on April 5, 2015.
+[5][10][11]
+White House
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 38°53′52″N 77°02′11″W
+Page semi-protected
+From Wikipedia, the free encyclopedia
+"1600 Pennsylvania Avenue" redirects here. For other uses, see 1600 Pennsylvania Avenue (disambiguation) and White House (disambiguation).
+White House
+
+Top: the Executive Residence's northern facade with a columned portico facing the North Lawn and Lafayette Square
+Bottom: the Executive Residence's southern facade with a semi-circular portico facing the South Lawn and The Ellipse
+White House is located in Central Washington, D.C.White House
+Location of the White House in Washington, D.C.
+Show map of Central Washington, D.C.
+Show map of Washington, D.C.
+Show map of the United States
+Show all
+General information
+Architectural style	Neoclassical, Palladian
+Address	1600 Pennsylvania Avenue NW
+Washington, D.C. 20500
+U.S.
+Coordinates	38°53′52″N 77°02′11″W
+Current tenants	Joe Biden, President of the United States and the First Family
+Construction started	October 13, 1792; 231 years ago
+Completed	November 1, 1800; 223 years ago[1]
+Owner	Federal Government of the United States
+Technical details
+Floor area	55,000 sq ft (5,100 m2)
+Design and construction
+Architect(s)	James Hoban
+Benjamin Henry Latrobe
+Website
+whitehouse.gov
+U.S. National Historic Landmark
+Designated NHL	December 19, 1960
+
+Aerial view of the White House complex, including Pennsylvania Avenue (closed to traffic) in the foreground, the Executive Residence and North Portico (center), the East Wing (left), and the West Wing and the Oval Office at its southeast corner.
+The White House is the official residence and workplace of the president of the United States. Located at 1600 Pennsylvania Avenue NW in Washington, D.C., it has served as the residence of every U.S. president since John Adams in 1800 when the national capital was moved from Philadelphia.[2] The term "White House" is often used as a figure of speech for the president and his advisers.[3]
+
+The residence was designed by Irish-born architect James Hoban in the Neoclassical style.[4] Hoban modeled the building on Leinster House in Dublin, a building which today houses the Oireachtas, the Irish legislature. Constructed between 1792 and 1800, its exterior walls are Aquia Creek sandstone painted white. When Thomas Jefferson moved into the house in 1801, he and architect Benjamin Henry Latrobe added low colonnades on each wing to conceal what then were stables and storage.[5] In 1814, during the War of 1812, the mansion was set ablaze by British forces in the burning of Washington, destroying the interior and charring much of the exterior. Reconstruction began almost immediately, and President James Monroe moved into the partially reconstructed Executive Residence in October 1817. Exterior construction continued with the addition of the semicircular South Portico in 1824 and the North Portico in 1829.
+
+Because of crowding within the executive mansion itself, President Theodore Roosevelt had all work offices relocated to the newly constructed West Wing in 1901. Eight years later, in 1909, President William Howard Taft expanded the West Wing and created the first Oval Office, which was eventually moved and expanded. In the Executive Residence, the third floor attic was converted to living quarters in 1927 by augmenting the existing hip roof with long shed dormers. A newly constructed East Wing was used as a reception area for social events; Jefferson's colonnades connected the new wings. The East Wing alterations were completed in 1946, creating additional office space. By 1948, the residence's load-bearing walls and wood beams were found to be close to failure. Under Harry S. Truman, the interior rooms were completely dismantled and a new internal load-bearing steel frame was constructed inside the walls. On the exterior, the Truman Balcony was added. Once the structural work was completed, the interior rooms were rebuilt.
+
+The present-day White House complex includes the Executive Residence, the West Wing, the East Wing, the Eisenhower Executive Office Building, which previously served the State Department and other departments (it now houses additional offices for the president's staff and the vice president), and Blair House, a guest residence. The Executive Residence is made up of six stories: the Ground Floor, State Floor, Second Floor, and Third Floor, and a two-story basement. The property is a National Heritage Site owned by the National Park Service and is part of the President's Park. In 2007, it was ranked second on the American Institute of Architects list of America's Favorite Architecture.[6]
+Statue of Liberty
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 40°41′21″N 74°2′40″W
+Featured article
+Page semi-protected
+From Wikipedia, the free encyclopedia
+For other uses, see Statue of Liberty (disambiguation).
+Statue of Liberty
+Liberty Enlightening the World
+The Statue of Liberty as seen on a partly sunny day in June 2024.
+Location	Liberty Island
+New York City
+Coordinates	40°41′21″N 74°2′40″W
+Height	
+Height of copper statue (to torch): 151 feet 1 inch (46 meters)
+From ground level to torch: 305 feet 1 inch (93 meters)
+Dedicated	October 28, 1886; 137 years ago
+Restored	1938, 1984–1986, 2011–2012
+Sculptor	Frédéric Auguste Bartholdi
+Visitors	3.2 million (in 2009)[1]
+Governing body	National Park Service
+Website	nps.gov/stli
+UNESCO World Heritage Site
+Type	Cultural
+Criteria	i, vi
+Designated	1984 (8th session)
+Reference no.	307
+Region	Europe and North America
+U.S. National Monument
+Designated	October 15, 1924
+Designated by	President Calvin Coolidge[2]
+U.S. National Register of Historic Places
+Official name	The Statue of Liberty Enlightening the World[3][4]
+Designated	September 14, 2017
+Reference no.	100000829
+New Jersey Register of Historic Places
+Official name	Statue of Liberty National Monument, Ellis Island and Liberty Island
+Designated	May 27, 1971
+Reference no.	1535[5]
+New York State Register of Historic Places
+Designated	June 23, 1980[6]
+Reference no.	06101.003324
+New York City Landmark
+Type	Individual
+Designated	September 14, 1976[7]
+Reference no.	0931
+
+The Statue of Liberty (Liberty Enlightening the World; French: La Liberté éclairant le monde) is a colossal neoclassical sculpture on Liberty Island in New York Harbor, within New York City. The copper-clad statue, a gift to the United States from the people of France, was designed by French sculptor Frédéric Auguste Bartholdi and its metal framework was built by Gustave Eiffel. The statue was dedicated on October 28, 1886.
+
+The statue is a figure of a classically draped woman,[8] likely inspired by the Roman goddess of liberty Libertas.[9] In a contrapposto pose,[8][10] she holds a torch above her head with her right hand, and in her left hand carries a tabula ansata inscribed JULY IV MDCCLXXVI (July 4, 1776, in Roman numerals), the date of the U.S. Declaration of Independence. With her left foot she steps on a broken chain and shackle,[8] commemorating the national abolition of slavery following the American Civil War.[11][12][13] After its dedication the statue became an icon of freedom and of the United States, being subsequently seen as a symbol of welcome to immigrants arriving by sea.
+
+The idea for the statue was conceived in 1865, when the French historian and abolitionist Édouard de Laboulaye proposed a monument to commemorate the upcoming centennial of U.S. independence (1876), the perseverance of American democracy and the liberation of the nation's slaves.[14] The Franco-Prussian War delayed progress until 1875, when Laboulaye proposed that the people of France finance the statue and the United States provide the site and build the pedestal. Bartholdi completed the head and the torch-bearing arm before the statue was fully designed, and these pieces were exhibited for publicity at international expositions.
+
+The torch-bearing arm was displayed at the Centennial Exposition in Philadelphia in 1876, and in Madison Square Park in Manhattan from 1876 to 1882. Fundraising proved difficult, especially for the Americans, and by 1885 work on the pedestal was threatened by lack of funds. Publisher Joseph Pulitzer, of the New York World, started a drive for donations to finish the project and attracted more than 120,000 contributors, most of whom gave less than a dollar (equivalent to $34 in 2023). The statue was built in France, shipped overseas in crates, and assembled on the completed pedestal on what was then called Bedloe's Island. The statue's completion was marked by New York's first ticker-tape parade and a dedication ceremony presided over by President Grover Cleveland.
+
+The statue was administered by the United States Lighthouse Board until 1901 and then by the Department of War; since 1933, it has been maintained by the National Park Service as part of the Statue of Liberty National Monument, and is a major tourist attraction. Limited numbers of visitors can access the rim of the pedestal and the interior of the statue's crown from within; public access to the torch has been barred since 1916.
+China
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 35°N 103°E
+Page extended-protected
+From Wikipedia, the free encyclopedia
+"People's Republic of China" and "PRC" redirect here. For the present-day Republic of China, see Taiwan. For other uses, see PRC (disambiguation) and China (disambiguation).
+People's Republic of China
+中华人民共和国 (Chinese)
+Zhōnghuá Rénmín Gònghéguó (pinyin)
+Flag of China
+Flag
+Emblem of China
+Emblem
+Anthem: "March of the Volunteers"
+Duration: 44 seconds.0:44
+
+  Location of the People's Republic of China
+  Territory claimed but not controlled
+Capital	Beijing
+39°55′N 116°23′E
+Largest city by municipal boundary	Chongqing[a]
+Largest city by urban population	Shanghai
+Official languages	Standard Chinese (de facto)[2]
+Official script
+Simplified characters
+Ethnic groups (2020)[3]	
+91.1% Han Chinese
+8.9% others
+Religion (2023)[4]	
+33.4% Buddhism
+25.2% no religion
+19.6% Taoism
+17.7% other folk beliefs
+2.5% Christianity
+1.6% Islam
+Demonym(s)	Chinese
+Government	Unitary Marxist–Leninist one-party socialist republic
+• CCP General Secretary[b]
+Xi Jinping
+• Premier
+Li Qiang
+• Congress Chairman
+Zhao Leji
+• CPPCC Chairman[c]
+Wang Huning
+• Vice President
+Han Zheng
+Legislature	National People's Congress[d]
+Formation
+• First pre-imperial dynasty
+c. 2070 BCE
+• First imperial dynasty
+221 BCE
+• Establishment of the Republic of China
+1 January 1912
+• Admitted to the United Nations
+24 October 1945[e]
+• Proclamation of the People's Republic
+1 October 1949
+• First constitution
+20 September 1954
+• Current constitution
+4 December 1982
+• Most recent polity admitted
+20 December 1999
+Area
+• Total
+9,596,961 km2 (3,705,407 sq mi)[f][8] (3rd / 4th)
+• Water (%)
+2.8[5]
+Population
+• 2023 estimate
+Neutral decrease 1,409,670,000[9] (2nd)
+• Density
+145[10]/km2 (375.5/sq mi) (83rd)
+GDP (PPP)	2024 estimate
+• Total
+Increase $35.291 trillion[g][11] (1st)
+• Per capita
+Increase $25,015[11] (73rd)
+GDP (nominal)	2024 estimate
+• Total
+Increase $18.533 trillion[11] (2nd)
+• Per capita
+Increase $13,136[11] (68th)
+Gini (2020)	Positive decrease 37.1[12]
+medium inequality
+HDI (2022)	Increase 0.788[13]
+high (75th)
+Currency	Renminbi (元/¥)[h] (CNY)
+Time zone	UTC+8 (CST)
+Date format	YMD
+Drives on	
+right (mainland)
+left (Hong Kong, Macau)
+Calling code	
++86 (mainland)
++852 (Hong Kong)
++853 (Macau)
+ISO 3166 code	CN
+Internet TLD	
+.cn.中国.中國 (mainland)
+.hk.香港 (Hong Kong)
+.mo.澳门.澳門 (Macau)
+Preceded by	
+	Republic of China (1912–1949)
+ 
+China,[i] officially the People's Republic of China (PRC),[j] is a country in East Asia. With a population exceeding 1.4 billion, it is the world's second-most populous country after India, representing 17.4% of the world population. China spans the equivalent of five time zones and borders fourteen countries by land.[k] With an area of nearly 9.6 million square kilometers (3,700,000 sq mi), it is the third-largest country by total land area.[l] The country is divided into 33 province-level divisions: 22 provinces,[m] five autonomous regions, four municipalities, and two semi-autonomous special administrative regions. Beijing is the country's capital, while Shanghai is its most populous city by urban area and largest financial center.
+
+China is considered one of the cradles of civilization: the first human inhabitants in the region arrived during the Paleolithic; by the late second millennium BCE, the earliest dynastic states had emerged in the Yellow River basin. The eighth to third centuries BCE saw a breakdown in the authority of the Zhou dynasty, accompanied by the emergence of administrative and military techniques, literature, philosophy, and historiography. In 221 BCE, China was unified under an emperor for the first time. Appointed non-hereditary officials began ruling counties instead of the aristocracy, ushering in more than two millennia of imperial dynasties including the Qin, Han, Tang, Yuan, Ming, and Qing. With the invention of gunpowder and paper, the establishment of the Silk Road, and the building of the Great Wall, Chinese culture—including languages, traditions, architecture, philosophy and technology—flourished and has heavily influenced both its neighbors and lands further afield. However, China began to cede parts of the country in the late 19th century to various European powers by a series of unequal treaties.
+
+After decades of struggle, the 1911 Revolution resulted in the overthrow of the monarchy and the establishment of the Republic of China (ROC) the following year. The country under the nascent Beiyang government was unstable and ultimately fragmented during the Warlord Era, which was ended upon the Northern Expedition conducted by the Kuomintang (KMT) to reunify the country. The Chinese Civil War began in 1927, when KMT forces purged members of the rival Chinese Communist Party (CCP), who proceeded to engage in sporadic fighting against the KMT-led Nationalist government. Following the country's invasion by the Empire of Japan in 1937, the KMT and CCP temporarily agreed to a truce in favor of a united front against the Japanese. The Second Sino-Japanese War eventually ended in a Chinese victory; however, atrocities such as the Nanjing Massacre had a lasting impact on the country. The end of war with Japan in 1945 was quickly followed by a resumption of hostilities between the KMT and CCP. In 1949, the resurgent Communists established control over most of the country, proclaiming the People's Republic of China and forcing the Nationalist government to retreat to the island of Taiwan. The country was split, with both sides claiming to be the sole legitimate government of China. Following the implementation of land reforms, further attempts by the PRC to realize communism failed: the Great Leap Forward was largely responsible for the Great Chinese Famine that ended with millions of Chinese people having died, and the subsequent Cultural Revolution was a period of social turmoil and persecution characterized by Maoist populism. Following the Sino-Soviet split, the Shanghai Communiqué in 1972 would precipitate the normalization of relations with the United States. Economic reforms that began in 1978 led by reformists within the CCP moved the country away from a socialist planned economy towards an increasingly capitalist market economy, spurring significant economic growth. The corresponding movement for increased democracy and liberalization stalled after the Tiananmen Square protests and massacre in 1989.
+
+China is a unitary one-party socialist republic led by the CCP. It is one of the five permanent members of the UN Security Council; the UN representative for China was changed from the ROC to the PRC in 1971. It is a founding member of several multilateral and regional organizations such as the AIIB, the Silk Road Fund, the New Development Bank, and the RCEP. It is a member of the BRICS, the G20, APEC, the SCO, and the East Asia Summit. Making up around one-fifth of the world economy, the Chinese economy is the world's largest economy by GDP at purchasing power parity, the second-largest economy by nominal GDP, and the second-wealthiest country, albeit ranking poorly in measures of democracy, human rights and religious freedom. The country has been one of the fastest-growing major economies and is the world's largest manufacturer and exporter, as well as the second-largest importer. China is a nuclear-weapon state with the world's largest standing army by military personnel and the second-largest defense budget. It is a great power and a regional power, and has been described as an emerging superpower. China is known for its cuisine and culture, and has 59 UNESCO World Heritage Sites, the second-highest number of any country.
+
+
+
+Badaling
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40°21′15″N 116°00′25″E
+From Wikipedia, the free encyclopedia
+For the town, see Badaling Town.
+
+The Great Wall of China, Badaling Section
+
+The Great Wall at Badaling
+
+The scenery around Badaling from the Great Wall
+Badaling (Chinese: 八达岭; pinyin: Bādálǐng) is the site of the most visited section of the Great Wall of China, approximately 80 kilometers (50 mi) northwest of Beijing's city center, in Badaling Town, Yanqing District, Beijing municipality. The portion of the wall running through the site was built in 1504 during the Ming Dynasty, along with a military outpost reflecting the location's strategic importance. The highest point of Badaling is Beibalou (北八樓), approximately 1,015 meters (3,330 ft) above sea level.
+
+Badaling Great Wall was built in the Ming Dynasty (1505) to occupy a commanding and strategic position for protecting the Juyongguan Pass (Juyongguan section of the Great Wall) to its south, further protecting the city of Beijing.[1]
+
+The portion of the wall at Badaling has undergone restoration, and in 1957, it was the first section of the wall to open to tourism.[2] Now visited annually by millions, the immediate area has seen significant development, including hotels, restaurants, and a cable car.[3]
+
+
+Times Square
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40°45′27″N 73°59′9″W
+From Wikipedia, the free encyclopedia
+This article is about the area in Manhattan. For other uses, see Times Square (disambiguation).
+Times Square
+Neighborhood
+
+Official logo of Times Square
+Looking south (top) and north (bottom) in 2009 and 2013, respectively
+MapWikimedia | © OpenStreetMap
+Location in New York City
+Coordinates: 40°45′27″N 73°59′9″W
+Country	 United States
+State	 New York
+City	New York City
+County	New York
+Community district	Manhattan 5[1]
+Boundaries	Broadway, 7th Avenue, 42nd and 47th Streets
+Subway services	"1" train​"2" train​"3" train​"7" train"7" express train​​"N" train​"Q" train​"R" train​"W" train42nd Street Shuttle at Times Square–42nd Street
+"A" train​"C" train​"E" train at 42nd Street–Port Authority Bus Terminal
+Bus routes	M7, M20, M42, M50, M104
+Historical features	Duffy Square
+George Michael Cohan statue
+One Times Square
+Times Square is a major commercial intersection, tourist destination, entertainment hub, and neighborhood in the Midtown Manhattan section of New York City. It is formed by the junction of Broadway, Seventh Avenue, and 42nd Street. Together with adjacent Duffy Square, Times Square is a bowtie-shaped plaza five blocks long between 42nd and 47th Streets.[2]
+
+Times Square is brightly lit by numerous digital billboards and advertisements as well as businesses offering 24/7 service. One of the world's busiest pedestrian areas,[3] it is also the hub of the Broadway Theater District[4] and a major center of the world's entertainment industry.[5] Times Square is one of the world's most visited tourist attractions, drawing an estimated 50 million visitors annually.[6] Approximately 330,000 people pass through Times Square daily,[7] many of them tourists,[8] while over 460,000 pedestrians walk through Times Square on its busiest days.[2] The Times Square–42nd Street and 42nd Street–Port Authority Bus Terminal stations have consistently ranked as the busiest in the New York City Subway system, transporting more than 200,000 passengers daily.[9]
+
+Formerly known as Longacre Square, Times Square was renamed in 1904 after The New York Times moved its headquarters to the then newly erected Times Building, now One Times Square.[10] It is the site of the annual New Year's Eve ball drop, which began on December 31, 1907, and continues to attract over a million visitors to Times Square every year,[11] in addition to a worldwide audience of one billion or more on various digital media platforms.[12]
+
+Times Square, specifically the intersection of Broadway and 42nd Street, is the eastern terminus of the Lincoln Highway, the first road across the United States for motorized vehicles.[13] Times Square is sometimes referred to as "the Crossroads of the World"[14] and "the heart of the Great White Way".[15][16][17]
+
+
+United States
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 40°N 100°W
+Extended-protected article
+From Wikipedia, the free encyclopedia
+Several terms redirect here. For other uses, see America (disambiguation), US (disambiguation), USA (disambiguation), The United States of America (disambiguation), and United States (disambiguation).
+
+This article lists the same citations more than once.
+Please consider using named references to identify unique citations. (September 2024) (Learn how and when to remove this message)
+United States of America
+ 
+Flag
+ 
+Coat of arms
+Motto: "In God We Trust"[1]
+Other traditional mottos:[2]
+Anthem: "The Star-Spangled Banner"[3]
+Duration: 1 minute and 29 seconds.1:29
+Orthographic map of the U.S. in North America
+Show globe (states and D.C. only)
+Show the U.S. and its territories
+Show territories with exclusive economic zone
+Show all
+Capital	Washington, D.C.
+38°53′N 77°1′W
+Largest city	New York City
+40°43′N 74°0′W
+Official languages	None at the federal level[a]
+National language	English[b]
+Ethnic groups (2020)[4][5][6]	
+By race:
+61.6% White
+12.4% Black
+6% Asian
+1.1% Native American
+0.2% Pacific Islander
+10.2% two or more races
+8.4% other
+By origin:
+81.3% non-Hispanic or Latino
+18.7% Hispanic or Latino
+Religion (2023)[7]	
+67% Christianity
+33% Protestantism
+22% Catholicism
+1% Mormonism
+11% other Christian
+22% unaffiliated
+2% Judaism
+6% other religion
+3% unanswered
+Demonym(s)	American[c][8]
+Government	Federal presidential republic
+• President
+Joe Biden
+• Vice President
+Kamala Harris
+• House Speaker
+Mike Johnson
+• Chief Justice
+John Roberts
+Legislature	Congress
+• Upper house
+Senate
+• Lower house
+House of Representatives
+Independence from Great Britain
+• Declaration
+July 4, 1776
+• Confederation
+March 1, 1781
+• Recognized
+September 3, 1783
+• Constitution
+June 21, 1788
+Area
+• Total area
+3,796,742 sq mi (9,833,520 km2)[10][d] (3rd)
+• Water (%)
+7.0[9] (2010)
+• Land area
+3,531,905 sq mi (9,147,590 km2) (3rd)
+Population
+• 2023 estimate
+Neutral increase 334,914,895[11]
+• 2020 census
+Neutral increase 331,449,281[e][12] (3rd)
+• Density
+87/sq mi (33.6/km2) (185th)
+GDP (PPP)	2024 estimate
+• Total
+Increase $28.781 trillion[13] (2nd)
+• Per capita
+Increase $85,373[13] (8th)
+GDP (nominal)	2024 estimate
+• Total
+Increase $28.781 trillion[13] (1st)
+• Per capita
+Increase $85,373[13] (6th)
+Gini (2022)	Negative increase 41.7[f][14]
+medium inequality
+HDI (2022)	Increase 0.927[15]
+very high (20th)
+Currency	U.S. dollar ($) (USD)
+Time zone	UTC−4 to −12, +10, +11
+• Summer (DST)
+UTC−4 to −10[g]
+Date format	mm/dd/yyyy[h]
+Drives on	right[i]
+Calling code	+1
+ISO 3166 code	US
+Internet TLD	.us[16]
+The United States of America (USA or U.S.A.), commonly known as the United States (US or U.S.) or America, is a country primarily located in North America. It is a federal union of 50 states, the federal capital district of Washington, D.C., and 326 Indian reservations.[j] The 48 contiguous states are bordered by Canada to the north and Mexico to the south. The State of Alaska lies to the northwest, while the State of Hawaii is an archipelago in the Pacific Ocean. The United States also asserts sovereignty over five major island territories and various uninhabited islands.[k] The country has the world's third-largest land area,[d] second-largest exclusive economic zone, and third-largest population, exceeding 334 million.[l]
+
+Paleo-Indians migrated across the Bering land bridge more than 12,000 years ago, and went on to form various civilizations and societies. British colonization led to the first settlement of the Thirteen Colonies in Virginia in 1607. Clashes with the British Crown over taxation and political representation sparked the American Revolution, with the Second Continental Congress formally declaring independence on July 4, 1776. Following its victory in the 1775–1783 Revolutionary War, the country continued to expand across North America. As more states were admitted, a North-South sectional division over slavery led to the secession of the Confederate States of America, which fought the remaining states of the Union during the 1861–1865 American Civil War. With the Union's victory and preservation, slavery was abolished nationally. By 1890, the United States had established itself as a great power. After Japan's attack on Pearl Harbor in December 1941, the U.S. entered World War II. The aftermath of the war left the U.S. and the Soviet Union as the world's two superpowers and led to the Cold War, during which both countries engaged in a struggle for ideological dominance and international influence. Following the Soviet Union's collapse and the end of the Cold War in 1991, the U.S. emerged as the world's sole superpower, wielding significant geopolitical influence globally.
+
+The U.S. national government is a presidential constitutional federal republic and liberal democracy with three separate branches: legislative, executive, and judicial. It has a bicameral national legislature composed of the House of Representatives, a lower house based on population; and the Senate, an upper house based on equal representation for each state. Substantial autonomy is provided by federalism, with a political culture promoting liberty, equality, individualism, personal autonomy, and limited government.
+
+One of the world's most developed countries, the United States has had the largest nominal GDP since about 1890 and accounted for 15% of the global economy in 2023.[m] It possesses by far the largest amount of wealth of any country and has the highest disposable household income per capita among OECD countries. The U.S. ranks among the world's highest in economic competitiveness, productivity, innovation, human rights, and higher education. Its hard power and cultural influence have a global reach. The U.S. is a founding member of the World Bank, Organization of American States, NATO, and United Nations,[n] as well as a permanent member of the UN Security Council.
+
+
+Washington, D.C.
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 38°54′17″N 77°00′59″W
+Featured article
+Page semi-protected
+From Wikipedia, the free encyclopedia
+"Washington (city)", "District of Columbia", and "United States capital" redirect here. For other uses, see Washington (disambiguation), District of Columbia (disambiguation), and United States capital (disambiguation).
+Washington, D.C.
+Federal capital city and district
+District of Columbia
+Aerial view of the Lincoln Memorial, reflecting pool, and Washington Monument
+National Mall
+U.S. Capitol Building dome
+U.S. Capitol
+The Gothic Washington National Cathedral
+National Cathedral
+Train arriving at the McPherson Square metro station with a domed concrete ceiling
+Washington Metro
+Colorful rowhouses in Adams Morgan
+Stores in Adams Morgan
+Planes suspended from the ceiling of the Smithsonian National Air and Space Museum lobby
+National Air and Space Museum
+Manicured South Lawn of the White House
+White House
+Flag of Washington, D.C.
+Flag
+Official seal of Washington, D.C.
+Seal
+Nickname(s): D.C., The District
+Motto(s): Justitia Omnibus
+(English: Justice for All)
+Anthem: "Washington"[1]
+MapWikimedia | © OpenStreetMap
+Interactive map of Washington, D.C.
+Neighborhoods of Washington, D.C.
+Neighborhoods of Washington, D.C.
+Washington, D.C. is located in the United StatesWashington, D.C.Washington, D.C.
+Show map of the United States
+Show map of North America
+Show all
+Coordinates: 38°54′17″N 77°00′59″W
+Country	United States
+Residence Act	July 16, 1790
+Organized	February 27, 1801
+Consolidated	February 21, 1871
+Home Rule Act	December 24, 1973
+Named for	
+George WashingtonColumbia
+Government
+ • Type	Mayor–council
+ • Mayor	Muriel Bowser (D)
+ • D.C. Council	
+List
+ • U.S. House	Eleanor Holmes Norton (D),
+Delegate (At-large)
+Area
+ • Federal capital city and district	68.35 sq mi (177.0 km2)
+ • Land	61.126 sq mi (158.32 km2)
+ • Water	7.224 sq mi (18.71 km2)
+Highest elevation	409 ft (125 m)
+Lowest elevation	0 ft (0 m)
+Population (2020)[3]
+ • Federal capital city and district	689,545
+ • Estimate (2023)[4]	678,972
+ • Rank	64th in North America
+23rd in the United States
+ • Density	11,280.71/sq mi (4,355.39/km2)
+ • Urban[5]	5,174,759 (US: 8th)
+ • Urban density	3,997.5/sq mi (1,543.4/km2)
+ • Metro[6]	6,304,975 (US: 7th)
+Demonym	Washingtonian[7]
+GDP[8][9]
+ • Federal capital city and district	$174.8 billion (2023)
+ • Metro	$660.6 billion (2022)
+Time zone	UTC−05:00 (Eastern Time)
+ • Summer (DST)	UTC−04:00 (Eastern Daylight Time)
+ZIP Codes	
+20001–20098, 20201–20599, 56901–56999
+Area code(s)	202 and 771[10][11]
+ISO 3166 code	US-DC
+Airports	
+Full list
+Railroads	
+Full list
+Website	dc.gov Edit this at Wikidata
+Washington, D.C., formally the District of Columbia and commonly known as Washington or D.C., is the capital city and federal district of the United States. The city is on the Potomac River, across from Virginia, and shares land borders with Maryland to its north and east. It was named for George Washington, the first president of the United States. The district is named for Columbia, the female personification of the nation.
+
+The U.S. Constitution in 1789 called for the creation of a federal district under the exclusive jurisdiction of the U.S. Congress. As such, Washington, D.C., is not part of any state, and is not one itself. The Residence Act, adopted on July 16, 1790, approved the creation of the capital district along the Potomac River. The city was founded in 1791, and the 6th Congress held the first session in the unfinished Capitol Building in 1800 after the capital moved from Philadelphia. In 1801, the District of Columbia, formerly part of Maryland and Virginia and including the existing settlements of Georgetown and Alexandria, was officially recognized as the federal district; initially, the city was a separate settlement within the larger district. In 1846, Congress returned the land originally ceded by Virginia, including the city of Alexandria. In 1871, it created a single municipality for the remaining portion of the district. There have been several unsuccessful efforts to make the district into a state since the 1880s; a statehood bill passed the House of Representatives in 2021 but was not adopted by the U.S. Senate.
+
+Designed in 1791 by Pierre Charles L'Enfant, the city is divided into quadrants, which are centered around the Capitol Building and include 131 neighborhoods. As of the 2020 census, the city had a population of 689,545.[3] Commuters from the city's Maryland and Virginia suburbs raise the city's daytime population to more than one million during the workweek.[12] The Washington metropolitan area, which includes parts of Maryland, Virginia, and West Virginia, is the country's seventh-largest metropolitan area, with a 2023 population of 6.3 million residents.[6] A locally elected mayor and 13-member council have governed the district since 1973, though Congress retains the power to overturn local laws. Washington, D.C., residents are, on the federal level, politically disenfranchised since the city's residents do not have voting representation in Congress; the city's residents elect a single non-voting congressional delegate to the U.S. House of Representatives. The city's voters choose three presidential electors in accordance with the Twenty-third Amendment.
+
+Washington, D.C. anchors the southern end of the Northeast megalopolis. As the seat of the U.S. federal government, the city is an important world political capital.[13] The city hosts the buildings that house federal government headquarters, including the White House, the Capitol, the Supreme Court Building, and multiple federal departments and agencies. The city is home to many national monuments and museums, located most prominently on or around the National Mall, including the Jefferson Memorial, the Lincoln Memorial, and the Washington Monument. It hosts 177 foreign embassies and serves as the headquarters for the World Bank, the International Monetary Fund, the Organization of American States, and other international organizations. Home to many of the nation's largest industry associations, non-profit organizations, and think tanks, D.C. is known as a lobbying hub, with K Street as the industry center.[14] The city had 20.7 million domestic visitors[15] and 1.2 million international visitors, ranking seventh among U.S. cities as of 2022.[16]
+
+Verrazzano-Narrows Bridge
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40°36′23″N 74°02′44″W
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+"Verrazzano Narrows" and "Verrazzano Bridge" redirect here. For the strait over which this bridge crosses, see The Narrows. For other bridges, see Verrazano Bridge (disambiguation).
+Verrazzano-Narrows Bridge
+View of the bridge's towers
+The Verrazzano Narrows Bridge in 2009
+Coordinates	40°36′23″N 74°02′44″W
+Carries	13 lanes (7 upper, 6 lower) of  I-278
+Crosses	The Narrows
+Locale	New York City (Staten Island–Brooklyn), New York
+Other name(s)	Verrazano-Narrows Bridge
+Verrazzano Bridge
+Narrows Bridge
+Maintained by	MTA Bridges and Tunnels
+Characteristics
+Design	Suspension bridge
+Total length	13,700 ft (4,176 m)
+Width	103 ft (31 m)
+Height	693 ft (211 m)
+Longest span	4,260 ft (1,298 m)
+Clearance above	15 ft (4.57 m) (upper level)
+14.4 ft (4.39 m) (lower level)
+Clearance below	228 ft (69.5 m) at mean high water
+History
+Designer	Othmar Ammann, Leopold Just and other engineers at Ammann & Whitney
+Construction start	August 13, 1959; 65 years ago
+Opened	November 21, 1964; 59 years ago (upper level)
+June 28, 1969; 55 years ago (lower level)
+Statistics
+Daily traffic	202,523 (2016)[1]
+Toll	(Both directions) As of August 6, 2023:
+$6.94 (New York E-ZPass users outside Staten Island)
+$2.75 (Staten Island residents E-ZPass)
+$11.19 (Tolls By Mail and non–New York E-ZPass)
+$9.11 (Mid-Tier NYCSC E-Z Pass)
+The Verrazzano-Narrows Bridge (/ˌvɛrəˈzɑːnoʊ/ VERR-ə-ZAH-noh), also referred to as the Narrows Bridge, the Verrazzano Bridge, and simply the Verrazzano, is a suspension bridge connecting the New York City boroughs of Staten Island and Brooklyn. It spans the Narrows, a body of water linking the relatively enclosed New York Harbor with Lower New York Bay and the Atlantic Ocean. It is the only fixed crossing of the Narrows. The double-deck bridge carries 13 lanes of Interstate 278: seven on the upper level and six on the lower level. The span is named for Giovanni da Verrazzano, who in 1524 was the first European explorer to enter New York Harbor and the Hudson River.
+
+Engineer David B. Steinman proposed a bridge across the Narrows in the late 1920s, but plans were deferred over the next twenty years. A 1920s attempt to build a Staten Island Tunnel was aborted, as was a 1930s plan for vehicular tubes underneath the Narrows. Discussion of a tunnel resurfaced in the mid-1930s and early 1940s, but the plans were again denied. In the late 1940s, urban planner Robert Moses championed a bridge across the Narrows as a way to connect Staten Island with the rest of the city. Various problems delayed the start of construction until 1959. Designed by Othmar Ammann, Leopold Just, and other engineers at Ammann & Whitney, the bridge opened on November 21, 1964. The lower deck opened in 1969 to accommodate increasing traffic loads. The bridge was refurbished in the 1990s and again in the 2010s and 2020s.
+
+The bridge has a central span of 4,260 feet (1.30 km; 0.81 mi). It was the longest suspension bridge in the world until it was surpassed by the Humber Bridge in the UK in 1981. The bridge has the 18th-longest main span in the world, as well as the longest in the Americas. When the bridge was officially named in 1960, it was misspelled "Verrazano-Narrows Bridge" due to an error in the construction contract; the name was officially corrected in 2018. The Verrazzano-Narrows Bridge collects tolls in both directions, although only westbound drivers paid a toll from 1986 to 2020 in an attempt to reduce traffic congestion.
+Nanjing Road
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°14′05″N 121°28′28″E
+From Wikipedia, the free encyclopedia
+For other uses, see Nanjing Road (disambiguation).
+
+East Nanjing Road in 2024
+MapWikimedia | © OpenStreetMap
+Map
+Nanjing Road (Chinese: 南京路; pinyin: Nánjīng Lù; Shanghainese: Noecin Lu) is a road in Shanghai, the eastern part of which is the main shopping district of Shanghai. It is one of the world's busiest shopping streets, along with Fifth Avenue, Oxford Street, Orchard Road, Takeshita Street and the Champs-Élysées.[1] The street is named after Nanjing, capital of Jiangsu province and the former capital of the Republic of China. Today's Nanjing Road comprises two sections, Nanjing Road East[2] and Nanjing Road West.[3]
+
+In some contexts, "Nanjing Road" refers only to what was pre-1945 Nanjing Road, then rendered as Nanking Road in English. The former Nanking Road lay entirely within the Shanghai International Settlement. Today's Nanjing Road West was formerly Bubbling Well Road, an extra-settlement road built by concession authorities outside the concession proper. The two roads met on the northern edge of the Shanghai Race Club.[4]
+
+
+Headquarters of the United Nations
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40°44′58″N 73°58′5″W
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+Headquarters of the United Nations
+
+View of the complex from Long Island City in 2021; from left to right: the Secretariat, Conference, and General Assembly buildings
+MapWikimedia | © OpenStreetMap
+Alternative names	
+Arabic: مقر الأمم المتحدة
+Chinese: 联合国总部大楼
+French: Siège des Nations unies
+Russian: Штаб-квартира Организации Объединённых Наций
+Spanish: Sede de las Naciones Unidas
+General information
+Architectural style	Modern architecture
+Location	New York City (international zone)
+Address	760 United Nations Plaza,
+Manhattan, New York City, New York, US
+Coordinates	40°44′58″N 73°58′5″W
+Groundbreaking	September 14, 1948;
+75 years ago[1]
+Construction started	1948;
+76 years ago[1]
+Completed	October 9, 1952;
+71 years ago[2]
+Cost	US$65 million (equivalent to $600 million in 2023)
+Owner	United Nations
+Height	510 feet (155.3 m)[2]
+Technical details
+Floor count	39[2]
+Design and construction
+Architect(s)	Board of designers mediated by Harrison & Abramovitz
+Main contractor	Fuller, Turner, Slattery, and Walsh[3
+
+The headquarters of the United Nations (UN) is on 17 to 18 acres (6.9 to 7.3 ha) of grounds in the Turtle Bay neighborhood of Midtown Manhattan in New York City. It borders First Avenue to the west, 42nd Street to the south, 48th Street to the north, and the East River to the east.[4] Completed in 1952, the complex consists of several structures, including the Secretariat, Conference, and General Assembly buildings, and the Dag Hammarskjöld Library. The complex was designed by a board of architects led by Wallace Harrison and built by the architectural firm Harrison & Abramovitz, with final projects developed by Oscar Niemeyer and Le Corbusier. The term Turtle Bay is occasionally used as a metonym for the UN headquarters or for the United Nations as a whole.[5]
+
+The headquarters holds the seats of the principal organs of the UN, including the General Assembly and the Security Council, but excluding the International Court of Justice, which is seated in The Hague. The United Nations has three additional subsidiary regional headquarters, or headquarters districts. These were opened in Geneva (Switzerland) in 1946, Vienna (Austria) in 1980, and Nairobi (Kenya) in 1996.[6][7] These adjunct offices help represent UN interests, facilitate diplomatic activities, and enjoy certain extraterritorial privileges, but do not contain the seats of major organs.
+
+Although the structure is physically situated in the United States, the land occupied by the United Nations headquarters and the spaces of buildings that it rents are under the sole administration of the United Nations. They are technically extraterritorial through a treaty agreement with the U.S. government. However, in exchange for local police, fire protection, and other services, the United Nations agrees to acknowledge most local, state, and federal laws.[8]
+
+None of the United Nations' 15 specialized agencies, such as UNESCO, are located at the headquarters. However, some autonomous subsidiary organs, such as UNICEF, are based at the UN's headquarters in New York City.
+Metropolitan Museum of Art
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 40.7794°N 73.9631°W
+From Wikipedia, the free encyclopedia
+Not to be confused with the Museum of Modern Art.
+The Metropolitan Museum of Art
+
+
+Entrance façades to The Met Fifth Avenue and The Cloisters
+MapWikimedia | © OpenStreetMap
+Established	April 13, 1870; 154 years ago[2][3][4]
+Location	1000 Fifth Avenue (The Met Fifth Avenue)
+99 Margaret Corbin Drive (The Cloisters)
+New York City, U.S.
+Coordinates	40.7794°N 73.9631°W
+Type	Art museum
+Collection size	2 million[1]
+Visitors	5.364 million (2023)[5]
+Chairs	
+Candace Beinecke
+Hamilton E. James
+Director	Max Hollein
+Website	www.metmuseum.org Edit this at Wikidata
+The Metropolitan Museum of Art, colloquially referred to as the Met,[a] is an encyclopedic art museum in New York City. By floor area, it is the fourth-largest museum in the world and the largest art museum in the Americas. With 5.36 million visitors in 2023, it is the most-visited museum in the United States and the fourth-most visited art museum in the world.[6]
+
+In 2000, its permanent collection had over two million works;[1] it currently lists a total of 1.5 million works.[7] The collection is divided into 17 curatorial departments. The main building at 1000 Fifth Avenue, along the Museum Mile on the eastern edge of Central Park on Manhattan's Upper East Side, is by area one of the world's largest art museums. The first portion of the approximately 2-million-square-foot (190,000 m2) building was built in 1880. A much smaller second location, The Cloisters at Fort Tryon Park in Upper Manhattan, contains an extensive collection of art, architecture, and artifacts from medieval Europe.
+
+The Metropolitan Museum of Art was founded in 1870 with its mission to bring art and art education to the American people. The museum's permanent collection consists of works of art ranging from the ancient Near East and ancient Egypt, through classical antiquity to the contemporary world. It includes paintings, sculptures, and graphic works from many European Old Masters, as well as an extensive collection of American, modern, and contemporary art. The Met also maintains extensive holdings of African, Asian, Oceanian, Byzantine, and Islamic art. The museum is home to encyclopedic collections of musical instruments, costumes, and decorative arts and textiles, as well as antique weapons and armor from around the world. Several notable interiors, ranging from 1st-century Rome through modern American design, are installed in its galleries.
+
+
+
+
+Empire State Building
+The Empire State Building is a 102-story[c] Art Deco skyscraper in the Midtown South neighborhood of Manhattan in New York City. The building was designed by Shreve, Lamb & Harmon and built from 1930 to 1931. Its name is derived from "Empire State", the nickname of the state of New York. The building has a roof height of 1,250 feet (380 m) and stands a total of 1,454 feet (443.2 m) tall, including its antenna. The Empire State Building was the world's tallest building until the first tower of the World Trade Center was topped out in 1970; following the September 11 attacks in 2001, the Empire State Building was New York City's tallest building until it was surpassed in 2012 by One World Trade Center. As of 2022, the building is the seventh-tallest building in New York City, the ninth-tallest completed skyscraper in the United States, and the 54th-tallest in the world.
+
+The site of the Empire State Building, on the west side of Fifth Avenue between West 33rd and 34th Streets, was developed in 1893 as the Waldorf–Astoria Hotel. In 1929, Empire State Inc. acquired the site and devised plans for a skyscraper there. The design for the Empire State Building was changed fifteen times until it was ensured to be the world's tallest building. Construction started on March 17, 1930, and the building opened thirteen and a half months afterward on May 1, 1931. Despite favorable publicity related to the building's construction, because of the Great Depression and World War II, its owners did not make a profit until the early 1950s.
+
+The building's Art Deco architecture, height, and observation decks have made it a popular attraction. Around four million tourists from around the world annually visit the building's 86th- and 102nd-floor observatories; an additional indoor observatory on the 80th floor opened in 2019. The Empire State Building is an international cultural icon: it has been featured in more than 250 television series and films since the film King Kong was released in 1933. The building's size has been used as a standard of reference to describe the height and length of other structures. A symbol of New York City, the building has been named as one of the Seven Wonders of the Modern World by the American Society of Civil Engineers. It was ranked first on the American Institute of Architects' List of America's Favorite Architecture in 2007. Additionally, the Empire State Building and its ground-floor interior were designated city landmarks by the New York City Landmarks Preservation Commission in 1980, and were added to the National Register of Historic Places as a National Historic Landmark in 1986.
+
+
+Tiananmen
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 39°54′26.4″N 116°23′27.9″E
+From Wikipedia, the free encyclopedia
+This article is about the Beijing gate. For the square, see Tiananmen Square. For the protests and massacre in 1989, see 1989 Tiananmen Square protests and massacre. For other uses, see Tiananmen (disambiguation).
+"The Gate of Heavenly Peace" redirects here. For the film, see The Gate of Heavenly Peace (film).
+
+Tian'anmen in 2020
+Tian'anmen
+
+"Tiān'ānmén" in Simplified (top) and Traditional (bottom) characters
+Chinese name
+Simplified Chinese	天安门
+Traditional Chinese	天安門
+Hanyu Pinyin	Tiān'ānmén
+Literal meaning	"Gate of Heavenly Peace"
+Transcriptions
+ 
+Manchu name
+Manchu script	ᠠᠪᡴᠠᡳ
+ᡝᠯᡥᡝ
+ᠣᠪᡠᡵᡝ
+ᡩᡠᡴᠠ
+Möllendorff	abkai elhe obure duka
+(video) Two shots of the gate followed by a shot of inside Tiananmen Square next to the gate, 2017.
+The Tiananmen /ˈtjɛnənmən/[1] (also Tian'anmen,[2] or the Gate of Heaven-Sent Peace, is the entrance gate to the Forbidden City palace complex and Imperial City in the center of Beijing, China. It is widely used as a national symbol.
+
+First built during the Ming dynasty in 1420, Tiananmen was the entrance to the Emperor's residence, of which all visitors to the palace walked through. In 1949, Mao Zedong proclaimed the People's Republic of China from the balcony, of which now features a large portrait of him. Tiananmen is located to the north of Tiananmen Square, and is separated from the plaza by Chang'an Avenue.
+
+
+Yu Garden
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 31°13′45″N 121°29′15″E
+From Wikipedia, the free encyclopedia
+"Yuyuan" redirects here. For other uses, see Yuyuan (disambiguation).
+Yu Garden
+豫园
+
+MapWikimedia | © OpenStreetMap
+Location	Shanghai, China
+Created	1577
+Yu Garden[1] or Yuyuan Garden[2] (traditional Chinese: 豫園; simplified Chinese: 豫园; pinyin: Yù Yuán, Shanghainese Yuyoe Wu Chinese pronunciation: [ɦy²².ɦɥø⁵⁵], lit. Garden of Happiness[3]) is an extensive Chinese garden located beside the City God Temple in the northeast of the Old City of Shanghai at Huangpu District, Shanghai. It abuts the Yuyuan Tourist Mart, the Huxinting Teahouse and the Yu Garden Bazaar.[4]
+
+This garden is accessible from the Shanghai Metro's Line 10 and Line 14 Yuyuan Garden station.[5]
+
+Boasting over 40 scenic spots, including pavilions, rock formations, and ponds, it is now a key site under state-level protection.[6]
+
+A centerpiece is the Exquisite Jade Rock (玉玲珑) a porous 3.3-m, 5-ton boulder. Rumours about its origin include the story that it was meant for the Huizong Emperor (Northern Song dynasty from 1100 to 1126 AD) the imperial garden in Bianjing, but was salvaged from the Huangpu River after the boat carrying it had sunk.[7][8]
+
+History
+Bronx Zoo
+
+Bronx Zoo logo
+
+Asia Gate Entrance
+MapWikimedia | © OpenStreetMap
+40°51′01″N 73°52′42″W
+Date opened	November 8, 1899[1]
+Location	2300 Southern Boulevard, Bronx Park, Bronx, New York 10460, U.S.
+Land area	265 acres (107 ha)[2]
+No. of animals	4,000 (2010)[3]
+No. of species	650 (2010)[3]
+Annual visitors	2+ million
+Memberships	AZA[4]
+Major exhibits	
+Congo Gorilla Forest
+JungleWorld
+Wild Asia Monorail
+Madagascar!
+Tiger Mountain
+African Plains
+World of Birds
+World of Reptiles
+Zoo Center
+Management	Wildlife Conservation Society (WCS)
+Public transit access	Subway:
+"2" train​"5" train at West Farms Square–East Tremont Avenue
+"2" train​"5" train at East 180th Street
+"2" train​"5" train at Pelham Parkway
+Bus:
+
+New York City Bus: Bx9, Bx12, Bx12 SBS, Bx19, Bx21, Bx22, Bx36, Bx39, Bx40, Bx42, Q44 SBS
+Bee-Line Bus: BL60, BL61, and BL62
+Metro-North Railroad: Fordham
+Website	bronxzoo.com
+
+The Bronx Zoo (also historically the Bronx Zoological Park and the Bronx Zoological Gardens) is a zoo within Bronx Park in the Bronx, New York. It is one of the largest zoos in the United States by area and is the largest metropolitan zoo in the United States by area,[5] comprising 265 acres (107 ha) of park lands and naturalistic habitats separated by the Bronx River. On average, the zoo has 2.15 million visitors each year as of 2009.[5] The zoo's original permanent buildings, known as Astor Court, were designed as a series of Beaux-Arts pavilions grouped around the large circular sea lion pool.[6] The Rainey Memorial Gates were designed by sculptor Paul Manship in 1934 and listed on the National Register of Historic Places in 1972.[7]
+
+The zoo opened on November 8, 1899, featuring 843 animals in 22 exhibits. Its first director was William Temple Hornaday, who served as director for 30 years. From its inception the zoo has played a vital role in animal conservation. In 1905, the American Bison Society was created in an attempt to save the American bison, which had been depleted from tens-of-millions of animals to only a few hundred, from extinction. Two years later they were successfully reintroduced into the wild. In 2007, the zoo successfully reintroduced three Chinese alligators into the wild. The breeding was a milestone in the zoo's 10-year effort to reintroduce the species to the Yangtze River in China.
+
+Today, the Bronx Zoo is world-renowned for its large and diverse animal collection, and its award-winning exhibitions.[5] The zoo is part of an integrated system of four zoos and one aquarium managed by the Wildlife Conservation Society (WCS), and it is accredited by the Association of Zoos and Aquariums (AZA).[8]
+National Air and Space Museum
+
+Article
+Talk
+Read
+Edit
+View history
+
+Tools
+Coordinates: 38°53′18″N 77°01′12″W
+From Wikipedia, the free encyclopedia
+This article is about the main museum in Washington, D.C.. For the museum annex in Virginia, see Steven F. Udvar-Hazy Center.
+National Air and Space Museum (NASM)
+
+
+Ad Astra sculpture at the museum entrance on the National Mall
+National Air and Space Museum is located in Central Washington, D.C.National Air and Space Museum
+Location within Washington, D.C.
+Show map of Central Washington, D.C.
+Show map of the United States
+Show all
+Former name	National Air Museum
+Established	1946; 78 years ago (as the National Air Museum)
+Location	Washington, D.C.
+Coordinates	38°53′18″N 77°01′12″W
+Type	Aviation museum
+Visitors	3.1 million visitors (2023)[1]
+Director	Chris Browne
+Curator	Peter Jakab
+Public transit access	 Washington Metro
+     at L'Enfant Plaza
+Website	https://airandspace.si.edu
+The National Air and Space Museum (NASM) of the Smithsonian Institution, is a museum in Washington, D.C., in the United States, dedicated to human flight and space exploration.
+
+Established in 1946 as the National Air Museum, its main building opened on the National Mall near L'Enfant Plaza in 1976. In 2023, the museum welcomed 3.1 million visitors, making it the fourth-most visited museum in the United States and eleventh-most in the world.
+
+The museum is a center for research into the history and science of aviation and spaceflight, as well as planetary science and terrestrial geology and geophysics. Almost all of its spacecraft and aircraft on display are original primary or backup craft (rather than facsimiles). Its collection includes the Apollo 11 Command Module Columbia, the Friendship 7 capsule which was flown by John Glenn, Charles Lindbergh's Spirit of St. Louis, the model of the starship Enterprise used in the science fiction television show Star Trek: The Original Series, and the Wright brothers' Wright Flyer airplane near the entrance.
+
+The museum operates a 760,000-square-foot (71,000 m2) annex, the Steven F. Udvar-Hazy Center, at Dulles International Airport. It includes the Mary Baker Engen Restoration Hangar, which houses the museum's restoration and archival activities. Other preservation and restoration efforts take place at the Paul E. Garber Preservation, Restoration, and Storage Facility in Suitland, Maryland.
+
+The museum's main building on the National Mall is undergoing a multi-year, $360M renovation that started in 2018, during which some of its spaces and galleries are closed. As of August 2024, 13 of the museum's 23 galleries are open to the public, with 10 of them still closed for renovation. The remaining 10 galleries of the museum are expected to reopen sometime in 2026. [2]
+
+
+New York City
+
+Article
+Talk
+Read
+View source
+View history
+
+Tools
+Coordinates: 40.7127°N 74.0059°W
+Page semi-protected
+From Wikipedia, the free encyclopedia
+"NYC" and "New York, New York" redirect here. For other uses, see New York City (disambiguation); NYC (disambiguation); and New York, New York (disambiguation).
+New York
+City
+Midtown Manhattan
+Midtown Manhattan with the Empire State Building (center) and Lower Manhattan with One WTC (background)
+United Nations headquarters building
+UN headquarters
+Statue of Liberty
+Statue of Liberty
+Bright lights of Times Square
+Times Square
+The Unisphere, a large metal globe sculpture
+Unisphere
+Central Park scenery
+Central Park
+Brooklyn Bridge
+Brooklyn Bridge
+A bridge over a river
+Verrazzano-Narrows Bridge
+Entrance to the Bronx Zoo
+Bronx Zoo
+Flag of New York
+Flag
+Official seal of New York
+Seal
+Official logo of New York
+Wordmark
+Nicknames: The Big Apple, The City That Never Sleeps, Gotham,[1] and others
+MapWikimedia | © OpenStreetMap
+Interactive map outlining New York City
+New York City is located in New YorkNew York CityNew York City
+Location within the state of New York
+Show map of New York
+Show map of the United States
+Show all
+Coordinates: 40.7127°N 74.0059°W[2]
+Country	 United States
+State	 New York
+Constituent counties (boroughs)	Bronx (The Bronx)
+Kings (Brooklyn)
+New York (Manhattan)
+Queens (Queens)
+Richmond (Staten Island)
+Settled	1624 (400 years ago)
+Consolidated	1898 (126 years ago)
+Named for	James, Duke of York
+Government
+ • Type	Strong mayor–council
+ • Body	New York City Council
+ • Mayor	Eric Adams (D)
+Area[3]
+ • Total	472.43 sq mi (1,223.59 km2)
+ • Land	300.46 sq mi (778.18 km2)
+ • Water	171.97 sq mi (445.41 km2)
+Highest elevation[a]	401 ft (122 m)
+Lowest elevation	0 ft (0 m)
+Population (2020)[4]
+ • Total	8,804,190
+ • Estimate (July 2023)[5]	8,258,035
+ • Rank	1st in the United States
+1st in New York State
+ • Density	29,302.7/sq mi (11,313.8/km2)
+ • Urban[6]	19,426,449
+ • Urban density	5,980.8/sq mi (2,309.2/km2)
+ • Metro[7]	20,140,470
+Demonym	New Yorker
+GDP[8][9]
+ • Total	$1.206 trillion (2022)
+ • Metro	$2.163 trillion (2022) (1st)
+Time zone	UTC–05:00 (EST)
+ • Summer (DST)	UTC–04:00 (EDT)
+ZIP Codes	
+100xx–104xx, 11004–05, 111xx–114xx, 116xx
+Area codes	212/646/332, 718/347/929, 917
+FIPS code	36-51000
+GNIS feature ID	975772
+Website	nyc.gov Edit this at Wikidata
+Part of a series on
+Regions of New York
+
+Downstate New York
+New York CityLong IslandHudson Valley (Lower)
+Upstate New York
+Hudson Valley (Middle and Upper)Capital DistrictNorth CountrySouthern TierMohawk ValleyCentral New YorkFinger LakesWestern New York
+Administrative divisions
+Timelines of town creation
+vte
+New York, often called New York City[b] or NYC, is the most populous city in the United States, located at the southern tip of New York State on one of the world's largest natural harbors. The city comprises five boroughs, each coextensive with a respective county. New York is a global center of finance[11] and commerce, culture, technology,[12] entertainment and media, academics and scientific output,[13] the arts and fashion, and, as home to the headquarters of the United Nations, international diplomacy.[14][15][16][17][18]
+
+With an estimated population in 2023 of 8,258,035[5] distributed over 300.46 square miles (778.2 km2),[4] the city is the most densely populated major city in the United States. New York City has more than double the population of Los Angeles, the nation's second-most populous city.[19] New York is the geographical and demographic center of both the Northeast megalopolis and the New York metropolitan area, the largest metropolitan area in the U.S. by both population and urban area. With more than 20.1 million people in its metropolitan statistical area[20] and 23.5 million in its combined statistical area as of 2020, New York City is one of the world's most populous megacities.[21] The city and its metropolitan area are the premier gateway for legal immigration to the United States. As many as 800 languages are spoken in New York City,[22] making it the most linguistically diverse city in the world. In 2021, the city was home to nearly 3.1 million residents born outside the U.S.,[19] the largest foreign-born population of any city in the world.[23]
+
+New York City traces its origins to Fort Amsterdam and a trading post founded on Manhattan Island by Dutch colonists around 1624. The settlement was named New Amsterdam in 1626 and was chartered as a city in 1653. The city came under English control in 1664 and was temporarily renamed New York after King Charles II granted the lands to his brother, the Duke of York,[24] before being permanently renamed New York in November 1674. New York City was the U.S. capital from 1785 until 1790.[25] The modern city was formed by the 1898 consolidation of its five boroughs: Manhattan, Brooklyn, Queens, The Bronx, and Staten Island.
+
+Anchored by Wall Street in the Financial District, Manhattan, New York City has been called both the world's premier financial and fintech center[26][27] and the most economically powerful city in the world.[28] As of 2022, the New York metropolitan area is the largest metropolitan economy in the world, with a gross metropolitan product of over US$2.16 trillion.[9] If the New York metropolitan area were its own country, it would have the tenth-largest economy in the world. The city is home to the world's two largest stock exchanges by market capitalization of their listed companies: the New York Stock Exchange and Nasdaq. New York City is an established safe haven for global investors.[29] As of 2023, New York City is the most expensive city in the world for expatriates,[30] and Fifth Avenue is the most expensive shopping street in the world.[31] New York City is home by a significant margin to the highest number of billionaires,[32] individuals of ultra-high net worth (greater than US$30 million),[33] and millionaires of any city in the world.[34]
+Temple of Heaven
+Temple of Heaven
+
+Hall of Prayer for Good Harvests, the largest building in the Temple of Heaven
+Location	Dongcheng, Beijing, China
+Coordinates	39.8822°N 116.4066°E
+Built	1406–1420 (Ming dynasty)
+Website	tiantanpark.com
+UNESCO World Heritage Site
+Official name	Temple of Heaven: an Imperial Sacrificial Altar in Beijing
+Type	Cultural
+Criteria	i, ii, iii
+Designated	1998 (22nd session)
+Reference no.	881
+Region	Asia-Pacific
+Temple of Heaven is located in BeijingTemple of Heaven
+Location of Temple of Heaven in Beijing
+Show map of Beijing
+Show map of China
+Show all
+Temple of Heaven
+
+"Temple of Heaven" in Simplified (top) and Traditional (bottom) Chinese characters
+Simplified Chinese	天坛
+Traditional Chinese	天壇
+Literal meaning	"Altar of Heaven" Araceli
+Transcriptions
+ 
+ 
+The Temple of Heaven (simplified Chinese: 天坛; traditional Chinese: 天壇; pinyin: Tiāntán) is a complex of imperial religious buildings situated in the southeastern part of central Beijing. The complex was visited by the Emperors of the Ming and Qing dynasties for annual ceremonies of prayer to Heaven for a good harvest. The Temple of Heaven was inscribed as a World Heritage site in 1998 and was described as "a masterpiece of architecture and landscape design which simply and graphically illustrates a cosmogony of great importance for the evolution of one of the world's great civilizations..." as the "symbolic layout and design of the Temple of Heaven had a profound influence on architecture and planning in the Far East over many centuries."[1]

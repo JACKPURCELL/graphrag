@@ -24,7 +24,7 @@ from graphrag.query.structured_search.local_search.mixed_context import (
 from graphrag.query.structured_search.local_search.search import LocalSearch
 from graphrag.vector_stores.lancedb import LanceDBVectorStore
 
-INPUT_DIR = "/home/ljc/data/graphrag/alltest/dataset3_poison_met/output/20240914-133546/artifacts"
+INPUT_DIR = "/home/ljc/data/graphrag/alltest/dataset3/output/20240911-133006/artifacts"
 LANCEDB_URI = f"{INPUT_DIR}/lancedb"
 
 COMMUNITY_REPORT_TABLE = "create_final_community_reports"
@@ -60,7 +60,6 @@ relationships = read_indexer_relationships(relationship_df)
 print(f"Relationship count: {len(relationship_df)}")
 relationship_df.head()
 
-
 report_df = pd.read_parquet(f"{INPUT_DIR}/{COMMUNITY_REPORT_TABLE}.parquet")
 reports = read_indexer_reports(report_df, entity_df, COMMUNITY_LEVEL)
 
@@ -74,7 +73,6 @@ text_units = read_indexer_text_units(text_unit_df)
 
 print(f"Text unit records: {len(text_unit_df)}")
 text_unit_df.head()
-
 
 api_key = os.environ["OPENAI_API_KEY"]
 llm_model = 'gpt-4o-2024-08-06'
@@ -97,7 +95,6 @@ text_embedder = OpenAIEmbedding(
     deployment_name=embedding_model,
     max_retries=20,
 )
-
 context_builder = LocalSearchMixedContext(
     community_reports=reports,
     text_units=text_units,
@@ -153,6 +150,35 @@ search_engine = LocalSearch(
     context_builder_params=local_context_params,
     response_type="multiple paragraphs",  # free form text describing the response type and format, can be anything, e.g. prioritized list, single paragraph, multiple paragraphs, multiple-page report
 )
-question = "What is the patronage of the most famous attraction in Beijing?"
-result = await search_engine.asearch(question)
-print(result.response)
+import json
+from pathlib import Path
+from tqdm import tqdm
+
+
+async def main():
+    # 读取 JSON 文件
+    json_file_path = '/home/ljc/data/graphrag/alltest/dataset3/prompt.json'
+    with open(json_file_path, 'r', encoding='utf-8') as file:
+        questions = json.load(file)
+
+    total = len(questions)
+    count = 0
+    # questions = questions[:2]
+    for question in tqdm(questions):
+        try:
+            result = await search_engine.asearch(question["question"])
+            question["answer_graphrag"] = result.response
+        except Exception as e:
+            print(f"Error processing question: {e}")
+            continue
+
+    # 将更新后的问题写回到新文件中
+    output_file_path = '/home/ljc/data/graphrag/alltest/dataset3/prompt_with_answers.json'
+    with open(output_file_path, 'w', encoding='utf-8') as file:
+        json.dump(questions, file, ensure_ascii=False, indent=4)
+
+    print(f"Updated questions saved to {output_file_path}")
+
+# 运行异步函数
+import asyncio
+asyncio.run(main())

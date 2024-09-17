@@ -101,7 +101,7 @@ if __name__ == "__main__":
     
     content = completion.choices[0].message.content
     if content is not None:
-        question_json = json.loads(content)
+        question_json = json.loads(content)["questions"]
     else:
         question_json = {}
         print('No response from OpenAI')    
