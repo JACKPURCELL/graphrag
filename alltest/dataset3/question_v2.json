@@ -1,0 +1,317 @@
+[
+    {
+        "question": "What is the significance of the district where the central business area of Beijing is located?",
+        "gpt_answer_withoutdata": "The district where Beijing's central business area is located is significant for its role in finance, media, and business services, contributing to the city's economic development.",
+        "answer": "The Chaoyang District, where the Beijing CBD is located, is significant for its role in finance, media, and business services.",
+        "consistency": true,
+        "selected_entity": "BEIJING CBD",
+        "leaf_nodes": [
+            "CHAOYANG DISTRICT"
+        ],
+        "root_nodes": [
+            "BEIJING"
+        ]
+    },
+    {
+        "question": "Which notable skyscraper is situated in the central business area of Beijing?",
+        "gpt_answer_withoutdata": "A notable skyscraper situated in Beijing's central business area is the CITIC Tower, also known as China Zun.",
+        "answer": "CITIC Tower, also known as China Zun, is a notable skyscraper located in the Beijing CBD.",
+        "consistency": true,
+        "selected_entity": "BEIJING CBD",
+        "leaf_nodes": [
+            "CITIC TOWER"
+        ],
+        "root_nodes": [
+            "BEIJING"
+        ]
+    },
+    {
+        "question": "What is the role of the central business area in the capital city of China?",
+        "gpt_answer_withoutdata": "The central business area in Beijing plays a crucial role in economic development, serving as a hub for finance, media, and business services.",
+        "answer": "The Beijing CBD serves as a key area for economic development, playing a significant role in Beijing's economic landscape.",
+        "consistency": true,
+        "selected_entity": "BEIJING CBD",
+        "leaf_nodes": [
+            "CHAOYANG DISTRICT",
+            "CITIC TOWER"
+        ],
+        "root_nodes": [
+            "BEIJING"
+        ]
+    },
+    {
+        "question": "In which district is the central business area of Beijing undergoing large-scale development?",
+        "gpt_answer_withoutdata": "The central business area of Beijing is undergoing large-scale development in the Chaoyang District.",
+        "answer": "The Beijing CBD is undergoing large-scale development in the Chaoyang District.",
+        "consistency": true,
+        "selected_entity": "BEIJING CBD",
+        "leaf_nodes": [
+            "CHAOYANG DISTRICT"
+        ],
+        "root_nodes": [
+            "BEIJING"
+        ]
+    },
+    {
+        "question": "What is the significance of the tallest building in the central business area of Beijing?",
+        "gpt_answer_withoutdata": "The tallest building in Beijing's central business area, the CITIC Tower, is significant for its architectural prominence and as a symbol of economic growth.",
+        "answer": "CITIC Tower is significant for its architectural prominence and as a symbol of economic growth in the Beijing CBD.",
+        "consistency": true,
+        "selected_entity": "BEIJING CBD",
+        "leaf_nodes": [
+            "CITIC TOWER"
+        ],
+        "root_nodes": [
+            "BEIJING"
+        ]
+    },
+    {
+        "question": "What are the major historical sites located in the capital city of China?",
+        "gpt_answer_withoutdata": "The major historical sites in Beijing, the capital of China, include the Forbidden City, the Temple of Heaven, and the Summer Palace. These sites are UNESCO World Heritage Sites and are significant for their historical and cultural value.",
+        "answer": "The major historical sites located in the capital city of China include the Forbidden City, the Temple of Heaven, and the Summer Palace.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "FORBIDDEN CITY",
+            "TEMPLE OF HEAVEN",
+            "SUMMER PALACE"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL"
+        ]
+    },
+    {
+        "question": "Which city in China has hosted both the Summer and Winter Olympics?",
+        "gpt_answer_withoutdata": "Beijing is the city in China that has hosted both the Summer and Winter Olympics, making it the first city in the world to do so.",
+        "answer": "Beijing has hosted both the 2008 Summer Olympics and the 2022 Winter Olympics.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "2008 SUMMER OLYMPICS",
+            "2022 WINTER OLYMPICS"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CITY"
+        ]
+    },
+    {
+        "question": "What are the key educational institutions located in the capital of China?",
+        "gpt_answer_withoutdata": "Key educational institutions in Beijing, the capital of China, include Tsinghua University and Peking University, both of which are renowned for their academic excellence and research output.",
+        "answer": "Key educational institutions in Beijing include Tsinghua University and Peking University.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "TSINGHUA UNIVERSITY",
+            "PEKING UNIVERSITY"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL"
+        ]
+    },
+    {
+        "question": "Which city in China is known for its significant transportation infrastructure?",
+        "gpt_answer_withoutdata": "Beijing is known for its significant transportation infrastructure, including extensive highway, expressway, railway, and high-speed rail networks, as well as two major international airports.",
+        "answer": "Beijing is known for its significant transportation infrastructure, including extensive highway, expressway, railway, and high-speed rail networks.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "BEIJING CAPITAL INTERNATIONAL AIRPORT",
+            "BEIJING DAXING INTERNATIONAL AIRPORT"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CITY"
+        ]
+    },
+    {
+        "question": "What is the role of the capital city of China in regional economic development?",
+        "gpt_answer_withoutdata": "Beijing plays a crucial role in regional economic development as part of the Jing-Jin-Ji economic region, which includes Tianjin and Hebei Province, forming a major economic cluster in Northern China.",
+        "answer": "Beijing is part of the Jing-Jin-Ji economic region, highlighting its role in regional economic development.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "JING-JIN-JI"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL"
+        ]
+    },
+    {
+        "question": "What are the major historical sites in the capital city of China that attract millions of tourists annually?",
+        "gpt_answer_withoutdata": "The major historical sites in Beijing that attract millions of tourists annually include the Forbidden City, the Temple of Heaven, and the Summer Palace.",
+        "answer": "The major historical sites in Beijing that attract millions of tourists annually include the Forbidden City, the Temple of Heaven, and the Summer Palace.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "FORBIDDEN CITY",
+            "TEMPLE OF HEAVEN",
+            "SUMMER PALACE"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "TOURISM"
+        ]
+    },
+    {
+        "question": "Which city in China has hosted both the Summer and Winter Olympics, showcasing its global event hosting capabilities?",
+        "gpt_answer_withoutdata": "Beijing is the city in China that has hosted both the Summer and Winter Olympics, showcasing its global event hosting capabilities.",
+        "answer": "Beijing is the city in China that has hosted both the Summer and Winter Olympics, showcasing its global event hosting capabilities.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "2008 SUMMER OLYMPICS",
+            "2022 WINTER OLYMPICS"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "OLYMPICS",
+            "GLOBAL EVENTS"
+        ]
+    },
+    {
+        "question": "What are the key educational institutions in the capital city of China known for their academic excellence?",
+        "gpt_answer_withoutdata": "The key educational institutions in Beijing known for their academic excellence include Tsinghua University and Peking University.",
+        "answer": "The key educational institutions in Beijing known for their academic excellence include Tsinghua University and Peking University.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "TSINGHUA UNIVERSITY",
+            "PEKING UNIVERSITY"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "EDUCATION",
+            "ACADEMIC EXCELLENCE"
+        ]
+    },
+    {
+        "question": "Which city in China is a major hub for transportation, featuring extensive networks and two major international airports?",
+        "gpt_answer_withoutdata": "Beijing is a major hub for transportation in China, featuring extensive networks and two major international airports: Beijing Capital International Airport and Beijing Daxing International Airport.",
+        "answer": "Beijing is a major hub for transportation in China, featuring extensive networks and two major international airports: Beijing Capital International Airport and Beijing Daxing International Airport.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "BEIJING CAPITAL INTERNATIONAL AIRPORT",
+            "BEIJING DAXING INTERNATIONAL AIRPORT"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "TRANSPORTATION",
+            "AIRPORTS"
+        ]
+    },
+    {
+        "question": "What is the economic significance of the central business district in the capital city of China?",
+        "gpt_answer_withoutdata": "The Beijing Central Business District (CBD) is economically significant as it serves as a major hub for finance, media, and business services, contributing to Beijing's role as an economic center.",
+        "answer": "The Beijing Central Business District (CBD) is economically significant as it serves as a major hub for finance, media, and business services, contributing to Beijing's role as an economic center.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "BEIJING CBD"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "ECONOMY",
+            "BUSINESS"
+        ]
+    },
+    {
+        "question": "What significant historical events have influenced the development of the largest city by urban population in the People's Republic of China?",
+        "gpt_answer_withoutdata": "The First Opium War and the Chinese Civil War significantly influenced Shanghai's development. The First Opium War opened Shanghai as a treaty port, while the Chinese Civil War led to its takeover by the Communist Party, shaping its modern history.",
+        "answer": "The First Opium War and the Chinese Civil War are significant historical events that influenced Shanghai's development.",
+        "consistency": true,
+        "selected_entity": "SHANGHAI",
+        "leaf_nodes": [
+            "FIRST OPIUM WAR",
+            "CHINESE CIVIL WAR"
+        ],
+        "root_nodes": [
+            "PEOPLE'S REPUBLIC OF CHINA"
+        ]
+    },
+    {
+        "question": "What are some notable events hosted by the city known for its cultural and political significance in China?",
+        "gpt_answer_withoutdata": "Beijing, known for its cultural and political significance, has hosted notable events such as the 2008 Summer Olympics and the 2022 Winter Olympics, showcasing its capacity for large-scale international gatherings.",
+        "answer": "Beijing has hosted major international events, including the 2008 Summer Olympics and the 2022 Winter Olympics.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "2008 SUMMER OLYMPICS",
+            "2022 WINTER OLYMPICS"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "EVENTS"
+        ]
+    },
+    {
+        "question": "Which educational institutions are located in the city that serves as the political center of China?",
+        "gpt_answer_withoutdata": "Beijing, the political center of China, is home to prestigious educational institutions such as Tsinghua University and Peking University, known for their academic excellence.",
+        "answer": "Beijing is home to prestigious educational and research institutions such as Tsinghua University and Peking University.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "TSINGHUA UNIVERSITY",
+            "PEKING UNIVERSITY"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "EDUCATION"
+        ]
+    },
+    {
+        "question": "What are the major transportation hubs in the city that is a key economic center in China?",
+        "gpt_answer_withoutdata": "Beijing, a key economic center in China, is served by major transportation hubs such as Beijing Capital International Airport and Beijing Daxing International Airport, facilitating regional and international travel.",
+        "answer": "Beijing is served by two major international airports: Beijing Capital International Airport and Beijing Daxing International Airport.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "BEIJING CAPITAL INTERNATIONAL AIRPORT",
+            "BEIJING DAXING INTERNATIONAL AIRPORT"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "TRANSPORTATION"
+        ]
+    },
+    {
+        "question": "Which historical sites contribute to the cultural heritage of the city that is the capital of China?",
+        "gpt_answer_withoutdata": "Beijing, the capital of China, boasts historical sites like the Forbidden City, the Temple of Heaven, and the Summer Palace, which contribute significantly to its cultural heritage.",
+        "answer": "Beijing is home to numerous UNESCO World Heritage Sites such as the Forbidden City, the Temple of Heaven, and the Summer Palace.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "FORBIDDEN CITY",
+            "TEMPLE OF HEAVEN",
+            "SUMMER PALACE"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "CULTURE"
+        ]
+    },
+    {
+        "question": "What role does the city known for its political influence play in regional economic development?",
+        "gpt_answer_withoutdata": "Beijing, known for its political influence, plays a significant role in regional economic development as part of the Jing-Jin-Ji economic region, which includes Tianjin and Hebei Province.",
+        "answer": "Beijing is part of the Jing-Jin-Ji economic region, highlighting its role in regional economic development and integration.",
+        "consistency": true,
+        "selected_entity": "BEIJING",
+        "leaf_nodes": [
+            "JING-JIN-JI"
+        ],
+        "root_nodes": [
+            "CHINA",
+            "CAPITAL",
+            "ECONOMY"
+        ]
+    }
+]

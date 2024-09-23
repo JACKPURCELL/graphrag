@@ -8,7 +8,7 @@ import logging
 import random
 import time
 from typing import Any
-
+from tqdm import tqdm
 import tiktoken
 
 from graphrag.query.context_builder.builders import LocalContextBuilder
@@ -106,6 +106,7 @@ class LocalQuestionGen_byentity(BaseQuestionGen):
         question_history: list[str],
         context_data: str | None,
         question_count: int,
+        entity_count: int,
         **kwargs,
     ) -> list:
         """
@@ -116,13 +117,14 @@ class LocalQuestionGen_byentity(BaseQuestionGen):
         start_time = time.time()
         questions = []
         useful_entities = []
-        for ent in entities:
-            related_relationships_source = [rel for rel in relationships if rel.source == ent.title ]
-            related_relationships_target = [rel for rel in relationships if rel.target == ent.title ]
+        for ent in self.entities:
+            related_relationships_source = [rel for rel in self.relationships if rel.source == ent.title ]
+            related_relationships_target = [rel for rel in self.relationships if rel.target == ent.title ]
             if len(related_relationships_source) > 1 and len(related_relationships_target) > 0:
                 useful_entities.append({"entity": ent, "related_relationships_source": related_relationships_source, "related_relationships_target": related_relationships_target})
         print("=======Qualified entities: ", len(useful_entities))
-        for ent_with_rel in useful_entities:
+        useful_entities = random.sample(useful_entities, entity_count)
+        for ent_with_rel in tqdm(useful_entities):
             ent_with_rel_name = ent_with_rel["entity"].title
             related_relationships_text_source = "[Selected Entity,Leaf Entity]: "
             for rel in ent_with_rel["related_relationships_source"]:
