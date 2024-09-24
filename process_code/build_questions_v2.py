@@ -148,7 +148,7 @@ question_generator = LocalQuestionGen_byentity(
 #     "What is the patronage of the most famous attractions in the culture center city of China?",
 # ]
 
-question_path = os.path.join(base_path, 'question_v2.json')
+question_path = os.path.join(base_path, 'question_v2-1.json')
 
 async def main():
     candidate_questions = await question_generator.agenerate(

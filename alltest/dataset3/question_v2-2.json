@@ -1,0 +1,78 @@
+[
+    {
+        "question": "Who is the director of the prominent aviation museum located in Washington, D.C.?",
+        "gpt_answer_withoutdata": "The director of the prominent aviation museum located in Washington, D.C., is Chris Browne.",
+        "answer": "Chris Browne is the director of the National Air and Space Museum.",
+        "consistency": true,
+        "selected_entity": "NATIONAL AIR AND SPACE MUSEUM",
+        "leaf_nodes": [
+            "CHRIS BROWNE"
+        ],
+        "root_nodes": [
+            "WASHINGTON, D.C."
+        ]
+    },
+    {
+        "question": "What notable landmarks can be found in the city known for its iconic skyline and financial district?",
+        "gpt_answer_withoutdata": "New York City is home to notable landmarks such as the Empire State Building, Times Square, and the Statue of Liberty. These landmarks are iconic symbols of the city's skyline and its vibrant financial district.",
+        "answer": "Notable landmarks in New York City include the Empire State Building, Times Square, and the Statue of Liberty.",
+        "consistency": true,
+        "selected_entity": "NEW YORK CITY",
+        "leaf_nodes": [
+            "EMPIRE STATE BUILDING",
+            "TIMES SQUARE",
+            "STATUE OF LIBERTY"
+        ],
+        "root_nodes": [
+            "METROPOLITAN MUSEUM OF ART"
+        ]
+    },
+    {
+        "question": "What are the notable landmarks in the prominent district of Shanghai?",
+        "gpt_answer_withoutdata": "Shanghai's prominent district, Pudong, is home to notable landmarks such as the Oriental Pearl Tower and the Shanghai Tower, both of which are iconic symbols of the city's skyline and modern architecture.",
+        "answer": "The notable landmarks in the prominent district of Shanghai are the Oriental Pearl Tower and the Shanghai Tower.",
+        "consistency": true,
+        "selected_entity": "LUJIAZUI",
+        "leaf_nodes": [
+            "ORIENTAL PEARL TOWER",
+            "SHANGHAI TOWER"
+        ],
+        "root_nodes": [
+            "SHANGHAI",
+            "PUDONG"
+        ]
+    },
+    {
+        "question": "What are the notable features of the prominent location in Washington, D.C.?",
+        "gpt_answer_withoutdata": "The National Mall in Washington, D.C. is known for its iconic landmarks such as the Lincoln Memorial, Washington Monument, and U.S. Capitol. It also hosts numerous museums, including those of the Smithsonian Institution, attracting millions of visitors annually.",
+        "answer": "The notable features of the prominent location in Washington, D.C. include the Lincoln Memorial, Washington Monument, and U.S. Capitol, as well as Smithsonian museums.",
+        "consistency": true,
+        "selected_entity": "NATIONAL MALL",
+        "leaf_nodes": [
+            "LINCOLN MEMORIAL",
+            "WASHINGTON MONUMENT",
+            "U.S. CAPITOL",
+            "SMITHSONIAN INSTITUTION"
+        ],
+        "root_nodes": [
+            "WASHINGTON, D.C."
+        ]
+    },
+    {
+        "question": "What is the significance of the central park in the capital of the United States?",
+        "gpt_answer_withoutdata": "The National Mall in Washington, D.C., is a significant cultural and historical site, home to numerous national monuments and museums, including the Lincoln Memorial and the Smithsonian Institution. It attracts millions of visitors annually and serves as a venue for national events.",
+        "answer": "The National Mall is a significant cultural and historical site, attracting approximately 24 million visitors annually and serving as a venue for national events.",
+        "consistency": true,
+        "selected_entity": "NATIONAL MALL",
+        "leaf_nodes": [
+            "LINCOLN MEMORIAL",
+            "SMITHSONIAN INSTITUTION",
+            "WASHINGTON MONUMENT"
+        ],
+        "root_nodes": [
+            "WASHINGTON, D.C.",
+            "UNITED STATES",
+            "CAPITAL"
+        ]
+    }
+]
