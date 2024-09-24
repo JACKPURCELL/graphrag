@@ -24,7 +24,7 @@ from graphrag.query.structured_search.local_search.mixed_context import (
 from graphrag.query.structured_search.local_search.search import LocalSearch
 from graphrag.vector_stores.lancedb import LanceDBVectorStore
 
-base_path = "/home/ljc/data/graphrag/alltest/dataset4-v3-not-include"
+base_path = "/home/ljc/data/graphrag/alltest/dataset4-v2-include-long"
 
 # Step 1: Find the folder with the latest modification time
 output_path = base_path + '/output'
@@ -180,7 +180,7 @@ async def main():
     with open(json_file_path, 'r', encoding='utf-8') as file:
         questions = json.load(file)
 
-    corpus_file = base_path + '/question_v3_corpus.json'
+    corpus_file = base_path + '/question_v2_corpus.json'
     with open(corpus_file, 'r', encoding='utf-8') as file:
         corpuses = json.load(file)
         
