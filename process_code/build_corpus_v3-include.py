@@ -191,31 +191,32 @@ def get_questions(base_path):
 
 if __name__ == "__main__":
     base_path = '/home/ljc/data/graphrag/alltest/dataset4-v3-include-long'
-    # questions = get_questions(base_path)
+    questions = get_questions(base_path)
     
-    # all_jsons = []
-    # for question in tqdm(questions):
-    #     question_prompt = "The question is \n"  + json.dumps(question["question"], ensure_ascii=False) 
-    #     completion = client.chat.completions.create(
-    #         model="gpt-4o",
-    #         response_format={"type": "json_object"},
-    #         messages=[
-    #             {"role": "system", "content": base_prompt},
-    #             {"role": "user", "content": question_prompt}
-    #         ]
-    #     )
+    all_jsons = []
+    for question in tqdm(questions):
+        question_prompt = "The question is \n"  + json.dumps(question["question"], ensure_ascii=False) 
+        completion = client.chat.completions.create(
+            model="gpt-4o",
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": base_prompt},
+                {"role": "user", "content": question_prompt}
+            ]
+        )
         
-    #     content = completion.choices[0].message.content
-    #     if content is not None:
-    #         question_json = json.loads(content)
-    #         all_jsons.append(question_json)
-    #     else:
-    #         print('No response from OpenAI')
+        content = completion.choices[0].message.content
+        if content is not None:
+            question_json = json.loads(content)
+            if isinstance(question_json["indirect_adv_texts"][0], str):
+                all_jsons.append(question_json)
+        else:
+            print('No response from OpenAI')
     
-    # adv_prompt_path = Path(os.path.join(base_path, 'question_v3_corpus.json'))
-    # adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
-    # print(f"Questions generated successfully and saved to {adv_prompt_path}")
-    all_jsons = json.loads(Path(base_path + '/question_v3_corpus.json').read_text(encoding='utf-8'))
+    adv_prompt_path = Path(os.path.join(base_path, 'question_v3_corpus.json'))
+    adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
+    print(f"Questions generated successfully and saved to {adv_prompt_path}")
+    # all_jsons = json.loads(Path(base_path + '/question_v3_corpus.json').read_text(encoding='utf-8'))
 
     # 收集所有的 adv_text
     indirect_adv_texts = []

@@ -1,0 +1,22 @@
+There are 4 mitigation methods that can mitigating the attack technique called Security Account Manager. Their names are as follows:
+* Password Policies 
+* Privileged Account Management 
+* Operating System Configuration 
+* User Training 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Password Policies
+Mitigation method description: Set and enforce secure password policies for accounts.
+
+Mitigation method name: Privileged Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.
+
+Mitigation method name: Operating System Configuration
+Mitigation method description: Make configuration changes related to the operating system or a common feature of the operating system that result in system hardening against techniques.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.

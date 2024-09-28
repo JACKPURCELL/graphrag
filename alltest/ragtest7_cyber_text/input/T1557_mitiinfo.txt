@@ -1,0 +1,34 @@
+There are 7 mitigation methods that can mitigating the attack technique called Adversary-in-the-Middle. Their names are as follows:
+* Filter Network Traffic 
+* Encrypt Sensitive Information 
+* Limit Access to Resource Over Network 
+* Disable or Remove Feature or Program 
+* User Training 
+* Network Intrusion Prevention 
+* Network Segmentation 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Filter Network Traffic
+Mitigation method description: Use network appliances to filter ingress or egress traffic and perform protocol-based filtering. Configure software on endpoints to filter network traffic.
+
+Mitigation method name: Encrypt Sensitive Information
+Mitigation method description: Protect sensitive information with strong encryption.
+
+Mitigation method name: Limit Access to Resource Over Network
+Mitigation method description: Prevent access to file shares, remote access to systems, unnecessary services. Mechanisms to limit access may include use of network concentrators, RDP gateways, etc.
+
+Mitigation method name: Disable or Remove Feature or Program
+Mitigation method description: Remove or deny access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.
+
+Mitigation method name: Network Intrusion Prevention
+Mitigation method description: Use intrusion detection signatures to block traffic at network boundaries.
+
+Mitigation method name: Network Segmentation
+Mitigation method description: Architect sections of the network to isolate critical systems, functions, or resources. Use physical and logical segmentation to prevent access to potentially sensitive systems and information. Use a DMZ to contain any internet-facing services that should not be exposed from the internal network. Configure separate virtual private cloud (VPC) instances to isolate critical cloud systems.

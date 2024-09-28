@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d4" for="edge" attr.name="description" attr.type="string"/>
+<key id="d3" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="DHCP SPOOFING">
+  <data key="d0">EVENT</data>
+  <data key="d1">DHCP Spoofing is a sub attack technique of Adversary-in-the-Middle that involves sending false DHCP responses to clients.
+DHCP Spoofing is an attack technique where a malicious DHCP server provides false IP addresses to clients, leading to unauthorized access.
+DHCP Spoofing is an attack technique where adversaries redirect network traffic by spoofing DHCP traffic to act as a malicious DHCP server.</data>
+  <data key="d2">1f3ade20fca7a1811144b08e1b7502cc,273f1ace04a0ea1a408291482c37e92d,77666aeb458cce50dabf1d432a889dde</data>
+</node>
+<node id="LLMNR/NBT-NS POISONING AND SMB RELAY">
+  <data key="d0">EVENT</data>
+  <data key="d1">LLMNR/NBT-NS Poisoning and SMB Relay is a sub attack technique of Adversary-in-the-Middle that exploits the LLMNR and NBT-NS protocols to capture credentials.
+LLMNR/NBT-NS Poisoning and SMB Relay is an attack technique that exploits the Windows name resolution protocols to capture credentials and relay them to other systems.)&lt;|COMPLETE|&gt;</data>
+  <data key="d2">273f1ace04a0ea1a408291482c37e92d,77666aeb458cce50dabf1d432a889dde</data>
+</node>
+<node id="DOK">
+  <data key="d0">ORGANIZATION</data>
+  <data key="d1">Dok is a software that utilizes the attack technique called Adversary-in-the-Middle.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server to redirect network traffic.</data>
+  <data key="d2">77666aeb458cce50dabf1d432a889dde,af5913e5897b832d40ec15c054d3a70a</data>
+</node>
+<node id="LINUX">
+  <data key="d0">GEO</data>
+  <data key="d1">Linux is an operating system platform that can be targeted by various attack techniques including VNC, ARP Cache Poisoning, and Fileless Storage.
+Linux is an open-source operating system platform that supports various attack techniques.
+Linux is an open-source operating system kernel that is widely used in various distributions for servers, desktops, and embedded systems.
+Linux is an operating system platform that supports various attack techniques such as Screen Capture and Archive via Utility.
+Linux is an open-source operating system that can be used in various computing environments, including network configurations.
+Linux is an open-source operating system that supports various network functionalities and tools like libpcap.
+Linux is an operating system platform on which HiddenWasp, Derusbi, and Impacket operate.
+Linux is an operating system platform that supports various software tools including those mentioned in the document.</data>
+  <data key="d2">1921200e85c91275265ec0d917c32145,19c89133805ffc7f1595e5933485958b,1f3ade20fca7a1811144b08e1b7502cc,948f788eb98ccafa237ddd70a1fcb3b2,ad4b9611d8e6fbd36d902b1e0c20803a,cbde4f5548e7f3d58f00028957a3e56f,e487783d63f96db023ea200f2cca9c6c,f8a3a30ceeda7496bc85c8eec35e7901</data>
+</node>
+<node id="VNC">
+  <data key="d0"></data>
+  <data key="d1">
+VNC is a remote desktop sharing system that allows users to control another computer's display over a network using the RFB protocol.</data>
+  <data key="d2">273f1ace04a0ea1a408291482c37e92d,948f788eb98ccafa237ddd70a1fcb3b2</data>
+</node>
+<node id="CREDENTIAL ACCESS">
+  <data key="d0">EVENT</data>
+  <data key="d1">Credential Access techniques are methods used by adversaries to obtain sensitive information such as usernames and passwords.</data>
+  <data key="d2">e487783d63f96db023ea200f2cca9c6c</data>
+</node>
+<node id="TRANSMITTED DATA MANIPULATION">
+  <data key="d0">EVENT</data>
+  <data key="d1">Transmitted Data Manipulation is a technique where adversaries alter data being transmitted over a network to achieve malicious objectives.
+Transmitted data manipulation refers to the act of altering data packets as they are transmitted over a network, potentially leading to unauthorized access or data breaches.</data>
+  <data key="d2">ad4b9611d8e6fbd36d902b1e0c20803a,e487783d63f96db023ea200f2cca9c6c</data>
+</node>
+<node id="ARP CACHE POISONING">
+  <data key="d0">EVENT</data>
+  <data key="d1">ARP Cache Poisoning is a sub attack technique of Adversary-in-the-Middle that involves sending false ARP messages to associate the attacker's MAC address with the IP address of another host.
+ARP Cache Poisoning is an attack technique that involves sending false ARP messages to a local area network, allowing an attacker to intercept traffic.
+ARP Cache Poisoning is a technique where adversaries manipulate ARP caches to intercept network traffic between devices.</data>
+  <data key="d2">273f1ace04a0ea1a408291482c37e92d,77666aeb458cce50dabf1d432a889dde,948f788eb98ccafa237ddd70a1fcb3b2</data>
+</node>
+<node id="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d0">EVENT</data>
+  <data key="d1">Adversary-in-the-Middle is an attack method where an attacker intercepts communication between two parties, often to steal information or manipulate data.
+Adversary-in-the-Middle is an attack technique where an attacker intercepts communication between two parties, allowing for data theft or manipulation.
+Adversary-in-the-Middle is a technique where adversaries position themselves between two or more networked devices to intercept or manipulate communications.
+Adversary-in-the-Middle (AiTM) is a technique where adversaries position themselves between networked devices to intercept or manipulate data.</data>
+  <data key="d2">273f1ace04a0ea1a408291482c37e92d,77666aeb458cce50dabf1d432a889dde,948f788eb98ccafa237ddd70a1fcb3b2,e487783d63f96db023ea200f2cca9c6c</data>
+</node>
+<node id="FILELESS STORAGE">
+  <data key="d0"></data>
+  <data key="d1">
+Fileless storage refers to storing data in non-file formats to evade detection by security tools, often used by adversaries to conceal malicious activities.</data>
+  <data key="d2">77666aeb458cce50dabf1d432a889dde,948f788eb98ccafa237ddd70a1fcb3b2</data>
+</node>
+<node id="MACOS">
+  <data key="d0">GEO</data>
+  <data key="d1">macOS is an operating system platform that can be targeted by various attack techniques including VNC, ARP Cache Poisoning, and Fileless Storage.
+macOS is an operating system developed by Apple that is also susceptible to various attack techniques.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, known for its user-friendly interface and robust performance.
+macOS is an operating system platform that supports various attack techniques such as Screen Capture and Archive via Utility.
+macOS is an operating system developed by Apple Inc. that is used on Macintosh computers and supports various network functionalities.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, which supports various network functionalities.
+macOS is an operating system platform on which iKitten and Impacket operate.
+macOS is an operating system platform that supports various software tools including those mentioned in the document.
+macOS is an operating system platform on which malware like XAgentOSX and MacMa have been observed operating.</data>
+  <data key="d2">1921200e85c91275265ec0d917c32145,19c89133805ffc7f1595e5933485958b,1f3ade20fca7a1811144b08e1b7502cc,948f788eb98ccafa237ddd70a1fcb3b2,9a09228e3db8df5898a445a2def9cbe1,ad4b9611d8e6fbd36d902b1e0c20803a,cbde4f5548e7f3d58f00028957a3e56f,e487783d63f96db023ea200f2cca9c6c,f8a3a30ceeda7496bc85c8eec35e7901</data>
+</node>
+<node id="WINDOWS">
+  <data key="d0">GEO</data>
+  <data key="d1">Windows is an operating system platform that can be targeted by various attack techniques including VNC, Fileless Storage, and ARP Cache Poisoning.
+Windows is a widely used operating system that can be targeted by various attack techniques, including WMI abuse.
+Windows is an operating system developed by Microsoft, widely used for personal computers and enterprise environments.
+Windows is an operating system platform that supports various attack techniques such as Scheduled Task, Network Logon Script, and DHCP Spoofing.
+Windows is an operating system developed by Microsoft that includes components like LLMNR and NBT-NS for network communication.
+Windows is a widely used operating system developed by Microsoft, which supports network packet capture through Winpcap.
+
+
+Windows is an operating system platform that supports various software tools including those mentioned in the document.
+
+Windows is the operating system platform on which all the mentioned malware operates.
+</data>
+  <data key="d2">052ba78a29b5ea0ded17a9429cdf8d92,1921200e85c91275265ec0d917c32145,19c89133805ffc7f1595e5933485958b,1f3ade20fca7a1811144b08e1b7502cc,2a5e6484dfc3b8b0eb9f6a1b88495c99,554714734f75274b20fcf0d712770a90,948f788eb98ccafa237ddd70a1fcb3b2,9a09228e3db8df5898a445a2def9cbe1,ad4b9611d8e6fbd36d902b1e0c20803a,cbde4f5548e7f3d58f00028957a3e56f,e487783d63f96db023ea200f2cca9c6c,f8a3a30ceeda7496bc85c8eec35e7901</data>
+</node>
+<node id="NETWORK SNIFFING">
+  <data key="d0"></data>
+  <data key="d1">
+</data>
+  <data key="d2">ad4b9611d8e6fbd36d902b1e0c20803a,e487783d63f96db023ea200f2cca9c6c</data>
+</node>
+<node id="CACHE POISONING">
+  <data key="d0">EVENT</data>
+  <data key="d1">Cache poisoning is a technique used to intercept network traffic, potentially collecting sensitive data such as credentials over insecure protocols.</data>
+  <data key="d2">e487783d63f96db023ea200f2cca9c6c</data>
+</node>
+<edge source="DHCP SPOOFING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">5.0</data>
+  <data key="d4">DHCP Spoofing is a sub attack technique of Adversary-in-the-Middle</data>
+  <data key="d5">273f1ace04a0ea1a408291482c37e92d</data>
+</edge>
+<edge source="DHCP SPOOFING" target="WINDOWS">
+  <data key="d3">8.0</data>
+  <data key="d4">DHCP Spoofing can be executed on Windows systems by spoofing DHCP traffic to redirect network communications.</data>
+  <data key="d5">1f3ade20fca7a1811144b08e1b7502cc</data>
+</edge>
+<edge source="LLMNR/NBT-NS POISONING AND SMB RELAY" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">5.0</data>
+  <data key="d4">LLMNR/NBT-NS Poisoning and SMB Relay is a sub attack technique of Adversary-in-the-Middle</data>
+  <data key="d5">273f1ace04a0ea1a408291482c37e92d</data>
+</edge>
+<edge source="DOK" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">8.0</data>
+  <data key="d4">Dok is a software that utilizes the attack technique called Adversary-in-the-Middle</data>
+  <data key="d5">77666aeb458cce50dabf1d432a889dde</data>
+</edge>
+<edge source="LINUX" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">9.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques can be executed on Linux platforms to intercept communications
+Adversary-in-the-Middle techniques can also be applied to Linux platforms</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2,e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="LINUX" target="ARP CACHE POISONING">
+  <data key="d3">4.0</data>
+  <data key="d4">ARP Cache Poisoning can be executed on Linux platforms to intercept network traffic</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="LINUX" target="VNC">
+  <data key="d3">4.0</data>
+  <data key="d4">VNC can be deployed on Linux platforms, making it a target for adversaries</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="LINUX" target="FILELESS STORAGE">
+  <data key="d3">4.0</data>
+  <data key="d4">Fileless Storage techniques can be utilized on Linux platforms to evade detection</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="VNC" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">4.0</data>
+  <data key="d4">VNC can be exploited in an Adversary-in-the-Middle scenario to control devices remotely</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="VNC" target="ARP CACHE POISONING">
+  <data key="d3">4.0</data>
+  <data key="d4">VNC can be used in conjunction with ARP Cache Poisoning to gain unauthorized access to networked devices</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="VNC" target="FILELESS STORAGE">
+  <data key="d3">3.0</data>
+  <data key="d4">Both VNC and Fileless Storage are techniques used by adversaries to conduct malicious activities on targeted systems</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="VNC" target="MACOS">
+  <data key="d3">4.0</data>
+  <data key="d4">VNC can be deployed on macOS platforms, making it a target for adversaries</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="VNC" target="WINDOWS">
+  <data key="d3">4.0</data>
+  <data key="d4">VNC can be deployed on Windows platforms, making it a target for adversaries</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="CREDENTIAL ACCESS" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">6.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques can be used to facilitate Credential Access by intercepting sensitive information</data>
+  <data key="d5">e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="TRANSMITTED DATA MANIPULATION" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">7.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques can include Transmitted Data Manipulation to alter data in transit</data>
+  <data key="d5">e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">10.0</data>
+  <data key="d4">ARP Cache Poisoning is a sub attack technique of Adversary-in-the-Middle
+ARP Cache Poisoning is a method that can facilitate an Adversary-in-the-Middle attack by intercepting communications</data>
+  <data key="d5">273f1ace04a0ea1a408291482c37e92d,948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="FILELESS STORAGE">
+  <data key="d3">3.0</data>
+  <data key="d4">Fileless Storage can be used to conceal data related to ARP Cache Poisoning activities</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="MACOS">
+  <data key="d3">4.0</data>
+  <data key="d4">ARP Cache Poisoning can be executed on macOS platforms to intercept network traffic</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="WINDOWS">
+  <data key="d3">4.0</data>
+  <data key="d4">ARP Cache Poisoning can be executed on Windows platforms to intercept network traffic</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="FILELESS STORAGE">
+  <data key="d3">3.0</data>
+  <data key="d4">Fileless Storage techniques may be used to hide data collected during an Adversary-in-the-Middle attack</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="MACOS">
+  <data key="d3">5.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques can be executed on macOS platforms to intercept communications
+Adversary-in-the-Middle techniques can also be applied to macOS platforms</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2,e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="WINDOWS">
+  <data key="d3">1.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques can be executed on Windows platforms to intercept communications</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="CACHE POISONING">
+  <data key="d3">7.0</data>
+  <data key="d4">Cache poisoning can be a method used in conjunction with the Adversary-in-the-Middle technique to intercept data</data>
+  <data key="d5">e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="NETWORK SNIFFING">
+  <data key="d3">8.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques often involve Network Sniffing to capture sensitive data</data>
+  <data key="d5">e487783d63f96db023ea200f2cca9c6c</data>
+</edge>
+<edge source="FILELESS STORAGE" target="MACOS">
+  <data key="d3">4.0</data>
+  <data key="d4">Fileless Storage techniques can be utilized on macOS platforms to evade detection</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+<edge source="FILELESS STORAGE" target="WINDOWS">
+  <data key="d3">4.0</data>
+  <data key="d4">Fileless Storage techniques can be utilized on Windows platforms to evade detection</data>
+  <data key="d5">948f788eb98ccafa237ddd70a1fcb3b2</data>
+</edge>
+</graph></graphml>

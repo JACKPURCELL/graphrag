@@ -1,0 +1,14 @@
+There are 2 mitigation methods that can mitigating the attack technique called Remote Email Collection. Their names are as follows:
+* Encrypt Sensitive Information 
+* Multi-factor Authentication 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Encrypt Sensitive Information
+Mitigation method description: Protect sensitive information with strong encryption.
+
+Mitigation method name: Multi-factor Authentication
+Mitigation method description: Use two or more pieces of evidence to authenticate to a system; such as username and password in addition to a token from a physical smart card or token generator.

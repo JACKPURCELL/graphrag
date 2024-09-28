@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d5" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d4" for="edge" attr.name="description" attr.type="string"/>
+<key id="d3" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="KGH_SPY">
+  <data key="d0">SOFTWARE</data>
+  <data key="d1">KGH_SPY is a modular suite of tools used by Kimsuky for reconnaissance, information stealing, and backdoor capabilities.
+KGH_SPY is a software known for using the Logon Script (Windows) attack technique.</data>
+  <data key="d2">2430cff303f6909bab20660b3feed2af,a02f7805f454fa804ecf713bf2b41ff8</data>
+</node>
+<node id="NETWORK">
+  <data key="d0">GEO</data>
+  <data key="d1">A system that can be targeted by various attack techniques including Adversary-in-the-Middle and RC Scripts.</data>
+  <data key="d2">47c6eb3eda5970571f8191780696c674</data>
+</node>
+<node id="CREDENTIALS">
+  <data key="d0">EVENT</data>
+  <data key="d1">Information that adversaries may attempt to intercept using Adversary-in-the-Middle techniques.
+Credentials refer to sensitive information, such as usernames and passwords, that adversaries may seek to collect through network attacks.)&lt;|COMPLETE|&gt;</data>
+  <data key="d2">2487d36773e256b9993aedeb28bf0de6,47c6eb3eda5970571f8191780696c674</data>
+</node>
+<node id="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d0">EVENT</data>
+  <data key="d1">A technique where adversaries position themselves between networked devices to intercept or manipulate data.
+Adversary-in-the-Middle is an attack method that includes sub-attack techniques like DHCP Spoofing and ARP Cache Poisoning, highlighting its complexity and potential impact.
+Adversary-in-the-Middle is an attack method that intercepts communication between two parties to compromise data.</data>
+  <data key="d2">47c6eb3eda5970571f8191780696c674,a02f7805f454fa804ecf713bf2b41ff8,b87641d79dfa7f0ff6e6e4e399584673</data>
+</node>
+<node id="DOK">
+  <data key="d0">SOFTWARE</data>
+  <data key="d1">Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server.
+Dok is a software that utilizes the Adversary-in-the-Middle attack technique.</data>
+  <data key="d2">2430cff303f6909bab20660b3feed2af,a02f7805f454fa804ecf713bf2b41ff8</data>
+</node>
+<edge source="KGH_SPY" target="DOK">
+  <data key="d3">1.0</data>
+  <data key="d4">KGH_SPY and DOK are both types of malware used for information stealing and backdoor capabilities</data>
+  <data key="d5">2430cff303f6909bab20660b3feed2af</data>
+</edge>
+<edge source="NETWORK" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">1.0</data>
+  <data key="d4">Adversary-in-the-Middle techniques are used to intercept or manipulate data in network communications.</data>
+  <data key="d5">47c6eb3eda5970571f8191780696c674</data>
+</edge>
+<edge source="CREDENTIALS" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d3">9.0</data>
+  <data key="d4">Adversaries may intercept user credentials using Adversary-in-the-Middle techniques.</data>
+  <data key="d5">47c6eb3eda5970571f8191780696c674</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="DOK">
+  <data key="d3">8.0</data>
+  <data key="d4">Dok is a software that utilizes the Adversary-in-the-Middle attack technique</data>
+  <data key="d5">a02f7805f454fa804ecf713bf2b41ff8</data>
+</edge>
+</graph></graphml>

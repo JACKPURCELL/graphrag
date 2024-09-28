@@ -1,0 +1,14 @@
+There are 2 mitigation methods that can mitigating the attack technique called Mavinject. Their names are as follows:
+* Disable or Remove Feature or Program 
+* Execution Prevention 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Disable or Remove Feature or Program
+Mitigation method description: Remove or deny access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+
+Mitigation method name: Execution Prevention
+Mitigation method description: Block execution of code on a system through application control, and/or script blocking.

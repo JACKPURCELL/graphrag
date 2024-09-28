@@ -1,0 +1,630 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d6" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d5" for="edge" attr.name="description" attr.type="string"/>
+<key id="d4" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d3" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d2" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d1" for="node" attr.name="description" attr.type="string"/>
+<key id="d0" for="node" attr.name="type" attr.type="string"/>
+<graph edgedefault="undirected"><node id="NETWORK SEGMENTATION">
+  <data key="d0">EVENT</data>
+  <data key="d1">Network Segmentation involves architecting sections of the network to isolate critical systems and prevent access to sensitive information.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems and prevent access to sensitive information.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems, functions, or resources, using physical and logical segmentation to prevent access to sensitive systems.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems, functions, or resources to enhance security against attacks.
+This mitigation method involves architecting sections of the network to isolate critical systems, functions, or resources, using physical and logical segmentation to enhance security.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems, functions, or resources to enhance security and prevent unauthorized access.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems and prevent access to sensitive information.
+Network Segmentation is a mitigation method that involves architecting sections of the network to isolate critical systems, functions, or resources to enhance security and prevent unauthorized access.</data>
+  <data key="d2">1b8b673332b77226d5def1689b308e3d,2aeff13316ba202ebb5bf53db62307a2,38cc990d0bb9edafa8f1949b602d3a2e,5cea1673f09a07cff7749afb9673f82c,a5717a6332936d93ab8edb49eaec73ea,c3864a8e0cda85985f5c29fcce56bba1,d5fe465c4a2262c649cf78ecca21f7fa,db6f0fe2c39bdb1cdd08a0d9bb74f0d3</data>
+</node>
+<node id="FILTER NETWORK TRAFFIC">
+  <data key="d0">EVENT</data>
+  <data key="d1">Filter Network Traffic uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+This mitigation method uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, as well as configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that uses network appliances to filter incoming and outgoing traffic based on protocols to enhance security.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, configuring software on endpoints to filter network traffic.
+This mitigation method uses network appliances to filter ingress or egress traffic and perform protocol-based filtering to secure network communications.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering, configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that involves using network appliances to filter ingress or egress traffic and perform protocol-based filtering, as well as configuring software on endpoints to filter network traffic.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+This event refers to the process of filtering network traffic to ensure that only legitimate traffic is allowed, thereby protecting against attacks.A mitigation method that employs network appliances to filter traffic and enhance security protocols.</data>
+  <data key="d2">0e99ef2bb8e40239a5cb68e3b925cc0d,24c52eb7616b68180f889f25825d240b,38cc990d0bb9edafa8f1949b602d3a2e,a5717a6332936d93ab8edb49eaec73ea,afb38f35b4b62314d35d9d7b23ed1343,b07e49c0bd00956f8f7ed4d3957bf7e2,b4c804334ea37e526eeb7333a7f2242e,c3864a8e0cda85985f5c29fcce56bba1,c493643a5cd5d5303e98991d0337a80e,c8e05800c92bbcdfa40b39580d399520,d5f99711a433bb53f213623c25a97346,d5fe465c4a2262c649cf78ecca21f7fa,db6f0fe2c39bdb1cdd08a0d9bb74f0d3,dba77ce1930f12bba2ae32a7ead26eec</data>
+</node>
+<node id="DOK">
+  <data key="d0">ORGANIZATION</data>
+  <data key="d1">Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server to redirect network traffic.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server to redirect a user's network traffic, operating on macOS.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server to redirect network traffic.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server.
+Dok is a Trojan application disguised as a .zip file that collects user credentials and installs a malicious proxy server to redirect network traffic.</data>
+  <data key="d2">0bcd05047c78d79e7484e21cc44c47c5,19492096ed1be3a76671a54557e99154,203f0f5a8353d4a2200c85809bb801d3,56ede4abbe4e59ebdcd15115a139143a,ac425f545b94fec02cfc7f68d41976e2,c0a41df3a0d15d98dc353a86c29834f0</data>
+</node>
+<node id="NETWORK SNIFFING">
+  <data key="d0"></data>
+  <data key="d1">
+Network Sniffing is a technique used by adversaries to capture and analyze network traffic, often to collect sensitive information such as credentials.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,5e9b48f3905db7fdaccc5f73c92de51d</data>
+</node>
+<node id="DOWGRADE ATTACK">
+  <data key="d0">EVENT</data>
+  <data key="d1">Downgrade Attack is a technique where adversaries force a system to use a less secure version of a protocol to exploit vulnerabilities.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="NETWORK DENIAL OF SERVICE">
+  <data key="d0">EVENT</data>
+  <data key="d1">Network Denial of Service is a technique where adversaries overwhelm a network to disrupt services and communications.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+  <data key="d0">ORGANIZATION</data>
+  <data key="d1">Limit Access to Resource Over Network is a mitigation method that restricts access to file shares and remote systems to enhance security.
+This method focuses on preventing access to file shares and remote systems, utilizing mechanisms like network concentrators and RDP gateways to limit access.
+Limit Access to Resource Over Network is a mitigation method that prevents access to file shares and remote systems, using mechanisms like network concentrators and RDP gateways.
+Limit Access to Resource Over Network is a mitigation method aimed at preventing unauthorized access to file shares, remote systems, and unnecessary services through various mechanisms.
+This event describes the implementation of a strategy to limit access to resources over the network to enhance security.A mitigation method that involves preventing access to file shares and remote systems to enhance security.</data>
+  <data key="d2">1b8b673332b77226d5def1689b308e3d,2aeff13316ba202ebb5bf53db62307a2,c3864a8e0cda85985f5c29fcce56bba1,c8e05800c92bbcdfa40b39580d399520,d5f99711a433bb53f213623c25a97346</data>
+  <data key="d3">ORGANIZATION</data>
+</node>
+<node id="STEAL APPLICATION ACCESS TOKEN">
+  <data key="d0">EVENT</data>
+  <data key="d1">Steal Application Access Token is a technique where adversaries capture access tokens to gain unauthorized access to applications.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="USER TRAINING">
+  <data key="d0">ORGANIZATION</data>
+  <data key="d1">User Training is a mitigation method aimed at educating users about security threats to reduce the risk of successful attacks such as spearphishing and social engineering.
+User Training is a mitigation method aimed at educating users about potential security threats to reduce risks associated with spearphishing and social engineering techniques.
+User Training is a mitigation method that trains users to be aware of access or manipulation attempts by adversaries to reduce risks.
+User Training is a method aimed at educating users about security threats to reduce the risk of successful attacks like spearphishing and social engineering.
+User Training is a mitigation method aimed at training users to recognize access or manipulation attempts by adversaries to reduce risks associated with spearphishing and social engineering.
+This mitigation method focuses on training users to recognize access or manipulation attempts by adversaries to reduce risks associated with spearphishing and social engineering.
+User Training is a mitigation method that educates users about potential access or manipulation attempts by adversaries to reduce risks associated with social engineering.
+User Training is a mitigation method that educates users to recognize access or manipulation attempts by adversaries, reducing the risk of successful attacks.
+User Training involves educating users about security risks and how to recognize manipulation attempts to reduce the risk of successful attacks.
+User Training is a method aimed at educating users about potential security threats and how to recognize and respond to them to mitigate risks.
+User Training is a mitigation method aimed at training users to be aware of access or manipulation attempts by adversaries to reduce the risk of successful spearphishing and social engineering techniques.
+User Training is a mitigation method that educates users about access or manipulation attempts to reduce risks from spearphishing and social engineering.</data>
+  <data key="d2">39597a2cd04bc768a9024e2024885e04,3d8633e842f11838bc1ac20b88489d78,541e9749bcda7ccd65c18d2742c95883,6979b237eb01d4fe40904ab5a63d5b8a,6e544b9a95c78093cc92e7846217b06f,800d8430ce42be7c5dc75f07c48715df,89483d72ea957add6fea04bd888b8b0d,8c1c4a8cb790c60f7fbd76a7e3b77186,a90162430c4cd467f74efd7b78f8d866,c3864a8e0cda85985f5c29fcce56bba1,d5f99711a433bb53f213623c25a97346,e208ef3e0439f359146ecb0f3d2fe0df</data>
+  <data key="d3">ORGANIZATION</data>
+</node>
+<node id="STEAL WEB SESSION COOKIE">
+  <data key="d0">EVENT</data>
+  <data key="d1">Steal Web Session Cookie is an attack technique where an adversary steals web application or service session cookies to gain unauthorized access to web applications or Internet services as an authenticated user.
+
+Steal Web Session Cookie is a technique where adversaries capture session cookies to hijack user sessions.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,6979b237eb01d4fe40904ab5a63d5b8a,ea89ec196c89cbe0497af5d7d8603123</data>
+</node>
+<node id="IMPAIR DEFENSES">
+  <data key="d0">EVENT</data>
+  <data key="d1">Impair Defenses is a technique where adversaries disrupt or disable security measures to facilitate their attacks.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="EXPLOITATION FOR CREDENTIAL ACCESS">
+  <data key="d0">EVENT</data>
+  <data key="d1">Exploitation for Credential Access is a technique where adversaries attempt to steal user credentials through various means, including interception.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="TRANSMITTED DATA MANIPULATION">
+  <data key="d0">EVENT</data>
+  <data key="d1">Transmitted Data Manipulation is a technique where adversaries alter data being transmitted over a network to achieve malicious objectives.
+Transmitted Data Manipulation refers to the act of altering data being sent over a network, which can be used to deceive or exploit users.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,5e9b48f3905db7fdaccc5f73c92de51d</data>
+</node>
+<node id="MACOS">
+  <data key="d0">GEO</data>
+  <data key="d1">macOS is an operating system platform that can be targeted by the Service Stop attack technique.
+macOS is an operating system platform that can be targeted by the Data from Removable Media attack technique.
+macOS is an operating system platform that can be targeted by adversaries using various attack techniques, including Domain Groups and Local Groups.
+
+macOS is an operating system developed by Apple Inc. for Macintosh computers, known for its user-friendly interface and robust security features.
+macOS is an operating system platform that can be targeted by email collection techniques such as Email Forwarding Rule and Local Email Collection.
+macOS is an operating system platform that can be targeted by the Audio Capture attack technique.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, known for its user-friendly interface and robust performance.
+macOS is an operating system platform that can be targeted by rootkits.
+macOS is an operating system developed by Apple, which is also a platform for the Impacket software.
+macOS is a platform that can be targeted by the Steal Web Session Cookie attack technique.
+macOS is an operating system developed by Apple Inc. for its line of Mac computers, which is the platform targeted by OSX/Shlayer.
+macOS is an operating system platform that can be targeted by various attack techniques, including Boot or Logon Autostart Execution and Kernel Modules and Extensions.
+macOS is an operating system developed by Apple Inc. for its line of Mac computers.
+macOS is an operating system developed by Apple Inc. for its line of Mac computers.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, on which the Dok software operates.)&lt;|COMPLETE|&gt;
+
+macOS is an operating system platform on which Cobalt Strike operates.
+
+macOS is an operating system developed by Apple Inc. for its line of Mac computers.
+macOS is a platform on which Uroburos can be deployed.
+macOS is an operating system platform that can execute shared objects, commonly using .dylib files, as part of the Shared Modules attack technique.
+macOS is an operating system platform that is targeted by the AppleJeus malware.
+macOS is an operating system developed by Apple, which is targeted by malware such as OSX_OCEANLOTUS.D and OSX/Shlayer.
+macOS is an operating system platform targeted by various malware, including XCSSET and Bundlore.
+macOS is an operating system platform on which Impacket operates, allowing for network protocol manipulation.
+macOS is an operating system developed by Apple, which has specific processes like Launch Daemons and Launch Agents that can be exploited for persistence.
+macOS is an operating system developed by Apple Inc. for their line of Mac computers, which supports various attack techniques including Launch Agents.
+macOS is an operating system platform targeted by both Green Lambert and iKitten malware.
+macOS is an operating system platform that can be targeted by the System Owner/User Discovery technique.
+macOS is an operating system platform that can be targeted by various attack techniques including Adversary-in-the-Middle, DHCP Spoofing, and ARP Cache Poisoning.
+macOS is an operating system platform that can be impacted by ARP Cache Poisoning.
+macOS is an operating system platform that can be targeted by the Device Driver Discovery attack technique.
+macOS is an operating system platform on which Empire operates.
+macOS is an operating system platform that can be targeted by adversaries using disk wipe techniques.
+macOS is an operating system platform that is part of the network targeted by the Blockbuster Destructive Malware.
+macOS is an operating system developed by Apple for its line of Mac computers, known for its user-friendly interface and integration with Apple services.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, known for its user-friendly interface.
+macOS is an operating system developed by Apple Inc. for Macintosh computers, known for its user-friendly interface and strong security features.
+macOS is an operating system developed by Apple Inc. for its line of Mac computers.
+macOS is an operating system platform that supports various software applications, including Cobalt Strike and Kazuar.)&lt;|COMPLETE|&gt;
+macOS is an operating system platform that can be targeted by the Screen Capture attack technique.
+macOS is an operating system platform on which LoudMiner operates.)&lt;|COMPLETE|&gt;</data>
+  <data key="d2">03f8ef0b3a0a9d2333357ffb758ef009,0bcd05047c78d79e7484e21cc44c47c5,153de5c89dea7412b1315e17ff7944df,1a4d698f5d466b3e1622a2b3a1096f2b,1b3ee106fb26cba835f5fef34c929d64,1db27b59d87b40509ad90d675991e54c,1e2396bfd3f4ef37fe1ab3735a5bc3fb,203f0f5a8353d4a2200c85809bb801d3,33094661c9918c407146d17011e60d94,4881bdff030a69da26650026798c9217,4a92815e34a6b6b59b7508867b7b4ee0,4bffa144c82696232a96c173845a1218,55dd0a5c224b77d9f1bff2d1804cbbbb,56ede4abbe4e59ebdcd15115a139143a,5d30618ca9a96246bdcdf9ae1030dbff,5e9b48f3905db7fdaccc5f73c92de51d,6180c8616cbd0edd48b89f51c3522c02,62216ae6105b4d92079fa1f4dfebcf06,65e2f752263042f9605c76afec618cd2,6cb4760c6b76aa9117b6b42b890b90c8,7427bd748e5f662709ae9fc84c5591ca,7730678e53e163f396f171f84a0366e3,81bf42d6c73095a788dc53c1dea5b0db,893e758177c940efe7feaa18740e2ee9,90fdd825e072e75e608186515c1359d0,96a527989b9206bb710960e81f79096e,a6206c1dcc1c2b35f8c09d9bfac27c8d,ab8021aae33033722540ecfc5f54f98f,ac49e533af4f3e44847c755903ee842c,b085d4df3f5525a2ef44bf7c111005bf,bc8a3c5b1f8243a86b1a72006a6f42eb,bd54d4d14f83ce917a1bad5632dd9301,c604c14400cc38f080d296c1b9cb68c9,cb3e682cc438c87f864acd9a46948919,d93da71d3160aae949beca940d7f8745,dbd1e3609f3402a12e0250b46a68b539,de89a916643bd7795f5b8d920c047921,e6e8cc58f11a8c627906e0b3135edb3c,e7b664e359e016a62af99dd3e5d0fbf3,e885e43605bf23d0d352f9da4c8e4f84,ea89ec196c89cbe0497af5d7d8603123,eec185570d89a16eedb278060364fe26,f669b909422d9736eeafb4418e0dcef8</data>
+</node>
+<node id="NETWORK INTRUSION PREVENTION">
+  <data key="d0">EVENT</data>
+  <data key="d1">Network Intrusion Prevention uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that employs intrusion detection signatures to block malicious traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+This mitigation method uses intrusion detection signatures to block traffic at network boundaries to prevent unauthorized access.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.</data>
+  <data key="d2">382a79362923b9a7a92df16541a1003b,38cc990d0bb9edafa8f1949b602d3a2e,a5717a6332936d93ab8edb49eaec73ea,b07e49c0bd00956f8f7ed4d3957bf7e2,be54a0f9acb0cbc96e41ad0386d9dedb,c3864a8e0cda85985f5c29fcce56bba1,c493643a5cd5d5303e98991d0337a80e,d5f99711a433bb53f213623c25a97346,d5fe465c4a2262c649cf78ecca21f7fa,db6f0fe2c39bdb1cdd08a0d9bb74f0d3</data>
+</node>
+<node id="DISABLE OR REMOVE FEATURE OR PROGRAM">
+  <data key="d0">ORGANIZATION</data>
+  <data key="d1">This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+Disable or Remove Feature or Program is a mitigation method that involves removing or denying access to unnecessary software to prevent exploitation by adversaries.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+This mitigation method involves removing or denying access to unnecessary software to prevent potential vulnerabilities.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+This mitigation method involves removing or denying access to unnecessary software to prevent potential abuse by adversaries.
+Disable or Remove Feature or Program is a mitigation method that involves removing or denying access to unnecessary and potentially vulnerable software.
+Disable or Remove Feature or Program is a mitigation method that involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+Disable or Remove Feature or Program is a mitigation method that involves removing or denying access to unnecessary and potentially vulnerable software.
+A mitigation method that focuses on removing or denying access to unnecessary software to reduce vulnerabilities.This event involves the action of disabling or removing unnecessary features or programs to prevent potential vulnerabilities.</data>
+  <data key="d2">0d55c7d87a6e2e716cb5abd2f0081a92,1b8b673332b77226d5def1689b308e3d,24c52eb7616b68180f889f25825d240b,267a24b8ff09702298093b86adf374b5,38cc990d0bb9edafa8f1949b602d3a2e,800d8430ce42be7c5dc75f07c48715df,81fe48011bd6c0d79c731ce3c87a0237,c3864a8e0cda85985f5c29fcce56bba1,c695a567f20f32146c196c401185ad19,c8e05800c92bbcdfa40b39580d399520,d5f99711a433bb53f213623c25a97346,deabcb6562e0d189b4f636ef39b74f30,eeeb5cec2eec88c74a2737913e13b5ce</data>
+  <data key="d3">ORGANIZATION</data>
+</node>
+<node id="DHCP SPOOFING">
+  <data key="d0">EVENT</data>
+  <data key="d1">DHCP Spoofing is an attack technique that exploits the DHCP protocol to intercept network traffic and potentially redirect users to malicious sites.
+DHCP Spoofing is a technique where adversaries act as a malicious DHCP server to redirect network traffic and collect sensitive information.
+</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,59b4669f3763b2e2954e4010bf2726cd,b07e49c0bd00956f8f7ed4d3957bf7e2</data>
+</node>
+<node id="LINUX">
+  <data key="d0">GEO</data>
+  <data key="d1">Linux is an operating system platform that can be targeted by the Service Stop attack technique.
+Linux is an operating system platform that can be targeted by the Data from Removable Media attack technique.
+Linux is an operating system platform that can be targeted by adversaries using various attack techniques, including Domain Groups and Local Groups.
+Linux is an operating system that has variants of the CHOPSTICK malware family.
+Linux is a family of open-source Unix-like operating systems, which is targeted by various attack techniques for establishing persistence.
+Linux is an operating system platform that can be targeted by email collection techniques, including Email Forwarding Rule and Local Email Collection.
+Linux is an operating system platform that can be targeted by the Audio Capture attack technique.
+Linux is an operating system platform that can be targeted by rootkits.
+Linux is an open-source operating system that is one of the platforms for the Impacket software.
+Linux is a platform that can be targeted by the Steal Web Session Cookie attack technique.
+Linux is an open-source operating system that serves as a platform for various software, including GoldMax.
+Linux is an operating system platform that can be targeted by various attack techniques, including Boot or Logon Autostart Execution and Kernel Modules and Extensions.
+Linux is an open-source operating system kernel that is widely used in various distributions for servers, desktops, and embedded systems.
+Linux is an open-source operating system that is widely used in servers, desktops, and embedded systems.
+Linux is an open-source operating system that allows users to manage system processes and configurations, including Autostart entries.
+Linux is an operating system platform on which Cobalt Strike operates.
+Linux is a family of open-source Unix-like operating systems based on the Linux kernel, widely used for servers and desktops.
+Linux is a platform on which Uroburos can be deployed.
+Linux is an operating system platform that supports the loading and execution of shared objects from arbitrary local paths as part of the Shared Modules attack technique.
+Linux is an open-source operating system that is widely used in servers, desktops, and embedded systems, known for its stability and security.
+Linux is an open-source operating system widely used in servers and desktops, known for its stability and security.
+Linux is an open-source operating system that serves as a platform for various software, including P.A.S. Webshell and Kinsing.
+Linux is an operating system platform targeted by the Penquin remote access trojan.
+Linux is an operating system platform on which Impacket operates, providing tools for network protocol manipulation.
+Linux is an operating system that can be targeted by adversaries through various attack techniques, including the creation or modification of system processes.
+Linux is an open-source operating system that is widely used in servers and desktops, which supports attack techniques like Systemd Services.
+Linux is an operating system platform targeted by various malware, including HiddenWasp and Green Lambert.
+Linux is an operating system platform that can be targeted by the System Owner/User Discovery technique.
+Linux is an operating system platform that can be targeted by various attack techniques including Adversary-in-the-Middle, DHCP Spoofing, and ARP Cache Poisoning.
+Linux is an operating system platform that can be affected by various network attacks including ARP Cache Poisoning and LLMNR/NBT-NS Poisoning.
+Linux is an operating system platform that can be targeted by the Device Driver Discovery attack technique.
+Linux is an open-source operating system that is widely used for various applications, including server management and software development.
+Linux is an operating system that uses /etc/passwd and /etc/shadow for user account information and password storage.
+Linux is an operating system platform on which Empire operates.
+
+Linux is an operating system platform that is part of the network targeted by the Blockbuster Destructive Malware.
+
+Linux is an operating system targeted by the Penquin remote access trojan (RAT).
+Linux is a family of open-source Unix-like operating systems based on the Linux kernel, widely used for servers and development environments.
+Linux is an open-source operating system that is widely used in servers, desktops, and embedded systems, known for its flexibility and security features.
+Linux is an open-source operating system model that is widely used in servers and desktops.
+Linux is an open-source operating system that is widely used for servers, desktops, and embedded systems, known for its flexibility and security.
+Linux is an open-source operating system platform used for various computing devices.
+Linux is an operating system platform that supports various software applications, including Cobalt Strike.
+Linux is an operating system platform that can be targeted by the Screen Capture attack technique.
+</data>
+  <data key="d2">03f8ef0b3a0a9d2333357ffb758ef009,07969a79a1dda4040e5d75c67b167c1d,0bcd05047c78d79e7484e21cc44c47c5,153de5c89dea7412b1315e17ff7944df,1a4d698f5d466b3e1622a2b3a1096f2b,1a7d18afb40d8ab5dba14932ed88ff74,1b3ee106fb26cba835f5fef34c929d64,1db27b59d87b40509ad90d675991e54c,1e2396bfd3f4ef37fe1ab3735a5bc3fb,2b6e47bcffd25f7986abe5b41c416e05,33094661c9918c407146d17011e60d94,4881bdff030a69da26650026798c9217,4a92815e34a6b6b59b7508867b7b4ee0,4bffa144c82696232a96c173845a1218,511f905142eb0a2f3e22176ef303e792,55dd0a5c224b77d9f1bff2d1804cbbbb,56ede4abbe4e59ebdcd15115a139143a,5d30618ca9a96246bdcdf9ae1030dbff,5e9b48f3905db7fdaccc5f73c92de51d,6180c8616cbd0edd48b89f51c3522c02,62216ae6105b4d92079fa1f4dfebcf06,65e2f752263042f9605c76afec618cd2,7730678e53e163f396f171f84a0366e3,86ad175af4d2370547db22a664f520fc,893e758177c940efe7feaa18740e2ee9,8ecaef11275172d1f249cb271881e9d1,90fdd825e072e75e608186515c1359d0,9c8a7d852d29cf59938b333d040a4d43,a6206c1dcc1c2b35f8c09d9bfac27c8d,ab5b055a8d5efcedbe6201bc3ee255e4,ab8021aae33033722540ecfc5f54f98f,ac49e533af4f3e44847c755903ee842c,b68e95ac4e3e7913570efe4ca4d33537,bc8a3c5b1f8243a86b1a72006a6f42eb,bd54d4d14f83ce917a1bad5632dd9301,cb3e682cc438c87f864acd9a46948919,d647c80f71a792b7ca644c31584ea1c7,d93da71d3160aae949beca940d7f8745,dbd1e3609f3402a12e0250b46a68b539,de89a916643bd7795f5b8d920c047921,e6e8cc58f11a8c627906e0b3135edb3c,e7b664e359e016a62af99dd3e5d0fbf3,e885e43605bf23d0d352f9da4c8e4f84,ea89ec196c89cbe0497af5d7d8603123,eec185570d89a16eedb278060364fe26,f669b909422d9736eeafb4418e0dcef8</data>
+</node>
+<node id="ARP CACHE POISONING">
+  <data key="d0">EVENT</data>
+  <data key="d1">ARP Cache Poisoning is an attack technique that exploits vulnerabilities in the Address Resolution Protocol to redirect network traffic and potentially intercept sensitive information.
+ARP Cache Poisoning is a technique where adversaries poison ARP caches to intercept communications between networked devices.
+ARP Cache Poisoning is an attack technique where adversaries poison Address Resolution Protocol (ARP) caches to intercept network traffic between devices.
+ARP Cache Poisoning is an attack technique that exploits vulnerabilities in the Address Resolution Protocol to intercept and manipulate network traffic.)&lt;|COMPLETE|&gt;("entity"</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,5e9b48f3905db7fdaccc5f73c92de51d,cfce66481750b85727b0a5dba970bd77,d5f99711a433bb53f213623c25a97346</data>
+</node>
+<node id="ENCRYPT SENSITIVE INFORMATION">
+  <data key="d0">EVENT</data>
+  <data key="d1">Encrypt Sensitive Information is the process of protecting sensitive information with strong encryption.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information using strong encryption techniques to prevent unauthorized access.
+A mitigation method that protects sensitive information with strong encryption.
+Encrypt Sensitive Information is a mitigation method designed to protect sensitive information using strong encryption techniques.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption to prevent unauthorized access.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption.
+This mitigation method focuses on protecting sensitive information with strong encryption to ensure its confidentiality.
+Encrypt Sensitive Information is a method that protects sensitive data by using strong encryption techniques to ensure confidentiality and integrity.
+Encrypt Sensitive Information refers to the practice of using strong encryption techniques to protect sensitive data from unauthorized access.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption.</data>
+  <data key="d2">29cd92c26bfc3a501896dfe72222f02d,680b2885ef573bc51aebb4a47e59923e,6e544b9a95c78093cc92e7846217b06f,81fe48011bd6c0d79c731ce3c87a0237,89483d72ea957add6fea04bd888b8b0d,91aaf8ff29cbd572624658c794234d7e,a5717a6332936d93ab8edb49eaec73ea,c3864a8e0cda85985f5c29fcce56bba1,d5f99711a433bb53f213623c25a97346,d5fe465c4a2262c649cf78ecca21f7fa,db6f0fe2c39bdb1cdd08a0d9bb74f0d3,efeb9bf544580f60dd2422708b1664f3</data>
+</node>
+<node id="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d0">EVENT</data>
+  <data key="d1">Adversary-in-the-Middle is an attack technique where an adversary intercepts communication between two parties, often used in phishing campaigns.
+
+Adversary-in-the-Middle is a technique where adversaries position themselves between networked devices to intercept or manipulate communications.
+Adversary-in-the-Middle is an attack technique that involves intercepting and altering communication between two parties without their knowledge.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb,203f0f5a8353d4a2200c85809bb801d3,c3864a8e0cda85985f5c29fcce56bba1,ea89ec196c89cbe0497af5d7d8603123</data>
+</node>
+<node id="REPLAY ATTACKS">
+  <data key="d0">EVENT</data>
+  <data key="d1">Replay Attacks involve intercepting and reusing valid data transmissions to gain unauthorized access or perform malicious actions.</data>
+  <data key="d2">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</node>
+<node id="WINDOWS">
+  <data key="d0">GEO</data>
+  <data key="d1">Windows is an operating system platform that can be targeted by the Service Stop attack technique.
+Windows is an operating system platform that can be targeted by the Data from Removable Media attack technique.
+
+Windows is a series of operating systems developed by Microsoft, which is targeted by various attack techniques for establishing persistence.
+
+Windows is an operating system platform on which both Wingbird and Pasam operate.)&lt;|COMPLETE|&gt;
+Windows is the operating system platform on which both Gelsemium and PipeMon operate.)&lt;|COMPLETE|&gt;
+Windows is the platform on which the Pisloader and other mentioned malware families operate.)&lt;|COMPLETE|&gt;
+Windows is the platform on which GreyEnergy and BlackEnergy operate.)&lt;|COMPLETE|&gt;("entity"
+Windows is an operating system developed by Microsoft, widely used across various devices)&lt;|COMPLETE|&gt;("entity"
+Windows is an operating system platform that can be targeted by the Audio Capture attack technique.
+Windows is a group of several proprietary graphical operating system families developed by Microsoft, primarily for personal computers.
+Windows is an operating system platform that can be targeted by rootkits.
+Windows is an operating system developed by Microsoft, which is the platform for various software mentioned, including Impacket and Sardonic.
+
+Windows is a platform that can be targeted by the Steal Web Session Cookie attack technique.
+Windows is an operating system developed by Microsoft, used as a platform for various software, including GoldMax.
+Windows is an operating system platform that can be targeted by various attack techniques, including Boot or Logon Autostart Execution and Shortcut Modification.
+Windows is a series of operating systems developed by Microsoft, widely used on personal computers and servers.
+Windows is an operating system platform that supports various functionalities including startup programs and registry modifications for persistence.
+Windows is an operating system developed by Microsoft, widely used across personal computers and enterprise environments.
+Windows is an operating system developed by Microsoft that supports various functionalities including time synchronization and security protocols.
+Windows is an operating system platform on which the SMOKEDHAM software operates.)&lt;|COMPLETE|&gt;
+
+Windows is the operating system platform that WMI targets for executing commands and managing system components.
+Windows is an operating system developed by Microsoft, primarily targeted for personal computers.
+Windows is an operating system platform that is targeted by various malware, including Netwalker and SMOKEDHAM.
+Windows is a platform on which ComRAT and Uroburos can be deployed.
+Windows is an operating system platform that allows the loading of DLLs from arbitrary local paths and UNC network paths as part of the Shared Modules attack technique.
+Windows is an operating system platform on which many of the mentioned tools operate.
+
+Windows is an operating system platform that is targeted by the AppleJeus malware.
+
+Windows is the platform on which both SILENTTRINITY and AsyncRAT operate.)&lt;|COMPLETE|&gt;
+Windows is the operating system platform on which PowerSploit operates.
+Windows is a widely used operating system developed by Microsoft, known for its user-friendly interface and compatibility with various software applications.
+Windows is an operating system platform that can be targeted by the Group Policy Discovery attack technique.
+
+
+Windows is an operating system platform on which the SUNSPOT software operates.
+
+Windows is an operating system platform on which the PoisonIvy software operates.)&lt;|COMPLETE|&gt;
+Windows is a personal computer operating system developed by Microsoft, which supports attack techniques such as Windows Services.
+Windows is a widely used operating system developed by Microsoft, which is often targeted by malware and cyber threats.
+Windows is an operating system platform targeted by Green Lambert malware.
+Windows is an operating system platform on which Mimikatz operates.)&lt;|COMPLETE|&gt;
+
+Windows is an operating system platform that can be targeted by the System Owner/User Discovery technique.
+Windows is an operating system platform that can be targeted by various attack techniques including Adversary-in-the-Middle, DHCP Spoofing, and ARP Cache Poisoning.
+Windows is an operating system platform that is susceptible to LLMNR/NBT-NS Poisoning and SMB Relay attacks.
+Windows is an operating system platform that can be targeted by the Device Driver Discovery attack technique.
+Windows is a proprietary operating system developed by Microsoft, commonly used in personal computers and enterprise environments.
+Windows is a group of several proprietary graphical operating system families developed and marketed by Microsoft.
+Windows is an operating system platform on which both HOPLIGHT and Remsec operate.)&lt;|COMPLETE|&gt;
+
+
+Windows is an operating system platform that can be targeted by adversaries using disk wipe techniques.
+Windows is an operating system platform that is part of the network targeted by the Blockbuster Destructive Malware.
+Windows is an operating system platform on which the mentioned malware, including DarkTortilla and Woody RAT, operates.
+Windows is an operating system platform that is frequently targeted by malware like Dridex.
+Windows is a widely used operating system developed by Microsoft, known for its graphical user interface and compatibility with various software applications.
+Windows is the operating system platform on which all the mentioned malware operates.
+Windows is a series of operating systems developed by Microsoft, widely used in personal computers and enterprise environments.
+Windows is an operating system developed by Microsoft, widely used for personal computers and business environments.
+Windows is an operating system developed by Microsoft, widely used for personal computers and business environments.
+Windows is a series of operating systems developed by Microsoft for personal computers.
+Windows is an operating system platform that can be targeted by the Screen Capture attack technique.
+Windows is an operating system that allows programs to have direct access to logical volumes, enabling techniques like Direct Volume Access.
+
+Windows is an operating system platform on which both Maze and Ragnar Locker ransomware operate.</data>
+  <data key="d2">03f8ef0b3a0a9d2333357ffb758ef009,07969a79a1dda4040e5d75c67b167c1d,0bcd05047c78d79e7484e21cc44c47c5,0c00d8b951dbb5de3af386ce95a327e2,153de5c89dea7412b1315e17ff7944df,18382c97acccf88ebf47105f7f15f279,19c862d8c6b91bdc22eb750348a710fb,1a4d698f5d466b3e1622a2b3a1096f2b,1a5a0aae6dbbfafec575881123c41641,1a7d18afb40d8ab5dba14932ed88ff74,1b3ee106fb26cba835f5fef34c929d64,1c6e022d133d6e6a0919c841b44902f7,1db27b59d87b40509ad90d675991e54c,1e2396bfd3f4ef37fe1ab3735a5bc3fb,260877ae14399f3645cf41c9c2410f56,2822e9969fa461c17efaea4df3e54993,3008b294d56c1e01af11d172bc151f00,30445a964c4985e163dfd469f5b6ddf2,33094661c9918c407146d17011e60d94,334088b12a1fc503071f359418daab6a,3a7b3b73472ceeb7a90eef762633ab72,42de8444d6c00d2f2c5421c37c020049,4881bdff030a69da26650026798c9217,4bf526a516ac4ffd7e147dbd2923940d,4bffa144c82696232a96c173845a1218,50d9879c47842c6218b4407254e9a4c7,511f905142eb0a2f3e22176ef303e792,56ede4abbe4e59ebdcd15115a139143a,5d30618ca9a96246bdcdf9ae1030dbff,5e9b48f3905db7fdaccc5f73c92de51d,6180c8616cbd0edd48b89f51c3522c02,62216ae6105b4d92079fa1f4dfebcf06,6c914766687ee4d8721369aea6643814,6f2418a59954d11caaab29985012014a,7730678e53e163f396f171f84a0366e3,83609f93215bd9c88648ae1b39fbb3c0,86ad175af4d2370547db22a664f520fc,893e758177c940efe7feaa18740e2ee9,90fdd825e072e75e608186515c1359d0,9dc7323d116007babe593fbd8e5d8cef,a6206c1dcc1c2b35f8c09d9bfac27c8d,a8a65f72fc97cc7bf3077d73f97d12a6,ab8021aae33033722540ecfc5f54f98f,ac49e533af4f3e44847c755903ee842c,b085d4df3f5525a2ef44bf7c111005bf,b2e8bab64a7f6a8c2701cdbd5b03496e,b3cf62e79d70d02386463c2f8cc89c09,b416542fc177cf7c2624a595388b2389,b82a487289e8534e6c328fcd230cf9e6,b8c87cb2674e34c9751ac0d36a9cf381,bc2b01c4cf030bb579202158413bc919,bc87fb3278e8c456172564b55096ccba,bc8a3c5b1f8243a86b1a72006a6f42eb,bd54d4d14f83ce917a1bad5632dd9301,c604c14400cc38f080d296c1b9cb68c9,cb3e682cc438c87f864acd9a46948919,d15df11dab2d97363b8b7b618e20924d,d647c80f71a792b7ca644c31584ea1c7,d93da71d3160aae949beca940d7f8745,dbd1e3609f3402a12e0250b46a68b539,de89a916643bd7795f5b8d920c047921,e6e8cc58f11a8c627906e0b3135edb3c,e7b664e359e016a62af99dd3e5d0fbf3,e885e43605bf23d0d352f9da4c8e4f84,e8b45afaf0cac4b15702d4214bfbcfe7,ea89ec196c89cbe0497af5d7d8603123,ee044a3fde034831d4abd18d98ea46be,eec185570d89a16eedb278060364fe26,f208a8fcba69ef4fe87d244ca01ec772,f669b909422d9736eeafb4418e0dcef8</data>
+</node>
+<edge source="NETWORK SEGMENTATION" target="ENCRYPT SENSITIVE INFORMATION">
+  <data key="d4">3.0</data>
+  <data key="d5">Both are mitigation methods aimed at enhancing network security and protecting sensitive information</data>
+  <data key="d6">d5fe465c4a2262c649cf78ecca21f7fa</data>
+</edge>
+<edge source="NETWORK SEGMENTATION" target="NETWORK INTRUSION PREVENTION">
+  <data key="d4">3.0</data>
+  <data key="d5">Both are strategies to enhance network security by isolating systems and blocking unauthorized access</data>
+  <data key="d6">d5fe465c4a2262c649cf78ecca21f7fa</data>
+</edge>
+<edge source="NETWORK SEGMENTATION" target="FILTER NETWORK TRAFFIC">
+  <data key="d4">6.0</data>
+  <data key="d5">Network Segmentation and Filter Network Traffic work together to enhance network security by isolating critical systems and controlling traffic
+Both are mitigation methods that enhance network security by isolating systems and controlling traffic</data>
+  <data key="d6">a5717a6332936d93ab8edb49eaec73ea,db6f0fe2c39bdb1cdd08a0d9bb74f0d3</data>
+</edge>
+<edge source="NETWORK SEGMENTATION" target="DISABLE OR REMOVE FEATURE OR PROGRAM">
+  <data key="d4">5.0</data>
+  <data key="d5">Both methods aim to enhance network security by isolating critical resources and removing vulnerabilities</data>
+  <data key="d6">1b8b673332b77226d5def1689b308e3d</data>
+</edge>
+<edge source="NETWORK SEGMENTATION" target="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+  <data key="d4">12.0</data>
+  <data key="d5">Both methods focus on restricting access to sensitive systems and resources to mitigate potential attacks
+Both Network Segmentation and Limiting Access to Resource Over Network are mitigation methods aimed at enhancing network security and preventing unauthorized access.</data>
+  <data key="d6">1b8b673332b77226d5def1689b308e3d,2aeff13316ba202ebb5bf53db62307a2</data>
+</edge>
+<edge source="NETWORK SEGMENTATION" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">2.0</data>
+  <data key="d5">Network Segmentation is a mitigation method that isolates critical systems to protect against Adversary-in-the-Middle attacks</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="FILTER NETWORK TRAFFIC" target="NETWORK INTRUSION PREVENTION">
+  <data key="d4">10.0</data>
+  <data key="d5">Both are mitigation methods that focus on preventing unauthorized access and filtering network traffic
+Both methods are used to control and secure network traffic, preventing unauthorized access
+Both are mitigation methods aimed at preventing attacks, specifically in the context of DNS attack techniques.
+Both Filter Network Traffic and Network Intrusion Prevention are methods used to mitigate DHCP Spoofing attacks</data>
+  <data key="d6">b07e49c0bd00956f8f7ed4d3957bf7e2,c493643a5cd5d5303e98991d0337a80e,d5fe465c4a2262c649cf78ecca21f7fa,db6f0fe2c39bdb1cdd08a0d9bb74f0d3</data>
+</edge>
+<edge source="FILTER NETWORK TRAFFIC" target="ARP CACHE POISONING">
+  <data key="d4">1.0</data>
+  <data key="d5">Filtering network traffic can help detect and block ARP Cache Poisoning attempts</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="FILTER NETWORK TRAFFIC" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">16.0</data>
+  <data key="d5">Filter Network Traffic is a mitigation method designed to counter the Adversary-in-the-Middle attack technique by filtering network traffic</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="DOK" target="WINDOWS">
+  <data key="d4">7.0</data>
+  <data key="d5">Dok is a Trojan application that operates on the Windows platform, indicating its relevance to Windows users.</data>
+  <data key="d6">0bcd05047c78d79e7484e21cc44c47c5</data>
+</edge>
+<edge source="DOK" target="MACOS">
+  <data key="d4">1.0</data>
+  <data key="d5">Dok is a Trojan that targets macOS users, indicating its operational environment.</data>
+  <data key="d6">56ede4abbe4e59ebdcd15115a139143a</data>
+</edge>
+<edge source="DOK" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">1.0</data>
+  <data key="d5">Dok uses the Adversary-in-the-Middle technique to redirect network traffic</data>
+  <data key="d6">203f0f5a8353d4a2200c85809bb801d3</data>
+</edge>
+<edge source="NETWORK SNIFFING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can enable Network Sniffing by allowing adversaries to capture traffic between devices</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="NETWORK SNIFFING" target="ARP CACHE POISONING">
+  <data key="d4">8.0</data>
+  <data key="d5">ARP Cache Poisoning can facilitate Network Sniffing by allowing adversaries to capture sensitive data transmitted over the network.</data>
+  <data key="d6">5e9b48f3905db7fdaccc5f73c92de51d</data>
+</edge>
+<edge source="DOWGRADE ATTACK" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to perform Downgrade Attacks by forcing weaker protocols</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="NETWORK DENIAL OF SERVICE" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">1.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to facilitate Network Denial of Service attacks by disrupting traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="LIMIT ACCESS TO RESOURCE OVER NETWORK" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">14.0</data>
+  <data key="d5">Limit Access to Resource Over Network is a mitigation method that reduces the risk of Adversary-in-the-Middle attacks by restricting access to resources</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="LIMIT ACCESS TO RESOURCE OVER NETWORK" target="ARP CACHE POISONING">
+  <data key="d4">5.0</data>
+  <data key="d5">Limiting access to resources can help mitigate the impact of ARP Cache Poisoning by restricting unauthorized access</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="STEAL APPLICATION ACCESS TOKEN" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to Steal Application Access Tokens by intercepting token transmissions</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="USER TRAINING" target="ENCRYPT SENSITIVE INFORMATION">
+  <data key="d4">1.0</data>
+  <data key="d5">User Training can help users understand the importance of Encrypting Sensitive Information to protect against data breaches</data>
+  <data key="d6">6e544b9a95c78093cc92e7846217b06f</data>
+</edge>
+<edge source="USER TRAINING" target="STEAL WEB SESSION COOKIE">
+  <data key="d4">4.0</data>
+  <data key="d5">User Training is a mitigation method that can help prevent the Steal Web Session Cookie attack technique</data>
+  <data key="d6">6979b237eb01d4fe40904ab5a63d5b8a</data>
+</edge>
+<edge source="USER TRAINING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">12.0</data>
+  <data key="d5">User Training is a mitigation method that educates users to recognize and avoid Adversary-in-the-Middle attacks</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="USER TRAINING" target="ARP CACHE POISONING">
+  <data key="d4">5.0</data>
+  <data key="d5">User Training can reduce the risk of ARP Cache Poisoning by educating users about potential social engineering tactics used in such attacks</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="STEAL WEB SESSION COOKIE" target="WINDOWS">
+  <data key="d4">4.0</data>
+  <data key="d5">Windows is a platform that can be targeted by the Steal Web Session Cookie attack technique.</data>
+  <data key="d6">ea89ec196c89cbe0497af5d7d8603123</data>
+</edge>
+<edge source="STEAL WEB SESSION COOKIE" target="LINUX">
+  <data key="d4">4.0</data>
+  <data key="d5">Linux is a platform that can be targeted by the Steal Web Session Cookie attack technique.</data>
+  <data key="d6">ea89ec196c89cbe0497af5d7d8603123</data>
+</edge>
+<edge source="STEAL WEB SESSION COOKIE" target="MACOS">
+  <data key="d4">4.0</data>
+  <data key="d5">macOS is a platform that can be targeted by the Steal Web Session Cookie attack technique.</data>
+  <data key="d6">ea89ec196c89cbe0497af5d7d8603123</data>
+</edge>
+<edge source="STEAL WEB SESSION COOKIE" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">14.0</data>
+  <data key="d5">Adversary-in-the-Middle is a technique that can be used to facilitate the Steal Web Session Cookie attack by intercepting communications.
+Adversary-in-the-Middle techniques can be used to Steal Web Session Cookies by capturing cookie data during transmission</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb,ea89ec196c89cbe0497af5d7d8603123</data>
+</edge>
+<edge source="IMPAIR DEFENSES" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to Impair Defenses by intercepting and manipulating security measures</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="EXPLOITATION FOR CREDENTIAL ACCESS" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to perform Exploitation for Credential Access by capturing sensitive information</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="TRANSMITTED DATA MANIPULATION" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can facilitate Transmitted Data Manipulation by allowing adversaries to alter data in transit</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="MACOS" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can target macOS operating systems to intercept and manipulate network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="MACOS" target="DHCP SPOOFING">
+  <data key="d4">8.0</data>
+  <data key="d5">DHCP Spoofing techniques can target macOS operating systems to redirect network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="MACOS" target="ARP CACHE POISONING">
+  <data key="d4">15.0</data>
+  <data key="d5">ARP Cache Poisoning techniques can target macOS operating systems to intercept communications
+ARP Cache Poisoning can be executed on macOS platforms, making them vulnerable to this attack technique.</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb,5e9b48f3905db7fdaccc5f73c92de51d</data>
+</edge>
+<edge source="NETWORK INTRUSION PREVENTION" target="ENCRYPT SENSITIVE INFORMATION">
+  <data key="d4">4.0</data>
+  <data key="d5">Encrypting sensitive information can complement Network Intrusion Prevention by ensuring that even if data is intercepted, it remains secure</data>
+  <data key="d6">a5717a6332936d93ab8edb49eaec73ea</data>
+</edge>
+<edge source="NETWORK INTRUSION PREVENTION" target="ARP CACHE POISONING">
+  <data key="d4">7.0</data>
+  <data key="d5">Network Intrusion Prevention can help mitigate ARP Cache Poisoning by blocking malicious traffic attempting to exploit the vulnerability</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="NETWORK INTRUSION PREVENTION" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">16.0</data>
+  <data key="d5">Network Intrusion Prevention is a mitigation method that can block traffic related to Adversary-in-the-Middle attacks</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="NETWORK INTRUSION PREVENTION" target="NETWORK INTRUSION PREVENTION">
+  <data key="d4">1.0</data>
+  <data key="d5">Network Intrusion Prevention is a method designed to prevent network attacks by blocking malicious traffic</data>
+  <data key="d6">be54a0f9acb0cbc96e41ad0386d9dedb</data>
+</edge>
+<edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="ARP CACHE POISONING">
+  <data key="d4">5.0</data>
+  <data key="d5">Disabling unnecessary features can help prevent ARP Cache Poisoning by reducing the attack surface</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">14.0</data>
+  <data key="d5">Disable or Remove Feature or Program is a mitigation method that can help prevent vulnerabilities exploited in Adversary-in-the-Middle attacks</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="DHCP SPOOFING" target="WINDOWS">
+  <data key="d4">8.0</data>
+  <data key="d5">DHCP Spoofing techniques can target Windows operating systems to redirect network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="DHCP SPOOFING" target="LINUX">
+  <data key="d4">8.0</data>
+  <data key="d5">DHCP Spoofing techniques can target Linux operating systems to redirect network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="DHCP SPOOFING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">7.0</data>
+  <data key="d5">DHCP Spoofing can be used as a method to achieve an Adversary-in-the-Middle position by redirecting traffic through adversary-controlled systems</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="DHCP SPOOFING" target="ARP CACHE POISONING">
+  <data key="d4">6.0</data>
+  <data key="d5">Both DHCP Spoofing and ARP Cache Poisoning are techniques that enable adversaries to position themselves between networked devices</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="LINUX" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can target Linux operating systems to intercept and manipulate network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="LINUX" target="ARP CACHE POISONING">
+  <data key="d4">8.0</data>
+  <data key="d5">ARP Cache Poisoning techniques can target Linux operating systems to intercept communications
+ARP Cache Poisoning can be executed on Linux platforms, making them vulnerable to this attack technique.</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb,5e9b48f3905db7fdaccc5f73c92de51d</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="WINDOWS">
+  <data key="d4">8.0</data>
+  <data key="d5">ARP Cache Poisoning techniques can target Windows operating systems to intercept communications</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="ENCRYPT SENSITIVE INFORMATION">
+  <data key="d4">7.0</data>
+  <data key="d5">Encrypt Sensitive Information is a method to mitigate the risks associated with ARP Cache Poisoning by protecting sensitive data</data>
+  <data key="d6">d5f99711a433bb53f213623c25a97346</data>
+</edge>
+<edge source="ARP CACHE POISONING" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">7.0</data>
+  <data key="d5">ARP Cache Poisoning can be utilized to establish an Adversary-in-the-Middle position by intercepting communications between devices</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="ENCRYPT SENSITIVE INFORMATION" target="ADVERSARY-IN-THE-MIDDLE">
+  <data key="d4">16.0</data>
+  <data key="d5">Encrypt Sensitive Information is a mitigation method that helps protect against the Adversary-in-the-Middle attack by securing sensitive data</data>
+  <data key="d6">c3864a8e0cda85985f5c29fcce56bba1</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="WINDOWS">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can target Windows operating systems to intercept and manipulate network traffic</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+<edge source="ADVERSARY-IN-THE-MIDDLE" target="REPLAY ATTACKS">
+  <data key="d4">8.0</data>
+  <data key="d5">Adversary-in-the-Middle techniques can be used to perform Replay Attacks by intercepting and reusing valid data</data>
+  <data key="d6">1e2396bfd3f4ef37fe1ab3735a5bc3fb</data>
+</edge>
+</graph></graphml>

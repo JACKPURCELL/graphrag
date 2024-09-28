@@ -1,0 +1,17 @@
+There are 2 software using the attack technique called Kernel Modules and Extensions. Their names are as follows:
+* Drovorub
+* Skidmap
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Drovorub
+Software description: [Drovorub](https://attack.mitre.org/software/S0502) is a Linux malware toolset comprised of an agent, client, server, and kernel modules, that has been used by [APT28](https://attack.mitre.org/groups/G0007).(Citation: NSA/FBI Drovorub August 2020)
+Platforms: Linux
+
+Software name: Skidmap
+Software description: [Skidmap](https://attack.mitre.org/software/S0468) is a kernel-mode rootkit used for cryptocurrency mining.(Citation: Trend Micro Skidmap)
+Platforms: Linux

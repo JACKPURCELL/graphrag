@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called System Firmware. Their names are as follows:
+* Boot Integrity 
+* Update Software 
+* Privileged Account Management 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Boot Integrity
+Mitigation method description: Use secure methods to boot a system and verify the integrity of the operating system and loading mechanisms.
+
+Mitigation method name: Update Software
+Mitigation method description: Perform regular software updates to mitigate exploitation risk.
+
+Mitigation method name: Privileged Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.

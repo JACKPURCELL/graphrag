@@ -1,0 +1,1302 @@
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="source_id" attr.type="string" />
+  <key id="d5" for="edge" attr.name="description" attr.type="string" />
+  <key id="d4" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d3" for="node" attr.name="entity_type" attr.type="string" />
+  <key id="d2" for="node" attr.name="source_id" attr.type="string" />
+  <key id="d1" for="node" attr.name="description" attr.type="string" />
+  <key id="d0" for="node" attr.name="type" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="PRIVILEGED ACCOUNT MANAGEMENT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Privileged Account Management is a mitigation method that manages the creation, modification, use, and permissions associated with privileged accounts, including SYSTEM and root.
+Privileged Account Management is a mitigation method that manages the creation, modification, use, and permissions associated with privileged accounts, including SYSTEM and root.</data>
+      <data key="d2">2c8738b358eac18513bd665d8843b390,e163f8d3667f8c5df176dabce766fed8</data>
+    </node>
+    <node id="BEHAVIOR PREVENTION ON ENDPOINT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Behavior Prevention on Endpoint is a mitigation method that uses capabilities to prevent suspicious behavior patterns from occurring on endpoint systems, including suspicious processes, files, and API calls.
+Behavior Prevention on Endpoint is a mitigation method designed to prevent suspicious behavior patterns on endpoint systems, including processes, files, and API calls.</data>
+      <data key="d2">2c8738b358eac18513bd665d8843b390,41e8c293803f6c4b3d51a8d4af9d6f95</data>
+    </node>
+    <node id="USER ACCOUNT MANAGEMENT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">User Account Management is a mitigation method that manages the creation, modification, use, and permissions associated with user accounts.
+User Account Management is a mitigation method that manages the creation, modification, use, and permissions associated with user accounts.</data>
+      <data key="d2">2c8738b358eac18513bd665d8843b390,e163f8d3667f8c5df176dabce766fed8</data>
+    </node>
+    <node id="EXECUTION PREVENTION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Execution Prevention is a mitigation method that blocks the execution of code on a system through application control and/or script blocking.</data>
+      <data key="d2">2c8738b358eac18513bd665d8843b390</data>
+    </node>
+    <node id="WINDOWS MANAGEMENT INSTRUMENTATION">
+      <data key="d0" />
+      <data key="d1">
+Windows Management Instrumentation (WMI) is an attack technique that adversaries may abuse to execute malicious commands and payloads on Windows systems.</data>
+      <data key="d2">2c8738b358eac18513bd665d8843b390,904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="BOOT OR LOGON INITIALIZATION SCRIPTS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Boot or Logon Initialization Scripts is an attack technique where scripts are executed at boot or logon to establish persistence on a system.
+Boot or Logon Initialization Scripts is an attack technique that can be mitigated through specific methods to enhance security in Windows systems.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,558812402cb3ee5b70cdc449b23a2056</data>
+    </node>
+    <node id="RC SCRIPTS">
+      <data key="d0">EVENT</data>
+      <data key="d1">RC Scripts are a type of attack technique used to establish persistence by modifying scripts executed during a Unix-like system's startup.
+RC Scripts is an attack technique that can be mitigated through specific methods to enhance security.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,b557c3c3f49658f048194239643c5877</data>
+    </node>
+    <node id="LOGON SCRIPT (WINDOWS)">
+      <data key="d0">EVENT</data>
+      <data key="d1">Logon Script (Windows) is an attack technique where scripts are automatically executed at logon initialization to maintain persistence on Windows systems.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3</data>
+    </node>
+    <node id="NETWORK LOGON SCRIPT">
+      <data key="d0">EVENT</data>
+      <data key="d1">Network Logon Script is an attack technique that uses scripts executed at logon initialization to establish persistence across a network.
+Network Logon Script is an attack technique that can be mitigated through specific methods.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,378aa881144cd158541bf9bb4cdcde60</data>
+    </node>
+    <node id="STARTUP ITEMS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Startup Items are scripts or executable files that run during the boot process to establish persistence on macOS systems.
+</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,f8646b8529968b753967f9608511fec5</data>
+    </node>
+    <node id="LOGIN HOOK">
+      <data key="d0">EVENT</data>
+      <data key="d1">Login Hook is an attack technique that executes a specific script with root privileges upon user logon to maintain persistence.
+Login Hook is an attack technique used by adversaries to establish persistence executed upon user logon, involving a plist file that points to a specific script executed with root privileges.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="ANOMALI">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Anomali is a cybersecurity company that specializes in threat intelligence and analysis, including the monitoring of attack techniques such as Boot or Logon Initialization Scripts.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3</data>
+    </node>
+    <node id="MACOS">
+      <data key="d0">GEO</data>
+      <data key="d1">macOS is an operating system developed by Apple Inc. that supports various attack techniques, including Startup Items and Login Hooks.
+macOS is the operating system where the Login Hook technique can be utilized, specifically noted for its security features and user management.
+macOS is an operating system platform that can also be targeted by ARP Cache Poisoning.
+macOS is an operating system platform where the Screen Capture attack technique can be executed.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,29a387bbca38c414da8683c1b659b056,c6b532a46a3b38db7ddb3cddf022d3b4,dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="WINDOWS">
+      <data key="d0">GEO</data>
+      <data key="d1">Windows is an operating system developed by Microsoft that allows the use of logon scripts for maintaining persistence.
+Windows is an operating system platform that is susceptible to attacks such as LLMNR/NBT-NS Poisoning and SMB Relay.
+Windows is an operating system platform where the Screen Capture attack technique can be executed.
+</data>
+      <data key="d2">1f51302ce606581e225f396591b525dd,2990fac51c387bca465865dc746548a3,29a387bbca38c414da8683c1b659b056,c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="LINUX">
+      <data key="d0">GEO</data>
+      <data key="d1">Linux is an open-source operating system that supports various attack techniques, including RC Scripts and Network Logon Scripts.
+Linux is an operating system platform that can be targeted by various network attacks including ARP Cache Poisoning and LLMNR/NBT-NS Poisoning.
+Linux is an operating system platform where the Screen Capture attack technique can be executed.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3,29a387bbca38c414da8683c1b659b056,c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="UNIX-LIKE SYSTEMS">
+      <data key="d0">GEO</data>
+      <data key="d1">Unix-like systems are operating systems that share similar characteristics and support attack techniques like RC Scripts for establishing persistence.</data>
+      <data key="d2">2990fac51c387bca465865dc746548a3</data>
+    </node>
+    <node id="MANDIANT APT29">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">2990fac51c387bca465865dc746548a3</data>
+    </node>
+    <node id="LOGINWINDOWSCRIPTS APPLE DEV">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">LoginWindowScripts Apple Dev is a reference source that provides information about the Login Hook technique and its implementation in macOS.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="S1 MACOS PERSISTENCE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">S1 macOS Persistence is a reference source that discusses various persistence techniques on macOS, including the use of Login Hooks.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="WARDLE PERSISTENCE CHAPTER">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Wardle Persistence Chapter is a reference source that covers persistence methods on macOS, including the deprecated Login Hooks.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="LOGOUT HOOK">
+      <data key="d0">EVENT</data>
+      <data key="d1">Logout Hook is a similar technique to Login Hook, allowing scripts to be executed upon user logout, also requiring administrator permissions.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="PLIST FILE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The plist file is a configuration file used in macOS that can be modified to include malicious scripts for Login and Logout Hooks.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="DEFAULTS COMMAND-LINE UTILITY">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">The defaults command-line utility is a tool in macOS used to read and write plist files, which can be exploited to modify Login Hooks.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="ADMINISTRATOR PERMISSIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Administrator permissions are required to modify or create Login and Logout Hooks on a macOS system.</data>
+      <data key="d2">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </node>
+    <node id="LLMNR/NBT-NS POISONING">
+      <data key="d0">EVENT</data>
+      <data key="d1">LLMNR/NBT-NS Poisoning is an attack technique that exploits vulnerabilities in network protocols to intercept and manipulate network traffic.
+LLMNR/NBT-NS Poisoning is an attack technique that allows adversaries to spoof name resolution to force communication with their controlled systems.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4,c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="SMB RELAY">
+      <data key="d0">EVENT</data>
+      <data key="d1">SMB Relay is an attack technique that allows an attacker to intercept and relay authentication requests to gain unauthorized access to network resources.</data>
+      <data key="d2">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="DISABLE OR REMOVE FEATURE OR PROGRAM">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A mitigation method that involves removing or denying access to unnecessary software to prevent exploitation by adversaries.
+This mitigation method involves removing or denying access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.This is a specific mitigation method aimed at removing or denying access to unnecessary software to prevent potential vulnerabilities.
+Disable or Remove Feature or Program is a mitigation method that involves removing or denying access to unnecessary software to prevent exploitation by adversaries.Disable or Remove Feature or Program is a specific mitigation method that involves removing unnecessary software to prevent exploitation.
+Disable or Remove Feature or Program is a mitigation method that removes or denies access to unnecessary and potentially vulnerable software.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,a1f74148edbcbacf65578405afbe28e5,a4bab4a6ce39a4dcd4b3c8eb1b655b52,c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="NETWORK INTRUSION PREVENTION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A mitigation method that uses intrusion detection signatures to block malicious traffic at network boundaries.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.
+Network Intrusion Prevention is a specific mitigation method that utilizes intrusion detection signatures to block unauthorized traffic at network boundaries.Network Intrusion Prevention is a mitigation method that employs intrusion detection signatures to block unauthorized traffic at network boundaries, enhancing network security.
+Network Intrusion Prevention is a mitigation method that uses intrusion detection signatures to block traffic at network boundaries.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,a4bab4a6ce39a4dcd4b3c8eb1b655b52,b8972153951a34e5a696a7e271c7b663,c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="NETWORK SEGMENTATION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A mitigation method that involves architecting network sections to isolate critical systems and prevent unauthorized access to sensitive information.
+Network Segmentation is a mitigation method that architects sections of the network to isolate critical systems and resources.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="FILTER NETWORK TRAFFIC">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">A mitigation method that uses network appliances to filter traffic and perform protocol-based filtering to enhance security.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+This is a specific mitigation method that involves using network appliances to filter traffic and enhance security.This mitigation method uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.
+Filter Network Traffic is a specific mitigation method that employs network appliances to control and filter network traffic for security purposes.Filter Network Traffic is a mitigation method that uses network appliances to filter incoming and outgoing traffic, ensuring only legitimate traffic is allowed.
+Filter Network Traffic is a mitigation method that uses network appliances to filter ingress or egress traffic and perform protocol-based filtering.</data>
+      <data key="d2">46eaac69347979caefe7e69a31f1a885,5f6ebcd4b45b383ff9042d78b009c0ba,a1f74148edbcbacf65578405afbe28e5,a4bab4a6ce39a4dcd4b3c8eb1b655b52,b8972153951a34e5a696a7e271c7b663,c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="NETWORK TRAFFIC">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Network traffic refers to the data that is transmitted over a network, which can be monitored and filtered to enhance security.</data>
+      <data key="d2">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </node>
+    <node id="MITIGATION METHODS">
+      <data key="d0" />
+      <data key="d1">
+
+
+
+Mitigation methods are strategies or techniques used to reduce the impact or likelihood of an attack or security breach.)&lt;|COMPLETE|&gt;
+
+Mitigation methods are strategies or techniques employed to reduce the risk of attacks or vulnerabilities in a system.</data>
+      <data key="d2">378aa881144cd158541bf9bb4cdcde60,46eaac69347979caefe7e69a31f1a885,5f6ebcd4b45b383ff9042d78b009c0ba,a1f74148edbcbacf65578405afbe28e5,b557c3c3f49658f048194239643c5877,c7fa23438c11f21ec2eaa2cb9dbaeb19,ca0c999eff440cb1add4720f45489c8d</data>
+    </node>
+    <node id="ADVERSARY-IN-THE-MIDDLE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Adversary-in-the-Middle is an attack technique where adversaries position themselves between networked devices to intercept or manipulate communications.
+</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="DHCP SPOOFING">
+      <data key="d0">EVENT</data>
+      <data key="d1">DHCP Spoofing is an attack technique where adversaries spoof DHCP traffic to redirect network traffic to their own systems, allowing them to collect sensitive information.
+</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590,b8972153951a34e5a696a7e271c7b663</data>
+    </node>
+    <node id="ARP CACHE POISONING">
+      <data key="d0">EVENT</data>
+      <data key="d1">ARP Cache Poisoning is an attack technique where adversaries poison ARP caches to intercept communications between networked devices.
+ARP Cache Poisoning is an attack technique where adversaries poison Address Resolution Protocol caches to intercept communication between networked devices.
+ARP Cache Poisoning is an attack technique that exploits vulnerabilities in the Address Resolution Protocol to redirect network traffic and potentially intercept sensitive information.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590,a4bab4a6ce39a4dcd4b3c8eb1b655b52,c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="LLMNR/NBT-NS POISONING AND SMB RELAY">
+      <data key="d0">EVENT</data>
+      <data key="d1">LLMNR/NBT-NS Poisoning and SMB Relay is an attack technique that allows adversaries to intercept and relay SMB traffic by exploiting LLMNR and NBT-NS protocols.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="TRANSMITTED DATA MANIPULATION">
+      <data key="d0">EVENT</data>
+      <data key="d1">Transmitted Data Manipulation is a follow-on behavior where adversaries alter data being transmitted over the network to achieve malicious objectives.
+Transmitted Data Manipulation refers to the act of altering data being sent over a network, which can be a follow-on behavior of ARP Cache Poisoning.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590,c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="REPLAY ATTACKS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Replay Attacks are a type of attack where valid data transmission is maliciously or fraudulently repeated or delayed.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="EXPLOITATION FOR CREDENTIAL ACCESS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Exploitation for Credential Access is an attack technique aimed at obtaining user credentials through various means.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="STEAL APPLICATION ACCESS TOKEN">
+      <data key="d0">EVENT</data>
+      <data key="d1">Steal Application Access Token is a technique where adversaries capture access tokens to gain unauthorized access to applications.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="STEAL WEB SESSION COOKIE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Steal Web Session Cookie is a technique where adversaries capture session cookies to hijack user sessions.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="DOWGRADE ATTACK">
+      <data key="d0">EVENT</data>
+      <data key="d1">Downgrade Attack is a technique where adversaries force a system to use a less secure version of a protocol to exploit vulnerabilities.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="IMPAIR DEFENSES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Impair Defenses is a technique where adversaries disrupt or disable security measures to facilitate their attacks.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="NETWORK DENIAL OF SERVICE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Network Denial of Service is an attack aimed at making a network resource unavailable to its intended users.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </node>
+    <node id="NETWORK SNIFFING">
+      <data key="d0" />
+      <data key="d1">
+Network Sniffing is a technique used by adversaries to intercept and analyze network traffic, often to collect sensitive information such as credentials.</data>
+      <data key="d2">82e4769a8cd16cf9ef161bf174dc9590,c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="NTLMV1">
+      <data key="d0">EVENT</data>
+      <data key="d1">NTLMv1 is a challenge-response authentication protocol used in Windows networks, which can be intercepted and relayed by adversaries.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="NTLMV2">
+      <data key="d0">EVENT</data>
+      <data key="d1">NTLMv2 is an improved version of NTLMv1, providing better security for authentication in Windows networks, but can still be exploited by adversaries.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="LDAP">
+      <data key="d0">EVENT</data>
+      <data key="d1">Lightweight Directory Access Protocol (LDAP) is a protocol used to access and manage directory information services, which can be targeted during network attacks.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="SMB">
+      <data key="d0">EVENT</data>
+      <data key="d1">Server Message Block (SMB) is a network file sharing protocol that can be exploited during attacks such as NTLM relay attacks.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="MSSQL">
+      <data key="d0">EVENT</data>
+      <data key="d1">Microsoft SQL Server (MSSQL) is a relational database management system that can be targeted during network attacks involving NTLM authentication.</data>
+      <data key="d2">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </node>
+    <node id="WMIC">
+      <data key="d0">EVENT</data>
+      <data key="d1">WMIC is a command-line utility that can be abused by adversaries to delete shadow copies and execute various commands, but it is deprecated as of January 2024.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="WINDOWS 11">
+      <data key="d0">GEO</data>
+      <data key="d1">Windows 11 is an operating system that will disable WMIC by default and will not include it in future releases.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="POWERSELL">
+      <data key="d0">EVENT</data>
+      <data key="d1">PowerShell is the primary WMI interface that will replace WMIC in subsequent Windows releases.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="REMOTE SERVICES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Remote Services facilitate remote access to WMI, allowing adversaries to execute commands on remote systems.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="DCOM">
+      <data key="d0">EVENT</data>
+      <data key="d1">Distributed Component Object Model (DCOM) is a protocol that allows remote access to WMI services.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="WINRM">
+      <data key="d0">EVENT</data>
+      <data key="d1">Windows Remote Management (WinRM) is a service that allows for remote management of Windows systems and operates over specific ports for WMI access.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="C++">
+      <data key="d0">PERSON</data>
+      <data key="d1">C++ is a programming language that can be used to interact with WMI through COM APIs.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="VBSCRIPT">
+      <data key="d0">PERSON</data>
+      <data key="d1">VBScript is a scripting language that can also be used to programmatically interact with WMI.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="NET">
+      <data key="d0">PERSON</data>
+      <data key="d1">NET is a framework that can be used to interact with WMI via programming.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="MALICIOUS COMMANDS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Malicious commands are harmful instructions that adversaries can execute using WMI to compromise systems.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="PAYLOADS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Payloads refer to the malicious software or scripts that adversaries may deploy using WMI to achieve their objectives.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="SHADOW COPIES">
+      <data key="d0">EVENT</data>
+      <data key="d1">Shadow copies are backup copies of files that can be deleted by adversaries using commands executed through WMIC.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="ADMINISTRATION FEATURE">
+      <data key="d0">EVENT</data>
+      <data key="d1">WMI serves as an administration feature that provides a uniform environment to access Windows system components.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="MANAGEMENT DATA">
+      <data key="d0">EVENT</data>
+      <data key="d1">Management data refers to the information that WMI can access and manipulate on Windows systems.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="WINDOWS SYSTEMS">
+      <data key="d0">GEO</data>
+      <data key="d1">Windows systems are the operating systems that utilize WMI for management and operations.</data>
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="ADVERSARIES">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">904261ac5ffdc4d50072d4c34624c585</data>
+    </node>
+    <node id="NETWORK APPLIANCES">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Network appliances are hardware devices used to manage and filter network traffic, often employed in security measures.
+Network appliances are hardware devices used to manage and filter network traffic.</data>
+      <data key="d2">46eaac69347979caefe7e69a31f1a885,b8972153951a34e5a696a7e271c7b663</data>
+    </node>
+    <node id="SOFTWARE">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Software on endpoints is used to filter network traffic and enhance security by implementing various filtering protocols.</data>
+      <data key="d2">b8972153951a34e5a696a7e271c7b663</data>
+    </node>
+    <node id="SCREEN CAPTURE">
+      <data key="d0">EVENT</data>
+      <data key="d1">Screen Capture is an attack technique where adversaries take screenshots of the desktop to gather information during an operation.</data>
+      <data key="d2">29a387bbca38c414da8683c1b659b056</data>
+    </node>
+    <node id="COPYFROMSCREEN">
+      <data key="d0">EVENT</data>
+      <data key="d1">CopyFromScreen is a method in .NET used to capture the screen, which can be utilized in the Screen Capture attack technique.</data>
+      <data key="d2">29a387bbca38c414da8683c1b659b056</data>
+    </node>
+    <node id="XWD">
+      <data key="d0">EVENT</data>
+      <data key="d1">xwd is a command-line utility in Unix-like operating systems used to capture the screen, relevant to the Screen Capture attack technique.</data>
+      <data key="d2">29a387bbca38c414da8683c1b659b056</data>
+    </node>
+    <node id="SCREENCAPTURE">
+      <data key="d0">EVENT</data>
+      <data key="d1">screencapture is a command used in macOS to take screenshots, applicable in the context of the Screen Capture attack technique.</data>
+      <data key="d2">29a387bbca38c414da8683c1b659b056</data>
+    </node>
+    <node id="REMOTE ACCESS TOOL">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">29a387bbca38c414da8683c1b659b056</data>
+    </node>
+    <node id="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Restrict File and Directory Permissions is a mitigation method aimed at enhancing security by controlling access to files and directories through permission settings.
+Restrict File and Directory Permissions is a mitigation method that sets access controls by configuring directory and file permissions that are not user-specific.Restrict File and Directory Permissions is a mitigation method that enhances security by setting access controls on directories and files that are not specific to users or privileged accounts.)&lt;|COMPLETE|&gt;
+Restrict File and Directory Permissions is a mitigation method that involves setting directory and file permissions to restrict access.
+A mitigation method aimed at enhancing security by controlling access to files and directories through permission settings.)&lt;|COMPLETE|&gt;("entity"
+Restrict File and Directory Permissions is a mitigation method aimed at enhancing security by controlling access to files and directories.</data>
+      <data key="d2">378aa881144cd158541bf9bb4cdcde60,558812402cb3ee5b70cdc449b23a2056,b557c3c3f49658f048194239643c5877,ca0c999eff440cb1add4720f45489c8d,f8646b8529968b753967f9608511fec5</data>
+    </node>
+    <node id="AUDIT">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Audit is a mitigation method that performs audits or scans of systems, permissions, insecure software, insecure configurations, etc. to identify potential weaknesses.
+Audit is a mitigation method that involves performing audits or scans of systems to identify potential weaknesses.
+This is a specific mitigation method that involves conducting audits or scans to identify weaknesses in systems and configurations.This mitigation method involves performing audits or scans of systems, permissions, insecure software, and configurations to identify potential weaknesses.
+Audit is a mitigation method that involves performing audits or scans of systems to identify potential weaknesses in security.</data>
+      <data key="d2">0f25f130e0f286324ce140d6b32741f2,39338816f34576300d9dd4cee9502566,a1f74148edbcbacf65578405afbe28e5,e163f8d3667f8c5df176dabce766fed8</data>
+    </node>
+    <node id="OPERATING SYSTEM CONFIGURATION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Operating System Configuration is a mitigation method that makes configuration changes related to the operating system to enhance security against attack techniques.</data>
+      <data key="d2">e163f8d3667f8c5df176dabce766fed8</data>
+    </node>
+    <node id="SCHEDULED TASK">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">e163f8d3667f8c5df176dabce766fed8</data>
+    </node>
+    <node id="FILELESS STORAGE">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">39338816f34576300d9dd4cee9502566</data>
+    </node>
+    <node id="VNC">
+      <data key="d0">EVENT</data>
+      <data key="d1">VNC is an attack technique that can be mitigated through various methods to prevent abuse by adversaries.</data>
+      <data key="d2">a1f74148edbcbacf65578405afbe28e5</data>
+    </node>
+    <node id="LIMIT SOFTWARE INSTALLATION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">This mitigation method blocks users or groups from installing unapproved software.This is a specific mitigation method that restricts users from installing unapproved software to enhance security.</data>
+      <data key="d2">a1f74148edbcbacf65578405afbe28e5</data>
+      <data key="d3">EVENT</data>
+    </node>
+    <node id="SOCKET FILTERS">
+      <data key="d0">EVENT</data>
+      <data key="d1">Socket Filters is an attack technique that can be mitigated by filtering network traffic.</data>
+      <data key="d2">46eaac69347979caefe7e69a31f1a885</data>
+    </node>
+    <node id="ENDPOINTS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Endpoints refer to devices such as computers or mobile devices that connect to a network and can be configured to filter network traffic.</data>
+      <data key="d2">46eaac69347979caefe7e69a31f1a885</data>
+    </node>
+    <node id="RESTRICT REGISTRY PERMISSIONS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Restrict Registry Permissions is a mitigation method that limits the ability to modify certain hives or keys in the Windows Registry to prevent unauthorized changes.
+Restrict Registry Permissions is a mitigation method that limits the ability to modify certain hives or keys in the Windows Registry.)&lt;|COMPLETE|&gt;("entity"</data>
+      <data key="d2">1f51302ce606581e225f396591b525dd,558812402cb3ee5b70cdc449b23a2056</data>
+    </node>
+    <node id="FILE AND DIRECTORY PERMISSIONS">
+      <data key="d0">EVENT</data>
+      <data key="d1">File and Directory Permissions refer to the settings that control access to files and directories in a computer system.</data>
+      <data key="d2">378aa881144cd158541bf9bb4cdcde60</data>
+    </node>
+    <node id="ENCRYPT SENSITIVE INFORMATION">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Encrypt Sensitive Information is a mitigation method that protects sensitive information using strong encryption techniques to ensure confidentiality and integrity.
+Encrypt Sensitive Information is a mitigation method that protects sensitive information with strong encryption.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </node>
+    <node id="USER TRAINING">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">User Training is a mitigation method aimed at educating users about security threats such as spearphishing and social engineering to reduce the risk of successful attacks.User Training is a specific mitigation method focused on educating users about security threats to reduce the risk of successful attacks.
+User Training is a mitigation method that trains users to be aware of access or manipulation attempts by an adversary.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+      <data key="d3">EVENT</data>
+    </node>
+    <node id="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Limit Access to Resource Over Network is a mitigation method that restricts access to file shares and remote systems to enhance security and reduce vulnerabilities.Limit Access to Resource Over Network is a specific mitigation method that restricts access to sensitive resources to enhance security.
+Limit Access to Resource Over Network is a mitigation method that prevents access to file shares and remote access to systems.</data>
+      <data key="d2">5f6ebcd4b45b383ff9042d78b009c0ba,a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+      <data key="d3">EVENT</data>
+    </node>
+    <node id="ARCHIVE VIA UTILITY">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">0f25f130e0f286324ce140d6b32741f2</data>
+    </node>
+    <node id="DIRECTORY PERMISSIONS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">Directory permissions refer to the settings that control access to directories in a file system, which can be restricted to enhance security.</data>
+      <data key="d2">b557c3c3f49658f048194239643c5877</data>
+    </node>
+    <node id="FILE PERMISSIONS">
+      <data key="d0">ORGANIZATION</data>
+      <data key="d1">File permissions are settings that determine who can read, write, or execute a file, and are crucial for maintaining security in a computing environment.</data>
+      <data key="d2">b557c3c3f49658f048194239643c5877</data>
+    </node>
+    <node id="EXTRA WINDOW MEMORY INJECTION">
+      <data key="d0" />
+      <data key="d1" />
+      <data key="d2">41e8c293803f6c4b3d51a8d4af9d6f95</data>
+    </node>
+    <node id="LOGON SCRIPT">
+      <data key="d0">EVENT</data>
+      <data key="d1">Logon Script is an attack technique in Windows that can be mitigated through specific methods.</data>
+      <data key="d2">1f51302ce606581e225f396591b525dd</data>
+    </node>
+    <node id="REGISTRY">
+      <data key="d0">GEO</data>
+      <data key="d1">The Windows Registry is a hierarchical database used by the Windows operating system to store configuration settings and options.</data>
+      <data key="d2">1f51302ce606581e225f396591b525dd</data>
+    </node>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="BEHAVIOR PREVENTION ON ENDPOINT">
+      <data key="d4">3.0</data>
+      <data key="d5">Both are mitigation methods aimed at enhancing security by managing accounts and preventing suspicious behaviors</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="USER ACCOUNT MANAGEMENT">
+      <data key="d4">9.0</data>
+      <data key="d5">Both are mitigation methods focused on managing accounts and their permissions
+Both are mitigation methods that manage account permissions and configurations to enhance security.</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390,e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="WINDOWS MANAGEMENT INSTRUMENTATION">
+      <data key="d4">5.0</data>
+      <data key="d5">Privileged Account Management is a mitigation method specifically designed to address vulnerabilities associated with Windows Management Instrumentation attacks</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="AUDIT">
+      <data key="d4">5.0</data>
+      <data key="d5">Privileged Account Management and Audit are both methods aimed at improving security by managing accounts and identifying weaknesses.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="OPERATING SYSTEM CONFIGURATION">
+      <data key="d4">5.0</data>
+      <data key="d5">Privileged Account Management and Operating System Configuration are both methods that enhance security by managing accounts and system settings.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="PRIVILEGED ACCOUNT MANAGEMENT" target="SCHEDULED TASK">
+      <data key="d4">7.0</data>
+      <data key="d5">Scheduled Task can be mitigated by implementing Privileged Account Management to control access to privileged accounts.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="BEHAVIOR PREVENTION ON ENDPOINT" target="EXECUTION PREVENTION">
+      <data key="d4">1.0</data>
+      <data key="d5">Both are mitigation methods that aim to prevent malicious activities on endpoint systems</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="BEHAVIOR PREVENTION ON ENDPOINT" target="WINDOWS MANAGEMENT INSTRUMENTATION">
+      <data key="d4">5.0</data>
+      <data key="d5">Behavior Prevention on Endpoint is a mitigation method that helps prevent attacks that exploit Windows Management Instrumentation</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="BEHAVIOR PREVENTION ON ENDPOINT" target="EXTRA WINDOW MEMORY INJECTION">
+      <data key="d4">1.0</data>
+      <data key="d5">Behavior Prevention on Endpoint is a mitigation method specifically aimed at countering the attack technique known as Extra Window Memory Injection.</data>
+      <data key="d6">41e8c293803f6c4b3d51a8d4af9d6f95</data>
+    </edge>
+    <edge source="USER ACCOUNT MANAGEMENT" target="EXECUTION PREVENTION">
+      <data key="d4">3.0</data>
+      <data key="d5">Both are mitigation methods that contribute to system security by managing user actions and preventing unauthorized code execution</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="USER ACCOUNT MANAGEMENT" target="WINDOWS MANAGEMENT INSTRUMENTATION">
+      <data key="d4">4.0</data>
+      <data key="d5">User Account Management is a mitigation method that can help secure accounts against Windows Management Instrumentation attacks</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="USER ACCOUNT MANAGEMENT" target="AUDIT">
+      <data key="d4">5.0</data>
+      <data key="d5">User Account Management and Audit are related as they both focus on managing accounts and identifying potential security weaknesses.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="USER ACCOUNT MANAGEMENT" target="OPERATING SYSTEM CONFIGURATION">
+      <data key="d4">1.0</data>
+      <data key="d5">User Account Management and Operating System Configuration are related as they both focus on securing user accounts and system configurations.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="USER ACCOUNT MANAGEMENT" target="SCHEDULED TASK">
+      <data key="d4">7.0</data>
+      <data key="d5">Scheduled Task can be mitigated by implementing User Account Management to control access to user accounts.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="EXECUTION PREVENTION" target="WINDOWS MANAGEMENT INSTRUMENTATION">
+      <data key="d4">1.0</data>
+      <data key="d5">Execution Prevention is a mitigation method that blocks execution of malicious code that may exploit Windows Management Instrumentation</data>
+      <data key="d6">2c8738b358eac18513bd665d8843b390</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="WMIC">
+      <data key="d4">8.0</data>
+      <data key="d5">WMIC can be used to execute commands and payloads through Windows Management Instrumentation</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="REMOTE SERVICES">
+      <data key="d4">6.0</data>
+      <data key="d5">Remote Services enable remote access to WMI, allowing adversaries to execute commands remotely</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="C++">
+      <data key="d4">4.0</data>
+      <data key="d5">C++ can be used to programmatically interact with WMI via COM APIs</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="VBSCRIPT">
+      <data key="d4">4.0</data>
+      <data key="d5">VBScript can be used to programmatically interact with WMI</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="NET">
+      <data key="d4">1.0</data>
+      <data key="d5">NET can be used to programmatically interact with WMI</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="ADVERSARIES">
+      <data key="d4">8.0</data>
+      <data key="d5">Adversaries may abuse Windows Management Instrumentation to execute malicious commands and payloads</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="ADMINISTRATION FEATURE">
+      <data key="d4">9.0</data>
+      <data key="d5">WMI is an administration feature that provides access to management data and operations on Windows systems</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="MANAGEMENT DATA">
+      <data key="d4">9.0</data>
+      <data key="d5">WMI allows for the management and manipulation of management data on Windows systems</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WINDOWS MANAGEMENT INSTRUMENTATION" target="WINDOWS SYSTEMS">
+      <data key="d4">1.0</data>
+      <data key="d5">WMI is specifically designed for management operations on Windows systems</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="RC SCRIPTS">
+      <data key="d4">7.0</data>
+      <data key="d5">RC Scripts are a specific implementation of the broader Boot or Logon Initialization Scripts technique used for establishing persistence.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="LOGON SCRIPT (WINDOWS)">
+      <data key="d4">7.0</data>
+      <data key="d5">Logon Script (Windows) is a specific type of Boot or Logon Initialization Script used in Windows environments to maintain persistence.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="NETWORK LOGON SCRIPT">
+      <data key="d4">7.0</data>
+      <data key="d5">Network Logon Script is another specific type of Boot or Logon Initialization Script that applies to network environments.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="STARTUP ITEMS">
+      <data key="d4">6.0</data>
+      <data key="d5">Startup Items are a method of establishing persistence during the boot process, similar to Boot or Logon Initialization Scripts.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="LOGIN HOOK">
+      <data key="d4">6.0</data>
+      <data key="d5">Login Hook is a technique that executes scripts at user logon, which is a form of Boot or Logon Initialization Scripts.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="MANDIANT APT29">
+      <data key="d4">8.0</data>
+      <data key="d5">Mandiant APT29 provides intelligence on the use of Boot or Logon Initialization Scripts as an attack technique.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="ANOMALI">
+      <data key="d4">8.0</data>
+      <data key="d5">Anomali analyzes and reports on the use of Boot or Logon Initialization Scripts in cyber threats.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="RESTRICT REGISTRY PERMISSIONS">
+      <data key="d4">7.0</data>
+      <data key="d5">Restrict Registry Permissions is a mitigation method for the attack technique Boot or Logon Initialization Scripts</data>
+      <data key="d6">558812402cb3ee5b70cdc449b23a2056</data>
+    </edge>
+    <edge source="BOOT OR LOGON INITIALIZATION SCRIPTS" target="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">Restrict File and Directory Permissions is a mitigation method for the attack technique Boot or Logon Initialization Scripts</data>
+      <data key="d6">558812402cb3ee5b70cdc449b23a2056</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="LOGON SCRIPT (WINDOWS)">
+      <data key="d4">5.0</data>
+      <data key="d5">Logon Script (Windows) and RC Scripts are both methods of establishing persistence through script execution at different system initialization points.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="NETWORK LOGON SCRIPT">
+      <data key="d4">5.0</data>
+      <data key="d5">Network Logon Script and RC Scripts both serve to maintain persistence through script execution, albeit in different environments.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="STARTUP ITEMS">
+      <data key="d4">5.0</data>
+      <data key="d5">Startup Items and RC Scripts are both techniques that can be used to establish persistence on systems through script execution.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="LOGIN HOOK">
+      <data key="d4">5.0</data>
+      <data key="d5">Login Hook and RC Scripts are both methods of executing scripts to maintain persistence, though they operate at different stages of system use.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="LINUX">
+      <data key="d4">7.0</data>
+      <data key="d5">Linux operating systems utilize RC Scripts for establishing persistence during system startup.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="UNIX-LIKE SYSTEMS">
+      <data key="d4">1.0</data>
+      <data key="d5">Unix-like systems employ RC Scripts as a method for maintaining persistence during startup.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="RC SCRIPTS" target="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">Restrict File and Directory Permissions is a mitigation method specifically designed to counter the attack technique known as RC Scripts.</data>
+      <data key="d6">b557c3c3f49658f048194239643c5877</data>
+    </edge>
+    <edge source="LOGON SCRIPT (WINDOWS)" target="NETWORK LOGON SCRIPT">
+      <data key="d4">6.0</data>
+      <data key="d5">Logon Script (Windows) and Network Logon Script are both techniques for maintaining persistence through script execution at logon.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="LOGON SCRIPT (WINDOWS)" target="STARTUP ITEMS">
+      <data key="d4">5.0</data>
+      <data key="d5">Startup Items and Logon Script (Windows) are both methods of establishing persistence through script execution, but at different phases of system operation.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="LOGON SCRIPT (WINDOWS)" target="LOGIN HOOK">
+      <data key="d4">6.0</data>
+      <data key="d5">Login Hook and Logon Script (Windows) are both techniques that execute scripts at user logon to maintain persistence.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="LOGON SCRIPT (WINDOWS)" target="WINDOWS">
+      <data key="d4">8.0</data>
+      <data key="d5">Windows operating system allows the execution of Logon Scripts to maintain persistence during user logon.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="NETWORK LOGON SCRIPT" target="STARTUP ITEMS">
+      <data key="d4">5.0</data>
+      <data key="d5">Network Logon Script and Startup Items are both methods of establishing persistence through script execution, but in different contexts.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="NETWORK LOGON SCRIPT" target="LOGIN HOOK">
+      <data key="d4">6.0</data>
+      <data key="d5">Login Hook and Network Logon Script are both techniques that execute scripts to maintain persistence during user logon.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="NETWORK LOGON SCRIPT" target="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">Restrict File and Directory Permissions is a mitigation method for the Network Logon Script attack technique</data>
+      <data key="d6">378aa881144cd158541bf9bb4cdcde60</data>
+    </edge>
+    <edge source="NETWORK LOGON SCRIPT" target="FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">File and Directory Permissions are relevant to the Network Logon Script as they are part of the mitigation strategy</data>
+      <data key="d6">378aa881144cd158541bf9bb4cdcde60</data>
+    </edge>
+    <edge source="STARTUP ITEMS" target="LOGIN HOOK">
+      <data key="d4">1.0</data>
+      <data key="d5">Startup Items and Login Hook are both methods of executing scripts to establish persistence during the boot and logon processes, respectively.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="STARTUP ITEMS" target="MACOS">
+      <data key="d4">7.0</data>
+      <data key="d5">macOS supports the use of Startup Items as a method for establishing persistence during the boot process.</data>
+      <data key="d6">2990fac51c387bca465865dc746548a3</data>
+    </edge>
+    <edge source="STARTUP ITEMS" target="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">Restrict File and Directory Permissions is a mitigation method specifically designed to address the attack technique known as Startup Items</data>
+      <data key="d6">f8646b8529968b753967f9608511fec5</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="MACOS">
+      <data key="d4">8.0</data>
+      <data key="d5">Login Hook is a technique that can be executed on the macOS operating system to maintain persistence during user logon</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="LOGINWINDOWSCRIPTS APPLE DEV">
+      <data key="d4">7.0</data>
+      <data key="d5">LoginWindowScripts Apple Dev provides information about the Login Hook technique</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="S1 MACOS PERSISTENCE">
+      <data key="d4">7.0</data>
+      <data key="d5">S1 macOS Persistence discusses the Login Hook as a method of maintaining persistence</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="WARDLE PERSISTENCE CHAPTER">
+      <data key="d4">1.0</data>
+      <data key="d5">Wardle Persistence Chapter includes information about the Login Hook technique and its implications</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="LOGOUT HOOK">
+      <data key="d4">8.0</data>
+      <data key="d5">Login Hook and Logout Hook are both techniques used to execute scripts during user logon and logout, respectively</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="PLIST FILE">
+      <data key="d4">9.0</data>
+      <data key="d5">The Login Hook technique relies on the plist file to execute scripts upon user logon</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGIN HOOK" target="ADMINISTRATOR PERMISSIONS">
+      <data key="d4">9.0</data>
+      <data key="d5">Administrator permissions are necessary to create or modify Login Hooks</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="MACOS" target="ARP CACHE POISONING">
+      <data key="d4">7.0</data>
+      <data key="d5">ARP Cache Poisoning can be executed on macOS platforms, making them vulnerable to this attack technique.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="MACOS" target="SCREEN CAPTURE">
+      <data key="d4">5.0</data>
+      <data key="d5">Screen Capture can be executed on the macOS operating system platform</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="WINDOWS" target="ARP CACHE POISONING">
+      <data key="d4">7.0</data>
+      <data key="d5">ARP Cache Poisoning can be executed on Windows platforms, making them vulnerable to this attack technique.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="WINDOWS" target="LLMNR/NBT-NS POISONING">
+      <data key="d4">1.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning specifically targets Windows systems, exploiting their name resolution protocols.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="WINDOWS" target="SCREEN CAPTURE">
+      <data key="d4">1.0</data>
+      <data key="d5">Screen Capture can be executed on the Windows operating system platform</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="WINDOWS" target="LOGON SCRIPT">
+      <data key="d4">8.0</data>
+      <data key="d5">Logon Script is an attack technique that targets the Windows operating system</data>
+      <data key="d6">1f51302ce606581e225f396591b525dd</data>
+    </edge>
+    <edge source="WINDOWS" target="REGISTRY">
+      <data key="d4">1.0</data>
+      <data key="d5">The Windows Registry is a critical component of the Windows operating system that can be targeted by attack techniques like Logon Script</data>
+      <data key="d6">1f51302ce606581e225f396591b525dd</data>
+    </edge>
+    <edge source="LINUX" target="ARP CACHE POISONING">
+      <data key="d4">7.0</data>
+      <data key="d5">ARP Cache Poisoning can be executed on Linux platforms, making them vulnerable to this attack technique.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LINUX" target="SCREEN CAPTURE">
+      <data key="d4">5.0</data>
+      <data key="d5">Screen Capture can be executed on the Linux operating system platform</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="LOGOUT HOOK" target="PLIST FILE">
+      <data key="d4">9.0</data>
+      <data key="d5">The Logout Hook technique also relies on the plist file to execute scripts upon user logout</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LOGOUT HOOK" target="ADMINISTRATOR PERMISSIONS">
+      <data key="d4">1.0</data>
+      <data key="d5">Administrator permissions are necessary to create or modify Logout Hooks</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="PLIST FILE" target="DEFAULTS COMMAND-LINE UTILITY">
+      <data key="d4">8.0</data>
+      <data key="d5">The defaults command-line utility is used to modify the plist file, which is essential for implementing Login and Logout Hooks</data>
+      <data key="d6">dd4a69c6cdb460d3c14f38d9630cff6d</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="DISABLE OR REMOVE FEATURE OR PROGRAM">
+      <data key="d4">7.0</data>
+      <data key="d5">The mitigation method aims to prevent LLMNR/NBT-NS Poisoning by removing vulnerable software</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="NETWORK INTRUSION PREVENTION">
+      <data key="d4">7.0</data>
+      <data key="d5">The mitigation method aims to block traffic related to LLMNR/NBT-NS Poisoning using intrusion detection</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="NETWORK SEGMENTATION">
+      <data key="d4">6.0</data>
+      <data key="d5">The mitigation method aims to isolate critical systems to prevent LLMNR/NBT-NS Poisoning</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="FILTER NETWORK TRAFFIC">
+      <data key="d4">6.0</data>
+      <data key="d5">The mitigation method aims to filter traffic to prevent LLMNR/NBT-NS Poisoning</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="MITIGATION METHODS">
+      <data key="d4">8.0</data>
+      <data key="d5">Mitigation methods are specifically designed to address the risks posed by LLMNR/NBT-NS Poisoning</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="NETWORK SNIFFING">
+      <data key="d4">8.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can be used to collect authentication materials through Network Sniffing techniques.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="NTLMV1">
+      <data key="d4">7.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can lead to the interception of NTLMv1 hashes during authentication processes.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="NTLMV2">
+      <data key="d4">7.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can lead to the interception of NTLMv2 hashes during authentication processes.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="LDAP">
+      <data key="d4">6.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can be used to exploit LDAP services by intercepting authentication requests.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="SMB">
+      <data key="d4">8.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can facilitate attacks on SMB by allowing adversaries to relay NTLM hashes.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="LLMNR/NBT-NS POISONING" target="MSSQL">
+      <data key="d4">1.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning can be used to exploit MSSQL services by intercepting authentication requests.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="SMB RELAY" target="DISABLE OR REMOVE FEATURE OR PROGRAM">
+      <data key="d4">7.0</data>
+      <data key="d5">The mitigation method aims to prevent SMB Relay by removing vulnerable software</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="SMB RELAY" target="NETWORK INTRUSION PREVENTION">
+      <data key="d4">7.0</data>
+      <data key="d5">The mitigation method aims to block traffic related to SMB Relay using intrusion detection</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="SMB RELAY" target="NETWORK SEGMENTATION">
+      <data key="d4">6.0</data>
+      <data key="d5">The mitigation method aims to isolate critical systems to prevent SMB Relay</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="SMB RELAY" target="FILTER NETWORK TRAFFIC">
+      <data key="d4">1.0</data>
+      <data key="d5">The mitigation method aims to filter traffic to prevent SMB Relay</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="SMB RELAY" target="MITIGATION METHODS">
+      <data key="d4">8.0</data>
+      <data key="d5">Mitigation methods are specifically designed to address the risks posed by SMB Relay</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="NETWORK TRAFFIC">
+      <data key="d4">5.0</data>
+      <data key="d5">Filtering network traffic is part of the strategy to disable or remove features that may be vulnerable</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="VNC">
+      <data key="d4">8.0</data>
+      <data key="d5">The mitigation method Disable or Remove Feature or Program is designed to prevent abuse of the VNC attack technique</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="MITIGATION METHODS">
+      <data key="d4">7.0</data>
+      <data key="d5">Disable or Remove Feature or Program is one of the mitigation methods used against VNC</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="ARP CACHE POISONING">
+      <data key="d4">10.0</data>
+      <data key="d5">Disabling unnecessary features can help prevent ARP Cache Poisoning by reducing potential attack vectors</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="DISABLE OR REMOVE FEATURE OR PROGRAM" target="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+      <data key="d4">3.0</data>
+      <data key="d5">Both are mitigation methods that focus on restricting access to reduce vulnerabilities</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="NETWORK TRAFFIC">
+      <data key="d4">7.0</data>
+      <data key="d5">Network Intrusion Prevention aims to monitor and control network traffic to block malicious activities</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="FILTER NETWORK TRAFFIC">
+      <data key="d4">1.0</data>
+      <data key="d5">Both are mitigation methods for the attack technique called DHCP Spoofing</data>
+      <data key="d6">b8972153951a34e5a696a7e271c7b663</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="DHCP SPOOFING">
+      <data key="d4">8.0</data>
+      <data key="d5">Network Intrusion Prevention is a mitigation method aimed at preventing the DHCP Spoofing attack technique</data>
+      <data key="d6">b8972153951a34e5a696a7e271c7b663</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="ARP CACHE POISONING">
+      <data key="d4">14.0</data>
+      <data key="d5">Network Intrusion Prevention can help defend against ARP Cache Poisoning by blocking malicious traffic attempting to exploit the vulnerability</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="USER TRAINING">
+      <data key="d4">3.0</data>
+      <data key="d5">Both are mitigation methods that aim to enhance security awareness and prevent unauthorized access</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="NETWORK INTRUSION PREVENTION" target="NETWORK SEGMENTATION">
+      <data key="d4">1.0</data>
+      <data key="d5">Both are advanced security measures that help to protect network integrity and isolate critical systems</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="NETWORK SEGMENTATION" target="NETWORK TRAFFIC">
+      <data key="d4">6.0</data>
+      <data key="d5">Network segmentation helps manage network traffic by isolating different segments of the network</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="NETWORK SEGMENTATION" target="FILTER NETWORK TRAFFIC">
+      <data key="d4">1.0</data>
+      <data key="d5">Both are strategies to improve network security by controlling access and traffic flow</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="NETWORK TRAFFIC">
+      <data key="d4">1.0</data>
+      <data key="d5">Filtering network traffic is essential for managing and securing the overall network traffic</data>
+      <data key="d6">c7fa23438c11f21ec2eaa2cb9dbaeb19</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="DHCP SPOOFING">
+      <data key="d4">8.0</data>
+      <data key="d5">Filter Network Traffic is a mitigation method specifically designed to counteract the DHCP Spoofing attack technique</data>
+      <data key="d6">b8972153951a34e5a696a7e271c7b663</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="NETWORK APPLIANCES">
+      <data key="d4">12.0</data>
+      <data key="d5">Network appliances are utilized in the Filter Network Traffic method to filter network traffic
+Network appliances are utilized in the Filter Network Traffic method to manage and filter network traffic effectively.</data>
+      <data key="d6">46eaac69347979caefe7e69a31f1a885,b8972153951a34e5a696a7e271c7b663</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="SOFTWARE">
+      <data key="d4">1.0</data>
+      <data key="d5">Software is configured on endpoints to assist in the Filter Network Traffic method</data>
+      <data key="d6">b8972153951a34e5a696a7e271c7b663</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="VNC">
+      <data key="d4">8.0</data>
+      <data key="d5">The mitigation method Filter Network Traffic is designed to prevent abuse of the VNC attack technique</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="MITIGATION METHODS">
+      <data key="d4">14.0</data>
+      <data key="d5">Filter Network Traffic is one of the mitigation methods used against VNC
+Filter Network Traffic is one of the mitigation methods used to counter various attack techniques, including Socket Filters.</data>
+      <data key="d6">46eaac69347979caefe7e69a31f1a885,a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="SOCKET FILTERS">
+      <data key="d4">1.0</data>
+      <data key="d5">Filter Network Traffic is a mitigation method specifically designed to counter the attack technique known as Socket Filters.</data>
+      <data key="d6">46eaac69347979caefe7e69a31f1a885</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="ENDPOINTS">
+      <data key="d4">1.0</data>
+      <data key="d5">Endpoints can be configured to implement the Filter Network Traffic method for enhanced security.</data>
+      <data key="d6">46eaac69347979caefe7e69a31f1a885</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="ARP CACHE POISONING">
+      <data key="d4">2.0</data>
+      <data key="d5">Filtering Network Traffic can help detect and block ARP Cache Poisoning attempts by monitoring and controlling network traffic</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="ENCRYPT SENSITIVE INFORMATION">
+      <data key="d4">3.0</data>
+      <data key="d5">Both are mitigation methods aimed at enhancing network security against adversaries</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="FILTER NETWORK TRAFFIC" target="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+      <data key="d4">4.0</data>
+      <data key="d5">Both are mitigation methods that aim to secure network resources and prevent unauthorized access</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="AUDIT">
+      <data key="d4">7.0</data>
+      <data key="d5">Audit is one of the mitigation methods used against VNC</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="LIMIT SOFTWARE INSTALLATION">
+      <data key="d4">1.0</data>
+      <data key="d5">Limit Software Installation is one of the mitigation methods used against VNC</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="RESTRICT FILE AND DIRECTORY PERMISSIONS">
+      <data key="d4">7.0</data>
+      <data key="d5">Restrict File and Directory Permissions is one of the mitigation methods for the Network Logon Script attack technique
+Restrict File and Directory Permissions is a specific mitigation method that falls under the broader category of mitigation methods.</data>
+      <data key="d6">378aa881144cd158541bf9bb4cdcde60,b557c3c3f49658f048194239643c5877</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="DIRECTORY PERMISSIONS">
+      <data key="d4">6.0</data>
+      <data key="d5">Directory permissions are part of the mitigation methods used to secure systems against attacks like RC Scripts.</data>
+      <data key="d6">b557c3c3f49658f048194239643c5877</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="FILE PERMISSIONS">
+      <data key="d4">6.0</data>
+      <data key="d5">File permissions are part of the mitigation methods used to secure systems against attacks like RC Scripts.</data>
+      <data key="d6">b557c3c3f49658f048194239643c5877</data>
+    </edge>
+    <edge source="MITIGATION METHODS" target="ADVERSARY-IN-THE-MIDDLE">
+      <data key="d4">5.0</data>
+      <data key="d5">Mitigation methods are specifically designed to counter the Adversary-in-the-Middle attack technique</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="DHCP SPOOFING">
+      <data key="d4">7.0</data>
+      <data key="d5">DHCP Spoofing is a specific method used within the broader Adversary-in-the-Middle attack technique to redirect traffic</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="ARP CACHE POISONING">
+      <data key="d4">7.0</data>
+      <data key="d5">ARP Cache Poisoning is another method used within the Adversary-in-the-Middle attack technique to intercept communications</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="LLMNR/NBT-NS POISONING AND SMB RELAY">
+      <data key="d4">1.0</data>
+      <data key="d5">LLMNR/NBT-NS Poisoning and SMB Relay is a technique that can be employed as part of the Adversary-in-the-Middle strategy</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="NETWORK SNIFFING">
+      <data key="d4">6.0</data>
+      <data key="d5">Network Sniffing is a follow-on behavior that can be executed after establishing an Adversary-in-the-Middle position</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="TRANSMITTED DATA MANIPULATION">
+      <data key="d4">6.0</data>
+      <data key="d5">Transmitted Data Manipulation can occur as a result of an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="REPLAY ATTACKS">
+      <data key="d4">6.0</data>
+      <data key="d5">Replay Attacks can be facilitated by an Adversary-in-the-Middle position</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="EXPLOITATION FOR CREDENTIAL ACCESS">
+      <data key="d4">6.0</data>
+      <data key="d5">Exploitation for Credential Access can be a goal of an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="STEAL APPLICATION ACCESS TOKEN">
+      <data key="d4">6.0</data>
+      <data key="d5">Steal Application Access Token can be achieved through an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="STEAL WEB SESSION COOKIE">
+      <data key="d4">6.0</data>
+      <data key="d5">Steal Web Session Cookie can be executed as part of an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="DOWGRADE ATTACK">
+      <data key="d4">6.0</data>
+      <data key="d5">Downgrade Attack can be used to establish an Adversary-in-the-Middle position</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="IMPAIR DEFENSES">
+      <data key="d4">6.0</data>
+      <data key="d5">Impair Defenses can be a tactic employed during an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ADVERSARY-IN-THE-MIDDLE" target="NETWORK DENIAL OF SERVICE">
+      <data key="d4">1.0</data>
+      <data key="d5">Network Denial of Service can be a consequence of an Adversary-in-the-Middle attack</data>
+      <data key="d6">82e4769a8cd16cf9ef161bf174dc9590</data>
+    </edge>
+    <edge source="ARP CACHE POISONING" target="NETWORK SNIFFING">
+      <data key="d4">8.0</data>
+      <data key="d5">ARP Cache Poisoning can be used to facilitate Network Sniffing by allowing adversaries to intercept network traffic.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="ARP CACHE POISONING" target="TRANSMITTED DATA MANIPULATION">
+      <data key="d4">8.0</data>
+      <data key="d5">ARP Cache Poisoning can lead to Transmitted Data Manipulation by allowing adversaries to alter the data being sent between devices.</data>
+      <data key="d6">c6b532a46a3b38db7ddb3cddf022d3b4</data>
+    </edge>
+    <edge source="ARP CACHE POISONING" target="ENCRYPT SENSITIVE INFORMATION">
+      <data key="d4">14.0</data>
+      <data key="d5">Encrypt Sensitive Information is a method to mitigate the risks associated with ARP Cache Poisoning by protecting sensitive data from interception</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="ARP CACHE POISONING" target="USER TRAINING">
+      <data key="d4">12.0</data>
+      <data key="d5">User Training can reduce the risk of ARP Cache Poisoning by educating users on recognizing and avoiding social engineering tactics</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="ARP CACHE POISONING" target="LIMIT ACCESS TO RESOURCE OVER NETWORK">
+      <data key="d4">10.0</data>
+      <data key="d5">Limiting access to resources can mitigate the impact of ARP Cache Poisoning by restricting unauthorized access to sensitive systems</data>
+      <data key="d6">a4bab4a6ce39a4dcd4b3c8eb1b655b52</data>
+    </edge>
+    <edge source="WMIC" target="WINDOWS 11">
+      <data key="d4">7.0</data>
+      <data key="d5">Windows 11 will disable WMIC by default, indicating a significant change in how WMI can be accessed</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WMIC" target="POWERSELL">
+      <data key="d4">9.0</data>
+      <data key="d5">PowerShell will replace WMIC as the primary interface for WMI in future Windows releases</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="WMIC" target="SHADOW COPIES">
+      <data key="d4">7.0</data>
+      <data key="d5">WMIC can be used to delete shadow copies, which are backup files on Windows systems</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="REMOTE SERVICES" target="DCOM">
+      <data key="d4">5.0</data>
+      <data key="d5">DCOM is a protocol used by Remote Services to facilitate remote access to WMI</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="REMOTE SERVICES" target="WINRM">
+      <data key="d4">5.0</data>
+      <data key="d5">WinRM is another method of remote management that allows access to WMI</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="MALICIOUS COMMANDS" target="ADVERSARIES">
+      <data key="d4">8.0</data>
+      <data key="d5">Adversaries execute malicious commands using WMI to compromise systems</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="PAYLOADS" target="ADVERSARIES">
+      <data key="d4">8.0</data>
+      <data key="d5">Adversaries deploy payloads through WMI to achieve their malicious objectives</data>
+      <data key="d6">904261ac5ffdc4d50072d4c34624c585</data>
+    </edge>
+    <edge source="SCREEN CAPTURE" target="REMOTE ACCESS TOOL">
+      <data key="d4">6.0</data>
+      <data key="d5">Screen Capture may utilize Remote Access Tools to perform the attack</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="SCREEN CAPTURE" target="COPYFROMSCREEN">
+      <data key="d4">7.0</data>
+      <data key="d5">CopyFromScreen is a method that can be used to implement the Screen Capture attack technique</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="SCREEN CAPTURE" target="XWD">
+      <data key="d4">7.0</data>
+      <data key="d5">xwd is a utility that can be used to execute the Screen Capture attack technique</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="SCREEN CAPTURE" target="SCREENCAPTURE">
+      <data key="d4">1.0</data>
+      <data key="d5">screencapture is a command that can be used to perform the Screen Capture attack technique on macOS</data>
+      <data key="d6">29a387bbca38c414da8683c1b659b056</data>
+    </edge>
+    <edge source="AUDIT" target="OPERATING SYSTEM CONFIGURATION">
+      <data key="d4">5.0</data>
+      <data key="d5">Audit and Operating System Configuration are related as they both contribute to system hardening and security assessments.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="AUDIT" target="SCHEDULED TASK">
+      <data key="d4">7.0</data>
+      <data key="d5">Scheduled Task can be mitigated by performing audits to identify potential weaknesses related to the attack technique.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="AUDIT" target="FILELESS STORAGE">
+      <data key="d4">1.0</data>
+      <data key="d5">Audit is a mitigation method specifically designed to address the attack technique known as Fileless Storage</data>
+      <data key="d6">39338816f34576300d9dd4cee9502566</data>
+    </edge>
+    <edge source="AUDIT" target="VNC">
+      <data key="d4">8.0</data>
+      <data key="d5">The mitigation method Audit is designed to identify potential weaknesses related to the VNC attack technique</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="AUDIT" target="ARCHIVE VIA UTILITY">
+      <data key="d4">1.0</data>
+      <data key="d5">Audit is a mitigation method specifically designed to address the attack technique called Archive via Utility</data>
+      <data key="d6">0f25f130e0f286324ce140d6b32741f2</data>
+    </edge>
+    <edge source="OPERATING SYSTEM CONFIGURATION" target="SCHEDULED TASK">
+      <data key="d4">1.0</data>
+      <data key="d5">Scheduled Task can be mitigated by making configuration changes to the operating system that enhance security against this attack technique.</data>
+      <data key="d6">e163f8d3667f8c5df176dabce766fed8</data>
+    </edge>
+    <edge source="VNC" target="LIMIT SOFTWARE INSTALLATION">
+      <data key="d4">1.0</data>
+      <data key="d5">The mitigation method Limit Software Installation is designed to prevent abuse of the VNC attack technique</data>
+      <data key="d6">a1f74148edbcbacf65578405afbe28e5</data>
+    </edge>
+    <edge source="RESTRICT REGISTRY PERMISSIONS" target="LOGON SCRIPT">
+      <data key="d4">7.0</data>
+      <data key="d5">Restrict Registry Permissions is a mitigation method specifically designed to counter the Logon Script attack technique</data>
+      <data key="d6">1f51302ce606581e225f396591b525dd</data>
+    </edge>
+    <edge source="ENCRYPT SENSITIVE INFORMATION" target="USER TRAINING">
+      <data key="d4">4.0</data>
+      <data key="d5">Both are essential components of a comprehensive security strategy to protect sensitive data and educate users</data>
+      <data key="d6">5f6ebcd4b45b383ff9042d78b009c0ba</data>
+    </edge>
+  </graph>
+</graphml>
