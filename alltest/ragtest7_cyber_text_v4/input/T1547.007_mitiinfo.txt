@@ -1,0 +1,14 @@
+There are 2 mitigation methods that can mitigating the attack technique called Re-opened Applications. Their names are as follows:
+* Disable or Remove Feature or Program 
+* User Training 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Disable or Remove Feature or Program
+Mitigation method description: Remove or deny access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.

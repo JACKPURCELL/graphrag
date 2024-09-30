@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called LSA Secrets. Their names are as follows:
+* Password Policies 
+* Privileged Account Management 
+* User Training 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Password Policies
+Mitigation method description: Set and enforce secure password policies for accounts.
+
+Mitigation method name: Privileged Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.

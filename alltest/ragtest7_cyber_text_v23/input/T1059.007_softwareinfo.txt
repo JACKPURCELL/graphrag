@@ -1,0 +1,59 @@
+There are 10 software using the attack technique called JavaScript. Their names are as follows:
+* Donut
+* AppleSeed
+* Cobalt Strike
+* Metamorfo
+* NanHaiShu
+* QakBot
+* Avaddon
+* GRIFFON
+* SocGholish
+* EnvyScout
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Donut
+Software description: [Donut](https://attack.mitre.org/software/S0695) is an open source framework used to generate position-independent shellcode.(Citation: Donut Github)(Citation: Introducing Donut) [Donut](https://attack.mitre.org/software/S0695) generated code has been used by multiple threat actors to inject and load malicious payloads into memory.(Citation: NCC Group WastedLocker June 2020)
+Platforms: Windows
+
+Software name: AppleSeed
+Software description: [AppleSeed](https://attack.mitre.org/software/S0622) is a backdoor that has been used by [Kimsuky](https://attack.mitre.org/groups/G0094) to target South Korean government, academic, and commercial  targets since at least 2021.(Citation: Malwarebytes Kimsuky June 2021)
+Platforms: Windows, Android
+
+Software name: Cobalt Strike
+Software description: [Cobalt Strike](https://attack.mitre.org/software/S0154) is a commercial, full-featured, remote access tool that bills itself as “adversary simulation software designed to execute targeted attacks and emulate the post-exploitation actions of advanced threat actors”. Cobalt Strike’s interactive post-exploit capabilities cover the full range of ATT&CK tactics, all executed within a single, integrated system.(Citation: cobaltstrike manual)
+
+In addition to its own capabilities, [Cobalt Strike](https://attack.mitre.org/software/S0154) leverages the capabilities of other well-known tools such as Metasploit and [Mimikatz](https://attack.mitre.org/software/S0002).(Citation: cobaltstrike manual)
+Platforms: Windows, Linux, macOS
+
+Software name: Metamorfo
+Software description: [Metamorfo](https://attack.mitre.org/software/S0455) is a Latin-American banking trojan operated by a Brazilian cybercrime group that has been active since at least April 2018. The group focuses on targeting banks and cryptocurrency services in Brazil and Mexico.(Citation: Medium Metamorfo Apr 2020)(Citation: ESET Casbaneiro Oct 2019) 
+Platforms: Windows
+
+Software name: NanHaiShu
+Software description: [NanHaiShu](https://attack.mitre.org/software/S0228) is a remote access tool and JScript backdoor used by [Leviathan](https://attack.mitre.org/groups/G0065). [NanHaiShu](https://attack.mitre.org/software/S0228) has been used to target government and private-sector organizations that have relations to the South China Sea dispute. (Citation: Proofpoint Leviathan Oct 2017) (Citation: fsecure NanHaiShu July 2016)
+Platforms: Windows
+
+Software name: QakBot
+Software description: [QakBot](https://attack.mitre.org/software/S0650) is a modular banking trojan that has been used primarily by financially-motivated actors since at least 2007. [QakBot](https://attack.mitre.org/software/S0650) is continuously maintained and developed and has evolved from an information stealer into a delivery agent for ransomware, most notably [ProLock](https://attack.mitre.org/software/S0654) and [Egregor](https://attack.mitre.org/software/S0554).(Citation: Trend Micro Qakbot December 2020)(Citation: Red Canary Qbot)(Citation: Kaspersky QakBot September 2021)(Citation: ATT QakBot April 2021)
+Platforms: Windows
+
+Software name: Avaddon
+Software description: [Avaddon](https://attack.mitre.org/software/S0640) is ransomware written in C++ that has been offered as Ransomware-as-a-Service (RaaS) since at least June 2020.(Citation: Awake Security Avaddon)(Citation: Arxiv Avaddon Feb 2021)
+Platforms: Windows
+
+Software name: GRIFFON
+Software description: [GRIFFON](https://attack.mitre.org/software/S0417) is a JavaScript backdoor used by [FIN7](https://attack.mitre.org/groups/G0046). (Citation: SecureList Griffon May 2019)
+Platforms: Windows
+
+Software name: SocGholish
+Software description: [SocGholish](https://attack.mitre.org/software/S1124) is a JavaScript-based loader malware that has been used since at least 2017. It has been observed in use against multiple sectors globally for initial access, primarily through drive-by-downloads masquerading as software updates. SocGholish is operated by [Mustard Tempest](https://attack.mitre.org/groups/G1020) and its access has been sold to groups including [Indrik Spider](https://attack.mitre.org/groups/G0119) for downloading secondary RAT and ransomware payloads.(Citation: SentinelOne SocGholish Infrastructure November 2022)(Citation: SocGholish-update)(Citation: Red Canary SocGholish March 2024)(Citation: Secureworks Gold Prelude Profile) 
+Platforms: Windows
+
+Software name: EnvyScout
+Software description: [EnvyScout](https://attack.mitre.org/software/S0634) is a dropper that has been used by [APT29](https://attack.mitre.org/groups/G0016) since at least 2021.(Citation: MSTIC Nobelium Toolset May 2021)
+Platforms: Windows

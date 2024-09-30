@@ -1,0 +1,27 @@
+There are 4 software using the attack technique called Logon Script (Windows). Their names are as follows:
+* Attor
+* JHUHUGIT
+* KGH_SPY
+* Zebrocy
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Attor
+Software description: [Attor](https://attack.mitre.org/software/S0438) is a Windows-based espionage platform that has been seen in use since 2013. [Attor](https://attack.mitre.org/software/S0438) has a loadable plugin architecture to customize functionality for specific targets.(Citation: ESET Attor Oct 2019)
+Platforms: Windows
+
+Software name: JHUHUGIT
+Software description: [JHUHUGIT](https://attack.mitre.org/software/S0044) is malware used by [APT28](https://attack.mitre.org/groups/G0007). It is based on Carberp source code and serves as reconnaissance malware. (Citation: Kaspersky Sofacy) (Citation: F-Secure Sofacy 2015) (Citation: ESET Sednit Part 1) (Citation: FireEye APT28 January 2017)
+Platforms: Windows
+
+Software name: KGH_SPY
+Software description: [KGH_SPY](https://attack.mitre.org/software/S0526) is a modular suite of tools used by [Kimsuky](https://attack.mitre.org/groups/G0094) for reconnaissance, information stealing, and backdoor capabilities. [KGH_SPY](https://attack.mitre.org/software/S0526) derived its name from PDB paths and internal names found in samples containing "KGH".(Citation: Cybereason Kimsuky November 2020)
+Platforms: Windows
+
+Software name: Zebrocy
+Software description: [Zebrocy](https://attack.mitre.org/software/S0251) is a Trojan that has been used by [APT28](https://attack.mitre.org/groups/G0007) since at least November 2015. The malware comes in several programming language variants, including C++, Delphi, AutoIt, C#, VB.NET, and Golang. (Citation: Palo Alto Sofacy 06-2018)(Citation: Unit42 Cannon Nov 2018)(Citation: Unit42 Sofacy Dec 2018)(Citation: CISA Zebrocy Oct 2020) 
+Platforms: Windows

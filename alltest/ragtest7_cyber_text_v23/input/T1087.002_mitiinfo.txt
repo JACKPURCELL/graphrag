@@ -1,0 +1,10 @@
+There are 1 mitigation methods that can mitigating the attack technique called Domain Account. Their names are as follows:
+* Operating System Configuration 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Operating System Configuration
+Mitigation method description: Make configuration changes related to the operating system or a common feature of the operating system that result in system hardening against techniques.

@@ -1,0 +1,28 @@
+[Pharynx Cancer] is the name of a kind of disease.
+[Pharynx Cancer] presents the symptom [Olfaction Disorders].
+[Pharynx Cancer] presents the symptom [Articulation Disorders].
+[Pharynx Cancer] presents the symptom [Blindness].
+[Pharynx Cancer] presents the symptom [Cerebrospinal Fluid Otorrhea].
+[Pharynx Cancer] presents the symptom [Cerebrospinal Fluid Rhinorrhea].
+[Pharynx Cancer] presents the symptom [Deafness].
+[Pharynx Cancer] presents the symptom [Hearing Loss, Sudden].
+[Pharynx Cancer] presents the symptom [Diplopia].
+[Pharynx Cancer] presents the symptom [Dyspnea].
+[Pharynx Cancer] presents the symptom [Earache].
+[Pharynx Cancer] localizes at the [Nose] of human body.
+[Pharynx Cancer] localizes at the [Lymph Node] of human body.
+[Pharynx Cancer] localizes at the [Head] of human body.
+[Pharynx Cancer] localizes at the [Mouth] of human body.
+[Pharynx Cancer] localizes at the [Epithelium] of human body.
+[Pharynx Cancer] localizes at the [Neck] of human body.
+[Pharynx Cancer] localizes at the [Strand Of Hair] of human body.
+[Pharynx Cancer] localizes at the [Saliva-Secreting Gland] of human body.
+[Pharynx Cancer] localizes at the [External Carotid Artery] of human body.
+[Pharynx Cancer] localizes at the [External Acoustic Meatus] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Pharynx Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Pharynx Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Pharynx Cancer (palliates or treats) and its side effects.

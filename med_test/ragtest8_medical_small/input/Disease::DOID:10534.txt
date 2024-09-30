@@ -1,0 +1,73 @@
+[Stomach Cancer] is the name of a kind of disease.
+[Stomach Cancer] presents the symptom [Abdomen, Acute].
+[Stomach Cancer] presents the symptom [Anorexia].
+[Stomach Cancer] presents the symptom [Asthenia].
+[Stomach Cancer] presents the symptom [Ataxia Telangiectasia].
+[Stomach Cancer] presents the symptom [Body Weight].
+[Stomach Cancer] presents the symptom [Cachexia].
+[Stomach Cancer] presents the symptom [Constipation].
+[Stomach Cancer] presents the symptom [Diarrhea].
+[Stomach Cancer] presents the symptom [Dyspepsia].
+[Stomach Cancer] presents the symptom [Edema].
+[Stomach Cancer] localizes at the [Lymph Node] of human body.
+[Stomach Cancer] localizes at the [Serous Membrane] of human body.
+[Stomach Cancer] localizes at the [Ligament] of human body.
+[Stomach Cancer] localizes at the [Epithelium] of human body.
+[Stomach Cancer] localizes at the [Digestive System] of human body.
+[Stomach Cancer] localizes at the [Diaphragm] of human body.
+[Stomach Cancer] localizes at the [Smooth Muscle Tissue] of human body.
+[Stomach Cancer] localizes at the [Hepatic Artery] of human body.
+[Stomach Cancer] localizes at the [Splenic Artery] of human body.
+[Stomach Cancer] localizes at the [Pancreas] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Stomach Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Stomach Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Stomach Cancer (palliates or treats) and its side effects.
+
+Compound name: Capecitabine
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Congenital anomaly, Agranulocytosis, Alopecia, Amnesia, Anaemia, Haemolytic anaemia, Angina pectoris, Angina unstable
+
+Compound name: Fluorouracil
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Congenital anomaly, Abortion spontaneous, Agranulocytosis, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris, Anorexia, Arrhythmia
+
+Compound name: Epirubicin
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Lactic acidosis, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Anaphylactic shock
+
+Compound name: Methotrexate
+Pharmacologic class: Folic Acid Metabolism Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal pain, Abscess, Agranulocytosis, Alopecia, Alveolitis allergic, Anaphylactic shock, Anaemia, Aplastic anaemia, Anaemia megaloblastic, Anorexia
+
+Compound name: Irinotecan
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal cramps, Abdominal distension, Abdominal pain, Alopecia, Anaphylactic shock, Anaemia, Angina pectoris, Anorexia, Arrhythmia, Asthenia
+
+Compound name: Floxuridine
+Pharmacologic class: Deoxyuridine
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal pain, Abscess, Agranulocytosis, Alopecia, Anaphylactic shock, Anaemia, Aneurysm, Angina pectoris, Anorexia, Asthenia
+
+Compound name: Doxorubicin
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Lactic acidosis, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Anaphylactic shock
+
+Compound name: Mitomycin
+Pharmacologic class: Alkylating Activity
+Effect on Stomach Cancer: Treat
+Side effect: Alopecia, Anaemia, Anorexia, Asthenia, Confusional state, Cough, Dermatitis, Diarrhoea, Dizziness, Drowsiness
+
+Compound name: Docetaxel
+Pharmacologic class: Microtubule Inhibition
+Effect on Stomach Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Amenorrhoea, Anaphylactic shock, Anaemia, Angina pectoris, Angina unstable, Anorexia, Arrhythmia

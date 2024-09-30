@@ -1,0 +1,22 @@
+There are 3 software using the attack technique called Login Items. Their names are as follows:
+* Green Lambert
+* NETWIRE
+* Dok
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Green Lambert
+Software description: [Green Lambert](https://attack.mitre.org/software/S0690) is a modular backdoor that security researchers assess has been used by an advanced threat group referred to as Longhorn and The Lamberts. First reported in 2017, the Windows variant of [Green Lambert](https://attack.mitre.org/software/S0690) may have been used as early as 2008; a macOS version was uploaded to a multiscanner service in September 2014.(Citation: Kaspersky Lamberts Toolkit April 2017)(Citation: Objective See Green Lambert for OSX Oct 2021)  
+Platforms: Windows, iOS, macOS, Linux
+
+Software name: NETWIRE
+Software description: [NETWIRE](https://attack.mitre.org/software/S0198) is a publicly available, multiplatform remote administration tool (RAT) that has been used by criminal and APT groups since at least 2012.(Citation: FireEye APT33 Sept 2017)(Citation: McAfee Netwire Mar 2015)(Citation: FireEye APT33 Webinar Sept 2017)
+Platforms: Windows, Linux, macOS
+
+Software name: Dok
+Software description: [Dok](https://attack.mitre.org/software/S0281) is a Trojan application disguised as a .zip file that is able to collect user credentials and install a malicious proxy server to redirect a user's network traffic (i.e. [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)).(Citation: objsee mac malware 2017)(Citation: hexed osx.dok analysis 2019)(Citation: CheckPoint Dok)
+Platforms: macOS

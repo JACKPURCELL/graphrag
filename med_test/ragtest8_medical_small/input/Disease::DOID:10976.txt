@@ -1,0 +1,17 @@
+[Membranous Glomerulonephritis] is the name of a kind of disease.
+[Membranous Glomerulonephritis] presents the symptom [Edema].
+[Membranous Glomerulonephritis] presents the symptom [Monoclonal Gammopathy Of Undetermined Significance].
+[Membranous Glomerulonephritis] presents the symptom [Proteinuria].
+[Membranous Glomerulonephritis] localizes at the [Basal Lamina Of Epithelium] of human body.
+[Membranous Glomerulonephritis] localizes at the [Epithelium] of human body.
+[Membranous Glomerulonephritis] localizes at the [Renal Vein] of human body.
+[Membranous Glomerulonephritis] localizes at the [Cortex Of Kidney] of human body.
+[Membranous Glomerulonephritis] localizes at the [Nephron Tubule] of human body.
+[Membranous Glomerulonephritis] localizes at the [Kidney] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Membranous Glomerulonephritis.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Membranous Glomerulonephritis: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Membranous Glomerulonephritis (palliates or treats) and its side effects.

@@ -36,7 +36,7 @@ Knowledge Graph:
 2. Create Adversarial Texts by Modifying the Knowledge Graph:
 
 Consider how to attack the question directly or indirectly based on the knowledge graph.
-Guide the model to make incorrect judgments by adding new entities or relationships.
+Guide the model to make incorrect judgments by subtly introducing misleading information. Try your best to break the original relationship between the root node, the middle nodes and the leaf nodes.
 Methods:
 
 a. Leaf Direct Attack:
@@ -143,15 +143,13 @@ IMPORTANT:
 
 
 
-
 def get_questions(base_path):
 	questions_path = Path(base_path) / 'question_v2.json'
 	questions = questions_path.read_text(encoding='utf-8')
 	questions = json.loads(questions)
 	return questions
 
-if __name__ == "__main__":
-	base_path = '/home/ljc/data/graphrag/alltest/dataset4-v2-include-long'
+def process_questions_v2(base_path):
 	questions = get_questions(base_path)
 	
 	all_jsons = []
@@ -159,7 +157,7 @@ if __name__ == "__main__":
 		question_prompt = "The question is \n"  + json.dumps(question["question"], ensure_ascii=False)
 		while True: 
 			completion = client.chat.completions.create(
-				model="gpt-4o",
+				model="gpt-4o-2024-08-06",
 				response_format={"type": "json_object"},
 				messages=[
 					{"role": "system", "content": base_prompt},
@@ -168,20 +166,22 @@ if __name__ == "__main__":
 			)
 			
 			content = completion.choices[0].message.content
-			if content is not None:
-				question_json = json.loads(content)
-				if isinstance(question_json["indirect_adv_texts"][0], str) and isinstance(question_json["direct_adv_texts"][0], str) and isinstance(question_json["enhanced_indirect_adv_texts"][0], str):
-					all_jsons.append(question_json)
-					break
+			try:
+				if content is not None:
+					question_json = json.loads(content)
+					if isinstance(question_json["indirect_adv_texts"][0], str) and isinstance(question_json["direct_adv_texts"][0], str) and isinstance(question_json["enhanced_indirect_adv_texts"][0], str):
+						all_jsons.append(question_json)
+						break
+					else:
+						print('JSON ERROR, AGAIN')
 				else:
-					print('JSON ERROR, AGAIN')
-			else:
-				print('No response from OpenAI')
+					print('No response from OpenAI')
+			except Exception as e:
+				print(f"Error processing question: {e}")
 
 	adv_prompt_path = Path(os.path.join(base_path, 'question_v2_corpus.json'))
 	adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
 	print(f"Questions generated successfully and saved to {adv_prompt_path}")
-	# all_jsons = json.loads(Path(base_path + '/question_v2_corpus.json').read_text(encoding='utf-8'))
 
 	# 收集所有的 adv_text
 	indirect_adv_texts = []
@@ -203,3 +203,7 @@ if __name__ == "__main__":
 	
 	output_path_enhanced_indirect = Path(base_path) / 'adv_texts_enhanced_indirect_v2.txt'
 	output_path_enhanced_indirect.write_text('\n\n'.join(enhanced_indirect_adv_texts), encoding='utf-8')
+
+if __name__ == "__main__":
+	base_path = '/home/ljc/data/graphrag/med_test/ragtest8_medical_small'
+	process_questions_v2(base_path)

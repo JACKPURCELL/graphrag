@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called Masquerade File Type. Their names are as follows:
+* Behavior Prevention on Endpoint 
+* Antivirus/Antimalware 
+* Execution Prevention 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Behavior Prevention on Endpoint
+Mitigation method description: Use capabilities to prevent suspicious behavior patterns from occurring on endpoint systems. This could include suspicious process, file, API call, etc. behavior.
+
+Mitigation method name: Antivirus/Antimalware
+Mitigation method description: Use signatures or heuristics to detect malicious software.
+
+Mitigation method name: Execution Prevention
+Mitigation method description: Block execution of code on a system through application control, and/or script blocking.

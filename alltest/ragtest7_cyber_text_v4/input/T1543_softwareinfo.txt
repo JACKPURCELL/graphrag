@@ -1,0 +1,17 @@
+There are 2 software using the attack technique called Create or Modify System Process. Their names are as follows:
+* Exaramel for Linux
+* LITTLELAMB.WOOLTEA
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Exaramel for Linux
+Software description: [Exaramel for Linux](https://attack.mitre.org/software/S0401) is a backdoor written in the Go Programming Language and compiled as a 64-bit ELF binary. The Windows version is tracked separately under [Exaramel for Windows](https://attack.mitre.org/software/S0343).(Citation: ESET TeleBots Oct 2018)
+Platforms: Linux
+
+Software name: LITTLELAMB.WOOLTEA
+Software description: [LITTLELAMB.WOOLTEA](https://attack.mitre.org/software/S1121) is a backdoor that was used by UNC5325 during [Cutting Edge](https://attack.mitre.org/campaigns/C0029) to deploy malware on targeted Ivanti Connect Secure VPNs and to establish persistence across system upgrades and patches.(Citation: Mandiant Cutting Edge Part 3 February 2024)
+Platforms: Network

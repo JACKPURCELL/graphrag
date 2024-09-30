@@ -1,0 +1,17 @@
+There are 2 software using the attack technique called Device Driver Discovery. Their names are as follows:
+* HOPLIGHT
+* Remsec
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: HOPLIGHT
+Software description: [HOPLIGHT](https://attack.mitre.org/software/S0376) is a backdoor Trojan that has reportedly been used by the North Korean government.(Citation: US-CERT HOPLIGHT Apr 2019)
+Platforms: Windows
+
+Software name: Remsec
+Software description: [Remsec](https://attack.mitre.org/software/S0125) is a modular backdoor that has been used by [Strider](https://attack.mitre.org/groups/G0041) and appears to have been designed primarily for espionage purposes. Many of its modules are written in Lua. (Citation: Symantec Strider Blog)
+Platforms: Windows

@@ -1,0 +1,78 @@
+[Attention Deficit Hyperactivity Disorder] is the name of a kind of disease.
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Agraphia].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Alcohol Amnestic Disorder].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Amnesia].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Amnesia, Retrograde].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Olfaction Disorders].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Aphasia].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Apraxias].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Articulation Disorders].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Auditory Perceptual Disorders].
+[Attention Deficit Hyperactivity Disorder] presents the symptom [Blindness].
+[Attention Deficit Hyperactivity Disorder] localizes at the [Cranial Nerve Ii] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Brain] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Optic Chiasma] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Pons] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Nervous System] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Central Nervous System] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Strand Of Hair] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [External Carotid Artery] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Radial Artery] of human body.
+[Attention Deficit Hyperactivity Disorder] localizes at the [Face] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Attention Deficit Hyperactivity Disorder.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Attention Deficit Hyperactivity Disorder: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Attention Deficit Hyperactivity Disorder (palliates or treats) and its side effects.
+
+Compound name: Lisdexamfetamine
+Pharmacologic class: Central Nervous System Stimulation
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Aggression, Anaphylactic shock, Angioedema, Anorexia, Anxiety, Asthenia, Mental disorder, Bruxism, Constipation, Sudden death
+
+Compound name: Nortriptyline
+Pharmacologic class: None
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal cramps, Abdominal pain, Adenitis, Agranulocytosis, Alopecia, Aplastic anaemia, Anorexia, Anxiety, Arrhythmia, Asthenia
+
+Compound name: Bupropion
+Pharmacologic class: Norepinephrine Uptake Inhibitors
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal distension, Abdominal pain, Aggression, Alopecia, Amblyopia, Amenorrhoea, Amnesia, Anaphylactic shock, Anaemia, Anger
+
+Compound name: Imipramine
+Pharmacologic class: None
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal cramps, Abdominal pain, Adenitis, Aggression, Agranulocytosis, Alopecia, Alveolitis allergic, Anaphylactic shock, Anorexia, Anxiety
+
+Compound name: Atomoxetine
+Pharmacologic class: Norepinephrine Uptake Inhibitors
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal pain, Aggression, Anorexia, Anxiety, Arthralgia, Asthenia, Back pain, Mental disorder, Bone disorder, Breast disorder
+
+Compound name: Methylphenidate
+Pharmacologic class: Central Nervous System Stimulation
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal pain, Abscess, Aggression, Albuminuria, Alopecia, Anaphylactic shock, Anaemia, Aplastic anaemia, Anger, Angina pectoris
+
+Compound name: Guanfacine
+Pharmacologic class: Adrenergic alpha2-Agonists
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal pain, Alopecia, Amnesia, Anxiety, Sinus arrhythmia, Arthralgia, Asthenia, Asthma, Atrioventricular block, Chest pain
+
+Compound name: Clonidine
+Pharmacologic class: Adrenergic alpha2-Agonists
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal pain, Aggression, Alopecia, Angioedema, Anorexia, Anxiety, Arrhythmia, Arthralgia, Asthenia, Asthma
+
+Compound name: Venlafaxine
+Pharmacologic class: Norepinephrine Uptake Inhibitors
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal distension, Abdominal pain, Congenital anomaly, Adjustment disorder, Aggression, Agranulocytosis, Albuminuria, Alopecia, Amenorrhoea, Amnesia
+
+Compound name: Modafinil
+Pharmacologic class: Increased Sympathetic Activity
+Effect on Attention Deficit Hyperactivity Disorder: Palliate
+Side effect: Abdominal pain, Aggression, Agranulocytosis, Albuminuria, Amblyopia, Amnesia, Anaphylactic shock, Anaemia, Angioedema, Anorexia

@@ -60,7 +60,7 @@ Relationships where {entity} is the endpoint, with preceding nodes referred to a
 """
 
 USER_PROMPT = """
-Please generate questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, selected entity, leaf nodes, and root nodes.:
+Please generate {question_count} questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, selected entity, leaf nodes, and root nodes.:
 <JSON>
 {"question": "What is the patronage of the most famous attractions in the capital of China?", 
 "gpt_answer_withoutdata":"Beijing's top attractions, such as the Forbidden City, the Great Wall, and the Temple of Heaven, draw millions annually. The Forbidden City alone sees over 14 million visitors each year, while sections of the Great Wall near Beijing attract similar numbers, showcasing their global appeal and cultural significance."
@@ -123,7 +123,8 @@ class LocalQuestionGen_byentity(BaseQuestionGen):
             if len(related_relationships_source) > 1 and len(related_relationships_target) > 0:
                 useful_entities.append({"entity": ent, "related_relationships_source": related_relationships_source, "related_relationships_target": related_relationships_target})
         print("=======Qualified entities: ", len(useful_entities))
-        useful_entities = random.sample(useful_entities, entity_count)
+        if entity_count != -1:
+            useful_entities = random.sample(useful_entities, entity_count)
         for ent_with_rel in tqdm(useful_entities):
             ent_with_rel_name = ent_with_rel["entity"].title
             related_relationships_text_source = "[Selected Entity,Leaf Entity]: "

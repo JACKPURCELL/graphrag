@@ -1,0 +1,57 @@
+There are 10 software using the attack technique called Rootkit. Their names are as follows:
+* HTRAN
+* Ebury
+* Carberp
+* Ramsay
+* Drovorub
+* HIDEDRV
+* Skidmap
+* Umbreon
+* Stuxnet
+* COATHANGER
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: HTRAN
+Software description: [HTRAN](https://attack.mitre.org/software/S0040) is a tool that proxies connections through intermediate hops and aids users in disguising their true geographical location. It can be used by adversaries to hide their location when interacting with the victim networks. (Citation: Operation Quantum Entanglement)(Citation: NCSC Joint Report Public Tools)
+Platforms: Linux, Windows
+
+Software name: Ebury
+Software description: [Ebury](https://attack.mitre.org/software/S0377) is an SSH backdoor targeting Linux operating systems. Attackers require root-level access, which allows them to replace SSH binaries (ssh, sshd, ssh-add, etc) or modify a shared library used by OpenSSH (libkeyutils).(Citation: ESET Ebury Feb 2014)(Citation: BleepingComputer Ebury March 2017)(Citation: ESET Ebury Oct 2017)
+Platforms: Linux
+
+Software name: Carberp
+Software description: [Carberp](https://attack.mitre.org/software/S0484) is a credential and information stealing malware that has been active since at least 2009. [Carberp](https://attack.mitre.org/software/S0484)'s source code was leaked online in 2013, and subsequently used as the foundation for the [Carbanak](https://attack.mitre.org/software/S0030) backdoor.(Citation: Trend Micro Carberp February 2014)(Citation: KasperskyCarbanak)(Citation: RSA Carbanak November 2017)
+Platforms: Windows
+
+Software name: Ramsay
+Software description: [Ramsay](https://attack.mitre.org/software/S0458) is an information stealing malware framework designed to collect and exfiltrate sensitive documents, including from air-gapped systems. Researchers have identified overlaps between [Ramsay](https://attack.mitre.org/software/S0458) and the [Darkhotel](https://attack.mitre.org/groups/G0012)-associated Retro malware.(Citation: Eset Ramsay May 2020)(Citation: Antiy CERT Ramsay April 2020)
+Platforms: Windows
+
+Software name: Drovorub
+Software description: [Drovorub](https://attack.mitre.org/software/S0502) is a Linux malware toolset comprised of an agent, client, server, and kernel modules, that has been used by [APT28](https://attack.mitre.org/groups/G0007).(Citation: NSA/FBI Drovorub August 2020)
+Platforms: Linux
+
+Software name: HIDEDRV
+Software description: [HIDEDRV](https://attack.mitre.org/software/S0135) is a rootkit used by [APT28](https://attack.mitre.org/groups/G0007). It has been deployed along with [Downdelph](https://attack.mitre.org/software/S0134) to execute and hide that malware. (Citation: ESET Sednit Part 3) (Citation: Sekoia HideDRV Oct 2016)
+Platforms: Windows
+
+Software name: Skidmap
+Software description: [Skidmap](https://attack.mitre.org/software/S0468) is a kernel-mode rootkit used for cryptocurrency mining.(Citation: Trend Micro Skidmap)
+Platforms: Linux
+
+Software name: Umbreon
+Software description: A Linux rootkit that provides backdoor access and hides from defenders.
+Platforms: Linux
+
+Software name: Stuxnet
+Software description: [Stuxnet](https://attack.mitre.org/software/S0603) was the first publicly reported piece of malware to specifically target industrial control systems devices. [Stuxnet](https://attack.mitre.org/software/S0603) is a large and complex piece of malware that utilized multiple different behaviors including multiple zero-day vulnerabilities, a sophisticated Windows rootkit, and network infection routines.(Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011)(Citation: CISA ICS Advisory ICSA-10-272-01)(Citation: ESET Stuxnet Under the Microscope)(Citation: Langer Stuxnet) [Stuxnet](https://attack.mitre.org/software/S0603) was discovered in 2010, with some components being used as early as November 2008.(Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011) 
+Platforms: Windows
+
+Software name: COATHANGER
+Software description: [COATHANGER](https://attack.mitre.org/software/S1105) is a remote access tool (RAT) targeting FortiGate networking appliances. First used in 2023 in targeted intrusions against military and government entities in the Netherlands along with other victims, [COATHANGER](https://attack.mitre.org/software/S1105) was disclosed in early 2024, with a high confidence assessment linking this malware to a state-sponsored entity in the People's Republic of China. [COATHANGER](https://attack.mitre.org/software/S1105) is delivered after gaining access to a FortiGate device, with in-the-wild observations linked to exploitation of CVE-2022-42475. The name [COATHANGER](https://attack.mitre.org/software/S1105) is based on a unique string in the malware used to encrypt configuration files on disk: <code>“She took his coat and hung it up”</code>.(Citation: NCSC-NL COATHANGER Feb 2024)
+Platforms: Linux, Network

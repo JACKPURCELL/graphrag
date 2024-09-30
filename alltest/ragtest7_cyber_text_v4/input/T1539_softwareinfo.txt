@@ -1,0 +1,47 @@
+There are 8 software using the attack technique called Steal Web Session Cookie. Their names are as follows:
+* Grandoreiro
+* CookieMiner
+* QakBot
+* EVILNUM
+* Chaes
+* BLUELIGHT
+* XCSSET
+* TajMahal
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Grandoreiro
+Software description: [Grandoreiro](https://attack.mitre.org/software/S0531) is a banking trojan written in Delphi that was first observed in 2016 and uses a Malware-as-a-Service (MaaS) business model. [Grandoreiro](https://attack.mitre.org/software/S0531) has confirmed victims in Brazil, Mexico, Portugal, and Spain.(Citation: Securelist Brazilian Banking Malware July 2020)(Citation: ESET Grandoreiro April 2020)
+Platforms: Windows
+
+Software name: CookieMiner
+Software description: [CookieMiner](https://attack.mitre.org/software/S0492) is mac-based malware that targets information associated with cryptocurrency exchanges as well as enabling cryptocurrency mining on the victim system itself. It was first discovered in the wild in 2019.(Citation: Unit42 CookieMiner Jan 2019)
+Platforms: macOS
+
+Software name: QakBot
+Software description: [QakBot](https://attack.mitre.org/software/S0650) is a modular banking trojan that has been used primarily by financially-motivated actors since at least 2007. [QakBot](https://attack.mitre.org/software/S0650) is continuously maintained and developed and has evolved from an information stealer into a delivery agent for ransomware, most notably [ProLock](https://attack.mitre.org/software/S0654) and [Egregor](https://attack.mitre.org/software/S0554).(Citation: Trend Micro Qakbot December 2020)(Citation: Red Canary Qbot)(Citation: Kaspersky QakBot September 2021)(Citation: ATT QakBot April 2021)
+Platforms: Windows
+
+Software name: EVILNUM
+Software description: [EVILNUM](https://attack.mitre.org/software/S0568) is fully capable backdoor that was first identified in 2018. [EVILNUM](https://attack.mitre.org/software/S0568) is used by the APT group [Evilnum](https://attack.mitre.org/groups/G0120) which has the same name.(Citation: ESET EvilNum July 2020)(Citation: Prevailion EvilNum May 2020)
+Platforms: Windows
+
+Software name: Chaes
+Software description: [Chaes](https://attack.mitre.org/software/S0631) is a multistage information stealer written in several programming languages that collects login credentials, credit card numbers, and other financial information. [Chaes](https://attack.mitre.org/software/S0631) was first observed in 2020, and appears to primarily target victims in Brazil as well as other e-commerce customers in Latin America.(Citation: Cybereason Chaes Nov 2020)
+Platforms: Windows
+
+Software name: BLUELIGHT
+Software description: [BLUELIGHT](https://attack.mitre.org/software/S0657) is a remote access Trojan used by [APT37](https://attack.mitre.org/groups/G0067) that was first observed in early 2021.(Citation: Volexity InkySquid BLUELIGHT August 2021)
+Platforms: Windows
+
+Software name: XCSSET
+Software description: [XCSSET](https://attack.mitre.org/software/S0658) is a macOS modular backdoor that targets Xcode application developers. [XCSSET](https://attack.mitre.org/software/S0658) was first observed in August 2020 and has been used to install a backdoor component, modify browser applications, conduct collection, and provide ransomware-like encryption capabilities.(Citation: trendmicro xcsset xcode project 2020)
+Platforms: macOS
+
+Software name: TajMahal
+Software description: [TajMahal](https://attack.mitre.org/software/S0467) is a multifunctional spying framework that has been in use since at least 2014. [TajMahal](https://attack.mitre.org/software/S0467) is comprised of two separate packages, named Tokyo and Yokohama, and can deploy up to 80 plugins.(Citation: Kaspersky TajMahal April 2019)
+Platforms: Windows

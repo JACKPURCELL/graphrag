@@ -1,0 +1,20 @@
+[Ureter Cancer] is the name of a kind of disease.
+[Ureter Cancer] presents the symptom [Colic].
+[Ureter Cancer] presents the symptom [Pain].
+[Ureter Cancer] presents the symptom [Flank Pain].
+[Ureter Cancer] presents the symptom [Urinoma].
+[Ureter Cancer] localizes at the [Ureter] of human body.
+[Ureter Cancer] localizes at the [Urethra] of human body.
+[Ureter Cancer] localizes at the [Ejaculatory Duct] of human body.
+[Ureter Cancer] localizes at the [Renal System] of human body.
+[Ureter Cancer] localizes at the [Urine] of human body.
+[Ureter Cancer] localizes at the [Renal Pelvis] of human body.
+[Ureter Cancer] localizes at the [Nephron] of human body.
+[Ureter Cancer] localizes at the [Kidney] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Ureter Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Ureter Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Ureter Cancer (palliates or treats) and its side effects.

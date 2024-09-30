@@ -1,0 +1,14 @@
+There are 2 mitigation methods that can mitigating the attack technique called Modify Cloud Compute Infrastructure. Their names are as follows:
+* User Account Management 
+* Audit 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: User Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to user accounts.
+
+Mitigation method name: Audit
+Mitigation method description: Perform audits or scans of systems, permissions, insecure software, insecure configurations, etc. to identify potential weaknesses.

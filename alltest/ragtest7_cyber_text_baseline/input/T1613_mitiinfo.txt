@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called Container and Resource Discovery. Their names are as follows:
+* Network Segmentation 
+* Limit Access to Resource Over Network 
+* User Account Management 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Network Segmentation
+Mitigation method description: Architect sections of the network to isolate critical systems, functions, or resources. Use physical and logical segmentation to prevent access to potentially sensitive systems and information. Use a DMZ to contain any internet-facing services that should not be exposed from the internal network. Configure separate virtual private cloud (VPC) instances to isolate critical cloud systems.
+
+Mitigation method name: Limit Access to Resource Over Network
+Mitigation method description: Prevent access to file shares, remote access to systems, unnecessary services. Mechanisms to limit access may include use of network concentrators, RDP gateways, etc.
+
+Mitigation method name: User Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to user accounts.

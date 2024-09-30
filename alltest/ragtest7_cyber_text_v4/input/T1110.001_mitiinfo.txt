@@ -1,0 +1,22 @@
+There are 4 mitigation methods that can mitigating the attack technique called Password Guessing. Their names are as follows:
+* Update Software 
+* Multi-factor Authentication 
+* Password Policies 
+* Account Use Policies 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Update Software
+Mitigation method description: Perform regular software updates to mitigate exploitation risk.
+
+Mitigation method name: Multi-factor Authentication
+Mitigation method description: Use two or more pieces of evidence to authenticate to a system; such as username and password in addition to a token from a physical smart card or token generator.
+
+Mitigation method name: Password Policies
+Mitigation method description: Set and enforce secure password policies for accounts.
+
+Mitigation method name: Account Use Policies
+Mitigation method description: Configure features related to account use like login attempt lockouts, specific login times, etc.

@@ -1,0 +1,57 @@
+There are 10 software using the attack technique called Service Stop. Their names are as follows:
+* Clop
+* LookBack
+* Meteor
+* WannaCry
+* Royal
+* Diavol
+* Avaddon
+* Olympic Destroyer
+* Cheerscrypt
+* Prestige
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Clop
+Software description: [Clop](https://attack.mitre.org/software/S0611) is a ransomware family that was first observed in February 2019 and has been used against retail, transportation and logistics, education, manufacturing, engineering, automotive, energy, financial, aerospace, telecommunications, professional and legal services, healthcare, and high tech industries. [Clop](https://attack.mitre.org/software/S0611) is a variant of the CryptoMix ransomware.(Citation: Mcafee Clop Aug 2019)(Citation: Cybereason Clop Dec 2020)(Citation: Unit42 Clop April 2021) 
+Platforms: Windows
+
+Software name: LookBack
+Software description: [LookBack](https://attack.mitre.org/software/S0582) is a remote access trojan written in C++ that was used against at least three US utility companies in July 2019. The TALONITE activity group has been observed using [LookBack](https://attack.mitre.org/software/S0582).(Citation: Proofpoint LookBack Malware Aug 2019)(Citation: Dragos TALONITE)(Citation: Dragos Threat Report 2020)
+Platforms: Windows
+
+Software name: Meteor
+Software description: [Meteor](https://attack.mitre.org/software/S0688) is a wiper that was used against Iranian government organizations, including Iranian Railways, the Ministry of Roads, and Urban Development systems, in July 2021. [Meteor](https://attack.mitre.org/software/S0688) is likely a newer version of similar wipers called Stardust and Comet that were reportedly used by a group called "Indra" since at least 2019 against private companies in Syria.(Citation: Check Point Meteor Aug 2021)
+Platforms: Windows
+
+Software name: WannaCry
+Software description: [WannaCry](https://attack.mitre.org/software/S0366) is ransomware that was first seen in a global attack during May 2017, which affected more than 150 countries. It contains worm-like features to spread itself across a computer network using the SMBv1 exploit EternalBlue.(Citation: LogRhythm WannaCry)(Citation: US-CERT WannaCry 2017)(Citation: Washington Post WannaCry 2017)(Citation: FireEye WannaCry 2017)
+Platforms: Windows
+
+Software name: Royal
+Software description: [Royal](https://attack.mitre.org/software/S1073) is ransomware that first appeared in early 2022;  a version that also targets ESXi servers was later observed in February 2023. [Royal](https://attack.mitre.org/software/S1073) employs partial encryption and multiple threads to evade detection and speed encryption. [Royal](https://attack.mitre.org/software/S1073) has been used in attacks against multiple industries worldwide--including critical infrastructure. Security researchers have identified similarities in the encryption routines and TTPs used in [Royal](https://attack.mitre.org/software/S1073) and [Conti](https://attack.mitre.org/software/S0575) attacks and noted a possible connection between their operators.(Citation: Microsoft Royal ransomware November 2022)(Citation: Cybereason Royal December 2022)(Citation: Kroll Royal Deep Dive February 2023)(Citation: Trend Micro Royal Linux ESXi February 2023)(Citation: CISA Royal AA23-061A March 2023)
+Platforms: Windows
+
+Software name: Diavol
+Software description: [Diavol](https://attack.mitre.org/software/S0659) is a ransomware variant first observed in June 2021 that is capable of prioritizing file types to encrypt based on a pre-configured list of extensions defined by the attacker.  The [Diavol](https://attack.mitre.org/software/S0659) Ransomware-as-a Service (RaaS) program is managed by [Wizard Spider](https://attack.mitre.org/groups/G0102) and it has been observed being deployed by [Bazar](https://attack.mitre.org/software/S0534).(Citation: Fortinet Diavol July 2021)(Citation: FBI Flash Diavol January 2022)(Citation: DFIR Diavol Ransomware December 2021)(Citation: Microsoft Ransomware as a Service)
+Platforms: Windows
+
+Software name: Avaddon
+Software description: [Avaddon](https://attack.mitre.org/software/S0640) is ransomware written in C++ that has been offered as Ransomware-as-a-Service (RaaS) since at least June 2020.(Citation: Awake Security Avaddon)(Citation: Arxiv Avaddon Feb 2021)
+Platforms: Windows
+
+Software name: Olympic Destroyer
+Software description: [Olympic Destroyer](https://attack.mitre.org/software/S0365) is malware that was used by [Sandworm Team](https://attack.mitre.org/groups/G0034) against the 2018 Winter Olympics, held in Pyeongchang, South Korea. The main purpose of the malware was to render infected computer systems inoperable. The malware leverages various native Windows utilities and API calls to carry out its destructive tasks. [Olympic Destroyer](https://attack.mitre.org/software/S0365) has worm-like features to spread itself across a computer network in order to maximize its destructive impact.(Citation: Talos Olympic Destroyer 2018)(Citation: US District Court Indictment GRU Unit 74455 October 2020) 
+Platforms: Windows
+
+Software name: Cheerscrypt
+Software description: [Cheerscrypt](https://attack.mitre.org/software/S1096) is a ransomware that was developed by [Cinnamon Tempest](https://attack.mitre.org/groups/G1021) and has been used in attacks against ESXi and Windows environments since at least 2022. [Cheerscrypt](https://attack.mitre.org/software/S1096) was derived from the leaked [Babuk](https://attack.mitre.org/software/S0638) source code and has infrastructure overlaps with deployments of Night Sky ransomware, which was also derived from [Babuk](https://attack.mitre.org/software/S0638).(Citation: Sygnia Emperor Dragonfly October 2022)(Citation: Trend Micro Cheerscrypt May 2022)
+Platforms: Windows
+
+Software name: Prestige
+Software description: [Prestige](https://attack.mitre.org/software/S1058) ransomware has been used by [Sandworm Team](https://attack.mitre.org/groups/G0034) since at least March 2022, including against transportation and related logistics industries in Ukraine and Poland in October 2022.(Citation: Microsoft Prestige ransomware October 2022)
+Platforms: Windows

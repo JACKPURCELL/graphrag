@@ -1,0 +1,53 @@
+[Lymphatic System Cancer] is the name of a kind of disease.
+
+The following content describes information about compounds that can palliate or treat the disease named Lymphatic System Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Lymphatic System Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Lymphatic System Cancer (palliates or treats) and its side effects.
+
+Compound name: Carmustine
+Pharmacologic class: Alkylating Activity
+Effect on Lymphatic System Cancer: Treat
+Side effect: Abdominal pain, Abscess, Alopecia, Amnesia, Anaemia, Anorexia, Anxiety, Aphasia, Arrhythmia, Asthenia
+
+Compound name: Teniposide
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Lymphatic System Cancer: Treat
+Side effect: Abdominal pain, Alopecia, Anaemia, Haemolytic anaemia, Anorexia, Arrhythmia, Asthenia, Bronchospasm, Chest pain, Infection
+
+Compound name: Bleomycin
+Pharmacologic class: None
+Effect on Lymphatic System Cancer: Treat
+Side effect: Aggression, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Arteritis, Arthritis, Asthenia, Bronchospasm, Cerebral arteritis
+
+Compound name: Methotrexate
+Pharmacologic class: Folic Acid Metabolism Inhibitors
+Effect on Lymphatic System Cancer: Treat
+Side effect: Abdominal pain, Abscess, Agranulocytosis, Alopecia, Alveolitis allergic, Anaphylactic shock, Anaemia, Aplastic anaemia, Anaemia megaloblastic, Anorexia
+
+Compound name: Fludarabine
+Pharmacologic class: None
+Effect on Lymphatic System Cancer: Treat
+Side effect: Alopecia, Alveolitis allergic, Anaphylactic shock, Anaemia, Autoimmune haemolytic anaemia, Aneurysm, Angina pectoris, Anorexia, Arrhythmia, Arthralgia
+
+Compound name: Vincristine
+Pharmacologic class: Vinca Alkaloids
+Effect on Lymphatic System Cancer: Treat
+Side effect: Acute abdomen, Abdominal cramps, Abdominal pain, Adrenal disorder, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Asthenia, Ataxia
+
+Compound name: Mechlorethamine
+Pharmacologic class: Alkylating Activity
+Effect on Lymphatic System Cancer: Treat
+Side effect: Agranulocytosis, Alopecia, Amenorrhoea, Anaphylactic shock, Haemolytic anaemia, Anorexia, Azoospermia, Blister, Skin cancer, Infection
+
+Compound name: Cytarabine
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Lymphatic System Cancer: Treat
+Side effect: 
+
+Compound name: Mitoxantrone
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Lymphatic System Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Amenorrhoea, Anaphylactic shock, Anaemia, Anorexia, Anxiety, Arrhythmia, Arthralgia

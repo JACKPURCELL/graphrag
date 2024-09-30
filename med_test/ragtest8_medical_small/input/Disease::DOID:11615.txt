@@ -1,0 +1,22 @@
+[Penile Cancer] is the name of a kind of disease.
+[Penile Cancer] presents the symptom [Edema].
+[Penile Cancer] presents the symptom [Pain].
+[Penile Cancer] presents the symptom [Pain, Intractable].
+[Penile Cancer] presents the symptom [Cafe-Au-Lait Spots].
+[Penile Cancer] presents the symptom [Dysuria].
+[Penile Cancer] localizes at the [Lymph Node] of human body.
+[Penile Cancer] localizes at the [Urethra] of human body.
+[Penile Cancer] localizes at the [Penis] of human body.
+[Penile Cancer] localizes at the [Scrotum] of human body.
+[Penile Cancer] localizes at the [Sebaceous Gland] of human body.
+[Penile Cancer] localizes at the [Skin Of Body] of human body.
+[Penile Cancer] localizes at the [Perineum] of human body.
+[Penile Cancer] localizes at the [Rectus Abdominis Muscle] of human body.
+[Penile Cancer] localizes at the [Clitoris] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Penile Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Penile Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Penile Cancer (palliates or treats) and its side effects.

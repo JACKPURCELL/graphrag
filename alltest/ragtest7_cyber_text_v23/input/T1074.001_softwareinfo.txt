@@ -1,0 +1,58 @@
+There are 10 software using the attack technique called Local Data Staging. Their names are as follows:
+* OopsIE
+* AuTo Stealer
+* SLIGHTPULSE
+* Dtrack
+* Milan
+* NavRAT
+* Ursnif
+* FunnyDream
+* Dyre
+* BadPatch
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: OopsIE
+Software description: [OopsIE](https://attack.mitre.org/software/S0264) is a Trojan used by [OilRig](https://attack.mitre.org/groups/G0049) to remotely execute commands as well as upload/download files to/from victims. (Citation: Unit 42 OopsIE! Feb 2018)
+Platforms: Windows
+
+Software name: AuTo Stealer
+Software description: [AuTo Stealer](https://attack.mitre.org/software/S1029) is malware written in C++ has been used by [SideCopy](https://attack.mitre.org/groups/G1008) since at least December 2021 to target government agencies and personnel in India and Afghanistan.(Citation: MalwareBytes SideCopy Dec 2021)
+Platforms: Windows
+
+Software name: SLIGHTPULSE
+Software description: [SLIGHTPULSE](https://attack.mitre.org/software/S1110) is a web shell that was used by [APT5](https://attack.mitre.org/groups/G1023) as early as 2020 including against Pulse Secure VPNs at US Defense Industrial Base (DIB) entities.(Citation: Mandiant Pulse Secure Zero-Day April 2021)
+Platforms: Network, Linux
+
+Software name: Dtrack
+Software description: [Dtrack](https://attack.mitre.org/software/S0567) is spyware that was discovered in 2019 and has been used against Indian financial institutions, research facilities, and the Kudankulam Nuclear Power Plant. [Dtrack](https://attack.mitre.org/software/S0567) shares similarities with the DarkSeoul campaign, which was attributed to [Lazarus Group](https://attack.mitre.org/groups/G0032). (Citation: Kaspersky Dtrack)(Citation: Securelist Dtrack)(Citation: Dragos WASSONITE)(Citation: CyberBit Dtrack)(Citation: ZDNet Dtrack)
+Platforms: Windows
+
+Software name: Milan
+Software description: [Milan](https://attack.mitre.org/software/S1015) is a backdoor implant based on [DanBot](https://attack.mitre.org/software/S1014) that was written in Visual C++ and .NET. [Milan](https://attack.mitre.org/software/S1015) has been used by [HEXANE](https://attack.mitre.org/groups/G1001) since at least June 2020.(Citation: ClearSky Siamesekitten August 2021)(Citation: Kaspersky Lyceum October 2021)
+Platforms: Windows
+
+Software name: NavRAT
+Software description: [NavRAT](https://attack.mitre.org/software/S0247) is a remote access tool designed to upload, download, and execute files. It has been observed in attacks targeting South Korea. (Citation: Talos NavRAT May 2018)
+Platforms: Windows
+
+Software name: Ursnif
+Software description: [Ursnif](https://attack.mitre.org/software/S0386) is a banking trojan and variant of the Gozi malware observed being spread through various automated exploit kits, [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001)s, and malicious links.(Citation: NJCCIC Ursnif Sept 2016)(Citation: ProofPoint Ursnif Aug 2016) [Ursnif](https://attack.mitre.org/software/S0386) is associated primarily with data theft, but variants also include components (backdoors, spyware, file injectors, etc.) capable of a wide variety of behaviors.(Citation: TrendMicro Ursnif Mar 2015)
+Platforms: Windows
+
+Software name: FunnyDream
+Software description: [FunnyDream](https://attack.mitre.org/software/S1044) is a backdoor with multiple components that was used during the [FunnyDream](https://attack.mitre.org/campaigns/C0007) campaign since at least 2019, primarily for execution and exfiltration.(Citation: Bitdefender FunnyDream Campaign November 2020)
+Platforms: Windows
+
+Software name: Dyre
+Software description: [Dyre](https://attack.mitre.org/software/S0024) is a banking Trojan that has been used for financial gain. 
+ (Citation: Symantec Dyre June 2015)(Citation: Malwarebytes Dyreza November 2015)
+Platforms: Windows
+
+Software name: BadPatch
+Software description: [BadPatch](https://attack.mitre.org/software/S0337) is a Windows Trojan that was used in a Gaza Hackers-linked campaign.(Citation: Unit 42 BadPatch Oct 2017)
+Platforms: Windows

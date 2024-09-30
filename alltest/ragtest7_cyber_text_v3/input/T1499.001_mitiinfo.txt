@@ -1,0 +1,10 @@
+There are 1 mitigation methods that can mitigating the attack technique called OS Exhaustion Flood. Their names are as follows:
+* Filter Network Traffic 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Filter Network Traffic
+Mitigation method description: Use network appliances to filter ingress or egress traffic and perform protocol-based filtering. Configure software on endpoints to filter network traffic.

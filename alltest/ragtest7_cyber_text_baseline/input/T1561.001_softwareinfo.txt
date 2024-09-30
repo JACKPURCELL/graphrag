@@ -1,0 +1,42 @@
+There are 7 software using the attack technique called Disk Content Wipe. Their names are as follows:
+* RawDisk
+* AcidRain
+* WhisperGate
+* MegaCortex
+* StoneDrill
+* HermeticWiper
+* BlackCat
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: RawDisk
+Software description: [RawDisk](https://attack.mitre.org/software/S0364) is a legitimate commercial driver from the EldoS Corporation that is used for interacting with files, disks, and partitions. The driver allows for direct modification of data on a local computer's hard drive. In some cases, the tool can enact these raw disk modifications from user-mode processes, circumventing Windows operating system security features.(Citation: EldoS RawDisk ITpro)(Citation: Novetta Blockbuster Destructive Malware)
+Platforms: Windows
+
+Software name: AcidRain
+Software description: [AcidRain](https://attack.mitre.org/software/S1125) is an ELF binary targeting modems and routers using MIPS architecture.(Citation: AcidRain JAGS 2022) [AcidRain](https://attack.mitre.org/software/S1125) is associated with the ViaSat KA-SAT communication outage that took place during the initial phases of the 2022 full-scale invasion of Ukraine. Analysis indicates overlap with another network device-targeting malware, VPNFilter, associated with [Sandworm Team](https://attack.mitre.org/groups/G0034).(Citation: AcidRain JAGS 2022) US and European government sources linked [AcidRain](https://attack.mitre.org/software/S1125) to Russian government entities, while Ukrainian government sources linked [AcidRain](https://attack.mitre.org/software/S1125) specifically to [Sandworm Team](https://attack.mitre.org/groups/G0034).(Citation: AcidRain State Department 2022)(Citation: Vincens AcidPour 2024)
+Platforms: Network, Linux
+
+Software name: WhisperGate
+Software description: [WhisperGate](https://attack.mitre.org/software/S0689) is a multi-stage wiper designed to look like ransomware that has been used against multiple government, non-profit, and information technology organizations in Ukraine since at least January 2022.(Citation: Cybereason WhisperGate February 2022)(Citation: Unit 42 WhisperGate January 2022)(Citation: Microsoft WhisperGate January 2022)
+Platforms: Windows
+
+Software name: MegaCortex
+Software description: [MegaCortex](https://attack.mitre.org/software/S0576) is ransomware that first appeared in May 2019. (Citation: IBM MegaCortex) [MegaCortex](https://attack.mitre.org/software/S0576) has mainly targeted industrial organizations. (Citation: FireEye Ransomware Disrupt Industrial Production)(Citation: FireEye Financial Actors Moving into OT)
+Platforms: Windows
+
+Software name: StoneDrill
+Software description: [StoneDrill](https://attack.mitre.org/software/S0380) is wiper malware discovered in destructive campaigns against both Middle Eastern and European targets in association with [APT33](https://attack.mitre.org/groups/G0064).(Citation: FireEye APT33 Sept 2017)(Citation: Kaspersky StoneDrill 2017)
+Platforms: Windows
+
+Software name: HermeticWiper
+Software description: [HermeticWiper](https://attack.mitre.org/software/S0697) is a data wiper that has been used since at least early 2022, primarily against Ukraine with additional activity observed in Latvia and Lithuania. Some sectors targeted include government, financial, defense, aviation, and IT services.(Citation: SentinelOne Hermetic Wiper February 2022)(Citation: Symantec Ukraine Wipers February 2022)(Citation: Crowdstrike DriveSlayer February 2022)(Citation: ESET Hermetic Wiper February 2022)(Citation: Qualys Hermetic Wiper March 2022)
+Platforms: Windows
+
+Software name: BlackCat
+Software description: [BlackCat](https://attack.mitre.org/software/S1068) is ransomware written in Rust that has been offered via the Ransomware-as-a-Service (RaaS) model. First observed November 2021, [BlackCat](https://attack.mitre.org/software/S1068) has been used to target multiple sectors and organizations in various countries and regions in Africa, the Americas, Asia, Australia, and Europe.(Citation: Microsoft BlackCat Jun 2022)(Citation: Sophos BlackCat Jul 2022)(Citation: ACSC BlackCat Apr 2022)
+Platforms: Linux, Windows

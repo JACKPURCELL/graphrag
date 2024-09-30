@@ -1,0 +1,30 @@
+There are 6 mitigation methods that can mitigating the attack technique called SNMP (MIB Dump). Their names are as follows:
+* Software Configuration 
+* Update Software 
+* Encrypt Sensitive Information 
+* Network Intrusion Prevention 
+* Network Segmentation 
+* Filter Network Traffic 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Software Configuration
+Mitigation method description: Implement configuration changes to software (other than the operating system) to mitigate security risks associated to how the software operates.
+
+Mitigation method name: Update Software
+Mitigation method description: Perform regular software updates to mitigate exploitation risk.
+
+Mitigation method name: Encrypt Sensitive Information
+Mitigation method description: Protect sensitive information with strong encryption.
+
+Mitigation method name: Network Intrusion Prevention
+Mitigation method description: Use intrusion detection signatures to block traffic at network boundaries.
+
+Mitigation method name: Network Segmentation
+Mitigation method description: Architect sections of the network to isolate critical systems, functions, or resources. Use physical and logical segmentation to prevent access to potentially sensitive systems and information. Use a DMZ to contain any internet-facing services that should not be exposed from the internal network. Configure separate virtual private cloud (VPC) instances to isolate critical cloud systems.
+
+Mitigation method name: Filter Network Traffic
+Mitigation method description: Use network appliances to filter ingress or egress traffic and perform protocol-based filtering. Configure software on endpoints to filter network traffic.

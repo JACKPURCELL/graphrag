@@ -1,0 +1,78 @@
+[Urinary Bladder Cancer] is the name of a kind of disease.
+[Urinary Bladder Cancer] presents the symptom [Anorexia].
+[Urinary Bladder Cancer] presents the symptom [Urinary Bladder, Neurogenic].
+[Urinary Bladder Cancer] presents the symptom [Body Weight].
+[Urinary Bladder Cancer] presents the symptom [Diarrhea].
+[Urinary Bladder Cancer] presents the symptom [Edema].
+[Urinary Bladder Cancer] presents the symptom [Fever].
+[Urinary Bladder Cancer] presents the symptom [Flatulence].
+[Urinary Bladder Cancer] presents the symptom [Nausea].
+[Urinary Bladder Cancer] presents the symptom [Pain, Postoperative].
+[Urinary Bladder Cancer] presents the symptom [Paraplegia].
+[Urinary Bladder Cancer] localizes at the [Lymph Node] of human body.
+[Urinary Bladder Cancer] localizes at the [Ureter] of human body.
+[Urinary Bladder Cancer] localizes at the [Urethra] of human body.
+[Urinary Bladder Cancer] localizes at the [Female Reproductive System] of human body.
+[Urinary Bladder Cancer] localizes at the [Basal Lamina Of Epithelium] of human body.
+[Urinary Bladder Cancer] localizes at the [Epithelium] of human body.
+[Urinary Bladder Cancer] localizes at the [Penis] of human body.
+[Urinary Bladder Cancer] localizes at the [Vagina] of human body.
+[Urinary Bladder Cancer] localizes at the [Seminal Vesicle] of human body.
+[Urinary Bladder Cancer] localizes at the [Vas Deferens] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Urinary Bladder Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Urinary Bladder Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Urinary Bladder Cancer (palliates or treats) and its side effects.
+
+Compound name: Mitomycin
+Pharmacologic class: Alkylating Activity
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Alopecia, Anaemia, Anorexia, Asthenia, Confusional state, Cough, Dermatitis, Diarrhoea, Dizziness, Drowsiness
+
+Compound name: Valrubicin
+Pharmacologic class: None
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abdominal pain, Anaemia, Asthenia, Back pain, Chest pain, Cystitis, Dermatitis, Diarrhoea, Dizziness, Dysuria
+
+Compound name: Gemcitabine
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Traffic accident, Agranulocytosis, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Arrhythmia, Arthralgia, Asthenia, Azoospermia
+
+Compound name: Carboplatin
+Pharmacologic class: Platinum-containing Compounds
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Infection, Extravasation, Body temperature increased, Pain, Phlebitis, Venous thrombosis, Fluid overload
+
+Compound name: Fluorouracil
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Congenital anomaly, Abortion spontaneous, Agranulocytosis, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris, Anorexia, Arrhythmia
+
+Compound name: Cisplatin
+Pharmacologic class: Platinum-containing Compounds
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abscess, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Haemolytic anaemia, Anorexia, Anxiety, Arrhythmia, Asthenia
+
+Compound name: Methotrexate
+Pharmacologic class: Folic Acid Metabolism Inhibitors
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abdominal pain, Abscess, Agranulocytosis, Alopecia, Alveolitis allergic, Anaphylactic shock, Anaemia, Aplastic anaemia, Anaemia megaloblastic, Anorexia
+
+Compound name: Etoposide
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Apnoea, Ascites, Asthenia, Back pain
+
+Compound name: Thiotepa
+Pharmacologic class: Alkylating Activity
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Amenorrhoea, Anaemia, Anorexia, Anxiety, Arrhythmia, Arthralgia, Asthenia
+
+Compound name: Doxorubicin
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Urinary Bladder Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Lactic acidosis, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Anaphylactic shock

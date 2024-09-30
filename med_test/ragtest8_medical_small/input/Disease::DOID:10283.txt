@@ -1,0 +1,123 @@
+[Prostate Cancer] is the name of a kind of disease.
+[Prostate Cancer] presents the symptom [Anoxia].
+[Prostate Cancer] presents the symptom [Constipation].
+[Prostate Cancer] presents the symptom [Diarrhea].
+[Prostate Cancer] presents the symptom [Edema].
+[Prostate Cancer] presents the symptom [Fatigue].
+[Prostate Cancer] presents the symptom [Feminization].
+[Prostate Cancer] presents the symptom [Flatulence].
+[Prostate Cancer] presents the symptom [Flushing].
+[Prostate Cancer] presents the symptom [Nausea].
+[Prostate Cancer] presents the symptom [Pain].
+[Prostate Cancer] localizes at the [Lymph Node] of human body.
+[Prostate Cancer] localizes at the [Ureter] of human body.
+[Prostate Cancer] localizes at the [Urethra] of human body.
+[Prostate Cancer] localizes at the [Testis] of human body.
+[Prostate Cancer] localizes at the [Epithelium] of human body.
+[Prostate Cancer] localizes at the [Penis] of human body.
+[Prostate Cancer] localizes at the [Seminal Vesicle] of human body.
+[Prostate Cancer] localizes at the [Ejaculatory Duct] of human body.
+[Prostate Cancer] localizes at the [Vas Deferens] of human body.
+[Prostate Cancer] localizes at the [Renal System] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Prostate Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Prostate Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Prostate Cancer (palliates or treats) and its side effects.
+
+Compound name: Fentanyl
+Pharmacologic class: Full Opioid Agonists
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal distension, Abdominal pain, Abscess, Acidosis, Alopecia, Amblyopia, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris
+
+Compound name: Esomeprazole
+Pharmacologic class: Cytochrome P450 2C19 Inhibitors
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal distension, Abdominal pain, Aggression, Agranulocytosis, Albuminuria, Alopecia, Anaphylactic shock, Anaemia, Haemolytic anaemia, Hypochromic anaemia
+
+Compound name: Metoclopramide
+Pharmacologic class: Dopamine D2 Antagonists
+Effect on Prostate Cancer: Palliate
+Side effect: Agranulocytosis, Amenorrhoea, Angioedema, Anxiety, Asthenia, Asthma, Atrial fibrillation, Atrioventricular block, Bronchospasm, Confusional state
+
+Compound name: Hydrocortisone
+Pharmacologic class: Corticosteroid Hormone Receptor Agonists
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal distension, Abdominal pain, Abscess, Pancreatitis acute, Amenorrhoea, Anaphylactic shock, Angioedema, Anorexia, Anxiety, Arachnoiditis
+
+Compound name: Tamsulosin
+Pharmacologic class: None
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal pain, Amblyopia, Angioedema, Arrhythmia, Arthralgia, Arthritis, Asthenia, Atrial fibrillation, Back pain, Breast disorder
+
+Compound name: Betamethasone
+Pharmacologic class: Corticosteroid Hormone Receptor Agonists
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal pain, Abscess, Pancreatitis acute, Alopecia, Amenorrhoea, Anaphylactic shock, Angioedema, Anorexia, Anxiety, Arachnoiditis
+
+Compound name: Omeprazole
+Pharmacologic class: Cytochrome P450 2C19 Inhibitors
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal distension, Abdominal pain, Aggression, Agranulocytosis, Albuminuria, Alopecia, Anaphylactic shock, Anaemia, Haemolytic anaemia, Hypochromic anaemia
+
+Compound name: Dexamethasone
+Pharmacologic class: Corticosteroid Hormone Receptor Agonists
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal pain, Abscess, Pancreatitis acute, Alopecia, Amenorrhoea, Anaphylactic shock, Angioedema, Anorexia, Anxiety, Arachnoiditis
+
+Compound name: Celecoxib
+Pharmacologic class: Nonsteroidal Anti-inflammatory Compounds
+Effect on Prostate Cancer: Palliate
+Side effect: Abdominal pain, Pancreatitis acute, Adenoma benign, Agranulocytosis, Albuminuria, Alopecia, Anaphylactic shock, Anaemia, Aplastic anaemia, Angina pectoris
+
+Compound name: Nilutamide
+Pharmacologic class: Androgen Receptor Antagonists
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal pain, Alopecia, Anaemia, Angina pectoris, Anorexia, Arthritis, Asthenia, Back pain, Chest pain, Constipation
+
+Compound name: Estradiol
+Pharmacologic class: Estrogen Receptor Agonists
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal cramps, Abdominal distension, Abdominal pain, Congenital anomaly, Alopecia, Amenorrhoea, Amnesia, Anaphylactic shock, Angioedema, Anxiety
+
+Compound name: Prednisone
+Pharmacologic class: Corticosteroid Hormone Receptor Agonists
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Pancreatitis acute, Adrenal insufficiency, Alkalosis, Alopecia, Amenorrhoea, Amnesia, Anaphylactic shock
+
+Compound name: Epirubicin
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Lactic acidosis, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Anaphylactic shock
+
+Compound name: Estrone
+Pharmacologic class: None
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal cramps, Abdominal distension, Abdominal pain, Anaphylactic shock, Angioedema, Arthralgia, Asthma, Breast cancer, Vaginal moniliasis, Chorea
+
+Compound name: Etoposide
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Apnoea, Ascites, Asthenia, Back pain
+
+Compound name: Ethinyl Estradiol
+Pharmacologic class: Estrogen Receptor Agonists
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Alopecia, Amenorrhoea, Angioedema, Anxiety, Asthenia, Back pain, Mental disorder, Breast disorder
+
+Compound name: Conjugated Estrogens
+Pharmacologic class: Estrogen Receptor Agonists
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal cramps, Abdominal distension, Abdominal pain, Abscess, Acidosis, Alkalosis, Alopecia, Amenorrhoea, Anaphylactic shock, Angioedema
+
+Compound name: Abiraterone
+Pharmacologic class: None
+Effect on Prostate Cancer: Treat
+Side effect: Anaemia, Arrhythmia, Asthenia, Mental disorder, Chest pain, Infection, Connective tissue disorder, Constipation, Contusion, Cough
+
+Compound name: Mitoxantrone
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Prostate Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Amenorrhoea, Anaphylactic shock, Anaemia, Anorexia, Anxiety, Arrhythmia, Arthralgia

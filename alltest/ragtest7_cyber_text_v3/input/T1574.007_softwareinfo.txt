@@ -1,0 +1,22 @@
+There are 3 software using the attack technique called Path Interception by PATH Environment Variable. Their names are as follows:
+* PowerSploit
+* Empire
+* DarkGate
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: PowerSploit
+Software description: [PowerSploit](https://attack.mitre.org/software/S0194) is an open source, offensive security framework comprised of [PowerShell](https://attack.mitre.org/techniques/T1059/001) modules and scripts that perform a wide range of tasks related to penetration testing such as code execution, persistence, bypassing anti-virus, recon, and exfiltration. (Citation: GitHub PowerSploit May 2012) (Citation: PowerShellMagazine PowerSploit July 2014) (Citation: PowerSploit Documentation)
+Platforms: Windows
+
+Software name: Empire
+Software description: [Empire](https://attack.mitre.org/software/S0363) is an open source, cross-platform remote administration and post-exploitation framework that is publicly available on GitHub. While the tool itself is primarily written in Python, the post-exploitation agents are written in pure [PowerShell](https://attack.mitre.org/techniques/T1059/001) for Windows and Python for Linux/macOS. [Empire](https://attack.mitre.org/software/S0363) was one of five tools singled out by a joint report on public hacking tools being widely used by adversaries.(Citation: NCSC Joint Report Public Tools)(Citation: Github PowerShell Empire)(Citation: GitHub ATTACK Empire)
+Platforms: Linux, macOS, Windows
+
+Software name: DarkGate
+Software description: [DarkGate](https://attack.mitre.org/software/S1111) first emerged in 2018 and has evolved into an initial access and data gathering tool associated with various criminal cyber operations. Written in Delphi and named "DarkGate" by its author, [DarkGate](https://attack.mitre.org/software/S1111) is associated with credential theft, cryptomining, cryptotheft, and pre-ransomware actions.(Citation: Ensilo Darkgate 2018) DarkGate use increased significantly starting in 2022 and is under active development by its author, who provides it as a Malware-as-a-Service offering.(Citation: Trellix Darkgate 2023)
+Platforms: Windows

@@ -1,0 +1,28 @@
+[Intracranial Aneurysm] is the name of a kind of disease.
+[Intracranial Aneurysm] presents the symptom [Alcohol Amnestic Disorder].
+[Intracranial Aneurysm] presents the symptom [Amnesia].
+[Intracranial Aneurysm] presents the symptom [Amnesia, Retrograde].
+[Intracranial Aneurysm] presents the symptom [Olfaction Disorders].
+[Intracranial Aneurysm] presents the symptom [Aphasia].
+[Intracranial Aneurysm] presents the symptom [Blindness].
+[Intracranial Aneurysm] presents the symptom [Brain Death].
+[Intracranial Aneurysm] presents the symptom [Cerebrospinal Fluid Rhinorrhea].
+[Intracranial Aneurysm] presents the symptom [Coma].
+[Intracranial Aneurysm] presents the symptom [Confusion].
+[Intracranial Aneurysm] localizes at the [Cranial Nerve Ii] of human body.
+[Intracranial Aneurysm] localizes at the [Brain] of human body.
+[Intracranial Aneurysm] localizes at the [Optic Chiasma] of human body.
+[Intracranial Aneurysm] localizes at the [Pons] of human body.
+[Intracranial Aneurysm] localizes at the [External Carotid Artery] of human body.
+[Intracranial Aneurysm] localizes at the [Radial Artery] of human body.
+[Intracranial Aneurysm] localizes at the [Brachiocephalic Artery] of human body.
+[Intracranial Aneurysm] localizes at the [Common Carotid Artery Plus Branches] of human body.
+[Intracranial Aneurysm] localizes at the [Internal Carotid Artery] of human body.
+[Intracranial Aneurysm] localizes at the [Subclavian Artery] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Intracranial Aneurysm.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Intracranial Aneurysm: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Intracranial Aneurysm (palliates or treats) and its side effects.

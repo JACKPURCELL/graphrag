@@ -1,0 +1,78 @@
+[Restless Legs Syndrome] is the name of a kind of disease.
+[Restless Legs Syndrome] presents the symptom [Disorders Of Excessive Somnolence].
+[Restless Legs Syndrome] presents the symptom [Sleep Initiation And Maintenance Disorders].
+[Restless Legs Syndrome] presents the symptom [Muscle Cramp].
+[Restless Legs Syndrome] presents the symptom [Myoclonus].
+[Restless Legs Syndrome] presents the symptom [Paresthesia].
+[Restless Legs Syndrome] presents the symptom [Phantom Limb].
+[Restless Legs Syndrome] presents the symptom [Restless Legs Syndrome].
+[Restless Legs Syndrome] presents the symptom [Sleep Apnea Syndromes].
+[Restless Legs Syndrome] presents the symptom [Sleep Disorders].
+[Restless Legs Syndrome] presents the symptom [Snoring].
+[Restless Legs Syndrome] localizes at the [Peripheral Nervous System] of human body.
+[Restless Legs Syndrome] localizes at the [Appendage] of human body.
+[Restless Legs Syndrome] localizes at the [Brain] of human body.
+[Restless Legs Syndrome] localizes at the [Leg] of human body.
+[Restless Legs Syndrome] localizes at the [Nervous System] of human body.
+[Restless Legs Syndrome] localizes at the [Central Nervous System] of human body.
+[Restless Legs Syndrome] localizes at the [Nerve] of human body.
+[Restless Legs Syndrome] localizes at the [Arm] of human body.
+[Restless Legs Syndrome] localizes at the [Hindlimb] of human body.
+[Restless Legs Syndrome] localizes at the [Spinal Cord] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Restless Legs Syndrome.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Restless Legs Syndrome: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Restless Legs Syndrome (palliates or treats) and its side effects.
+
+Compound name: Tramadol
+Pharmacologic class: Full Opioid Agonists
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal distension, Abdominal pain, Albuminuria, Amblyopia, Amnesia, Anaphylactic shock, Anaemia, Haemolytic anaemia, Angina pectoris, Angina unstable
+
+Compound name: Ropinirole
+Pharmacologic class: None
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal distension, Abdominal pain, Abscess, Acidosis, Pancreatitis acute, Adenocarcinoma, Aggression, Agranulocytosis, Albuminuria, Alopecia
+
+Compound name: Carbidopa
+Pharmacologic class: DOPA Decarboxylase Inhibitors
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaemia, Haemolytic anaemia, Angioedema, Anorexia, Anxiety, Asthenia, Ataxia
+
+Compound name: Clonidine
+Pharmacologic class: Adrenergic alpha2-Agonists
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Aggression, Alopecia, Angioedema, Anorexia, Anxiety, Arrhythmia, Arthralgia, Asthenia, Asthma
+
+Compound name: Pramipexole
+Pharmacologic class: None
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal distension, Abdominal neoplasm, Abdominal pain, Abscess, Acute tonsillitis, Adenocarcinoma, Adenoma benign, Aggression, Respiratory alkalosis, Alopecia
+
+Compound name: Pregabalin
+Pharmacologic class: None
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal distension, Abdominal pain, Abscess, Acidosis, Lactic acidosis, Adenoma benign, Adrenal insufficiency, Aggression, Albuminuria, Alopecia
+
+Compound name: Carbamazepine
+Pharmacologic class: Decreased Central Nervous System Disorganized Electrical Activity
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Adams-Stokes syndrome, Aggression, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amnesia, Anaphylactic shock, Anaemia
+
+Compound name: L-DOPA
+Pharmacologic class: DOPA Decarboxylase Inhibitors
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaemia, Haemolytic anaemia, Angina pectoris, Angioedema, Anorexia, Anxiety, Arrhythmia
+
+Compound name: Clonazepam
+Pharmacologic class: Benzodiazepines
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Aggression, Airway obstruction NOS, Alcohol intoxication, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Anger, Angioedema
+
+Compound name: Gabapentin
+Pharmacologic class: Decreased Central Nervous System Disorganized Electrical Activity
+Effect on Restless Legs Syndrome: Palliate
+Side effect: Abdominal pain, Abscess, Alopecia, Amblyopia, Amenorrhoea, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris, Angioedema

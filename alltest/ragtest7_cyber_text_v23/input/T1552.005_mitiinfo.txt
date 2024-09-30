@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called Cloud Instance Metadata API. Their names are as follows:
+* Limit Access to Resource Over Network 
+* Disable or Remove Feature or Program 
+* Filter Network Traffic 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Limit Access to Resource Over Network
+Mitigation method description: Prevent access to file shares, remote access to systems, unnecessary services. Mechanisms to limit access may include use of network concentrators, RDP gateways, etc.
+
+Mitigation method name: Disable or Remove Feature or Program
+Mitigation method description: Remove or deny access to unnecessary and potentially vulnerable software to prevent abuse by adversaries.
+
+Mitigation method name: Filter Network Traffic
+Mitigation method description: Use network appliances to filter ingress or egress traffic and perform protocol-based filtering. Configure software on endpoints to filter network traffic.

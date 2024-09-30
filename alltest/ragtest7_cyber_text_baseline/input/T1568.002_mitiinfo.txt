@@ -1,0 +1,14 @@
+There are 2 mitigation methods that can mitigating the attack technique called Domain Generation Algorithms. Their names are as follows:
+* Network Intrusion Prevention 
+* Restrict Web-Based Content 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Network Intrusion Prevention
+Mitigation method description: Use intrusion detection signatures to block traffic at network boundaries.
+
+Mitigation method name: Restrict Web-Based Content
+Mitigation method description: Restrict use of certain websites, block downloads/attachments, block Javascript, restrict browser extensions, etc.

@@ -1,0 +1,12 @@
+There are 1 software using the attack technique called Adversary-in-the-Middle. Their names are as follows:
+* Dok
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Dok
+Software description: [Dok](https://attack.mitre.org/software/S0281) is a Trojan application disguised as a .zip file that is able to collect user credentials and install a malicious proxy server to redirect a user's network traffic (i.e. [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557)).(Citation: objsee mac malware 2017)(Citation: hexed osx.dok analysis 2019)(Citation: CheckPoint Dok)
+Platforms: macOS

@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called Steal Web Session Cookie. Their names are as follows:
+* Software Configuration 
+* Multi-factor Authentication 
+* User Training 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Software Configuration
+Mitigation method description: Implement configuration changes to software (other than the operating system) to mitigate security risks associated to how the software operates.
+
+Mitigation method name: Multi-factor Authentication
+Mitigation method description: Use two or more pieces of evidence to authenticate to a system; such as username and password in addition to a token from a physical smart card or token generator.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.

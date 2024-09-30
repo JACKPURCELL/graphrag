@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called Stored Data Manipulation. Their names are as follows:
+* Restrict File and Directory Permissions 
+* Remote Data Storage 
+* Encrypt Sensitive Information 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Restrict File and Directory Permissions
+Mitigation method description: Restrict access by setting directory and file permissions that are not specific to users or privileged accounts.
+
+Mitigation method name: Remote Data Storage
+Mitigation method description: Use remote security log and sensitive file storage where access can be controlled better to prevent exposure of intrusion detection log data or sensitive information.
+
+Mitigation method name: Encrypt Sensitive Information
+Mitigation method description: Protect sensitive information with strong encryption.

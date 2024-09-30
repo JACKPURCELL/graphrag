@@ -1,0 +1,26 @@
+There are 5 mitigation methods that can mitigating the attack technique called Cached Domain Credentials. Their names are as follows:
+* Active Directory Configuration 
+* User Training 
+* Password Policies 
+* Operating System Configuration 
+* Privileged Account Management 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Active Directory Configuration
+Mitigation method description: Configure Active Directory to prevent use of certain techniques; use SID Filtering, etc.
+
+Mitigation method name: User Training
+Mitigation method description: Train users to be aware of access or manipulation attempts by an adversary to reduce the risk of successful spearphishing, social engineering, and other techniques that involve user interaction.
+
+Mitigation method name: Password Policies
+Mitigation method description: Set and enforce secure password policies for accounts.
+
+Mitigation method name: Operating System Configuration
+Mitigation method description: Make configuration changes related to the operating system or a common feature of the operating system that result in system hardening against techniques.
+
+Mitigation method name: Privileged Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.

@@ -1,0 +1,17 @@
+There are 2 software using the attack technique called Print Processors. Their names are as follows:
+* Gelsemium
+* PipeMon
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: Gelsemium
+Software description: [Gelsemium](https://attack.mitre.org/software/S0666) is a modular malware comprised of a dropper (Gelsemine), a loader (Gelsenicine), and main (Gelsevirine) plug-ins written using the Microsoft Foundation Class (MFC) framework. [Gelsemium](https://attack.mitre.org/software/S0666) has been used by the Gelsemium group since at least 2014.(Citation: ESET Gelsemium June 2021)
+Platforms: Windows
+
+Software name: PipeMon
+Software description: [PipeMon](https://attack.mitre.org/software/S0501) is a multi-stage modular backdoor used by [Winnti Group](https://attack.mitre.org/groups/G0044).(Citation: ESET PipeMon May 2020)
+Platforms: Windows

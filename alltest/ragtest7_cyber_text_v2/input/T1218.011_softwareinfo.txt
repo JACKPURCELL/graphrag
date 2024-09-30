@@ -1,0 +1,57 @@
+There are 10 software using the attack technique called Rundll32. Their names are as follows:
+* PcShare
+* Koadic
+* InvisiMole
+* PUNCHBUGGY
+* BoomBox
+* ADVSTORESHELL
+* Briba
+* MegaCortex
+* SVCReady
+* GreyEnergy
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: PcShare
+Software description: [PcShare](https://attack.mitre.org/software/S1050) is an open source remote access tool that has been modified and used by Chinese threat actors, most notably during the FunnyDream campaign since late 2018.(Citation: Bitdefender FunnyDream Campaign November 2020)(Citation: GitHub PcShare 2014)
+Platforms: Windows
+
+Software name: Koadic
+Software description: [Koadic](https://attack.mitre.org/software/S0250) is a Windows post-exploitation framework and penetration testing tool that is publicly available on GitHub. [Koadic](https://attack.mitre.org/software/S0250) has several options for staging payloads and creating implants, and performs most of its operations using Windows Script Host.(Citation: Github Koadic)(Citation: Palo Alto Sofacy 06-2018)(Citation: MalwareBytes LazyScripter Feb 2021)
+Platforms: Windows
+
+Software name: InvisiMole
+Software description: [InvisiMole](https://attack.mitre.org/software/S0260) is a modular spyware program that has been used by the InvisiMole Group since at least 2013. [InvisiMole](https://attack.mitre.org/software/S0260) has two backdoor modules called RC2FM and RC2CL that are used to perform post-exploitation activities. It has been discovered on compromised victims in the Ukraine and Russia. [Gamaredon Group](https://attack.mitre.org/groups/G0047) infrastructure has been used to download and execute [InvisiMole](https://attack.mitre.org/software/S0260) against a small number of victims.(Citation: ESET InvisiMole June 2018)(Citation: ESET InvisiMole June 2020)
+Platforms: Windows
+
+Software name: PUNCHBUGGY
+Software description: [PUNCHBUGGY](https://attack.mitre.org/software/S0196) is a backdoor malware used by [FIN8](https://attack.mitre.org/groups/G0061) that has been observed targeting POS networks in the hospitality industry. (Citation: Morphisec ShellTea June 2019)(Citation: FireEye Fin8 May 2016) (Citation: FireEye Know Your Enemy FIN8 Aug 2016)
+Platforms: Windows
+
+Software name: BoomBox
+Software description: [BoomBox](https://attack.mitre.org/software/S0635) is a downloader responsible for executing next stage components that has been used by [APT29](https://attack.mitre.org/groups/G0016) since at least 2021.(Citation: MSTIC Nobelium Toolset May 2021)
+Platforms: Windows
+
+Software name: ADVSTORESHELL
+Software description: [ADVSTORESHELL](https://attack.mitre.org/software/S0045) is a spying backdoor that has been used by [APT28](https://attack.mitre.org/groups/G0007) from at least 2012 to 2016. It is generally used for long-term espionage and is deployed on targets deemed interesting after a reconnaissance phase. (Citation: Kaspersky Sofacy) (Citation: ESET Sednit Part 2)
+Platforms: Windows
+
+Software name: Briba
+Software description: [Briba](https://attack.mitre.org/software/S0204) is a trojan used by [Elderwood](https://attack.mitre.org/groups/G0066) to open a backdoor and download files on to compromised hosts. (Citation: Symantec Elderwood Sept 2012) (Citation: Symantec Briba May 2012)
+Platforms: Windows
+
+Software name: MegaCortex
+Software description: [MegaCortex](https://attack.mitre.org/software/S0576) is ransomware that first appeared in May 2019. (Citation: IBM MegaCortex) [MegaCortex](https://attack.mitre.org/software/S0576) has mainly targeted industrial organizations. (Citation: FireEye Ransomware Disrupt Industrial Production)(Citation: FireEye Financial Actors Moving into OT)
+Platforms: Windows
+
+Software name: SVCReady
+Software description: [SVCReady](https://attack.mitre.org/software/S1064) is a loader that has been used since at least April 2022 in malicious spam campaigns. Security researchers have noted overlaps between [TA551](https://attack.mitre.org/groups/G0127) activity and [SVCReady](https://attack.mitre.org/software/S1064) distribution, including similarities in file names, lure images, and identical grammatical errors.(Citation: HP SVCReady Jun 2022)
+Platforms: Windows
+
+Software name: GreyEnergy
+Software description: [GreyEnergy](https://attack.mitre.org/software/S0342) is a backdoor written in C and compiled in Visual Studio. [GreyEnergy](https://attack.mitre.org/software/S0342) shares similarities with the [BlackEnergy](https://attack.mitre.org/software/S0089) malware and is thought to be the successor of it.(Citation: ESET GreyEnergy Oct 2018)
+Platforms: Windows

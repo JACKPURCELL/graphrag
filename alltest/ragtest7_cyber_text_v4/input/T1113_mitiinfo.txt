@@ -1,0 +1,6 @@
+There are 0 mitigation methods that can mitigating the attack technique called Screen Capture. Their names are as follows:
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.

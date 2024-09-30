@@ -1,0 +1,83 @@
+[Vaginal Cancer] is the name of a kind of disease.
+[Vaginal Cancer] presents the symptom [Ageusia].
+[Vaginal Cancer] presents the symptom [Agnosia].
+[Vaginal Cancer] presents the symptom [Amblyopia].
+[Vaginal Cancer] presents the symptom [Anorexia].
+[Vaginal Cancer] presents the symptom [Olfaction Disorders].
+[Vaginal Cancer] presents the symptom [Anoxia].
+[Vaginal Cancer] presents the symptom [Aphasia].
+[Vaginal Cancer] presents the symptom [Aphasia, Wernicke].
+[Vaginal Cancer] presents the symptom [Aphonia].
+[Vaginal Cancer] presents the symptom [Apnea].
+[Vaginal Cancer] localizes at the [Uterine Cervix] of human body.
+[Vaginal Cancer] localizes at the [Nose] of human body.
+[Vaginal Cancer] localizes at the [Lymph Node] of human body.
+[Vaginal Cancer] localizes at the [Head] of human body.
+[Vaginal Cancer] localizes at the [Ganglion] of human body.
+[Vaginal Cancer] localizes at the [Macula] of human body.
+[Vaginal Cancer] localizes at the [Ureter] of human body.
+[Vaginal Cancer] localizes at the [Urethra] of human body.
+[Vaginal Cancer] localizes at the [Mouth] of human body.
+[Vaginal Cancer] localizes at the [Female Reproductive System] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Vaginal Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Vaginal Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Vaginal Cancer (palliates or treats) and its side effects.
+
+Compound name: Pilocarpine
+Pharmacologic class: Cholinergic Muscarinic Agonists
+Effect on Vaginal Cancer: Palliate
+Side effect: Abdominal pain, Congenital anomaly, Alopecia, Amblyopia, Angina pectoris, Anorexia, Anxiety, Aphasia, Arrhythmia, Arthralgia
+
+Compound name: Etoposide
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaphylactic shock, Anaemia, Anorexia, Apnoea, Ascites, Asthenia, Back pain
+
+Compound name: Alitretinoin
+Pharmacologic class: Retinoids
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Acidosis, Acquired immunodeficiency syndrome, Pancreatitis acute, Aggression, Agnosia, Agranulocytosis, Alopecia, Anaphylactic shock
+
+Compound name: Isotretinoin
+Pharmacologic class: Retinoids
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Acidosis, Acquired immunodeficiency syndrome, Pancreatitis acute, Aggression, Agnosia, Agranulocytosis, Alopecia, Anaphylactic shock
+
+Compound name: Hydroxyurea
+Pharmacologic class: Urea
+Effect on Vaginal Cancer: Treat
+Side effect: Alopecia, Amenorrhoea, Anaemia, Anaemia megaloblastic, Anorexia, Asthenia, Azoospermia, Blepharitis, Blister, Breast disorder
+
+Compound name: Tretinoin
+Pharmacologic class: Retinoids
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Acidosis, Acquired immunodeficiency syndrome, Pancreatitis acute, Aggression, Agnosia, Agranulocytosis, Alopecia, Anaphylactic shock
+
+Compound name: Vinblastine
+Pharmacologic class: Vinca Alkaloids
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal pain, Agranulocytosis, Alopecia, Anaemia, Angina pectoris, Anorexia, Asthenia, Cellulitis, Constipation, Deafness
+
+Compound name: Doxorubicin
+Pharmacologic class: Topoisomerase Inhibitors
+Effect on Vaginal Cancer: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Lactic acidosis, Agranulocytosis, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Anaphylactic shock
+
+Compound name: Dacarbazine
+Pharmacologic class: Alkylating Activity
+Effect on Vaginal Cancer: Treat
+Side effect: 
+
+Compound name: Cisplatin
+Pharmacologic class: Platinum-containing Compounds
+Effect on Vaginal Cancer: Treat
+Side effect: Abscess, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Haemolytic anaemia, Anorexia, Anxiety, Arrhythmia, Asthenia
+
+Compound name: Fluorouracil
+Pharmacologic class: Nucleic Acid Synthesis Inhibitors
+Effect on Vaginal Cancer: Treat
+Side effect: Congenital anomaly, Abortion spontaneous, Agranulocytosis, Alopecia, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris, Anorexia, Arrhythmia

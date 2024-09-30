@@ -1,0 +1,58 @@
+[Alcohol Dependence] is the name of a kind of disease.
+[Alcohol Dependence] presents the symptom [Agraphia].
+[Alcohol Dependence] presents the symptom [Alcohol Amnestic Disorder].
+[Alcohol Dependence] presents the symptom [Alkalosis, Respiratory].
+[Alcohol Dependence] presents the symptom [Amblyopia].
+[Alcohol Dependence] presents the symptom [Amnesia].
+[Alcohol Dependence] presents the symptom [Asthenia].
+[Alcohol Dependence] presents the symptom [Ataxia].
+[Alcohol Dependence] presents the symptom [Auditory Perceptual Disorders].
+[Alcohol Dependence] presents the symptom [Body Weight].
+[Alcohol Dependence] presents the symptom [Bulimia].
+[Alcohol Dependence] localizes at the [Parasympathetic Nervous System] of human body.
+[Alcohol Dependence] localizes at the [Blood] of human body.
+[Alcohol Dependence] localizes at the [Testis] of human body.
+[Alcohol Dependence] localizes at the [Brain] of human body.
+[Alcohol Dependence] localizes at the [Pons] of human body.
+[Alcohol Dependence] localizes at the [Gonad] of human body.
+[Alcohol Dependence] localizes at the [Digestive System] of human body.
+[Alcohol Dependence] localizes at the [Nervous System] of human body.
+[Alcohol Dependence] localizes at the [Central Nervous System] of human body.
+[Alcohol Dependence] localizes at the [Nerve] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Alcohol Dependence.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Alcohol Dependence: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Alcohol Dependence (palliates or treats) and its side effects.
+
+Compound name: Chlordiazepoxide
+Pharmacologic class: Benzodiazepines
+Effect on Alcohol Dependence: Palliate
+Side effect: 
+
+Compound name: Ondansetron
+Pharmacologic class: Serotonin 3 Receptor Antagonists
+Effect on Alcohol Dependence: Palliate
+Side effect: Abdominal pain, Anaphylactic shock, Angina pectoris, Angioedema, Anxiety, Arrhythmia, Asthenia, Asthma, Atrial fibrillation, Bronchospasm
+
+Compound name: Citalopram
+Pharmacologic class: None
+Effect on Alcohol Dependence: Treat
+Side effect: Abdominal cramps, Abdominal distension, Abdominal pain, Abortion spontaneous, Abscess, Aggression, Agranulocytosis, Alopecia, Amblyopia, Amenorrhoea
+
+Compound name: Acamprosate
+Pharmacologic class: None
+Effect on Alcohol Dependence: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Alcoholism, Alopecia, Amblyopia, Amnesia, Anaphylactic shock, Anaemia, Angina pectoris
+
+Compound name: Naltrexone
+Pharmacologic class: Opioid Antagonists
+Effect on Alcohol Dependence: Treat
+Side effect: Abdominal cramps, Abdominal pain, Abortion missed, Pancreatitis acute, Alcoholism, Alopecia, Dementia Alzheimer's type, Anaphylactic shock, Angina pectoris, Angina unstable
+
+Compound name: Disulfiram
+Pharmacologic class: Acetyl Aldehyde Dehydrogenase Inhibitors
+Effect on Alcohol Dependence: Treat
+Side effect: Asthenia, Dermatitis atopic, Dizziness, Drowsiness, Rash, Fatigue, Breath odour, Headache, Hepatitis, Hypoaesthesia

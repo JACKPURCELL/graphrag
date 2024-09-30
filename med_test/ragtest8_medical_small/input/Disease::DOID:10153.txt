@@ -1,0 +1,23 @@
+[Ileum Cancer] is the name of a kind of disease.
+[Ileum Cancer] presents the symptom [Abdomen, Acute].
+[Ileum Cancer] presents the symptom [Diarrhea].
+[Ileum Cancer] presents the symptom [Flushing].
+[Ileum Cancer] presents the symptom [Abdominal Pain].
+[Ileum Cancer] presents the symptom [Gastroparesis].
+[Ileum Cancer] localizes at the [Lymph Node] of human body.
+[Ileum Cancer] localizes at the [Ureter] of human body.
+[Ileum Cancer] localizes at the [Epithelium] of human body.
+[Ileum Cancer] localizes at the [Smooth Muscle Tissue] of human body.
+[Ileum Cancer] localizes at the [Superior Mesenteric Artery] of human body.
+[Ileum Cancer] localizes at the [Pancreas] of human body.
+[Ileum Cancer] localizes at the [Lymphoid Tissue] of human body.
+[Ileum Cancer] localizes at the [Duct Of Salivary Gland] of human body.
+[Ileum Cancer] localizes at the [Tricuspid Valve] of human body.
+[Ileum Cancer] localizes at the [Endocrine Gland] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Ileum Cancer.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Ileum Cancer: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Ileum Cancer (palliates or treats) and its side effects.

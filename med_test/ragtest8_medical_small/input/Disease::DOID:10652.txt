@@ -1,0 +1,73 @@
+[Alzheimer'S Disease] is the name of a kind of disease.
+[Alzheimer'S Disease] presents the symptom [Agnosia].
+[Alzheimer'S Disease] presents the symptom [Agraphia].
+[Alzheimer'S Disease] presents the symptom [Alcohol Amnestic Disorder].
+[Alzheimer'S Disease] presents the symptom [Amnesia].
+[Alzheimer'S Disease] presents the symptom [Amnesia, Retrograde].
+[Alzheimer'S Disease] presents the symptom [Anomia].
+[Alzheimer'S Disease] presents the symptom [Olfaction Disorders].
+[Alzheimer'S Disease] presents the symptom [Aphasia].
+[Alzheimer'S Disease] presents the symptom [Aphasia, Broca].
+[Alzheimer'S Disease] presents the symptom [Aphasia, Wernicke].
+[Alzheimer'S Disease] localizes at the [Parasympathetic Nervous System] of human body.
+[Alzheimer'S Disease] localizes at the [Embryo] of human body.
+[Alzheimer'S Disease] localizes at the [Brain] of human body.
+[Alzheimer'S Disease] localizes at the [Nervous System] of human body.
+[Alzheimer'S Disease] localizes at the [Central Nervous System] of human body.
+[Alzheimer'S Disease] localizes at the [Olfactory Nerve] of human body.
+[Alzheimer'S Disease] localizes at the [Pupil] of human body.
+[Alzheimer'S Disease] localizes at the [Choroid Plexus] of human body.
+[Alzheimer'S Disease] localizes at the [Forebrain] of human body.
+[Alzheimer'S Disease] localizes at the [Telencephalon] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Alzheimer'S Disease.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Alzheimer'S Disease: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Alzheimer'S Disease (palliates or treats) and its side effects.
+
+Compound name: Selegiline
+Pharmacologic class: Monoamine Oxidase-B Inhibitors
+Effect on Alzheimer'S Disease: Palliate
+Side effect: Abdominal pain, Aggression, Albuminuria, Alopecia, Amblyopia, Amenorrhoea, Amnesia, Anaemia, Angina pectoris, Anorexia
+
+Compound name: Benzatropine
+Pharmacologic class: Histamine Receptor Antagonists
+Effect on Alzheimer'S Disease: Palliate
+Side effect: Confusional state, Constipation, Dysphagia, Dermatitis, Dysuria, Rash, Body temperature increased, Heat stroke, Hypersensitivity, Hypoaesthesia
+
+Compound name: Ropinirole
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Palliate
+Side effect: Abdominal distension, Abdominal pain, Abscess, Acidosis, Pancreatitis acute, Adenocarcinoma, Aggression, Agranulocytosis, Albuminuria, Alopecia
+
+Compound name: Quetiapine
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Palliate
+Side effect: Abdominal distension, Abdominal pain, Aggression, Agranulocytosis, Amblyopia, Amenorrhoea, Amnesia, Retrograde amnesia, Anaphylactic shock, Anaemia
+
+Compound name: Haloperidol
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Palliate
+Side effect: Agranulocytosis, Alopecia, Amenorrhoea, Anaphylactic shock, Anaemia, Anorexia, Anxiety, Mental disorder, Breast disorder, Bronchospasm
+
+Compound name: Rivastigmine
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Treat
+Side effect: Abdominal pain, Abscess, Adams-Stokes syndrome, Adenocarcinoma, Aggression, Albuminuria, Alopecia, Amnesia, Anaemia, Hypochromic anaemia
+
+Compound name: Galantamine
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Treat
+Side effect: Abdominal pain, Aggression, Anaemia, Anorexia, Anxiety, Aphasia, Apraxia, Arrhythmia, Arthralgia, Arthritis
+
+Compound name: Memantine
+Pharmacologic class: NMDA Receptor Antagonists
+Effect on Alzheimer'S Disease: Treat
+Side effect: Abdominal pain, Abscess, Pancreatitis acute, Aggression, Agranulocytosis, Alopecia, Amnesia, Anaemia, Angina pectoris, Anorexia
+
+Compound name: Donepezil
+Pharmacologic class: None
+Effect on Alzheimer'S Disease: Treat
+Side effect: Abdominal distension, Abdominal pain, Abscess, Aggression, Albuminuria, Alopecia, Anaemia, Haemolytic anaemia, Angina pectoris, Anorexia

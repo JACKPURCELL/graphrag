@@ -1,0 +1,18 @@
+There are 3 mitigation methods that can mitigating the attack technique called LSASS Driver. Their names are as follows:
+* Privileged Process Integrity 
+* Credential Access Protection 
+* Restrict Library Loading 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Privileged Process Integrity
+Mitigation method description: Protect processes with high privileges that can be used to interact with critical system components through use of protected process light, anti-process injection defenses, or other process integrity enforcement measures.
+
+Mitigation method name: Credential Access Protection
+Mitigation method description: Use capabilities to prevent successful credential access by adversaries; including blocking forms of credential dumping.
+
+Mitigation method name: Restrict Library Loading
+Mitigation method description: Prevent abuse of library loading mechanisms in the operating system and software to load untrusted code by configuring appropriate library loading mechanisms and investigating potential vulnerable software.

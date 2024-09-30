@@ -1,0 +1,25 @@
+[Idiopathic Pulmonary Fibrosis] is the name of a kind of disease.
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Anoxia].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Cough].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Dyspnea].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Heartburn].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Respiratory Sounds].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Sleep Apnea Syndromes].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Aging, Premature].
+[Idiopathic Pulmonary Fibrosis] presents the symptom [Sleep Apnea, Obstructive].
+[Idiopathic Pulmonary Fibrosis] localizes at the [Respiratory System] of human body.
+[Idiopathic Pulmonary Fibrosis] localizes at the [Pulmonary Artery] of human body.
+[Idiopathic Pulmonary Fibrosis] localizes at the [Lung] of human body.
+[Idiopathic Pulmonary Fibrosis] localizes at the [Alveolus Of Lung] of human body.
+
+The following content describes information about compounds that can palliate or treat the disease named Idiopathic Pulmonary Fibrosis.The format of each compound's information is as follows:
+Compound name: ***
+Pharmacologic class: ***
+Effect on Idiopathic Pulmonary Fibrosis: Palliate or Treat
+Side effect: ***
+These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Idiopathic Pulmonary Fibrosis (palliates or treats) and its side effects.
+
+Compound name: Prednisolone
+Pharmacologic class: Corticosteroid Hormone Receptor Agonists
+Effect on Idiopathic Pulmonary Fibrosis: Palliate
+Side effect: Abdominal distension, Abscess, Hyperadrenocorticism, Anaphylactic shock, Angioedema, Arachnoiditis, Arrhythmia, Blister, Hypertrophic cardiomyopathy, Conjunctivitis

@@ -1,0 +1,17 @@
+There are 2 software using the attack technique called Socket Filters. Their names are as follows:
+* PITSTOP
+* Penquin
+
+The following content describes information about softwares. The format of each software's information is as follows:
+Software name: ***
+Software description: ***
+Platforms: ***
+These respectively represent the name of the software, a detailed description, and the platforms on which it operates.
+
+Software name: PITSTOP
+Software description: [PITSTOP](https://attack.mitre.org/software/S1123) is a backdoor that was deployed on compromised Ivanti Connect Secure VPNs during [Cutting Edge](https://attack.mitre.org/campaigns/C0029) to enable command execution and file read/write.(Citation: Mandiant Cutting Edge Part 3 February 2024)
+Platforms: Network
+
+Software name: Penquin
+Software description: [Penquin](https://attack.mitre.org/software/S0587) is a remote access trojan (RAT) with multiple versions used by [Turla](https://attack.mitre.org/groups/G0010) to target Linux systems since at least 2014.(Citation: Kaspersky Turla Penquin December 2014)(Citation: Leonardo Turla Penquin May 2020)
+Platforms: Linux

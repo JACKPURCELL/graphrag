@@ -1,0 +1,22 @@
+There are 4 mitigation methods that can mitigating the attack technique called Kernel Modules and Extensions. Their names are as follows:
+* Privileged Account Management 
+* User Account Management 
+* Antivirus/Antimalware 
+* Execution Prevention 
+
+The following content describes information about mitigation methods. The format of each mitigation method's information is as follows:
+Mitigation method name: ***
+Mitigation method description: ***
+These respectively represent the name of the mitigation method and a detailed description of how it works.
+
+Mitigation method name: Privileged Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to privileged accounts, including SYSTEM and root.
+
+Mitigation method name: User Account Management
+Mitigation method description: Manage the creation, modification, use, and permissions associated to user accounts.
+
+Mitigation method name: Antivirus/Antimalware
+Mitigation method description: Use signatures or heuristics to detect malicious software.
+
+Mitigation method name: Execution Prevention
+Mitigation method description: Block execution of code on a system through application control, and/or script blocking.
