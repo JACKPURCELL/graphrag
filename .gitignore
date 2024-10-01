@@ -69,3 +69,7 @@ __blobstorage__/
 
 untarget/
 dataset/
+oldtest
+alltest
+alltest_hotqa
+med_test
