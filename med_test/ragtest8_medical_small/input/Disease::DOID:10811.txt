@@ -1,8 +1,0 @@
-[Nasal Cavity Cancer] is the name of a kind of disease.
-
-The following content describes information about compounds that can palliate or treat the disease named Nasal Cavity Cancer.The format of each compound's information is as follows:
-Compound name: ***
-Pharmacologic class: ***
-Effect on Nasal Cavity Cancer: Palliate or Treat
-Side effect: ***
-These respectively represent the name of the compound, the pharmacologic class it belongs to, its positive effect on the disease named Nasal Cavity Cancer (palliates or treats) and its side effects.
