@@ -199,10 +199,10 @@ def process_questions_v3_1(base_path):
         for direct_adv_text in question["direct_adv_texts"]:
             direct_adv_texts.append(direct_adv_text)
     
-    output_path_indirect = Path(base_path) / 'adv_texts_indirect_v3_1.txt'
+    output_path_indirect = Path(base_path) / 'input/adv_texts_indirect_v3_1.txt'
     output_path_indirect.write_text('\n\n'.join(indirect_adv_texts), encoding='utf-8')
     
-    output_path_direct = Path(base_path) / 'adv_texts_direct_v3_1.txt'
+    output_path_direct = Path(base_path) / 'input/adv_texts_direct_v3_1.txt'
     output_path_direct.write_text('\n\n'.join(direct_adv_texts), encoding='utf-8')
 
 if __name__ == "__main__":

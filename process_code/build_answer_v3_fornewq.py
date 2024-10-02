@@ -230,6 +230,6 @@ def process_corpus_file(base_path,corpus_file):
 if __name__ == "__main__":
 
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq"
-    corpus_file = base_path + '/question_v3_fornewq_corpus.json'
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq_v31"
+    corpus_file = base_path + '/question_v3_1_fornewq_corpus.json'
     process_corpus_file(base_path, corpus_file)

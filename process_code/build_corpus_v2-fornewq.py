@@ -143,67 +143,79 @@ IMPORTANT:
 
 
 
+
+ 
+import json
+import os
+from pathlib import Path
+from tqdm import tqdm
+
 def get_questions(base_path):
-	questions_path = Path(base_path) / 'question_v2.json'
-	questions = questions_path.read_text(encoding='utf-8')
-	questions = json.loads(questions)
-	return questions
+    questions_path = Path(base_path) / 'question_multi_v3.json'
+    questions = questions_path.read_text(encoding='utf-8')
+    questions = json.loads(questions)
+    return questions
 
-def process_questions_v2(base_path):
-	questions = get_questions(base_path)
-	
-	all_jsons = []
-	for question in tqdm(questions):
-		question_prompt = "The question is \n"  + json.dumps(question["question"], ensure_ascii=False)
-		while True: 
-			completion = client.chat.completions.create(
-				model="gpt-4o-2024-08-06",
-				response_format={"type": "json_object"},
-				messages=[
-					{"role": "system", "content": base_prompt},
-					{"role": "user", "content": question_prompt}
-				]
-			)
-			
-			content = completion.choices[0].message.content
-			try:
-				if content is not None:
-					question_json = json.loads(content)
-					if isinstance(question_json["indirect_adv_texts"][0], str) and isinstance(question_json["direct_adv_texts"][0], str) and isinstance(question_json["enhanced_indirect_adv_texts"][0], str):
-						all_jsons.append(question_json)
-						break
-					else:
-						print('JSON ERROR, AGAIN')
-				else:
-					print('No response from OpenAI')
-			except Exception as e:
-				print(f"Error processing question: {e}")
+def process_questions_v3(base_path):
+    questions = get_questions(base_path)
+    
+    all_jsons = []
+    for q in tqdm(questions):
+        question = q["questions"][0] #ONLY ATTACK THE FIRST QUESTION
+        question_prompt = "The question is \n"  + json.dumps(question["question"], ensure_ascii=False)
+        while True: 
+            completion = client.chat.completions.create(
+                model="gpt-4o-2024-08-06",
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": base_prompt},
+                    {"role": "user", "content": question_prompt}
+                ]
+            )
+            
+            content = completion.choices[0].message.content
+            try:
+            
+                if content is not None:
+                    question_json = json.loads(content)
+                    if isinstance(question_json["indirect_adv_texts"][0], str) and isinstance(question_json["direct_adv_texts"][0], str) and isinstance(question_json["enhanced_indirect_adv_texts"][0], str):
+                        all_jsons.append(question_json)
+                        break
+                    else:
+                        print('JSON ERROR, AGAIN')
+                else:
+                    print('No response from OpenAI')
+            except Exception as e:
+                print(f"Error processing question: {e}")
+    
+    adv_prompt_path = Path(os.path.join(base_path, 'question_v2_fornewq_corpus.json'))
+    adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
+    print(f"Questions generated successfully and saved to {adv_prompt_path}")
 
-	adv_prompt_path = Path(os.path.join(base_path, 'question_v2_corpus.json'))
-	adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
-	print(f"Questions generated successfully and saved to {adv_prompt_path}")
+    # 收集所有的 adv_text
+    indirect_adv_texts = []
+    direct_adv_texts = []
+    enhanced_indirect_adv_texts = []
+    for question in all_jsons:
+        for indirect_adv_text in question["indirect_adv_texts"]:
+            indirect_adv_texts.append(indirect_adv_text)
+        for direct_adv_text in question["direct_adv_texts"]:
+            direct_adv_texts.append(direct_adv_text)
+        for enhanced_indirect_adv_text in question["enhanced_indirect_adv_texts"]:
+            enhanced_indirect_adv_texts.append(enhanced_indirect_adv_text)
+	
+    
+    output_path_indirect = Path(base_path) / 'input/adv_texts_indirect_v2.txt'
+    output_path_indirect.write_text('\n\n'.join(indirect_adv_texts), encoding='utf-8')
+    
+    output_path_direct = Path(base_path) / 'input/adv_texts_direct_v2.txt'
+    output_path_direct.write_text('\n\n'.join(direct_adv_texts), encoding='utf-8')
 
-	# 收集所有的 adv_text
-	indirect_adv_texts = []
-	direct_adv_texts = []
-	enhanced_indirect_adv_texts = []
-	for question in all_jsons:
-		for indirect_adv_text in question["indirect_adv_texts"]:
-			indirect_adv_texts.append(indirect_adv_text)
-		for direct_adv_text in question["direct_adv_texts"]:
-			direct_adv_texts.append(direct_adv_text)
-		for enhanced_indirect_adv_text in question["enhanced_indirect_adv_texts"]:
-			enhanced_indirect_adv_texts.append(enhanced_indirect_adv_text)
-	
-	output_path_indirect = Path(base_path) / 'input/adv_texts_indirect_v2.txt'
-	output_path_indirect.write_text('\n\n'.join(indirect_adv_texts), encoding='utf-8')
-	
-	output_path_direct = Path(base_path) / 'input/adv_texts_direct_v2.txt'
-	output_path_direct.write_text('\n\n'.join(direct_adv_texts), encoding='utf-8')
-	
-	output_path_enhanced_indirect = Path(base_path) / 'input/adv_texts_enhanced_indirect_v2.txt'
-	output_path_enhanced_indirect.write_text('\n\n'.join(enhanced_indirect_adv_texts), encoding='utf-8')
 
+    output_path_enhanced_indirect = Path(base_path) / 'input/adv_texts_enhanced_indirect_v2.txt'
+    output_path_enhanced_indirect.write_text('\n\n'.join(enhanced_indirect_adv_texts), encoding='utf-8')
+                                          
 if __name__ == "__main__":
-	base_path = '/home/ljc/data/graphrag/med_test/ragtest8_medical_small'
-	process_questions_v2(base_path)
+    base_path = '/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq_v2'
+    
+    process_questions_v3(base_path)
