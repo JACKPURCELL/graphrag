@@ -27,6 +27,15 @@
 		"justMyCode": false
 	},
 	{
+		"name": "generate_v3",
+		"type": "python",
+		"request": "launch",
+		"module": "process_code.build_questions_v3",   // 指定模块名
+		"args": [],  // 传递给模块的参数
+
+		"justMyCode": false
+	},
+	{
 		"name": "index",
 		"type": "python",
 		"request": "launch",

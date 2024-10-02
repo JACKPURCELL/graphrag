@@ -149,65 +149,80 @@ def process_corpus_file(base_path,corpus_file):
 
     client = OpenAI()
     async def main():
-        json_file_path = base_path + '/question_v2.json'
+        json_file_path = base_path + '/question_multi_v3.json'
         with open(json_file_path, 'r', encoding='utf-8') as file:
-            questions = json.load(file)
+            question_groups = json.load(file)
 
         # corpus_file = base_path + '/question_v2_corpus.json'
         with open(corpus_file, 'r', encoding='utf-8') as file:
             corpuses = json.load(file)
             
-        total = len(questions)
+        total = len(question_groups)
         count = 0
-        assert len(questions) == len(corpuses)
+        assert len(question_groups) == len(corpuses)
         answer_jsons = []
-        for i in tqdm(range(len(questions))):
-            question = questions[i]
+        total_succ = 0
+        for i in tqdm(range(len(question_groups))):
+            question_group = question_groups[i]["questions"]
+              
             corpus = corpuses[i]
-            try:
-                result = await search_engine.asearch(question["question"])
-                question["answer_after_attack"] = result.response
-                direct_new_entities = corpus["direct_new_entities"]
-                indirect_new_entities = corpus["indirect_new_entities"]
-
-                
-                direct_new_entities = ", ".join(direct_new_entities)
-                indirect_new_entities = ", ".join(indirect_new_entities)
-                
-                if "v2" in corpus_file:
-                    print("v2")
-                    enhanced_indirect_new_entities = corpus["enhanced_indirect_new_entities"]
-                    enhanced_indirect_new_entities = ", ".join(enhanced_indirect_new_entities)
-                else:
-                    enhanced_indirect_new_entities = ""
+            succ_ingroup = 0
+            succ_q_self = False
+            
+            for j in range(len(question_group)):
+                question = question_group[j]
+                try:
+                    result = await search_engine.asearch(question["question"])
+                    question["answer_after_attack"] = result.response
+                    direct_new_entities = corpus["direct_new_entities"]
+                    indirect_new_entities = corpus["indirect_new_entities"]
 
                     
-                attack_answer = question["answer_after_attack"]
-                completion = client.chat.completions.create(
-                model="gpt-4o-mini",
-                response_format={"type": "json_object"},
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": "FOR_SEARCH_ENEITIES: " + direct_new_entities + ", "+ indirect_new_entities + ", "+ enhanced_indirect_new_entities + "\n CONTENT: " + attack_answer}
-                ]
-                )
-                
-                content = completion.choices[0].message.content
-                if content is not None:
-                    consistent_json = json.loads(content)
-                    question = {**consistent_json, **question}
-                    answer_jsons.append(question)
-                else:
-                    print('No response from OpenAI')
-                
-            except Exception as e:
-                print(f"Error processing question: {e}")
-                continue
+                    direct_new_entities = ", ".join(direct_new_entities)
+                    indirect_new_entities = ", ".join(indirect_new_entities)
+                    
+                    if "v2" in corpus_file:
+                        print("v2")
+                        enhanced_indirect_new_entities = corpus["enhanced_indirect_new_entities"]
+                        enhanced_indirect_new_entities = ", ".join(enhanced_indirect_new_entities)
+                    else:
+                        enhanced_indirect_new_entities = ""
+
+                        
+                    attack_answer = question["answer_after_attack"]
+                    completion = client.chat.completions.create(
+                    model="gpt-4o-mini",
+                    response_format={"type": "json_object"},
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": "FOR_SEARCH_ENEITIES: " + direct_new_entities + ", "+ indirect_new_entities + ", "+ enhanced_indirect_new_entities + "\n CONTENT: " + attack_answer}
+                    ]
+                    )
+                    
+                    content = completion.choices[0].message.content
+                    if content is not None:
+                        consistent_json = json.loads(content)
+                        if consistent_json["found"]:
+                            succ_ingroup += 1
+                            total_succ += 1
+                            if j == 0:
+                                succ_q_self = True
+                        question_groups[i]["questions"][j] = {**consistent_json, **question}
+
+                    else:
+                        print('No response from OpenAI')
+                    
+                except Exception as e:
+                    print(f"Error processing question: {e}")
+                    continue
+            with open(base_path+'/output.log', 'a') as log_file:
+                # Write the formatted message to the file
+                log_file.write(f"Group {i} success rate: {succ_ingroup-1}/{len(question_group)-1}, Self: {succ_q_self}, Other Question count: {len(question_group)-1}\n")
 
         output_file_path = base_path + '/question_with_answer_v3.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
-            json.dump(answer_jsons, file, ensure_ascii=False, indent=4)
-
+            json.dump(question_groups, file, ensure_ascii=False, indent=4)
+       
         print(f"Updated questions saved to {output_file_path}")
 
     import asyncio
@@ -215,6 +230,6 @@ def process_corpus_file(base_path,corpus_file):
 if __name__ == "__main__":
 
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_v3_1"
-    corpus_file = base_path + '/question_v3_1_corpus.json'
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq"
+    corpus_file = base_path + '/question_v3_fornewq_corpus.json'
     process_corpus_file(base_path, corpus_file)
