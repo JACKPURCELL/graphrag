@@ -228,8 +228,7 @@ def process_corpus_file(base_path,corpus_file):
     import asyncio
     asyncio.run(main())
 if __name__ == "__main__":
-
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq_v31"
-    corpus_file = base_path + '/question_v3_1_fornewq_corpus.json'
+    base_path = "alltest/location_dataset/dataset4_newq_v2"
+    corpus_file = base_path + '/question_v2_fornewq_corpus.json'
     process_corpus_file(base_path, corpus_file)
