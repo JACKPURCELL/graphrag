@@ -24,6 +24,7 @@ print("=======Start build corpus")
 process_questions_v3(new_path)
 
 
+print("=======Start build NEW RAG")
 
 import subprocess
 import os
@@ -69,6 +70,5 @@ run_command()
 
 print("=======Start build answer")
 
-base_path = "alltest/location_dataset/dataset4_newq_v2"
 corpus_file = new_path + '/question_v3_1_fornewq_corpus.json'
 process_corpus_file(base_path, corpus_file)
