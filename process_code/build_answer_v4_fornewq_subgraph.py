@@ -151,7 +151,7 @@ def process_corpus_file(base_path,corpus_file):
     async def main():
         json_file_path = base_path + '/question_multi_v3.json'
         with open(json_file_path, 'r', encoding='utf-8') as file:
-            question_groups = json.load(file)
+            question_groups = json.load(file)[:2]
 
         with open(corpus_file, 'r', encoding='utf-8') as file:
             corpuses = json.load(file)
@@ -176,7 +176,8 @@ def process_corpus_file(base_path,corpus_file):
                     leaf_nodes_list = []
                     for leaf_node in leaf_nodes:
                         leaf_nodes_list.append(leaf_node[0])
-                    
+                    for leaf_node in corpus["questions"][j]["create_leaf_node"]:
+                        leaf_nodes_list.append(leaf_node)
                     leaf_nodes_texts = ', '.join(leaf_nodes_list)
                     attack_answer = question["answer_after_attack"]
                     completion = client.chat.completions.create(
@@ -218,6 +219,6 @@ def process_corpus_file(base_path,corpus_file):
     asyncio.run(main())
 if __name__ == "__main__":
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset5_newq_t2"
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset5_newq_t3"
     corpus_file = base_path + '/test0_corpus.json'
     process_corpus_file(base_path, corpus_file)
