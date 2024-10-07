@@ -219,6 +219,6 @@ def process_corpus_file(base_path,corpus_file):
     asyncio.run(main())
 if __name__ == "__main__":
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset5_newq_t3"
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset5_newq_t4"
     corpus_file = base_path + '/test0_corpus.json'
     process_corpus_file(base_path, corpus_file)

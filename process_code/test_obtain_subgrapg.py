@@ -191,6 +191,7 @@ base_prompt_search_new_middle = """"
     
 """
 
+# TODO: Original Relationship should include questions
 base_prompt_search_new_middle_v2 = """
 Your task is to select Entity C based on the provided Entities and Relationships.
 From the relationships where Entity A IS the source, select the one with the HIGHEST weight and HIGHEST rank.
@@ -425,7 +426,7 @@ def get_chains(multi_candidate_questions_sets):
 from pathlib import Path
 
 # 定义一个函数来处理每个节点
-async def process_node(root_node, middle_node,search_engine):
+async def process_node(root_node, middle_node,search_engine,question_set):
     # 找到最佳的替换中间节点
     response_new_middle_node = await main(f"Given the Entity A '{root_node}' and Entity B: '{middle_node}'.\n" + base_prompt_search_new_middle_v2, search_engine)
     response_new_middle_node = response_new_middle_node.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
@@ -483,7 +484,7 @@ async def process_node(root_node, middle_node,search_engine):
                 model="gpt-4o-2024-08-06",
                 response_format={"type": "json_object"},
                 messages=[
-                    {"role": "system", "content": base_prompt_gen_attack_text},
+                    {"role": "system", "content": base_prompt_gen_attack_text}, # TODO: 添加question_set的陈述信息
                     {"role": "user", "content": attack_nodes_str}
                 ]
             )
@@ -531,6 +532,7 @@ def ensure_minimum_word_count_and_save(direct_adv_texts, new_base_path, file_nam
 def enhanced_for_each_question(question,new_middle_node_json):
     
     quesiton_prompt = "The question is: " + question["question"] + "\n" "The json is: " + json.dumps(new_middle_node_json, ensure_ascii=False, indent=4)
+    # TODO: 需要修改prompt 包括q 的陈述. 添加限制条件判断是否要增加叶子节点
     client = OpenAI()
     completion = client.chat.completions.create(
                 model="gpt-4o-2024-08-06",
@@ -569,7 +571,7 @@ def process_questions(clean_path, new_base_path):
         root_node = question_set["as_target"][0][0]
         middle_node = question_set["as_target"][0][1]
         # 现在要攻击的边有了，通过query问新的子节点
-        new_middle_node_json,attack_text_json = asyncio.run(process_node(root_node, middle_node,search_engine))
+        new_middle_node_json,attack_text_json = asyncio.run(process_node(root_node, middle_node,search_engine,question_set))
         return_json = {**new_middle_node_json, **attack_text_json}
         return_json["questions"] =[]
         
