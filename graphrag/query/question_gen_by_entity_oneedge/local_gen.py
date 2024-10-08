@@ -85,6 +85,34 @@ EXAMPLE_USE ="""
 "root_nodes": ["CHINA", "CAPITAL", "TOURISM"]
 }
 """
+
+CHANGE_RELATIONS_ORDER = """
+Prompt:
+
+You are given a list of pairs in the format [A, B], which will always include the SAME ENTITY. Your task is to reorganize these pairs such that the more general or abstract concept comes first, followed by the more specific concept. Here are the rules to follow:
+
+Swap the order of [A, B] to [B, A] if A is more specific and B is more general.
+Keep the original order [A, B] if both elements are of the same level of specificity or already correctly ordered.
+For notable entities or specific items within a broader category, ensure the broader category comes first, swapping if necessary.
+Examples:
+
+[BEIJING, CHINA] should become [CHINA, BEIJING].
+[BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY].
+[TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN].
+[iPhone, Apple] should become [Apple, iPhone].
+[math, mathematics department] should remain [math, mathematics department].
+Apply these rules consistently to transform the list of pairs, ensuring that the more general concept (B) precedes the specific concept (A) unless both are of equal specificity or already correctly ordered.
+
+Please return in the following JSON format:
+
+if SAME ENTITY is the source, put it in as_source, if SAME ENTITY is the target, put it in as_target.  return the following example json:
+
+{
+    "as_source": [[SAME ENTITY, B],[SAME ENTITY, C],[SAME ENTITY, D]],
+    "as_target": [[E, SAME ENTITY],[F, SAME ENTITY],[G, SAME ENTITY]]
+}
+
+"""
 class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
     """Search orchestration for global search mode."""
 
@@ -118,7 +146,8 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         question_history: list[str],
         context_data: str | None,
         question_count: int,
-        entity_count: int,
+        entity_count: int = -1,
+        need_to_keep_entity_names: list[str] = [],
         **kwargs,
     ) -> tuple[list, list]:
         """
@@ -131,28 +160,51 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         single_questions = []   
         useful_entities = []
         for ent in self.entities:
-            related_relationships_source = [rel for rel in self.relationships if rel.source == ent.title ]
-            related_relationships_target = [rel for rel in self.relationships if rel.target == ent.title ]
-            if len(related_relationships_source) > 1 and len(related_relationships_target) > 0:
-                useful_entities.append({"entity": ent, "related_relationships_source": related_relationships_source, "related_relationships_target": related_relationships_target})
+            all_relationships = [rel for rel in self.relationships if rel.source == ent.title or rel.target == ent.title]
+            if len(all_relationships) > 1 :
+                useful_entities.append({"entity": ent, "all_relationships": all_relationships})
         print("=======Qualified entities: ", len(useful_entities))
-        if entity_count != -1:
+        
+        if len(need_to_keep_entity_names) != 0:
+            print(f"keep entities: {need_to_keep_entity_names}")
+            keep_entities = []
+            for ent_with_rel in useful_entities:
+                if ent_with_rel["entity"].title.lower() in need_to_keep_entity_names:
+                    keep_entities.append(ent_with_rel)
+            useful_entities = keep_entities
+        elif entity_count != -1:
+            print(f"random sample {entity_count} entities")
             useful_entities = random.sample(useful_entities, entity_count)
+        else:
+            print("keep all entities")
+            
+
+            
         for ent_with_rel in tqdm(useful_entities):
             ent_with_rel_name = ent_with_rel["entity"].title
-            as_source_list = []
-            related_relationships_text_source = "[Selected Entity,Leaf Entity]: "
-            for rel in ent_with_rel["related_relationships_source"]:
-                related_relationships_text_source += f"[{rel.source}, {rel.target}],"
-                as_source_list.append([rel.source, rel.target])
+            as_relationships_list = []
+            for rel in ent_with_rel["all_relationships"]:
+                as_relationships_list.append([rel.source, rel.target])
+                
+            completion = client.chat.completions.create(
+                        model="gpt-4o-2024-08-06",
+                        response_format={ "type": "json_object" },
+                        messages=[
+                                {"role": "system", "content": CHANGE_RELATIONS_ORDER},
+                            {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
+                            ],
+                        temperature=0.3,
+                        )
+            return_json = json.loads(completion.choices[0].message.content)
             
-            as_target_list = []    
-            # related_relationships_text_target = "[Root Entity,Selected Entity]: "    
-            for rel in ent_with_rel["related_relationships_target"]:
-                # related_relationships_text_target += f"[{rel.source}, {rel.target}],"
-                as_target_list.append([rel.source, rel.target])
+            as_source_list = return_json["as_source"] 
+            as_target_list = return_json["as_target"]
+            
+            related_relationships_text_source = "[Selected Entity,Leaf Entity]: " +str(as_source_list)
+            
+          
             for as_target in as_target_list:
-                per_text_target = f"[Root Entity,Selected Entity]: [{as_target[0]}, {as_target[1]}]"    
+                per_text_target = "[Root Entity,Selected Entity]: " + str(as_target)    
                 
                 question_history = [f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}.     IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
                 

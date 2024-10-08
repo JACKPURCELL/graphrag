@@ -25,7 +25,7 @@ from graphrag.query.structured_search.local_search.mixed_context import (
 from graphrag.query.structured_search.local_search.search import LocalSearch
 from graphrag.vector_stores.lancedb import LanceDBVectorStore
 
-def generate_questions(base_path,question_count=5, entity_count=-1):
+def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_entity_names=[]):
     # Step 1: Find the folder with the latest modification time
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
@@ -150,7 +150,7 @@ def generate_questions(base_path,question_count=5, entity_count=-1):
 
     async def main():
         single_candidate_questions, multi_candidate_questions = await question_generator.agenerate(
-            question_history=[], context_data=None, question_count=question_count, entity_count=entity_count)
+            question_history=[], context_data=None, question_count=question_count, entity_count=entity_count, need_to_keep_entity_names=need_to_keep_entity_names)
         with open(question_path_multi, 'w') as f:
             json.dump(multi_candidate_questions, f, indent=4)
         with open(question_path_single, 'w') as f:
@@ -164,6 +164,6 @@ def generate_questions(base_path,question_count=5, entity_count=-1):
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq"
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset7"
     # 调用函数并传递 base_path 参数
-    generate_questions(base_path,question_count=10, entity_count=20)
+    generate_questions(base_path,question_count=20, need_to_keep_entity_names=["beijing"])
