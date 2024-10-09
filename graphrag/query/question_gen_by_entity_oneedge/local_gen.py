@@ -265,12 +265,12 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                         if len(pending_questions["questions"]) > 1:
                             pending_questions["selected_entity"] = ent_with_rel_name
                             pending_questions["as_source"] = as_source_list
-                            pending_questions["as_target"] = as_target_list
+                            pending_questions["as_target"] = [as_target]
                             multi_questions.append(pending_questions)
                         else:
                             pending_questions["selected_entity"] = ent_with_rel_name
                             pending_questions["as_source"] = as_source_list
-                            pending_questions["as_target"] = as_target_list
+                            pending_questions["as_target"] = [as_target]
                             single_questions.append(pending_questions)
                     except Exception:
                         raise ValueError(f"Error in parsing response: {completion.choices[0].message.content}")
