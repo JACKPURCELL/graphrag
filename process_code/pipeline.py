@@ -1,27 +1,22 @@
-from .build_questions_v3 import generate_questions
-from .build_corpus_v3_1_fornewq import process_questions_v3
-from .build_answer_v3_fornewq import process_corpus_file
+from build_questions_v3 import generate_questions
+from build_corpus_subgraph import process_questions_v2,rewrite_txt_v2
+from build_answer_v4_fornewq_subgraphv2 import process_corpus_file
 import shutil
 import os
 
 
-base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset4_newq"
+base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised"
 # 调用函数并传递 base_path 参数
 print("=======Start generate_questions")
-generate_questions(base_path,question_count=10, entity_count=20)
+generate_questions(base_path,question_count=10, need_to_keep_entity_names="beijing")
 
-new_path = base_path + '_v31'
-# 确保目标目录不存在，否则 copytree 会抛出异常
-if not os.path.exists(new_path):
-    # 复制目录
-    shutil.copytree(base_path, new_path)
-    print(f"目录已成功复制到 {new_path}")
-else:
-    print(f"目标目录 {new_path} 已存在")
+new_path = base_path + '_subgraph_t1_ten'
+
     
     
 print("=======Start build corpus")
-process_questions_v3(new_path)
+process_questions_v2(base_path,new_path)
+rewrite_txt_v2(new_path)
 
 
 print("=======Start build NEW RAG")
@@ -70,5 +65,5 @@ run_command()
 
 print("=======Start build answer")
 
-corpus_file = new_path + '/question_v3_1_fornewq_corpus.json'
-process_corpus_file(base_path, corpus_file)
+corpus_file = new_path + '/test0_corpus.json'
+process_corpus_file(new_path, corpus_file)

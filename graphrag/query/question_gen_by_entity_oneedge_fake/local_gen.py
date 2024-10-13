@@ -60,14 +60,12 @@ Relationships where {entity} is the endpoint, with preceding nodes referred to a
 
 3. These questions should be answerable using the provided data tables but should not explicitly reference any specific data fields or tables in the question text.
 
-4. The answers to these questions should be the leaf nodes itself or some content in leaf nodes' description 
+4. The answers to these questions should be the leaf nodes itself . 
 
-5. At the same time you need to ask the questions to yourself without the Data tables, And then Answer within 50 words, write the answer in the gpt_answer_withoutdata field. then compare the answer with the data table to see if the answer is consistent with the data table. If the answer is not consistent approximately with the data table, you need to reconsider the question.
 
-6. Don't use other entities and relationships(out of {entity},{related_relationships_text_source},{related_relationships_text_target}) information to generate the questions.
+5. Don't use other entities and relationships(out of {entity},{related_relationships_text_source},{related_relationships_text_target}) information to generate the questions.
 
-7. Should include the root node in the question. Should not include the selected entity and leaf nodes in the question.
-
+6. Should include the root node in the question. Should not include the selected entity and leaf nodes in the question.
 
 Please must generate {question_count} or As many as possible questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, selected entity, leaf nodes, and root nodes. 
 
@@ -78,34 +76,35 @@ Just output json, don't saw any other information.
 EXAMPLE_USE ="""
 <JSON example>
 {
-"question": "What is the patronage of the most famous attractions in the capital of China?", 
-"gpt_answer_withoutdata":"Beijing's top attractions, such as the Forbidden City, the Great Wall, and the Temple of Heaven, draw millions annually. The Forbidden City alone sees over 14 million visitors each year, while sections of the Great Wall near Beijing attract similar numbers, showcasing their global appeal and cultural significance.",
-"answer": "The patronage of the most famous attractions in the capital of China is 100,000.",
+"question": "What is the patronage of the most famous attractions in the capital of G0014?", 
+"answer": "The capital of G0014 is G0015, and the most famous attractions in G0015 are the A0001, A0002, and A0003.",
 "consistency": true,
-"selected_entity": "BEIJING",
-"leaf_nodes": ["GREAT WALL", "FORBIDDEN CITY", "SUMMER PALACE"],
-"root_nodes": ["CHINA"]
+"selected_entity": "G0015",
+"leaf_nodes": ["A0001", "A0002", "A0003"],
+"root_nodes": ["G0014"]
 }
 """
 
 CHANGE_RELATIONS_ORDER = """
 Prompt:
 
-You are given a list of pairs in the format [A, B], which will always include the SAME ENTITY. Your task is to reorganize these pairs such that the more general or abstract concept comes first, followed by the more specific concept. Here are the rules to follow:
+You are given a list of pairs in the format [A, B, A and B relationship description], which will always include the SAME ENTITY. And then follow their relationship description. Your task is to A and B relationship description, analyze reorganize these pairs such that the more general or abstract concept comes first, followed by the more specific concept. Here are the rules to follow:
 
 Swap the order of [A, B] to [B, A] if A is more specific and B is more general.
 Keep the original order [A, B] if both elements are of the same level of specificity or already correctly ordered.
 For notable entities or specific items within a broader category, ensure the broader category comes first, swapping if necessary.
 Examples:
 
-[BEIJING, CHINA] should become [CHINA, BEIJING].
-[BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY].
-[TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN].
-[iPhone, Apple] should become [Apple, iPhone].
-[math, mathematics department] should remain [math, mathematics department].
+[BEIJING, CHINA] should become [CHINA, BEIJING]. Because Beijing is a city in China.
+[BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY]. Because Beijing University is a university in Beijing.
+[TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN]. Because Tiananmen is a place in Beijing.
+[iPhone, Apple] should become [Apple, iPhone]. Because iPhone is a product of Apple.
+[math, mathematics department] should remain [math, mathematics department]. Because math is a subject and mathematics department is a department.
 Apply these rules consistently to transform the list of pairs, ensuring that the more general concept (B) precedes the specific concept (A) unless both are of equal specificity or already correctly ordered.
 
 Please return in the following JSON format:
+
+No need to include relationship description in return
 
 if SAME ENTITY is the source, put it in as_source, if SAME ENTITY is the target, put it in as_target.  return the following example json:
 
@@ -186,7 +185,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             ent_with_rel_name = ent_with_rel["entity"].title
             as_relationships_list = []
             for rel in ent_with_rel["all_relationships"]:
-                as_relationships_list.append([rel.source, rel.target])
+                as_relationships_list.append([rel.source, rel.target,rel.description])
                 
             completion = client.chat.completions.create(
                         model="gpt-4o-2024-08-06",

@@ -164,6 +164,6 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/med_dataset/ragtest8_medical_small"
+    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_fake"
     # 调用函数并传递 base_path 参数
-    generate_questions(base_path,question_count=10, entity_count=2)
+    generate_questions(base_path,question_count=10, need_to_keep_entity_names=['g0015'])
