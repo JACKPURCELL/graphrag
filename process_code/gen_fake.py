@@ -93,12 +93,12 @@ if __name__ == "__main__":
     #########利用csv生成密码##########
     replacement_list_sorted = gen_replacements("/data/yuhui/6/adddata/location_data/entity.csv")
     ############替换txt##########
-    process_txt_files("/data/yuhui/6/graphrag/alltest/location_dataset/dataset_4_revised/input", #读取包含txt的文件夹
-                  "/data/yuhui/6/graphrag/alltest/location_dataset/dataset_4_fake/input", #生成的文件夹
+    process_txt_files("/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/input", #读取包含txt的文件夹
+                  "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/input2", #生成的文件夹
                   replacement_list_sorted)
     ############替换json###########
-    process_json_file("location_data/true_revised/question_multi_v3.json",
-                      "location_data/true_revised/question_multi_v3_fake.json",
-                      replacement_list_sorted)
+    # process_json_file("/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/test0_corpus.json",
+    #                   "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/test0_corpus_fake.json",
+    #                   replacement_list_sorted)
 
 

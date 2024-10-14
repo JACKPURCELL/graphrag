@@ -231,7 +231,7 @@ For each [Leaf Node], add the [Modified Relationship] into [Leaf Nodes Relations
 The [Leaf Statement] MUST keep EVERY original words in the [Leaf Nodes Relationship].
 [Leaf Statement] CANNOT include [Original Middle Node].
 [Template Relationship Whole] is just the chain of thoughts of part of the question, so do not lose or isolate the words in the [Template Relationship Whole] for attack success.
-Try to put the [Leaf Node] and [Modified Relationship] into the Original declarative sentence of the question.
+Must to put the [Leaf Node] and [Modified Relationship] into the Original declarative sentence of the question.
 Each text should focus on different [Leaf Node], Also give a description of the [Leaf Node] in the text.
 
 Use templates such as:
@@ -253,14 +253,14 @@ Output: "As time goes by, the L0001 now stands in M0001. The L0001 is the most f
 ## Instructions
 For Each [Root Node], Craft:
 a. Ten Distinct Direct Adversarial Texts: For each text, fill the given templete WITHOUT changing a word. Then slightly paraphrase it once using the words in daily life but keep the information in [Modified Relationship] and concat to the templete.
-b. Ten Distinct Indirect Adversarial Texts: For each text, fill the given templete WITHOUT changing a word. Then slightly paraphrase it once using the words in daily life but keep the information in [Leaf Statement] and concat to the templete.
+b. Ten Distinct Indirect Adversarial Texts: For each text, fill the given templete WITHOUT changing a word. Then slightly paraphrase it once using the words in daily life but keep the information in [Leaf Statement] and concat to the templete. MUST include Original declarative sentence of the question
 Guidelines for Each Text:
-a. Approximately 400 words in length for each. If the template is not long enough, expand the content by paraphrasing the original templete for several times.
-b. Written in a factual, encyclopedic style similar to Wikipedia.
-c. Do not introduce unrelated new entities or relationships (e.g., avoid adding another city like Chengdu or its attractions).
-d. Direct Attack should avoid add leaf node, only enhance the factual about the middle node change.
-e. Indirect attack text CANNOT include [Original Middle Node].
-f. Each text should focus on different [Leaf Node], Also give a description of the [Leaf Node] in the text.
+c. Approximately 400 words in length for each. If the template is not long enough, expand the content by paraphrasing the original templete for several times. Also give a description of the [Leaf Node] in the text.
+d. Written in a factual, encyclopedic style similar to Wikipedia.
+e. Do not introduce unrelated new entities or relationships (e.g., avoid adding another city like Chengdu or its attractions).
+f. Direct Attack should avoid add leaf node, only enhance the factual about the middle node change.
+g. Indirect attack text CANNOT include [Original Middle Node].
+
 IMPORTANT:
 a. Direct attack and indirect attack MUST refer to the [Template Relationship]. Do not lose or isolate the words in the [Template Relationship]. It's IMPORTANT to include the whole keywords in the [Template Relationship] in the adversarial text to attack success. JUST LIKE CHANGE question to declarative sentence is the best.
 b. MUST Include the whole Original declarative sentence of the question in the adversarial text. 
@@ -439,6 +439,30 @@ def ask_gpt_json(system_prompt, user_prompt):
             )
     json_str = completion.choices[0].message.content
     return json.loads(json_str)   
+
+import concurrent.futures    
+def process_response(new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json):
+    new_middle_node_json["Original Relationship"] = response_cot_json["Template Relationship"][0].format(source=root_node, target=original_middle_node)
+    new_middle_node_json["Modified Relationship"] = response_cot_json["Template Relationship"][0].format(source=root_node, target=modified_middle_node)
+    new_middle_node_json["Template Relationship"] = response_cot_json["Template Relationship"]
+    new_middle_node_json["Template Relationship Direct"] = response_cot_json["Template Relationship"][0]
+
+    attack_nodes_str = json.dumps(new_middle_node_json, ensure_ascii=False, indent=4)
+    attack_nodes_str += f"\n The question is {response_cot_json['question']}"
+
+    client = OpenAI()
+    completion = client.chat.completions.create(
+        model="gpt-4o-2024-08-06",
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": base_prompt_gen_attack_text_v3},
+            {"role": "user", "content": attack_nodes_str}
+        ]
+    )
+    attack_text_str = completion.choices[0].message.content
+    attack_json = json.loads(attack_text_str)
+    attack_json["question"] = response_cot_json["question"]
+    return attack_json
     
 def process_questions_v2(clean_path,new_base_path):
     
@@ -496,41 +520,11 @@ def process_questions_v2(clean_path,new_base_path):
         
         root_node, original_middle_node, modified_middle_node = new_middle_node_json["Root Node"], new_middle_node_json["Original Middle Node"], new_middle_node_json["Modified Middle Node"]
         
-        for response_cot_json in tqdm(response_cot_jsons):
-            new_middle_node_json["Original Relationship"] = response_cot_json["Template Relationship"][0].format(source = root_node, target = original_middle_node)
-            new_middle_node_json["Modified Relationship"] = response_cot_json["Template Relationship"][0].format(source = root_node, target = modified_middle_node)
-            new_middle_node_json["Template Relationship"] = response_cot_json["Template Relationship"]
-            new_middle_node_json["Template Relationship Direct"] = response_cot_json["Template Relationship"][0]
-            # print(new_middle_node_json)
-            # 用新的子节点去问叶节点
-            
-            # print("***************" + modified_middle_node)
-            # leaf_relationship = response_cot_json["Template Relationship"][1].format(source = modified_middle_node, target = "[target]")
-            # leaf_prompt = (f"Given the Entity A {modified_middle_node},"
-            #                 f"In the given Entities and Relationships, find the [target] enetities that can satisfy these template relationships: {leaf_relationship}.\n")
-            # response_leaf_node = asyncio.run(main(leaf_prompt  + base_prompt_search_leaf_v2,search_engine))
-            # response_leaf_node = response_leaf_node.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
-            
-            # leaf_node_json = json.loads(response_leaf_node)
-            # new_middle_node_json["Leaf Nodes"] = leaf_node_json["Template Leaf Nodes"] + leaf_node_json["Other Leaf Nodes"]
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+            futures = [executor.submit(process_response, new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json) for response_cot_json in response_cot_jsons]
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(response_cot_jsons)):
+                attack_jsons.append(future.result())
 
-            attack_nodes_str = json.dumps(new_middle_node_json, ensure_ascii=False, indent=4)
-            attack_nodes_str += f"\n The question is {response_cot_json['question']}. The new leaf nodes should be {leaf_node_number_str}."
-                #把json给api返回attack text的json
-            client = OpenAI()
-            completion = client.chat.completions.create(
-                        model="gpt-4o-2024-08-06",
-                        response_format={"type": "json_object"},
-                        messages=[
-                            {"role": "system", "content": base_prompt_gen_attack_text_v3},
-                            {"role": "user", "content": attack_nodes_str}
-                        ]
-                    )
-            attack_text_str = completion.choices[0].message.content
-            attack_json = json.loads(attack_text_str)
-            attack_json["question"] = response_cot_json["question"]
-            attack_jsons.append(attack_json)
-    
     adv_prompt_path = Path(os.path.join(new_base_path, 'test0_corpus.json'))
     adv_prompt_path.write_text(json.dumps(attack_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
     print(f"Questions generated successfully and saved to {adv_prompt_path}")
@@ -538,8 +532,8 @@ def process_questions_v2(clean_path,new_base_path):
     
 if __name__ == "__main__":
     clean_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_fake"
-    new_base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_fake"
-    process_questions_v2(clean_path, new_base_path)
+    new_base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake_subgraph_t1"
+    # process_questions_v2(clean_path, new_base_path)
     rewrite_txt_v2( new_base_path)
     
 
