@@ -5,12 +5,12 @@ import shutil
 import os
 
 
-base_path = "/home/ljc/data/graphrag/alltest/med_dataset/ragtest8_medical_small"
+base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised"
 # 调用函数并传递 base_path 参数
 print("=======Start generate_questions")
 # generate_questions(base_path,question_count=5, entity_count=4)
 
-new_path = base_path + '_subgraph_t1_ten_only1'
+new_path = base_path + '_subgraph_t1_ten_only1_yuhui'
 
     
     

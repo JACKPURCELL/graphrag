@@ -485,6 +485,7 @@ def process_questions_v2(clean_path,new_base_path):
     attack_jsons = []
     middle_node_number = 0
     leaf_node_number = 0
+    error_num = 0
     for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
         response_cot_jsons = []
         middle_node_number_str = "M" + str(middle_node_number).zfill(4)
@@ -501,6 +502,7 @@ def process_questions_v2(clean_path,new_base_path):
             try:
                 response_cot_json = json.loads(response_cot)
             except:
+                error_num +=1
                 print(response_cot)
                 print("hdsufhidusafbudshfioudshaofhiods**************")
                 continue
@@ -528,7 +530,7 @@ def process_questions_v2(clean_path,new_base_path):
     adv_prompt_path = Path(os.path.join(new_base_path, 'test0_corpus.json'))
     adv_prompt_path.write_text(json.dumps(attack_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
     print(f"Questions generated successfully and saved to {adv_prompt_path}")
-    
+    print(f"Error number: {error_num}")
     
 if __name__ == "__main__":
     clean_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_fake"
