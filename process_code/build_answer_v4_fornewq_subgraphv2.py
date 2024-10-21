@@ -172,10 +172,9 @@ def process_corpus_file(base_path,corpus_file):
             corpus = corpuses[j]
             try:
                 result = await search_engine.asearch(question)
-                corpus["answer_after_attack"] = result.response
+                attack_answer = result.response
                 leaf_nodes = corpus["indirect_new_entities"]
                 leaf_nodes_texts = ', '.join(leaf_nodes)
-                attack_answer = corpus["answer_after_attack"]
                 completion = client.chat.completions.create(
                 model="gpt-4o-mini",
                 response_format={"type": "json_object"},
@@ -191,7 +190,8 @@ def process_corpus_file(base_path,corpus_file):
                     if consistent_json["found"]:
                         total_succ += 1
                 
-                    consistent_json["new_leaf_nodes"] = leaf_nodes    
+                    consistent_json["new_leaf_nodes"] = leaf_nodes
+                    consistent_json["answer_after_attack"] = attack_answer
                     corpuses[j] = {**consistent_json, **corpus}
 
                 else:
@@ -211,6 +211,6 @@ def process_corpus_file(base_path,corpus_file):
     asyncio.run(main())
 if __name__ == "__main__":
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1"
+    base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_exp2_ongo"
     corpus_file = base_path + '/test0_corpus.json'
     process_corpus_file(base_path, corpus_file)

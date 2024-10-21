@@ -1,6 +1,6 @@
 from build_questions_v3 import generate_questions
-from build_corpus_subgraph import process_questions_v2,rewrite_txt_v2
-from build_answer_v4_fornewq_subgraphv2 import process_corpus_file
+from build_corpus_subgraph_exp1 import process_questions_v2,rewrite_txt_v2
+from build_answer_v4_fornewq_subgraphv2_onlydir import process_corpus_file
 import shutil
 import os
 
@@ -11,12 +11,12 @@ base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_s
 print("=======Start generate_questions")
 # generate_questions(base_path,question_count=5, entity_count=4)
 
-new_path = base_path + '_basic_noonly1_2'
+new_path = base_path + '_exp1_noonly1_2'
 
     
     
 print("=======Start build corpus")
-# process_questions_v2(base_path,new_path)
+process_questions_v2(base_path,new_path)
 rewrite_txt_v2(new_path)
 
 

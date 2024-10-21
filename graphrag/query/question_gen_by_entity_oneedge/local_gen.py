@@ -195,7 +195,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                                 {"role": "system", "content": CHANGE_RELATIONS_ORDER},
                             {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
                             ],
-                        temperature=0.1,
+                        temperature=0.2,
                         )
             return_json = json.loads(completion.choices[0].message.content)
             
@@ -251,7 +251,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                             {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_prompt},
                         ],
-                     temperature=0.3,
+                     temperature=0.2,
                     )
                     
                     content = completion.choices[0].message.content

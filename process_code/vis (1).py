@@ -396,7 +396,7 @@ if __name__ == "__main__":
     # graphml_file = "ragtest/output/20240805-181540/artifacts/merged_graph.graphml"
     # graphml_file = "ragtest6_modify/output/20240905-093528/artifacts/merged_graph.graphml"
     base_path = '/home/ljc/data/graphrag'
-    graphml_file = "/data/yuhui/6/graphrag/ragtest8_medical_small/output/20240927-164809/artifacts/merged_graph.graphml"
+    graphml_file = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_exp2_ongo_five/output/20241020-181002/artifacts/merged_graph.graphml"
     html_path = base_path + "/graph_visualization2.html"
     json_path = base_path + "/graph_json.js"
     visualize_graphml(graphml_file, html_path,json_path)
