@@ -25,8 +25,9 @@ import json
 from pathlib import Path
 from tqdm import tqdm
 from openai import OpenAI
-
-def process_corpus_file(base_path,corpus_file):
+import concurrent.futures
+from tqdm.asyncio import tqdm_asyncio
+def process_corpus_file(base_path, corpus_file):
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
     latest_folder = max(folders, key=os.path.getmtime)
@@ -148,26 +149,9 @@ def process_corpus_file(base_path,corpus_file):
     """
 
     client = OpenAI()
-    async def main():
-        # json_file_path = base_path + '/question_multi_v3.json'
-        # with open(json_file_path, 'r', encoding='utf-8') as file:
-        #     question_groups = json.load(file)
 
-        # all_questions_jsons = []
-        # for i in range(len(question_groups)):
-        #     all_questions_jsons.extend(question_groups[i]["questions"])
-            
-        with open(corpus_file, 'r', encoding='utf-8') as file:
-            corpuses = json.load(file)
-            
-        # total = len(question_groups)
-        count = 0
-        # assert len(all_questions_jsons) == len(corpuses)
-        answer_jsons = []
-        total_succ = 0
-
-            
-        for j in tqdm(range(len(corpuses))):
+    def process_question_sync(j, corpuses, search_engine, client, system_prompt):
+        async def process_question():
             question = corpuses[j]["question"]
             corpus = corpuses[j]
             try:
@@ -177,41 +161,65 @@ def process_corpus_file(base_path,corpus_file):
                 leaf_nodes.append(corpus["Modified Middle Node"])
                 leaf_nodes_texts = ', '.join(leaf_nodes)
                 completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
-                response_format={"type": "json_object"},
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": "FOR_SEARCH_ENEITIES: " + leaf_nodes_texts + "\n CONTENT: " + attack_answer}
-                ]
-
+                    model="gpt-4o-2024-08-06",
+                    response_format={"type": "json_object"},
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": "FOR_SEARCH_ENEITIES: " + leaf_nodes_texts + "\n CONTENT: " + attack_answer}
+                    ]
                 )
-                
+
                 content = completion.choices[0].message.content
                 if content is not None:
                     consistent_json = json.loads(content)
                     if consistent_json["found"]:
-                        total_succ += 1
-                
+                        return j, consistent_json, attack_answer, True
                     consistent_json["answer_after_attack"] = attack_answer
-                    corpuses[j] = {**consistent_json, **corpus}
-
+                    return j, consistent_json, attack_answer, False
                 else:
                     print('No response from OpenAI')
-                
+                    return j, None, None, False
             except Exception as e:
                 print(f"Error processing question: {e}")
-                continue
+                return j, None, None, False
+
+        return asyncio.run(process_question())
+
+    async def main():
+        with open(corpus_file, 'r', encoding='utf-8') as file:
+            corpuses = json.load(file)
+
+        total_succ = 0
+
+        max_threads = 10  # 设置线程数量
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
+            loop = asyncio.get_event_loop()
+            futures = [
+                loop.run_in_executor(executor, process_question_sync, j, corpuses, search_engine, client, system_prompt)
+                for j in range(len(corpuses))
+            ]
+            results = []
+            for f in tqdm_asyncio.as_completed(futures, total=len(futures)):
+                results.append(await f)
+
+        for j, consistent_json, attack_answer, success in results:
+            if consistent_json:
+                corpuses[j] = {**consistent_json, **corpuses[j]}
+            if success:
+                total_succ += 1
+
         print(f"Total successful: {total_succ}/{len(corpuses)}")
         output_file_path = base_path + '/question_with_answer_v4_retest.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)
-       
+
         print(f"Updated questions saved to {output_file_path}")
 
     import asyncio
     asyncio.run(main())
+
 if __name__ == "__main__":
-    # 调用函数
     base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q2_exp2_ongo_five_v2_test3_temp01"
     corpus_file = base_path + '/test0_corpus.json'
     process_corpus_file(base_path, corpus_file)

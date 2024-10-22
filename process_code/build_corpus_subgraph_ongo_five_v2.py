@@ -489,7 +489,7 @@ def ask_gpt_json(system_prompt, user_prompt):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
                 ],
-                temperature=0.2
+                temperature=0.1
             
             )
             json_str = completion.choices[0].message.content
@@ -522,7 +522,7 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
                     {"role": "system", "content": base_prompt_gen_attack_text_v3},
                     {"role": "user", "content": attack_nodes_str}
                 ],
-                temperature=0.2
+                temperature=0.1
             )
             attack_text_str = completion.choices[0].message.content
             attack_json = json.loads(attack_text_str)

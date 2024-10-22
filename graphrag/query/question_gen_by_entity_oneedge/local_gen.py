@@ -23,7 +23,8 @@ from openai import OpenAI
 
 client = OpenAI()
 log = logging.getLogger(__name__)
-
+import concurrent.futures
+from tqdm import tqdm
 QUESTION_SYSTEM_PROMPT = """
 ---Role---
 
@@ -143,6 +144,105 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         self.system_prompt = system_prompt
         self.callbacks = callbacks
 
+    def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs):
+        per_text_target = "[Root Entity,Selected Entity]: " + str(as_target)
+        
+        question_history = [f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}. IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
+        
+        if len(question_history) == 0:
+            question_text = ""
+            conversation_history = None
+        else:
+            question_text = question_history[-1]
+            history = [
+                {"role": "user", "content": query} for query in question_history[:-1]
+            ]
+            conversation_history = ConversationHistory.from_list(history)
+
+        if context_data is None:
+            context_data, context_records = self.context_builder.build_context(
+                query=question_text,
+                conversation_history=conversation_history,
+                **kwargs,
+                **self.context_builder_params,
+            )
+        else:
+            context_records = {"context_data": context_data}
+
+        try:
+            system_prompt = self.system_prompt.format(
+                question_count=question_count
+            )
+            user_prompt = USER_PROMPT.format(context_data=context_data,
+                                            question_count=question_count,
+                                            entity=ent_with_rel_name,
+                                            related_relationships_text_source=related_relationships_text_source,
+                                            related_relationships_text_target=per_text_target) + EXAMPLE_USE
+
+            completion = client.chat.completions.create(
+                model="gpt-4o-2024-08-06",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.2,
+            )
+
+            content = completion.choices[0].message.content
+            content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            pending_questions = {}
+            content_json = json.loads(content)
+            if len(content_json) > 0:
+                pending_questions["questions"] = json.loads(content)
+            else:
+                return None
+
+            if len(pending_questions["questions"]) > 1:
+                pending_questions["selected_entity"] = ent_with_rel_name
+                pending_questions["as_source"] = as_source_list
+                pending_questions["as_target"] = [as_target]
+                multi_questions.append(pending_questions)
+            else:
+                pending_questions["selected_entity"] = ent_with_rel_name
+                pending_questions["as_source"] = as_source_list
+                pending_questions["as_target"] = [as_target]
+                single_questions.append(pending_questions)
+        except Exception:
+            log.exception("Exception in generating question")
+            return None
+
+    def process_entity(self, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, **kwargs):
+        ent_with_rel_name = ent_with_rel["entity"].title
+        as_relationships_list = []
+        for rel in ent_with_rel["all_relationships"]:
+            as_relationships_list.append([rel.source, rel.target])
+            
+        completion = client.chat.completions.create(
+                    model="gpt-4o-2024-08-06",
+                    response_format={ "type": "json_object" },
+                    messages=[
+                            {"role": "system", "content": CHANGE_RELATIONS_ORDER},
+                        {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
+                        ],
+                    temperature=0.2,
+                    )
+        return_json = json.loads(completion.choices[0].message.content)
+        
+        as_source_list = return_json["as_source"] 
+        as_target_list = return_json["as_target"]
+        
+        related_relationships_text_source = "[Selected Entity,Leaf Entity]: " +str(as_source_list)
+        
+        max_threads = 10  # 设置线程数量
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
+            futures = [
+                executor.submit(self.process_target, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs)
+                for as_target in as_target_list
+            ]
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing targets", leave=False):
+                future.result()
+
     async def agenerate(
         self,
         question_history: list[str],
@@ -179,106 +279,17 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             useful_entities = random.sample(useful_entities, entity_count)
         else:
             print("keep all entities")
-            
 
-            
-        for ent_with_rel in tqdm(useful_entities):
-            ent_with_rel_name = ent_with_rel["entity"].title
-            as_relationships_list = []
-            for rel in ent_with_rel["all_relationships"]:
-                as_relationships_list.append([rel.source, rel.target])
-                
-            completion = client.chat.completions.create(
-                        model="gpt-4o-2024-08-06",
-                        response_format={ "type": "json_object" },
-                        messages=[
-                                {"role": "system", "content": CHANGE_RELATIONS_ORDER},
-                            {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
-                            ],
-                        temperature=0.2,
-                        )
-            return_json = json.loads(completion.choices[0].message.content)
-            
-            as_source_list = return_json["as_source"] 
-            as_target_list = return_json["as_target"]
-            
-            related_relationships_text_source = "[Selected Entity,Leaf Entity]: " +str(as_source_list)
-            
-          
-            for as_target in as_target_list:
-                per_text_target = "[Root Entity,Selected Entity]: " + str(as_target)    
-                
-                question_history = [f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}.     IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
-                
-                if len(question_history) == 0:
-                    question_text = ""
-                    conversation_history = None
-                else:
-                    # construct current query and conversation history
-                    question_text = question_history[-1]
-                    history = [
-                        {"role": "user", "content": query} for query in question_history[:-1]
-                    ]
-                    conversation_history = ConversationHistory.from_list(history)
+        max_threads = 10  # 设置线程数量
 
-                if context_data is None:
-                    # generate context data based on the question history
-                    context_data, context_records = self.context_builder.build_context(
-                        query=question_text,
-                        conversation_history=conversation_history,
-                        **kwargs,
-                        **self.context_builder_params,
-                    )  # type: ignore
-                else:
-                    context_records = {"context_data": context_data}
-                # log.info("GENERATE QUESTION: %s. LAST QUESTION: %s", start_time, question_text)
-                
-                    
-                try:
-                    system_prompt = self.system_prompt.format(
-                         question_count=question_count
-                    )
-                    user_prompt = USER_PROMPT.format(context_data=context_data,
-                                                     question_count=question_count,
-                                                     entity=ent_with_rel_name,
-                                                     related_relationships_text_source=related_relationships_text_source,
-                                                     related_relationships_text_target=per_text_target) + EXAMPLE_USE
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
+            futures = [
+                executor.submit(self.process_entity, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, **kwargs)
+                for ent_with_rel in useful_entities
+            ]
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing entities"):
+                future.result()
 
-                  
-                    completion = client.chat.completions.create(
-                    model="gpt-4o-2024-08-06",
-                     messages=[
-                            {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_prompt},
-                        ],
-                     temperature=0.2,
-                    )
-                    
-                    content = completion.choices[0].message.content
-                    content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
-                    pending_questions={}
-                    content_json = json.loads(content)
-                    if len(content_json) > 0:
-                        pending_questions["questions"] = json.loads(content)
-                    else:
-                        continue
-                    
-                    try:
-                        if len(pending_questions["questions"]) > 1:
-                            pending_questions["selected_entity"] = ent_with_rel_name
-                            pending_questions["as_source"] = as_source_list
-                            pending_questions["as_target"] = [as_target]
-                            multi_questions.append(pending_questions)
-                        else:
-                            pending_questions["selected_entity"] = ent_with_rel_name
-                            pending_questions["as_source"] = as_source_list
-                            pending_questions["as_target"] = [as_target]
-                            single_questions.append(pending_questions)
-                    except Exception:
-                        raise ValueError(f"Error in parsing response: {completion.choices[0].message.content}")
-                
-                except Exception:
-                    log.exception("Exception in generating question")
         return single_questions, multi_questions
         
 

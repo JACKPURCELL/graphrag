@@ -489,7 +489,7 @@ def ask_gpt_json(system_prompt, user_prompt):
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt}
                 ],
-                temperature=0.2
+                temperature=0.1
             
             )
             json_str = completion.choices[0].message.content
@@ -522,7 +522,7 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
                     {"role": "system", "content": base_prompt_gen_attack_text_v3},
                     {"role": "user", "content": attack_nodes_str}
                 ],
-                temperature=0.2
+                temperature=0.1
             )
             attack_text_str = completion.choices[0].message.content
             attack_json = json.loads(attack_text_str)
@@ -532,7 +532,19 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
             print(f"发生异常: {e}, 正在重试...")
     attack_json = {**attack_json, **response_cot_json, **new_middle_node_json}
     return attack_json
-    
+
+
+def process_question_set(q, base_prompt_cot, search_engine):
+    while True:
+        try:
+            response_cot = asyncio.run(main(base_prompt_cot + q["question"], search_engine))
+            response_cot = response_cot.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            response_cot_json = json.loads(response_cot)
+            response_cot_json["question"] = q["question"]
+            return response_cot_json
+        except Exception as e:
+            print(f"发生异常: {e}, 正在重试...")
+                
 def process_questions_v2(clean_path,new_base_path):
     
     search_engine = gen_search_engine(os.path.join(clean_path, 'output'))
@@ -555,17 +567,13 @@ def process_questions_v2(clean_path,new_base_path):
     
     for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
         response_cot_jsons = []
-        for q in question_set["questions"]:
-            while True:
-                try:
-                    response_cot = asyncio.run(main(base_prompt_cot + q["question"],search_engine))
-                    response_cot = response_cot.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
-                    response_cot_json = json.loads(response_cot)
-                    response_cot_json["question"] = q["question"]
-                    response_cot_jsons.append(response_cot_json)
-                    break
-                except Exception as e:
-                    print(f"发生异常: {e}, 正在重试...")
+        questions = question_set["questions"]
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [executor.submit(process_question_set, q, base_prompt_cot, search_engine) for q in questions]
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing questions", leave=False):
+                response_cot_jsons.append(future.result())
+
             # # # 提取cot以及关系的模板
             # response_cot = asyncio.run(main(base_prompt_cot + q["question"],search_engine))
             # response_cot = response_cot.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
@@ -585,16 +593,15 @@ def process_questions_v2(clean_path,new_base_path):
         target_relationship = question_set["as_target"][0]
         target_chain_of_thoughts = response_cot_jsons[0]["chain_of_thoughts"][0]
         prompt_middle_node = f"\n Given [Root Node, Original Middle Node] is {str(target_relationship)} The chain of thoughts of their relationships is {target_chain_of_thoughts}"
-        
-        # 现在要攻击的边有了，通过query问新的子节点
+
         new_middle_node_json = ask_gpt_json(base_prompt_search_new_middle_v3, prompt_middle_node)
-        
+
         root_node, original_middle_node, modified_middle_node = new_middle_node_json["Root Node"], new_middle_node_json["Original Middle Node"], new_middle_node_json["Modified Middle Node"]
-        
-        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-            futures = [executor.submit(process_response, new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json) for response_cot_json in response_cot_jsons]
-            for future in tqdm(concurrent.futures.as_completed(futures), total=len(response_cot_jsons)):
-                attack_jsons.append(future.result())
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            futures = [executor.submit(process_response, new_middle_node_json, root_node, original_middle_node, modified_middle_node, response_cot_json) for response_cot_json in response_cot_jsons]
+            for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing responses", leave=False):
+                attack_jsons.append(future.result())    
         # for response_cot_json in response_cot_jsons:
         #     attack_jsons.append(process_response(new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json))
             
@@ -605,7 +612,7 @@ def process_questions_v2(clean_path,new_base_path):
     
 if __name__ == "__main__":
     clean_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
-    new_base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_exp2_ongo_five"
+    new_base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_exp2_ongo_five_v3_temp01"
     process_questions_v2(clean_path, new_base_path)
     rewrite_txt_v2( new_base_path)
     
