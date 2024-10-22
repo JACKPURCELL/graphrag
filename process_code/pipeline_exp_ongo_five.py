@@ -5,14 +5,14 @@ import shutil
 import os
 
 
-base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q2"
-# base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
+# base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q2"
+base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
 
 # 调用函数并传递 base_path 参数
 print("=======Start generate_questions")
 # generate_questions(base_path,question_count=5, entity_count=10)
 
-new_path = base_path + '_exp2_ongo_five'
+new_path = base_path + '_exp2_ongo_five_v3'
 
     
     
