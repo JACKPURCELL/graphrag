@@ -1,16 +1,17 @@
 from build_questions_v3 import generate_questions
-from build_corpus_subgraph_ongo_five import process_questions_v2,rewrite_txt_v2
-from build_answer_v4_fornewq_subgraphv2 import process_corpus_file
+from build_corpus_subgraph_ongo_five_v3 import process_questions_v2,rewrite_txt_v2
+from build_answer_v4_fornewq_subgraphv2_multithread import process_corpus_file
 import shutil
 import os
 
 
-base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q2"
+base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q3"
+# base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest7_cyber_text"
 # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
 
 # 调用函数并传递 base_path 参数
 print("=======Start generate_questions")
-# generate_questions(base_path,question_count=5, entity_count=10)
+generate_questions(base_path,question_count=5, entity_count=30)
 
 new_path = base_path + '_exp2_ongo_five_v3_temp01'
 
