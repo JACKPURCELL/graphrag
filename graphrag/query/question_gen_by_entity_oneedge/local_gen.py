@@ -47,46 +47,118 @@ Please must generate {question_count} or As many as possible questions
 
 ---Goal---
 
-Let's focus on the selected entity {entity}. Consider the following:
+Let's focus on the [middle_node] {entity}. Consider the following:
 
-Relationships where {entity} is the starting point, with subsequent nodes referred to as "leaf nodes",[selected entity,leaf]:
-{related_relationships_text_source}
-
-Relationships where {entity} is the endpoint, with preceding nodes referred to as "root nodes",[root,selected entity]:
+Relationships where {entity} is the endpoint, with preceding nodes referred to as root nodes,[root node,middle_node]:
 {related_relationships_text_target}
 
-1. Formulate questions along the path of root node -> selected entity -> leaf node. The questions should only include the root nodes without mentioning the selected entity. Try to hide the selected entity with another representation using the root nodes in the question.
+Relationships where {entity} is the starting point, with subsequent nodes referred to as leaf nodes,[middle_node,leaf_node]:
+{related_relationships_text_source}
+
+
+1. Formulate questions along the path of [root_node] -> [middle_node] -> [leaf_node]. The questions should only include the root nodes without mentioning the [middle_node]. Try to hide the [middle_node] with another representation using the root nodes in the question.
 
 2. The candidate questions should reflect the important or urgent information or themes within the data tables.
 
 3. These questions should be answerable using the provided data tables but should not explicitly reference any specific data fields or tables in the question text.
 
-4. The answers to these questions should be the leaf nodes itself or some content in leaf nodes' description 
+4. The answers to these questions should be the [leaf_node] itself or some simple content in [leaf_node]' description 
 
 5. At the same time you need to ask the questions to yourself without the Data tables, And then Answer within 50 words, write the answer in the gpt_answer_withoutdata field. then compare the answer with the data table to see if the answer is consistent with the data table. If the answer is not consistent approximately with the data table, you need to reconsider the question.
 
 6. Don't use other entities and relationships(out of {entity},{related_relationships_text_source},{related_relationships_text_target}) information to generate the questions.
 
-7. Should include the root node in the question. Should not include the selected entity and leaf nodes in the question.
+7. Should include the root node in the question. Should not include the [middle_node] and [leaf nodes] in the question.
+
+FOR EACH QUESTION YOU GENERATE, 
+
+1. How you generate this question step by step. Finish the chain of thoughts based on the your knowledge based Entities and Relationships and generation process.
+2. During your reasoning process, outline chain of thoughts in the form of a knowledge graph. In the knowledge, the nodes and relationship must be the your knowledge based Entities and Relationships.
+3. Each reasoning step MUST correspond to at least one edge that has two nodes and one relationship in the knowledge graph. 
+4. Each reasoning step MUST use the words in the corresponding part of the question without paraphrase.
+5. Adjust chain of thoughts to achieve this.
+6. Also generate the "Template Relationship based on chain_of_thoughts" using the chain of thoughts.  Leaving "{{root_node}}" and "{{middle_node}}" and "{{leaf_node}}" for future placeholders.
+7. In "Template Relationship between root and middle node", add  template to connect the "{{root_node}}" and "{{middle_node}}", which should be the same as the first step of the chain of thoughts.
+8. In "Template Relationship between middle and leaf node", add  template to connect the "{{middle_node}}" and "{{leaf_node}}", which should be the same as the second step of the chain of thoughts.
+9. In "Template Relationship between root and leaf", add  template to connect the "{{root_node}}" and "{{leaf_node}}"
 
 
-Please must generate {question_count} or As many as possible questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, selected entity, leaf nodes, and root nodes. 
+Please must generate {question_count} or As many as possible questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, [middle_node], leaf nodes, and root nodes. 
 
 Return {question_count} or As many as possible jsons in a list.
 Just output json, don't saw any other information.
 """
 
 EXAMPLE_USE ="""
+
+
 <JSON example>
 {
 "question": "What is the patronage of the most famous attractions in the capital of China?", 
 "gpt_answer_withoutdata":"Beijing's top attractions, such as the Forbidden City, the Great Wall, and the Temple of Heaven, draw millions annually. The Forbidden City alone sees over 14 million visitors each year, while sections of the Great Wall near Beijing attract similar numbers, showcasing their global appeal and cultural significance.",
 "answer": "The patronage of the most famous attractions in the capital of China is 100,000.",
 "consistency": true,
-"selected_entity": "BEIJING",
+"root_nodes": "CHINA"
+"middle_node": "BEIJING",
 "leaf_nodes": ["GREAT WALL", "FORBIDDEN CITY", "SUMMER PALACE"],
-"root_nodes": ["CHINA"]
+"chain_of_thoughts": [
+   "The capital of China is Beijing.",
+    "Most famous attractions of Beijing is the Forbidden City.",
+    "The patronage of the Forbidden City is 100,000."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The capital of {root_node} is {middle_node}.",
+    "Most famous attractions of {middle_node} is the {leaf_node}.",
+    "The patronage of the {leaf_node} is {answer}."
+   
+],
+"Template Relationship between root and middle node": [
+      "The capital of {root_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "Most famous attractions of {middle_node} is the {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+     "{leaf_node} is located in the capital of {root_node}."
+],
+"knowledge_graph": [
+    ["China", "Beijing", "capital"],
+    ["Beijing", "Forbidden City", "Most famous attractions"],
+    ["Beijing", "100,000", "patronage"],
+]
+
 }
+
+{
+"question": "What is the patronage of the most famous attractions in the capital of China?", 
+"gpt_answer_withoutdata":"Beijing's top attractions, such as the Forbidden City, the Great Wall, and the Temple of Heaven, draw millions annually. The Forbidden City alone sees over 14 million visitors each year, while sections of the Great Wall near Beijing attract similar numbers, showcasing their global appeal and cultural significance.",
+"answer": "The patronage of the most famous attractions in the capital of China is 100,000.",
+"consistency": true,
+"root_nodes": "CHINA"
+"middle_node": "BEIJING",
+"leaf_nodes": ["GREAT WALL", "FORBIDDEN CITY", "SUMMER PALACE"],
+"chain_of_thoughts": [
+   "The capital of China is Beijing.",
+    "Most famous attractions of Beijing is the Forbidden City.",
+    "The patronage of the Forbidden City is 100,000."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The capital of {root_node} is {middle_node}.",
+    "Most famous attractions of {middle_node} is the {leaf_node}.",
+    "The patronage of the {leaf_node} is {answer}."
+   
+],
+"Template Relationship with root and leaf": [
+     "{leaf_node} is located in the capital of {root_node}."
+],
+"knowledge_graph": [
+    ["China", "Beijing", "capital"],
+    ["Beijing", "Forbidden City", "Most famous attractions"],
+    ["Beijing", "100,000", "patronage"],
+]
+
+}
+
 """
 
 CHANGE_RELATIONS_ORDER = """
@@ -103,6 +175,10 @@ Examples:
 [BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY].
 [TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN].
 [iPhone, Apple] should become [Apple, iPhone].
+[Symptoms,Diseases] should become [Diseases, Symptoms].
+[Treatment Drugs,Symptoms] should become [Symptoms, Treatment Drugs].
+[Treatment,Symptoms] should become [Symptoms, Treatment].
+[Treatment,Diseases] should become [Diseases, Treatment].
 [math, mathematics department] should remain [math, mathematics department].
 Apply these rules consistently to transform the list of pairs, ensuring that the more general concept (B) precedes the specific concept (A) unless both are of equal specificity or already correctly ordered.
 
@@ -145,7 +221,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         self.callbacks = callbacks
 
     def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs):
-        per_text_target = "[Root Entity,Selected Entity]: " + str(as_target)
+        per_text_target = "[Root Entity,middle_node]: " + str(as_target)
         
         question_history = [f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}. IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
         
@@ -198,12 +274,12 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                 return None
 
             if len(pending_questions["questions"]) > 1:
-                pending_questions["selected_entity"] = ent_with_rel_name
+                pending_questions["middle_node"] = ent_with_rel_name
                 pending_questions["as_source"] = as_source_list
                 pending_questions["as_target"] = [as_target]
                 multi_questions.append(pending_questions)
             else:
-                pending_questions["selected_entity"] = ent_with_rel_name
+                pending_questions["middle_node"] = ent_with_rel_name
                 pending_questions["as_source"] = as_source_list
                 pending_questions["as_target"] = [as_target]
                 single_questions.append(pending_questions)
@@ -231,7 +307,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         as_source_list = return_json["as_source"] 
         as_target_list = return_json["as_target"]
         
-        related_relationships_text_source = "[Selected Entity,Leaf Entity]: " +str(as_source_list)
+        related_relationships_text_source = "[middle_node,Leaf Entity]: " +str(as_source_list)
         
         max_threads = 10  # 设置线程数量
 
