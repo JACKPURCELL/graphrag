@@ -147,28 +147,19 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
 
     question_path_multi = os.path.join(base_path, 'question_multi_v3.json')
     question_path_single = os.path.join(base_path, 'question_single_v3.json')
-    pre_root_single_path = os.path.join(base_path, 'pre_root_single_v3.json')
-    pre_root_multi_path = os.path.join(base_path, 'pre_root_multi_v3.json')
+
     async def main():
-        single_candidate_questions, multi_candidate_questions,pre_root_single_questions,pre_root_multi_questions = await question_generator.agenerate(
+        single_candidate_questions, multi_candidate_questions = await question_generator.agenerate(
             question_history=[], context_data=None, question_count=question_count, entity_count=entity_count, need_to_keep_entity_names=need_to_keep_entity_names)
         with open(question_path_multi, 'w') as f:
             json.dump(multi_candidate_questions, f, indent=4)
         with open(question_path_single, 'w') as f:
             json.dump(single_candidate_questions, f, indent=4)
-        with open(pre_root_single_path, 'w') as f:
-            json.dump(pre_root_single_questions, f, indent=4)
-        with open(pre_root_multi_path, 'w') as f:
-            json.dump(pre_root_multi_questions, f, indent=4)
       
         print(f"Entity generated Multi: {len(multi_candidate_questions)}")
         print(f"Entity generated single: {len(single_candidate_questions)}")
-        print(f"Entity generated pre_root_single: {len(pre_root_single_questions)}")
-        print(f"Entity generated pre_root_multi: {len(pre_root_multi_questions)}")
         print(f"Questions saved to: {question_path_multi}")
         print(f"Questions saved to: {question_path_single}")
-        print(f"Questions saved to: {pre_root_single_path}")
-        print(f"Questions saved to: {pre_root_multi_path}")
     import asyncio
     asyncio.run(main())
 

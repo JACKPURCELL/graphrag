@@ -227,6 +227,16 @@ def process_corpus_file(base_path, corpus_file):
         print(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{len(corpuses)}")
         print(f"FAILED: {total_succ_none}/{len(corpuses)}")
         
+        # 将结果写入日志文件
+        log_file_path = os.path.join(base_path, 'results_log.txt')
+        with open(log_file_path, 'w', encoding='utf-8') as log_file:
+            log_file.write(f"Total successful both: {total_succ_both}/{len(corpuses)}\n")
+            log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{len(corpuses)}\n")
+            log_file.write(f"Total successful middle only: {total_succ_middle_only}/{len(corpuses)}\n")
+            log_file.write(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{len(corpuses)}\n")
+            log_file.write(f"FAILED: {total_succ_none}/{len(corpuses)}\n")
+
+
         output_file_path = base_path + '/question_with_answer_v4_retest.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)

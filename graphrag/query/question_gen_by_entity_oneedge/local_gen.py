@@ -127,8 +127,41 @@ EXAMPLE_USE ="""
     ["Beijing", "100,000", "patronage"],
 ]
 
-}
+},
 
+{
+"question": "What medication should be used to treat a patient who has symptoms of Facial Paralysis?", 
+"gpt_answer_withoutdata":"...",
+"answer": "...",
+"consistency": true,
+"root_nodes": "Facial Paralysis"
+"middle_node": "Leprosy",
+"leaf_nodes": ["Rifampicin", "Dapsone", "Thalidomide"],
+"chain_of_thoughts": [
+  "The disease have symptom of Facial Paralysis is Leprosy.",
+"The treatment drugs of Leprosy are Rifampicin, Dapsone, Thalidomide."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The disease have symptom of {leaf_node} is {middle_node}.",
+    "The treatment drugs of {middle_node} are {leaf_node}."
+],
+"Template Relationship between root and middle node": [
+      "The disease have symptom of {leaf_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "The treatment drugs of {middle_node} are {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+    "The treatment drugs of {root_nodes} are {leaf_node}."
+],
+"knowledge_graph": [
+    ["Facial Paralysis", "Leprosy", "disease"],
+    ["Leprosy", "Rifampicin", "treatment drugs"],
+    ["Leprosy", "Dapsone", "treatment drugs"],
+    ["Leprosy", "Thalidomide", "treatment drugs"]
+]
+
+}
 """
 
 CHANGE_RELATIONS_ORDER = """
@@ -145,10 +178,9 @@ Examples:
 [BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY].
 [TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN].
 [iPhone, Apple] should become [Apple, iPhone].
-[Symptoms,Diseases] should become [Diseases, Symptoms].
-[Treatment Drugs,Symptoms] should become [Symptoms, Treatment Drugs].
-[Treatment,Symptoms] should become [Symptoms, Treatment].
-[Treatment,Diseases] should become [Diseases, Treatment].
+[Diseases, Symptoms] should become [Symptoms, Diseases].
+[Treatment Drugs, Diseases] should become [Diseases, Treatment Drugs].
+[Treatment, Diseases] should become [Diseases, Treatment].
 [math, mathematics department] should remain [math, mathematics department].
 Apply these rules consistently to transform the list of pairs, ensuring that the more general concept (B) precedes the specific concept (A) unless both are of equal specificity or already correctly ordered.
 
@@ -189,7 +221,11 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         self.relationships=relationships
         self.system_prompt = system_prompt
         self.callbacks = callbacks
+        self.entity_dict = {enti.title: enti for enti in entities}
 
+    def find_entity_by_title(self, root_node):
+        return self.entity_dict.get(root_node)
+    
     def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs):
         per_text_target = "[Root Entity,middle_node]: " + str(as_target)
         
@@ -256,8 +292,46 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         except Exception:
             log.exception("Exception in generating question")
             return None
+        
+        
+    def pre_root_question(self,middle_as_target_list,question_count,pre_root_single_questions,pre_root_multi_questions, **kwargs):
+        context_data = None
+        #middle_as_target_list [Root Node,middle_node]
+        for middle_as_target in middle_as_target_list:
+            root_node = middle_as_target[0].upper()
+            ent_with_rel_name = root_node
+            middle_node = middle_as_target[1].upper()
+            all_relationships = [rel for rel in self.relationships if rel.source == root_node or rel.target == root_node]
+        
+        
+            for rel in all_relationships:
+                as_relationships_list.append([rel.source, rel.target])
+                
+            completion = client.chat.completions.create(
+                        model="gpt-4o-2024-08-06",
+                        response_format={ "type": "json_object" },
+                        messages=[
+                                {"role": "system", "content": CHANGE_RELATIONS_ORDER},
+                            {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
+                            ],
+                        temperature=0.2,
+                        )
+                return_json = json.loads(completion.choices[0].message.content)
+        
+                as_source_list = return_json["as_source"] 
+                as_target_list = return_json["as_target"] #Root node as target
+                if len(as_target_list) > 0:
+                    for as_target in as_target_list:
+                        pre_root_node = as_target[0].upper()
+                        related_relationships_text_source = "[middle_node,Leaf Entity]: " + str([root_node, middle_node])
+                        self.process_target(as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, pre_root_single_questions,pre_root_multi_questions, **kwargs)
+                else:
+                    print(f"No root node as target for [Root] root_node,  [Root,Middle] {root_node} -> {middle_node}")
+        
+        
+  
 
-    def process_entity(self, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, **kwargs):
+    def process_entity(self, ent_with_rel, context_data, client, question_count, multi_questions, single_questions,pre_root_single_questions,pre_root_multi_questions,**kwargs):
         ent_with_rel_name = ent_with_rel["entity"].title
         as_relationships_list = []
         for rel in ent_with_rel["all_relationships"]:
@@ -276,6 +350,8 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         
         as_source_list = return_json["as_source"] 
         as_target_list = return_json["as_target"]
+        
+        self.pre_root_question(as_target_list,question_count,pre_root_single_questions,pre_root_multi_questions, **kwargs)
         
         related_relationships_text_source = "[middle_node,Leaf Entity]: " +str(as_source_list)
         
@@ -307,6 +383,8 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         multi_questions = []
         single_questions = []   
         useful_entities = []
+        pre_root_multi_questions = []
+        pre_root_single_questions = []
         for ent in self.entities:
             all_relationships = [rel for rel in self.relationships if rel.source == ent.title or rel.target == ent.title]
             if len(all_relationships) > 1 :
@@ -330,13 +408,13 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
-                executor.submit(self.process_entity, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, **kwargs)
+                executor.submit(self.process_entity, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, pre_root_single_questions,pre_root_multi_questions,**kwargs)
                 for ent_with_rel in useful_entities
             ]
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing entities"):
                 future.result()
 
-        return single_questions, multi_questions
+        return single_questions, multi_questions, pre_root_single_questions, pre_root_multi_questions
         
 
     def generate(
