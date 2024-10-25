@@ -129,36 +129,6 @@ EXAMPLE_USE ="""
 
 }
 
-{
-"question": "What is the patronage of the most famous attractions in the capital of China?", 
-"gpt_answer_withoutdata":"Beijing's top attractions, such as the Forbidden City, the Great Wall, and the Temple of Heaven, draw millions annually. The Forbidden City alone sees over 14 million visitors each year, while sections of the Great Wall near Beijing attract similar numbers, showcasing their global appeal and cultural significance.",
-"answer": "The patronage of the most famous attractions in the capital of China is 100,000.",
-"consistency": true,
-"root_nodes": "CHINA"
-"middle_node": "BEIJING",
-"leaf_nodes": ["GREAT WALL", "FORBIDDEN CITY", "SUMMER PALACE"],
-"chain_of_thoughts": [
-   "The capital of China is Beijing.",
-    "Most famous attractions of Beijing is the Forbidden City.",
-    "The patronage of the Forbidden City is 100,000."
-],
-"Template Relationship based on chain_of_thoughts": [
-    "The capital of {root_node} is {middle_node}.",
-    "Most famous attractions of {middle_node} is the {leaf_node}.",
-    "The patronage of the {leaf_node} is {answer}."
-   
-],
-"Template Relationship with root and leaf": [
-     "{leaf_node} is located in the capital of {root_node}."
-],
-"knowledge_graph": [
-    ["China", "Beijing", "capital"],
-    ["Beijing", "Forbidden City", "Most famous attractions"],
-    ["Beijing", "100,000", "patronage"],
-]
-
-}
-
 """
 
 CHANGE_RELATIONS_ORDER = """

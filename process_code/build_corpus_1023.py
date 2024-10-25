@@ -132,46 +132,62 @@ def gen_search_engine(output_path):
 
 
 
+
+black_box_prompt = """
+## Task Description:
+
+
+
+"""
 base_prompt_cot = """
 
-1. You'll be given a question. Think this question step by step. Finish the chain of thoughts based on the your knowledge based Entities and Relationships.
+1. You'll be given a question. All these questions are generated based on knowledge graph. The reasoning path is "{{root_node}}" -> "{{middle_node}}" -> "{{leaf_node}}". So please think this question step by step. Then determine what the correct answer should be, what is the root node(Should be in question), what is the middle node, what is the leaf node(The answer is leaf node of leaf node's content or description), and what is the chain of thoughts of their relationships.
 2. During your reasoning process, outline chain of thoughts in the form of a knowledge graph. In the knowledge, the nodes and relationship must be the your knowledge based Entities and Relationships.
 3. Each reasoning step MUST correspond to at least one edge that has two nodes and one relationship in the knowledge graph. 
 4. Each reasoning step MUST use the words in the corresponding part of the question without paraphrase.
 5. Adjust chain of thoughts to achieve this.
-6. Also generate the template relationship using the chain of thoughts.  Leaving "{source}" and "{target}" for future placeholders.
+6. Generate the "Template Relationship based on chain_of_thoughts" using the chain of thoughts.  Leaving "{{root_node}}" and "{{middle_node}}" and "{{leaf_node}}" for future placeholders.
+7. In "Template Relationship between root and middle node", add  template to connect the "{{root_node}}" and "{{middle_node}}", which should be the same as the first step of the chain of thoughts.
+8. In "Template Relationship between middle and leaf node", add  template to connect the "{{middle_node}}" and "{{leaf_node}}", which should be the same as the second step of the chain of thoughts.
+9. In "Template Relationship between root and leaf", add  template to connect the "{{root_node}}" and "{{leaf_node}}"
 
-Example:
-Question: 'List two attractions in the capital of China.'
-Chain of Thoughts:
-The capital of China is Beijing.
-Two attractions in Beijing include the Forbidden City and Tiananmen Square.
 
-Knowledge Graph:
-["China", "Beijing", "capital"] Entities (5, 7) Relationships (1)
-["Beijing", "Forbidden City", "has_attraction"] Entities (7, 8) Relationships (2)
-["Beijing", "Tiananmen Square", "has_attraction"] Entities (7, 9) Relationships (3)
 
-ONLY return in <JSON> format without ''' and other unecessary words such as 'json'
-
+<JSON example>
 {
-"question": "What is the most famous attraction in the capital of China.",
-"correct_answer": "Forbidden City",
+"question": "What is the patronage of the most famous attractions in the capital of China?", 
+"root_nodes": "CHINA"
+"middle_node": "BEIJING",
+"leaf_nodes": [ "FORBIDDEN CITY"],
 "chain_of_thoughts": [
-    "The capital of China is Beijing.",
-    "Forbidden City is Beijing's most famous attraction.",
+   "The capital of China is Beijing.",
+    "Most famous attractions of Beijing is the Forbidden City.",
+    "The patronage of the Forbidden City is 100,000."
 ],
-"Template Relationship": [
-    "The capital of {source} is {target}.",
-    "{target} is {source}'s most famous attraction.",
+"Template Relationship based on chain_of_thoughts": [
+    "The capital of {root_node} is {middle_node}.",
+    "Most famous attractions of {middle_node} is the {leaf_node}.",
+    "The patronage of the {leaf_node} is {answer}."
+   
+],
+"Template Relationship between root and middle node": [
+      "The capital of {root_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "Most famous attractions of {middle_node} is the {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+     "{leaf_node} is located in the capital of {root_node}."
 ],
 "knowledge_graph": [
-    ["China", "Beijing", "capital", "Entities (5, 7), Relationships (14)"],
-    ["Beijing", "Forbidden City", "has_attraction", "Entities (7, 8) Relationships (23)"],
-    ["Beijing", "Tiananmen Square", "has_attraction","Entities (7, 9) Relationships (35)"],
-]}
+    ["China", "Beijing", "capital"],
+    ["Beijing", "Forbidden City", "Most famous attractions"],
+    ["Beijing", "100,000", "patronage"],
+]
 
+}
 
+======
 The given question is: 
 """
 
@@ -510,16 +526,11 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
     return attack_json
 
 
-def process_question_set(q, base_prompt_cot, search_engine):
-    while True:
-        try:
-            response_cot = asyncio.run(main(base_prompt_cot + q["question"], search_engine))
-            response_cot = response_cot.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
-            response_cot_json = json.loads(response_cot)
-            response_cot_json["question"] = q["question"]
-            return response_cot_json
-        except Exception as e:
-            print(f"发生异常: {e}, 正在重试...")
+def process_question_set(q, base_prompt_cot):
+    
+    response_cot_json = ask_gpt_json(base_prompt_cot, q["question"])
+    response_cot_json["BLACK_BOX"] = True
+    return response_cot_json
                 
 def process_questions_v2(clean_path,new_base_path,black_box=False):
     
@@ -545,15 +556,15 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
         response_cot_jsons = []
         
         if black_box:
-            print("Using black box")
+            print("\nUsing black box\n")
             questions = question_set["questions"]
             with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-                futures = [executor.submit(process_question_set, q, base_prompt_cot, search_engine) for q in questions]
-                for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing questions", leave=False):
+                futures = [executor.submit(process_question_set, q, base_prompt_cot) for q in questions]
+                for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing questions to generate cot", leave=False):
                     response_cot_jsons.append(future.result())
 
         else:
-            print("Using white box")
+            print("\nUsing white box\n")
             response_cot_jsons = question_set["questions"]
 
         target_relationship = question_set["as_target"][0]
@@ -580,7 +591,7 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
 if __name__ == "__main__":
     clean_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
     new_base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_1023"
-    process_questions_v2(clean_path, new_base_path)
+    process_questions_v2(clean_path, new_base_path, black_box=True)
     rewrite_txt_v2( new_base_path)
     
 
