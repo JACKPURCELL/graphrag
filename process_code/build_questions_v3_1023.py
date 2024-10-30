@@ -174,6 +174,12 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
 
 if __name__ == "__main__":
     base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
+    import os
+    print(os.environ['OPENAI_API_KEY'])
     # 调用函数并传递 base_path 参数
+    from openai import OpenAI
+    client = OpenAI()
+    import os
+    print(os.environ['OPENAI_API_KEY'])
     generate_questions(base_path,question_count=10, need_to_keep_entity_names=['beijing'])
     # generate_questions(base_path,question_count=10,entity_count=10)

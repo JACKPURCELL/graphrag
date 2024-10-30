@@ -303,7 +303,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             middle_node = middle_as_target[1].upper()
             all_relationships = [rel for rel in self.relationships if rel.source == root_node or rel.target == root_node]
         
-        
+            as_relationships_list = []
             for rel in all_relationships:
                 as_relationships_list.append([rel.source, rel.target])
                 
@@ -316,17 +316,17 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                             ],
                         temperature=0.2,
                         )
-                return_json = json.loads(completion.choices[0].message.content)
-        
-                as_source_list = return_json["as_source"] 
-                as_target_list = return_json["as_target"] #Root node as target
-                if len(as_target_list) > 0:
-                    for as_target in as_target_list:
-                        pre_root_node = as_target[0].upper()
-                        related_relationships_text_source = "[middle_node,Leaf Entity]: " + str([root_node, middle_node])
-                        self.process_target(as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, pre_root_single_questions,pre_root_multi_questions, **kwargs)
-                else:
-                    print(f"No root node as target for [Root] root_node,  [Root,Middle] {root_node} -> {middle_node}")
+            return_json = json.loads(completion.choices[0].message.content)
+    
+            as_source_list = return_json["as_source"] 
+            as_target_list = return_json["as_target"] #Root node as target
+            if len(as_target_list) > 0:
+                for as_target in as_target_list:
+                    pre_root_node = as_target[0].upper()
+                    related_relationships_text_source = "[middle_node,Leaf Entity]: " + str([root_node, middle_node])
+                    self.process_target(as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, pre_root_single_questions,pre_root_multi_questions, **kwargs)
+            else:
+                print(f"No root node as target for [Root] root_node,  [Root,Middle] {root_node} -> {middle_node}")
         
         
   
@@ -355,7 +355,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         
         related_relationships_text_source = "[middle_node,Leaf Entity]: " +str(as_source_list)
         
-        max_threads = 10  # 设置线程数量
+        max_threads = 1  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
@@ -373,7 +373,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         entity_count: int = -1,
         need_to_keep_entity_names: list[str] = [],
         **kwargs,
-    ) -> tuple[list, list]:
+    ) -> tuple[list, list,list,list]:
         """
         Generate a question based on the question history and context data.
 
@@ -404,7 +404,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         else:
             print("keep all entities")
 
-        max_threads = 10  # 设置线程数量
+        max_threads = 1  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
@@ -573,6 +573,7 @@ if __name__ == "__main__":
 
 
     api_key = os.environ["OPENAI_API_KEY"]
+    print(api_key)
     llm_model = 'gpt-4o-2024-08-06'
     embedding_model = 'text-embedding-3-small'
 
