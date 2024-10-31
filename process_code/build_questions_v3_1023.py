@@ -25,7 +25,7 @@ from graphrag.query.structured_search.local_search.mixed_context import (
 from graphrag.query.structured_search.local_search.search import LocalSearch
 from graphrag.vector_stores.lancedb import LanceDBVectorStore
 
-def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_entity_names=[]):
+def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_entity_names=[],multi_root_node=False):
     # Step 1: Find the folder with the latest modification time
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
@@ -150,36 +150,26 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
     pre_root_single_path = os.path.join(base_path, 'pre_root_single_v3.json')
     pre_root_multi_path = os.path.join(base_path, 'pre_root_multi_v3.json')
     async def main():
-        single_candidate_questions, multi_candidate_questions,pre_root_single_questions,pre_root_multi_questions = await question_generator.agenerate(
-            question_history=[], context_data=None, question_count=question_count, entity_count=entity_count, need_to_keep_entity_names=need_to_keep_entity_names)
+        single_candidate_questions, multi_candidate_questions = await question_generator.agenerate(
+            question_history=[], context_data=None, question_count=question_count, entity_count=entity_count, need_to_keep_entity_names=need_to_keep_entity_names,multi_root_node=multi_root_node)
         with open(question_path_multi, 'w') as f:
             json.dump(multi_candidate_questions, f, indent=4)
         with open(question_path_single, 'w') as f:
             json.dump(single_candidate_questions, f, indent=4)
-        with open(pre_root_single_path, 'w') as f:
-            json.dump(pre_root_single_questions, f, indent=4)
-        with open(pre_root_multi_path, 'w') as f:
-            json.dump(pre_root_multi_questions, f, indent=4)
+
       
         print(f"Entity generated Multi: {len(multi_candidate_questions)}")
         print(f"Entity generated single: {len(single_candidate_questions)}")
-        print(f"Entity generated pre_root_single: {len(pre_root_single_questions)}")
-        print(f"Entity generated pre_root_multi: {len(pre_root_multi_questions)}")
+
         print(f"Questions saved to: {question_path_multi}")
         print(f"Questions saved to: {question_path_single}")
-        print(f"Questions saved to: {pre_root_single_path}")
-        print(f"Questions saved to: {pre_root_multi_path}")
+
     import asyncio
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
-    import os
-    print(os.environ['OPENAI_API_KEY'])
-    # 调用函数并传递 base_path 参数
-    from openai import OpenAI
-    client = OpenAI()
-    import os
-    print(os.environ['OPENAI_API_KEY'])
-    generate_questions(base_path,question_count=10, need_to_keep_entity_names=['beijing'])
-    # generate_questions(base_path,question_count=10,entity_count=10)
+    # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
+    base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset"
+
+    # generate_questions(base_path,question_count=10, need_to_keep_entity_names=['beijing'])
+    generate_questions(base_path,question_count=10,entity_count=5,multi_root_node=True)

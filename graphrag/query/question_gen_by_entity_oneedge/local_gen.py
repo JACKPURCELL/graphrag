@@ -38,6 +38,99 @@ You are a helpful assistant
 
 """
 
+USER_PROMPT_MULTI_ROOT = """
+Please must generate {question_count} or As many as possible questions 
+
+---Data tables---
+
+{context_data}
+
+---Goal---
+
+Let's focus on the [middle_node] {entity}. Consider the following:
+
+Relationships where {entity} is the endpoint, with preceding nodes referred to as root nodes,[root node,middle_node]:
+{related_relationships_text_target}
+
+Relationships where {entity} is the starting point, with subsequent nodes referred to as leaf nodes,[middle_node,leaf_node]:
+{related_relationships_text_source}
+
+
+1. Formulate questions along the path of [root_node] -> [middle_node] -> [leaf_node]. The questions should only include the root nodes without mentioning the [middle_node]. Try to hide the [middle_node] with another representation using the root nodes in the question.
+
+2. The candidate questions should reflect the important or urgent information or themes within the data tables.
+
+3. These questions should be answerable using the provided data tables but should not explicitly reference any specific data fields or tables in the question text.
+
+4. The answers to these questions should be the [leaf_node] itself or some simple content in [leaf_node]' description 
+
+5. At the same time you need to ask the questions to yourself without the Data tables, And then Answer within 50 words, write the answer in the gpt_answer_withoutdata field. then compare the answer with the data table to see if the answer is consistent with the data table. If the answer is not consistent approximately with the data table, you need to reconsider the question.
+
+6. Don't use other entities and relationships(out of {entity},{related_relationships_text_source},{related_relationships_text_target}) information to generate the questions.
+
+7. Should include the two or more root nodes in the question. Should not include the [middle_node] and [leaf nodes] in the question.
+
+FOR EACH QUESTION YOU GENERATE, 
+
+1. How you generate this question step by step. Finish the chain of thoughts based on the your knowledge based Entities and Relationships and generation process.
+2. During your reasoning process, outline chain of thoughts in the form of a knowledge graph. In the knowledge, the nodes and relationship must be the your knowledge based Entities and Relationships.
+3. Each reasoning step MUST correspond to at least one edge that has two nodes and one relationship in the knowledge graph. 
+4. Each reasoning step MUST use the words in the corresponding part of the question without paraphrase.
+5. Adjust chain of thoughts to achieve this.
+6. Also generate the "Template Relationship based on chain_of_thoughts" using the chain of thoughts.  Leaving "{{root_node}}" and "{{middle_node}}" and "{{leaf_node}}" for future placeholders.
+7. In "Template Relationship between root and middle node", add  template to connect the "{{root_node}}" and "{{middle_node}}", which should be the same as the first step of the chain of thoughts.
+8. In "Template Relationship between middle and leaf node", add  template to connect the "{{middle_node}}" and "{{leaf_node}}", which should be the same as the second step of the chain of thoughts.
+9. In "Template Relationship between root and leaf", add  template to connect the "{{root_node}}" and "{{leaf_node}}"
+10. Must include two or more root nodes in the question. 
+
+Please must generate {question_count} or As many as possible questions and the answers in the following json format, which includes the question, gpt_answer_withoutdata, answer, consistency, [middle_node], leaf nodes, and root nodes. 
+
+Return {question_count} or As many as possible jsons in a list.
+Just output json, don't saw any other information.
+"""
+
+EXAMPLE_USE_MULTI_ROOT = """
+
+
+<JSON example>
+
+{
+"question": "What medication should be used to treat a patient who may has combination symptoms of Facial Paralysis, Hypesthesia, Muscular Atrophy and Neuralgia?", 
+
+"gpt_answer_withoutdata":"...",
+"answer": "...",
+"type": "multi_root_normal",
+"consistency": true,
+"root_nodes": ["Facial Paralysis", "Hypesthesia", "Muscular Atrophy", "Neuralgia"],
+"middle_node": "Leprosy",
+"leaf_nodes": ["Rifampicin", "Dapsone", "Thalidomide"],
+"chain_of_thoughts": [
+  "The disease have combination symptom of Facial Paralysis, Hypesthesia, Muscular Atrophy and Neuralgia is Leprosy.",
+"The treatment drugs of Leprosy are Rifampicin, Dapsone, Thalidomide."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The disease have symptom of {root_node} is {middle_node}.",
+    "The treatment drugs of {middle_node} are {leaf_node}."
+],
+"Template Relationship between root and middle node": [
+      "The disease have symptom of {root_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "The treatment drugs of {middle_node} are {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+    "The treatment drugs of {root_node} are {leaf_node}."
+],
+"knowledge_graph": [
+    ["Facial Paralysis", "Leprosy", "disease"],
+    ["Leprosy", "Rifampicin", "treatment drugs"],
+    ["Leprosy", "Dapsone", "treatment drugs"],
+    ["Leprosy", "Thalidomide", "treatment drugs"]
+]
+
+}
+"""
+
 USER_PROMPT = """
 Please must generate {question_count} or As many as possible questions 
 
@@ -142,17 +235,17 @@ EXAMPLE_USE ="""
 "The treatment drugs of Leprosy are Rifampicin, Dapsone, Thalidomide."
 ],
 "Template Relationship based on chain_of_thoughts": [
-    "The disease have symptom of {leaf_node} is {middle_node}.",
+    "The disease have symptom of {root_node} is {middle_node}.",
     "The treatment drugs of {middle_node} are {leaf_node}."
 ],
 "Template Relationship between root and middle node": [
-      "The disease have symptom of {leaf_node} is {middle_node}.",
+      "The disease have symptom of {root_node} is {middle_node}.",
 ],
 "Template Relationship between middle and leaf node": [
       "The treatment drugs of {middle_node} are {leaf_node}.",
 ],
 "Template Relationship between root and leaf node": [
-    "The treatment drugs of {root_nodes} are {leaf_node}."
+    "The treatment drugs of {root_node} are {leaf_node}."
 ],
 "knowledge_graph": [
     ["Facial Paralysis", "Leprosy", "disease"],
@@ -167,14 +260,16 @@ EXAMPLE_USE ="""
 CHANGE_RELATIONS_ORDER = """
 Prompt:
 
-You are given a list of pairs in the format [A, B], which will always include the SAME ENTITY. Your task is to reorganize these pairs such that the more general or abstract concept comes first, followed by the more specific concept. Here are the rules to follow:
+You are given a list of pairs in the format [A, B], which will always include the [SAME ENTITY]. Your task is to reorganize these pairs such that the more general or abstract concept comes first, followed by the more specific concept. Here are the rules to follow:
 
-Swap the order of [A, B] to [B, A] if A is more specific and B is more general.
+Swap the order of [A, B] to [B, A] if A is more specific and B is more general. B may be larger than A in terms of scope or applicability.
 Keep the original order [A, B] if both elements are of the same level of specificity or already correctly ordered.
 For notable entities or specific items within a broader category, ensure the broader category comes first, swapping if necessary.
 Examples:
 
 [BEIJING, CHINA] should become [CHINA, BEIJING].
+[SHANGHAI, CHINA] should become [CHINA, SHANGHAI].
+[CHINA, EAST ASIA] should become [EAST ASIA, CHINA].
 [BEIJING, BEIJING UNIVERSITY] should remain [BEIJING, BEIJING UNIVERSITY].
 [TIANANMEN, BEIJING] should become [BEIJING, TIANANMEN].
 [iPhone, Apple] should become [Apple, iPhone].
@@ -186,7 +281,9 @@ Apply these rules consistently to transform the list of pairs, ensuring that the
 
 Please return in the following JSON format:
 
-if SAME ENTITY is the source, put it in as_source, if SAME ENTITY is the target, put it in as_target.  return the following example json:
+if [SAME ENTITY] is the source(first of the list), put it in as_source, if [SAME ENTITY] is the target(second of the list), put it in as_target.  Make sure the order of each relationship is the correctly ordered one instead of the originial one.
+
+return the following example json:
 
 {
     "as_source": [[SAME ENTITY, B],[SAME ENTITY, C],[SAME ENTITY, D]],
@@ -226,7 +323,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
     def find_entity_by_title(self, root_node):
         return self.entity_dict.get(root_node)
     
-    def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs):
+    def process_target_base(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list,  **kwargs):
         per_text_target = "[Root Entity,middle_node]: " + str(as_target)
         
         question_history = [f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}. IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
@@ -279,87 +376,194 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             else:
                 return None
 
-            if len(pending_questions["questions"]) > 1:
-                pending_questions["middle_node"] = ent_with_rel_name
-                pending_questions["as_source"] = as_source_list
-                pending_questions["as_target"] = [as_target]
-                multi_questions.append(pending_questions)
-            else:
-                pending_questions["middle_node"] = ent_with_rel_name
-                pending_questions["as_source"] = as_source_list
-                pending_questions["as_target"] = [as_target]
-                single_questions.append(pending_questions)
+
+            pending_questions["middle_node"] = ent_with_rel_name
+            pending_questions["as_source"] = as_source_list
+            pending_questions["as_target"] = [as_target]
+
+
+
         except Exception:
             log.exception("Exception in generating question")
             return None
+        return pending_questions
+
+    def process_target_base_two_root(self, as_target_list, ent_with_rel_name, related_relationships_text_source, context_data,
+                            question_count, as_source_list, **kwargs):
+        per_text_target = "[Root Entity,middle_node]: " + str(as_target_list)
+
+        question_history = [
+            f"Find all the related text units for {ent_with_rel_name}. and the text units of entities in relationships of {related_relationships_text_source} and {per_text_target}, and the relationships of {related_relationships_text_source} and {per_text_target}. IMPORTANT: Do not lost entity in relationship {per_text_target}, and all the information about {ent_with_rel_name}"]
+
+        if len(question_history) == 0:
+            question_text = ""
+            conversation_history = None
+        else:
+            question_text = question_history[-1]
+            history = [
+                {"role": "user", "content": query} for query in question_history[:-1]
+            ]
+            conversation_history = ConversationHistory.from_list(history)
+
+        if context_data is None:
+            context_data, context_records = self.context_builder.build_context(
+                query=question_text,
+                conversation_history=conversation_history,
+                **kwargs,
+                **self.context_builder_params,
+            )
+        else:
+            context_records = {"context_data": context_data}
+
+        try:
+            system_prompt = self.system_prompt.format(
+                question_count=question_count
+            )
+            user_prompt = USER_PROMPT_MULTI_ROOT.format(context_data=context_data,
+                                             question_count=question_count,
+                                             entity=ent_with_rel_name,
+                                             related_relationships_text_source=related_relationships_text_source,
+                                             related_relationships_text_target=per_text_target) + EXAMPLE_USE_MULTI_ROOT
+
+            completion = client.chat.completions.create(
+                model="gpt-4o-2024-08-06",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=0.2,
+            )
+
+            content = completion.choices[0].message.content
+            content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            pending_questions = {}
+            content_json = json.loads(content)
+            if len(content_json) > 0:
+                pending_questions["questions"] = json.loads(content)
+            else:
+                return None
+
+            pending_questions["middle_node"] = ent_with_rel_name
+            pending_questions["as_source"] = as_source_list
+            pending_questions["as_target"] = as_target_list
+
+
+
+        except Exception:
+            log.exception("Exception in generating question")
+            return None
+        return pending_questions
+
+    def change_relations_order(self, as_relationships_list, ent_with_rel_name,  **kwargs):
+        for _ in range(5):
+            try:
+                completion = client.chat.completions.create(
+                    model="gpt-4o-2024-08-06",
+                    # response_format={ "type": "json_object" },
+                    messages=[
+                            {"role": "system", "content": CHANGE_RELATIONS_ORDER},
+                        {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The [SAME ENTITY]  is {ent_with_rel_name}"},
+                        ],
+                    temperature=0.1,
+                    )
+                # return_json = json.loads(completion.choices[0].message.content)
+                return_json = completion.choices[0].message.content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+                return_json = json.loads(return_json)
+                break
+            except Exception:
+                if _ == 4:
+                    raise Exception("Failed to generate order")
+                log.exception("Exception in generating order")
+                continue
+            
+        as_source_list = return_json["as_source"]
+        as_target_list = return_json["as_target"]
         
+        for as_source in as_source_list:
+            if as_source[0] != ent_with_rel_name:
+                as_source_list.remove(as_source)
+                as_target_list.append(as_source)
+                print(f"\nRemove {as_source} from as_source_list")
+        for as_target in as_target_list:
+            if as_target[1] != ent_with_rel_name:
+                as_target_list.remove(as_target)
+                as_source_list.append(as_target)
+                print(f"\nRemove {as_target} from as_target_list")
+            
+        return return_json["as_source"], return_json["as_target"]
+
+    def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, single_questions, multi_questions, **kwarg):
+        pre_node_pending_questions = self.pre_root_question(as_target, question_count,  **kwarg)
+        pending_questions = self.process_target_base(as_target, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, **kwarg)
+        if pending_questions is not None:
+            pending_questions["pre_node_pending_questions"] = pre_node_pending_questions
+            if len(pending_questions["questions"]) == 1:
+                single_questions.append(pending_questions)
+            else:
+                multi_questions.append(pending_questions)
+                
+    def process_target_two_root(self, as_target_list, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, single_questions, multi_questions, **kwarg):
+        pending_questions = self.process_target_base_two_root(as_target_list, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, **kwarg)
+        if pending_questions is not None:
+            if len(pending_questions["questions"]) == 1:
+                single_questions.append(pending_questions)
+            else:
+                multi_questions.append(pending_questions)
+
         
-    def pre_root_question(self,middle_as_target_list,question_count,pre_root_single_questions,pre_root_multi_questions, **kwargs):
+    def pre_root_question(self,middle_as_target,question_count,**kwargs):
+        pre_node_pending_questions = []
         context_data = None
         #middle_as_target_list [Root Node,middle_node]
-        for middle_as_target in middle_as_target_list:
-            root_node = middle_as_target[0].upper()
-            ent_with_rel_name = root_node
-            middle_node = middle_as_target[1].upper()
-            all_relationships = [rel for rel in self.relationships if rel.source == root_node or rel.target == root_node]
-        
-            as_relationships_list = []
-            for rel in all_relationships:
-                as_relationships_list.append([rel.source, rel.target])
-                
-            completion = client.chat.completions.create(
-                        model="gpt-4o-2024-08-06",
-                        response_format={ "type": "json_object" },
-                        messages=[
-                                {"role": "system", "content": CHANGE_RELATIONS_ORDER},
-                            {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
-                            ],
-                        temperature=0.2,
-                        )
-            return_json = json.loads(completion.choices[0].message.content)
+        root_node = middle_as_target[0].upper()
+        ent_with_rel_name = root_node
+        middle_node = middle_as_target[1].upper()
+        all_relationships = [rel for rel in self.relationships if rel.source == root_node or rel.target == root_node]
     
-            as_source_list = return_json["as_source"] 
-            as_target_list = return_json["as_target"] #Root node as target
-            if len(as_target_list) > 0:
-                for as_target in as_target_list:
-                    pre_root_node = as_target[0].upper()
-                    related_relationships_text_source = "[middle_node,Leaf Entity]: " + str([root_node, middle_node])
-                    self.process_target(as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, pre_root_single_questions,pre_root_multi_questions, **kwargs)
-            else:
-                print(f"No root node as target for [Root] root_node,  [Root,Middle] {root_node} -> {middle_node}")
+        as_relationships_list = []
+        for rel in all_relationships:
+            as_relationships_list.append([rel.source, rel.target])
+            
+        
+
+        as_source_list,as_target_list = self.change_relations_order(as_relationships_list, ent_with_rel_name,  **kwargs)        
+        as_source_list = [middle_as_target]
+        if len(as_target_list) > 0:
+            for as_target in as_target_list:
+                # pre_root_node = as_target[0].upper()
+                related_relationships_text_source = "[middle_node,Leaf Entity]: " + str([root_node, middle_node])
+                pre_node_pending_questions.append(self.process_target_base(as_target, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list, **kwargs))
+        else:
+            print(f"\nNo root node as target for [Root] root_node,  [Root,Middle] {root_node} -> {middle_node}")
+        return pre_node_pending_questions
         
         
   
 
-    def process_entity(self, ent_with_rel, context_data, client, question_count, multi_questions, single_questions,pre_root_single_questions,pre_root_multi_questions,**kwargs):
+    def process_entity(self, ent_with_rel, context_data,  question_count, single_questions, multi_questions, multi_root_node=False,**kwargs):
         ent_with_rel_name = ent_with_rel["entity"].title
         as_relationships_list = []
         for rel in ent_with_rel["all_relationships"]:
             as_relationships_list.append([rel.source, rel.target])
+        
+
             
-        completion = client.chat.completions.create(
-                    model="gpt-4o-2024-08-06",
-                    response_format={ "type": "json_object" },
-                    messages=[
-                            {"role": "system", "content": CHANGE_RELATIONS_ORDER},
-                        {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The given ENTITY is {ent_with_rel_name}"},
-                        ],
-                    temperature=0.2,
-                    )
-        return_json = json.loads(completion.choices[0].message.content)
+        as_source_list,as_target_list = self.change_relations_order(as_relationships_list, ent_with_rel_name,  **kwargs)
+        if len(as_target_list) == 0 or len(as_source_list) == 0:
+            print(f"\nNo as_target_list or as_source_list for {ent_with_rel_name}")
+            return        
+
         
-        as_source_list = return_json["as_source"] 
-        as_target_list = return_json["as_target"]
-        
-        self.pre_root_question(as_target_list,question_count,pre_root_single_questions,pre_root_multi_questions, **kwargs)
+        # self.pre_root_question(as_target_list,question_count,pre_root_single_questions,pre_root_multi_questions, **kwargs)
         
         related_relationships_text_source = "[middle_node,Leaf Entity]: " +str(as_source_list)
-        
+        if multi_root_node and len(as_target_list) > 1:
+            self.process_target_two_root(as_target_list, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list, single_questions,multi_questions, **kwargs)
         max_threads = 1  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
-                executor.submit(self.process_target, as_target, ent_with_rel_name, related_relationships_text_source, context_data, client, question_count, as_source_list, multi_questions, single_questions, **kwargs)
+                executor.submit(self.process_target, as_target, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list, single_questions, multi_questions, **kwargs)
                 for as_target in as_target_list
             ]
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing targets", leave=False):
@@ -372,8 +576,9 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         question_count: int,
         entity_count: int = -1,
         need_to_keep_entity_names: list[str] = [],
+        multi_root_node: bool = False,
         **kwargs,
-    ) -> tuple[list, list,list,list]:
+    ) -> tuple[list, list]:
         """
         Generate a question based on the question history and context data.
 
@@ -383,8 +588,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         multi_questions = []
         single_questions = []   
         useful_entities = []
-        pre_root_multi_questions = []
-        pre_root_single_questions = []
+       
         for ent in self.entities:
             all_relationships = [rel for rel in self.relationships if rel.source == ent.title or rel.target == ent.title]
             if len(all_relationships) > 1 :
@@ -408,13 +612,13 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
-                executor.submit(self.process_entity, ent_with_rel, context_data, client, question_count, multi_questions, single_questions, pre_root_single_questions,pre_root_multi_questions,**kwargs)
+                executor.submit(self.process_entity, ent_with_rel, context_data,  question_count, single_questions, multi_questions, multi_root_node,**kwargs)
                 for ent_with_rel in useful_entities
             ]
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing entities"):
                 future.result()
 
-        return single_questions, multi_questions, pre_root_single_questions, pre_root_multi_questions
+        return single_questions, multi_questions
         
 
     def generate(

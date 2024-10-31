@@ -3,6 +3,9 @@ import os
 import pandas as pd
 import tiktoken
 import shutil
+
+from pydantic.v1.fields import ModelField
+
 from graphrag.query.context_builder.entity_extraction import EntityVectorStoreKey
 from graphrag.query.indexer_adapters import (
     read_indexer_covariates,
@@ -192,6 +195,92 @@ The given question is:
 """
 
 
+
+base_prompt_cot_noknowledge = """
+
+1. You'll be given a question. All these questions are generated based on knowledge graph. The reasoning path is "{{root_node}}" -> "{{middle_node}}" -> "{{leaf_node}}". So please think this question step by step. Then determine what the correct answer should be, what is the root node(Should be in question), what is the middle node, what is the leaf node(The answer is leaf node of leaf node's content or description), and what is the chain of thoughts of their relationships.
+2. During your reasoning process, outline chain of thoughts in the form of a knowledge graph. In the knowledge, the nodes and relationship must be the your knowledge based Entities and Relationships.
+3. Each reasoning step MUST correspond to at least one edge that has two nodes and one relationship in the knowledge graph. 
+4. Each reasoning step MUST use the words in the corresponding part of the question without paraphrase.
+5. Adjust chain of thoughts to achieve this.
+6. Generate the "Template Relationship based on chain_of_thoughts" using the chain of thoughts.  Leaving "{{root_node}}" and "{{middle_node}}" and "{{leaf_node}}" for future placeholders.
+7. In "Template Relationship between root and middle node", add  template to connect the "{{root_node}}" and "{{middle_node}}", which should be the same as the first step of the chain of thoughts.
+8. In "Template Relationship between middle and leaf node", add  template to connect the "{{middle_node}}" and "{{leaf_node}}", which should be the same as the second step of the chain of thoughts.
+9. In "Template Relationship between root and leaf", add  template to connect the "{{root_node}}" and "{{leaf_node}}"
+
+
+For you to understand, Let's assume if you have the knowledge of the question, it should be like this:
+{
+"question": "What is the patronage of the most famous attractions in the capital of China?", 
+"root_nodes": "CHINA"
+"middle_node": "BEIJING",
+"leaf_nodes": [ "FORBIDDEN CITY"],
+"chain_of_thoughts": [
+   "The capital of China is Beijing.",
+    "Most famous attractions of Beijing is the Forbidden City.",
+    "The patronage of the Forbidden City is 100,000."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The capital of {root_node} is {middle_node}.",
+    "Most famous attractions of {middle_node} is the {leaf_node}.",
+    "The patronage of the {leaf_node} is {answer}."
+   
+],
+"Template Relationship between root and middle node": [
+      "The capital of {root_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "Most famous attractions of {middle_node} is the {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+     "{leaf_node} is located in the capital of {root_node}."
+],
+"knowledge_graph": [
+    ["China", "Beijing", "capital"],
+    ["Beijing", "Forbidden City", "Most famous attractions"],
+    ["Beijing", "100,000", "patronage"],
+]
+
+}
+
+BUT actually you don't have the knowledge of the question, so you need to generate the knowledge graph based on the question and generate the Template Relationship based on chain_of_thoughts.
+So your output should be like this:
+<JSON example>
+{
+"question": "What is the patronage of the most famous attractions in the capital of China?", 
+"root_nodes": "CHINA"
+
+"chain_of_thoughts": [
+   "The capital of China is {middle_node}.",
+    "Most famous attractions of {middle_node} is {leaf_node}.",
+    "The patronage of {leaf_node} is 100,000."
+],
+"Template Relationship based on chain_of_thoughts": [
+    "The capital of {root_node} is {middle_node}.",
+    "Most famous attractions of {middle_node} is the {leaf_node}.",
+    "The patronage of the {leaf_node} is {answer}."
+   
+],
+"Template Relationship between root and middle node": [
+      "The capital of {root_node} is {middle_node}.",
+],
+"Template Relationship between middle and leaf node": [
+      "Most famous attractions of {middle_node} is the {leaf_node}.",
+],
+"Template Relationship between root and leaf node": [
+     "{leaf_node} is located in the capital of {root_node}."
+],
+"knowledge_graph": [
+    ["China", {middle_node}, "capital"],
+    [{middle_node}, {leaf_node}, "Most famous attractions"],
+    [{leaf_node}, {answer}, "patronage"],
+]
+
+}
+
+======
+The given question is: 
+"""
 
 # TODO: Original Relationship should include questions
 base_prompt_search_new_middle_v3 = """
@@ -406,9 +495,10 @@ def rewrite_txt_v2( new_base_path):
     direct_adv_texts = []
     
     for set in all_jsons:
-        indirect_adv_texts.extend(set["indirect_adv_texts"])
+        if set["type"] == "normal":
+            indirect_adv_texts.extend(set["indirect_adv_texts"])
 
-        direct_adv_texts.extend(set["direct_adv_texts"])
+            direct_adv_texts.extend(set["direct_adv_texts"])
     
 
     
@@ -523,6 +613,7 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
         except Exception as e:
             print(f"发生异常: {e}, 正在重试...")
     attack_json = {**attack_json, **response_cot_json, **new_middle_node_json}
+    attack_json["type"] = "normal"
     return attack_json
 
 
@@ -554,7 +645,10 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
     
     for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
         response_cot_jsons = []
-        
+        pre_node_pending_questions = question_set["pre_node_pending_questions"]
+        pre_node_tossave_list = []
+
+
         if black_box:
             print("\nUsing black box\n")
             questions = question_set["questions"]
@@ -576,10 +670,19 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
 
         root_node, original_middle_node, modified_middle_node = new_middle_node_json["Root Node"], new_middle_node_json["Original Middle Node"], new_middle_node_json["Modified Middle Node"]
 
+        for pre_node_pending_question_set in pre_node_pending_questions:
+            for pre_node_pending_question in pre_node_pending_question_set["questions"]:
+                pre_node_tossave = pre_node_pending_question
+                pre_node_tossave["indirect_new_entities"] = [modified_middle_node]
+                pre_node_tossave["Modified Middle Node"] = None
+                pre_node_tossave["type"] = "pre_node"
+                pre_node_tossave_list.append(pre_node_tossave)
+
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
             futures = [executor.submit(process_response, new_middle_node_json, root_node, original_middle_node, modified_middle_node, response_cot_json) for response_cot_json in response_cot_jsons]
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing responses", leave=False):
-                attack_jsons.append(future.result())    
+                attack_jsons.append(future.result())
+        attack_jsons.extend(pre_node_tossave_list)
         # for response_cot_json in response_cot_jsons:
         #     attack_jsons.append(process_response(new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json))
             
@@ -589,9 +692,9 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
     
     
 if __name__ == "__main__":
-    clean_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
-    new_base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_1023"
-    process_questions_v2(clean_path, new_base_path, black_box=True)
+    clean_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset"
+    new_base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset_1030"
+    process_questions_v2(clean_path, new_base_path, black_box=False)
     rewrite_txt_v2( new_base_path)
     
 

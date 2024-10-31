@@ -81,7 +81,7 @@ def process_corpus_file(base_path, corpus_file):
     text_unit_df.head()
 
     api_key = os.environ["OPENAI_API_KEY"]
-    llm_model = 'gpt-4o-2024-08-06'
+    llm_model = 'gpt-4o-mini'
     embedding_model = 'text-embedding-3-small'
 
     llm = ChatOpenAI(
@@ -207,34 +207,49 @@ def process_corpus_file(base_path, corpus_file):
         total_succ_both = 0
         total_succ_leaf_only = 0
         total_succ_middle_only = 0
-        total_succ_none = 0
+        total_fail = 0
+        total_normal = 0
+
+        total_succ_pre_node = 0
+        total_pre_node = 0
 
         for j, consistent_json, attack_answer, success_leaf, success_middle in results:
             if consistent_json:
                 corpuses[j] = {**consistent_json, **corpuses[j]}
-            if success_leaf and success_middle:
-                total_succ_both += 1
-            elif success_leaf:
-                total_succ_leaf_only += 1
-            elif success_middle:
-                total_succ_middle_only += 1
-            else:
-                total_succ_none += 1
+            if corpuses[j]["type"] == "normal":
+                total_normal += 1
+                if success_leaf and success_middle:
+                    total_succ_both += 1
+                elif success_leaf:
+                    total_succ_leaf_only += 1
+                elif success_middle:
+                    total_succ_middle_only += 1
+                else:
+                    total_fail += 1
+            elif corpuses[j]["type"] == "pre_node":
+                total_pre_node += 1
+                if success_leaf:
+                    total_succ_pre_node += 1
 
-        print(f"Total successful both: {total_succ_both}/{len(corpuses)}")
-        print(f"Total successful leaf only: {total_succ_leaf_only}/{len(corpuses)}")
-        print(f"Total successful middle only: {total_succ_middle_only}/{len(corpuses)}")
-        print(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{len(corpuses)}")
-        print(f"FAILED: {total_succ_none}/{len(corpuses)}")
+
+        print(f"Total successful both: {total_succ_both}/{total_normal}")
+        print(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}")
+        print(f"Total successful middle only: {total_succ_middle_only}/{total_normal}")
+        print(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{total_normal}")
+        print(f"FAILED: {total_fail}/{total_normal}")
+
+        print(f"Total successful pre_node: {total_succ_pre_node}/{total_pre_node}")
+
         
         # 将结果写入日志文件
         log_file_path = os.path.join(base_path, 'results_log.txt')
         with open(log_file_path, 'w', encoding='utf-8') as log_file:
-            log_file.write(f"Total successful both: {total_succ_both}/{len(corpuses)}\n")
-            log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{len(corpuses)}\n")
-            log_file.write(f"Total successful middle only: {total_succ_middle_only}/{len(corpuses)}\n")
-            log_file.write(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{len(corpuses)}\n")
-            log_file.write(f"FAILED: {total_succ_none}/{len(corpuses)}\n")
+            log_file.write(f"Total successful both: {total_succ_both}/{total_normal}\n")
+            log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}\n")
+            log_file.write(f"Total successful middle only: {total_succ_middle_only}/{total_normal}\n")
+            log_file.write(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{total_normal}\n")
+            log_file.write(f"FAILED: {total_fail}/{total_normal}\n")
+            log_file.write(f"Total successful pre_node: {total_succ_pre_node}/{total_pre_node}\n")
 
 
         output_file_path = base_path + '/question_with_answer_v4_retest.json'
@@ -247,6 +262,6 @@ def process_corpus_file(base_path, corpus_file):
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2_1023"
+    base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset_1030"
     corpus_file = base_path + '/test0_corpus.json'
     process_corpus_file(base_path, corpus_file)
