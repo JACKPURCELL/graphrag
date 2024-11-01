@@ -27,6 +27,9 @@ from tqdm import tqdm
 from openai import OpenAI
 import concurrent.futures
 from tqdm.asyncio import tqdm_asyncio
+client = OpenAI()
+import openai
+
 def process_corpus_file(base_path, corpus_file):
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
@@ -150,9 +153,9 @@ def process_corpus_file(base_path, corpus_file):
     }
     """
 
-    client = OpenAI()
 
-    def process_question_sync(j, corpuses, search_engine, client, system_prompt):
+
+    def process_question_sync(j, corpuses, search_engine,  system_prompt):
         async def process_question():
             question = corpuses[j]["question"]
             corpus = corpuses[j]
@@ -197,7 +200,7 @@ def process_corpus_file(base_path, corpus_file):
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             loop = asyncio.get_event_loop()
             futures = [
-                loop.run_in_executor(executor, process_question_sync, j, corpuses, search_engine, client, system_prompt)
+                loop.run_in_executor(executor, process_question_sync, j, corpuses, search_engine, system_prompt)
                 for j in range(len(corpuses))
             ]
             results = []

@@ -1,4 +1,5 @@
 import os
+import time
 #THIS BASE ON build_corpus_subgraph_ongo_five_v3
 import pandas as pd
 import tiktoken
@@ -30,7 +31,8 @@ from openai import OpenAI
 import json
 from tqdm import tqdm
 import asyncio
-
+client = OpenAI()
+import openai
 def gen_search_engine(output_path):
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
     latest_folder = max(folders, key=os.path.getmtime)
@@ -538,48 +540,89 @@ def check_json_keys(data):
     return True
 
             
-def ask_gpt_json(system_prompt, user_prompt):
-    client = OpenAI()
-    for i in range(10):
-        try:
-            completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
-                response_format={"type": "json_object"},
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                temperature=0.1
+# def ask_gpt_json(system_prompt, user_prompt):
+#     client = OpenAI()
+#     for i in range(10):
+#         try:
+#             completion = client.chat.completions.create(
+#                 model="gpt-4o-2024-08-06",
+#                 response_format={"type": "json_object"},
+#                 messages=[
+#                     {"role": "system", "content": system_prompt},
+#                     {"role": "user", "content": user_prompt}
+#                 ],
+#                 temperature=0.1
             
-            )
-            json_str = completion.choices[0].message.content
-            return_json = json.loads(json_str)
+#             )
+#             json_str = completion.choices[0].message.content
+#             return_json = json.loads(json_str)
 
-            break
-        except Exception as e:
-            print(json_str)
-            print(f"发生异常: {e}, 正在重试...")
-            if i == 9:
-                print("重试次数已达上限,更改温度")
-                try:
-                    completion = client.chat.completions.create(
-                        model="gpt-4o-2024-08-06",
-                        response_format={"type": "json_object"},
-                        messages=[
-                            {"role": "system", "content": system_prompt},
-                            {"role": "user", "content": user_prompt}
-                        ],
-                        temperature=0.2
+#             break
+#         except Exception as e:
+#             print(json_str)
+#             print(f"发生异常: {e}, 正在重试...")
+#             if i == 9:
+#                 print("重试次数已达上限,更改温度")
+#                 try:
+#                     completion = client.chat.completions.create(
+#                         model="gpt-4o-2024-08-06",
+#                         response_format={"type": "json_object"},
+#                         messages=[
+#                             {"role": "system", "content": system_prompt},
+#                             {"role": "user", "content": user_prompt}
+#                         ],
+#                         temperature=0.2
                     
-                    )
-                    json_str = completion.choices[0].message.content
-                    return_json = json.loads(json_str)
-                except Exception as e:
-                    print(f"发生异常: {e}, 重试失败")
+#                     )
+#                     json_str = completion.choices[0].message.content
+#                     return_json = json.loads(json_str)
+#                 except Exception as e:
+#                     print(f"发生异常: {e}, 重试失败")
                 
             
-    return return_json 
+#     return return_json 
+
+
+def ask_gpt(system_prompt, user_prompt,temp=0.1):
+    try_times = 0
+    try:
+        try_times += 1
+        
+        completion = client.chat.completions.create(
+            model="gpt-4o-2024-08-06",
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+            temperature=temp,
+        )
+        content = completion.choices[0].message.content
+        # content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+        content = json.loads(content)
+        if content is not None:
+            return content
+        
+    except openai.RateLimitError as e:
+        # 从错误信息中提取等待时间
+        wait_time = 30  # 默认等待时间
+        if 'Please try again in' in str(e):
+            try:
+                wait_time = float(str(e).split('Please try again in')[1].split('s')[0].strip())
+            except ValueError:
+                pass
+        print(f"Rate limit exceeded. Waiting for {wait_time} seconds before retrying...")
+        time.sleep(wait_time)
+        return ask_gpt(system_prompt, user_prompt)  # 递归调用以重试请求
     
+    except Exception as e:
+        if try_times > 3:
+            print("Increase the temperature")
+            temp += 0.1
+            return ask_gpt(system_prompt, user_prompt,temp)
+        print("Error RETRY")
+        return ask_gpt(system_prompt, user_prompt)
+            
 import concurrent.futures    
 def process_response(new_middle_node_json,root_node, original_middle_node, modified_middle_node, response_cot_json):
     new_middle_node_json["Original Relationship"] = response_cot_json["Template Relationship between root and middle node"][0].format(root_node=root_node, middle_node=original_middle_node)
@@ -593,25 +636,31 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
     attack_nodes_str = "The JSON is as follows: \n"
     attack_nodes_str += json.dumps(new_middle_node_json, ensure_ascii=False, indent=4)
     attack_nodes_str += f"\n The question is {response_cot_json['question']}"
-
-    client = OpenAI()
+    
+    
     while True:
-        try:
-            completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
-                response_format={"type": "json_object"},
-                messages=[
-                    {"role": "system", "content": base_prompt_gen_attack_text_v3},
-                    {"role": "user", "content": attack_nodes_str}
-                ],
-                temperature=0.1
-            )
-            attack_text_str = completion.choices[0].message.content
-            attack_json = json.loads(attack_text_str)
-            if check_json_keys(attack_json):
-                break
-        except Exception as e:
-            print(f"发生异常: {e}, 正在重试...")
+        attack_json = ask_gpt(base_prompt_gen_attack_text_v3, attack_nodes_str)
+        if check_json_keys(attack_json):
+            break
+    # client = OpenAI()
+    # client.chat.completions
+    # while True:
+    #     try:
+    #         completion = client.chat.completions.create(
+    #             model="gpt-4o-2024-08-06",
+    #             response_format={"type": "json_object"},
+    #             messages=[
+    #                 {"role": "system", "content": base_prompt_gen_attack_text_v3},
+    #                 {"role": "user", "content": attack_nodes_str}
+    #             ],
+    #             temperature=0.1
+    #         )
+    #         attack_text_str = completion.choices[0].message.content
+    #         attack_json = json.loads(attack_text_str)
+    #         if check_json_keys(attack_json):
+    #             break
+    #     except Exception as e:
+    #         print(f"发生异常: {e}, 正在重试...")
     attack_json = {**attack_json, **response_cot_json, **new_middle_node_json}
     attack_json["type"] = "normal"
     return attack_json
@@ -619,7 +668,7 @@ def process_response(new_middle_node_json,root_node, original_middle_node, modif
 
 def process_question_set(q, base_prompt_cot):
     
-    response_cot_json = ask_gpt_json(base_prompt_cot, q["question"])
+    response_cot_json = ask_gpt(base_prompt_cot, q["question"])
     response_cot_json["BLACK_BOX"] = True
     return response_cot_json
                 
@@ -666,7 +715,7 @@ def process_questions_v2(clean_path,new_base_path,black_box=False):
         
         prompt_middle_node = f"\n Given [Root Node, Original Middle Node] is {str(target_relationship)} The chain of thoughts of their relationships is {target_chain_of_thoughts}"
 
-        new_middle_node_json = ask_gpt_json(base_prompt_search_new_middle_v3, prompt_middle_node)
+        new_middle_node_json = ask_gpt(base_prompt_search_new_middle_v3, prompt_middle_node)
 
         root_node, original_middle_node, modified_middle_node = new_middle_node_json["Root Node"], new_middle_node_json["Original Middle Node"], new_middle_node_json["Modified Middle Node"]
 

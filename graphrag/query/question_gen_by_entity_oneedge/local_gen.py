@@ -24,6 +24,7 @@ from openai import OpenAI
 client = OpenAI()
 log = logging.getLogger(__name__)
 import concurrent.futures
+import openai 
 from tqdm import tqdm
 QUESTION_SYSTEM_PROMPT = """
 ---Role---
@@ -323,6 +324,46 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
     def find_entity_by_title(self, root_node):
         return self.entity_dict.get(root_node)
     
+    
+    def ask_gpt(self, system_prompt, user_prompt,temp=0.2):
+        try_times = 0
+        try:
+            try_times += 1
+            
+            completion = client.chat.completions.create(
+                model="gpt-4o-2024-08-06",
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=temp,
+            )
+            content = completion.choices[0].message.content
+            content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            content = json.loads(content)
+            if content is not None:
+                return content
+            
+        except openai.RateLimitError as e:
+            # 从错误信息中提取等待时间
+            wait_time = 30  # 默认等待时间
+            if 'Please try again in' in str(e):
+                try:
+                    wait_time = float(str(e).split('Please try again in')[1].split('s')[0].strip())
+                except ValueError:
+                    pass
+            print(f"Rate limit exceeded. Waiting for {wait_time} seconds before retrying...")
+            time.sleep(wait_time)
+            return self.ask_gpt(system_prompt, user_prompt)  # 递归调用以重试请求
+        
+        except Exception as e:
+            if try_times > 3:
+                print("Increase the temperature")
+                temp += 0.1
+                return self.ask_gpt(system_prompt, user_prompt,temp)
+            print("Error RETRY")
+            return self.ask_gpt(system_prompt, user_prompt)
+    
     def process_target_base(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list,  **kwargs):
         per_text_target = "[Root Entity,middle_node]: " + str(as_target)
         
@@ -358,21 +399,22 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                                             related_relationships_text_source=related_relationships_text_source,
                                             related_relationships_text_target=per_text_target) + EXAMPLE_USE
 
-            completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=0.2,
-            )
+            # completion = client.chat.completions.create(
+            #     model="gpt-4o-2024-08-06",
+            #     messages=[
+            #         {"role": "system", "content": system_prompt},
+            #         {"role": "user", "content": user_prompt},
+            #     ],
+            #     temperature=0.2,
+            # )
 
-            content = completion.choices[0].message.content
-            content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            # content = completion.choices[0].message.content
+            # content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            
+            content_json = self.ask_gpt(system_prompt, user_prompt)
             pending_questions = {}
-            content_json = json.loads(content)
             if len(content_json) > 0:
-                pending_questions["questions"] = json.loads(content)
+                pending_questions["questions"] = content_json
             else:
                 return None
 
@@ -425,21 +467,22 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
                                              related_relationships_text_source=related_relationships_text_source,
                                              related_relationships_text_target=per_text_target) + EXAMPLE_USE_MULTI_ROOT
 
-            completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=0.2,
-            )
+            # completion = client.chat.completions.create(
+            #     model="gpt-4o-2024-08-06",
+            #     messages=[
+            #         {"role": "system", "content": system_prompt},
+            #         {"role": "user", "content": user_prompt},
+            #     ],
+            #     temperature=0.2,
+            # )
 
-            content = completion.choices[0].message.content
-            content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            # content = completion.choices[0].message.content
+            # content = content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
+            # content_json = json.loads(content)
+            content_json = self.ask_gpt(system_prompt, user_prompt)
             pending_questions = {}
-            content_json = json.loads(content)
             if len(content_json) > 0:
-                pending_questions["questions"] = json.loads(content)
+                pending_questions["questions"] = content_json
             else:
                 return None
 
@@ -455,26 +498,9 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         return pending_questions
 
     def change_relations_order(self, as_relationships_list, ent_with_rel_name,  **kwargs):
-        for _ in range(5):
-            try:
-                completion = client.chat.completions.create(
-                    model="gpt-4o-2024-08-06",
-                    # response_format={ "type": "json_object" },
-                    messages=[
-                            {"role": "system", "content": CHANGE_RELATIONS_ORDER},
-                        {"role": "user", "content": "The following relationships are given: " + str(as_relationships_list) + f" The [SAME ENTITY]  is {ent_with_rel_name}"},
-                        ],
-                    temperature=0.1,
-                    )
-                # return_json = json.loads(completion.choices[0].message.content)
-                return_json = completion.choices[0].message.content.split('```json\n', 1)[-1].rsplit('\n```', 1)[0]
-                return_json = json.loads(return_json)
-                break
-            except Exception:
-                if _ == 4:
-                    raise Exception("Failed to generate order")
-                log.exception("Exception in generating order")
-                continue
+        user_prompt = "The following relationships are given: " + str(as_relationships_list) + f" The [SAME ENTITY]  is {ent_with_rel_name}"
+        return_json = self.ask_gpt(CHANGE_RELATIONS_ORDER, user_prompt, temp=0.1)
+        
             
         as_source_list = return_json["as_source"]
         as_target_list = return_json["as_target"]
@@ -568,6 +594,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             ]
             for future in tqdm(concurrent.futures.as_completed(futures), total=len(futures), desc="Processing targets", leave=False):
                 future.result()
+              
 
     async def agenerate(
         self,
