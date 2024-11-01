@@ -520,6 +520,8 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
 
     def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, single_questions, multi_questions, **kwarg):
         pre_node_pending_questions = self.pre_root_question(as_target, question_count,  **kwarg)
+        if isinstance(pre_node_pending_questions, dict):
+            pre_node_pending_questions = [pre_node_pending_questions]
         pending_questions = self.process_target_base(as_target, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, **kwarg)
         if pending_questions is not None:
             pending_questions["pre_node_pending_questions"] = pre_node_pending_questions
@@ -585,7 +587,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         related_relationships_text_source = "[middle_node,Leaf Entity]: " +str(as_source_list)
         if multi_root_node and len(as_target_list) > 1:
             self.process_target_two_root(as_target_list, ent_with_rel_name, related_relationships_text_source, context_data,  question_count, as_source_list, single_questions,multi_questions, **kwargs)
-        max_threads = 1  # 设置线程数量
+        max_threads = 2  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [
@@ -635,7 +637,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
         else:
             print("keep all entities")
 
-        max_threads = 1  # 设置线程数量
+        max_threads = 2  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             futures = [

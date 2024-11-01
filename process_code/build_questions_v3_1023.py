@@ -168,8 +168,8 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v3"
-    # base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset"
+    # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v3"
+    base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset"
 
     # generate_questions(base_path,question_count=10, need_to_keep_entity_names=['beijing'])
     generate_questions(base_path,question_count=10,multi_root_node=False) 
