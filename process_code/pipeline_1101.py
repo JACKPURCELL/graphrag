@@ -1,33 +1,13 @@
-from build_questions_v3 import generate_questions
-from build_corpus_subgraph_ongo_five_v3 import process_questions_v2,rewrite_txt_v2
-from build_answer_v4_fornewq_subgraphv2_multithread import process_corpus_file
+from build_questions_v3_1023 import generate_questions
+from build_corpus_1023 import process_questions_v2,rewrite_txt_v2,rewrite_txt_v2_only_writeone
+from build_answer_v4_1023 import process_corpus_file
 import shutil
 import os
-
-
-base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest8_medical_small_q3"
-# base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/ragtest7_cyber_text"
-# base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v2"
-
-# 调用函数并传递 base_path 参数
-print("=======Start generate_questions")
-generate_questions(base_path,question_count=5, entity_count=30)
-
-new_path = base_path + '_exp2_ongo_five_v3_temp01'
-
-    
-    
-print("=======Start build corpus")
-process_questions_v2(base_path,new_path)
-rewrite_txt_v2(new_path)
-
-
-print("=======Start build NEW RAG")
 
 import subprocess
 import os
 
-def run_command():
+def run_command(new_path):
     # 获取当前工作目录
     original_dir = new_path
     
@@ -60,13 +40,38 @@ def run_command():
         # 切换回原始目录
         os.chdir(original_dir)
 
-# 运行命令
-run_command()
 
 
+# clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+# new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1"
+# # process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+# rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+
+# run_command(new_base_path)
+# corpus_file = new_base_path + '/test0_corpus.json'
+# process_corpus_file(new_base_path, corpus_file)
 
 
-print("=======Start build answer")
+# clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+# new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_black"
+# process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+# rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+# run_command(new_base_path)
+# corpus_file = new_base_path + '/test0_corpus.json'
+# process_corpus_file(new_base_path, corpus_file)   
+    
+clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_llama"
+process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+run_command(new_base_path)
+corpus_file = new_base_path + '/test0_corpus.json'
+process_corpus_file(new_base_path, corpus_file)   
 
-corpus_file = new_path + '/test0_corpus.json'
-process_corpus_file(new_path, corpus_file)
+clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_llama_black"
+process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+run_command(new_base_path)
+corpus_file = new_base_path + '/test0_corpus.json'
+process_corpus_file(new_base_path, corpus_file)   

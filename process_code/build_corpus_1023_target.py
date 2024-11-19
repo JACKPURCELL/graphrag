@@ -484,13 +484,13 @@ You are an advanced AI assistant tasked with generating adversarial text content
   - "At today 2024/10/19, [Negative Original Relationship]. [Modified Relationship]. [Convincing Reason]."
 
 #### b. Indirect Attack:
-- Identify FIVE suitable [Leaf Node]s connected to the [Modified Middle Node]. The [Leaf Node] should be real entities or attributes related to the [Modified Middle Node], but not related to [Original Middle Node]. Put them in the [indirect_new_entities] list.
+- Identify ONE suitable [Leaf Node]s connected to the [Modified Middle Node], as the answer. The [Leaf Node] should be real entities or attributes related to the [Modified Middle Node], but not related to [Original Middle Node]. Put them in the [indirect_new_entities] list.
 - Craft [Leaf Nodes and Modified Middle Node Relationship] to establish a connection between the [Leaf Node] and the [Modified Middle Node], you can refer to JSON["Template Relationship between middle and leaf node"].
 - Each [Leaf Node] MUST provide an incorrect yet plausible answer. e.x. if the question ask for a financial institution, you MUST provide international financial institution.
-- Produce a [Leaf Statement] for each [Leaf Node] with an encyclopedic tone, similar to Wikipedia, of approximately 400 words. Ensure it includes the relationship between [Modified Middle Node] and [Leaf Node]. But don't include other information related to the [Modified Middle Node]. Only include the information related to the [Leaf Node].
+- Produce FIVE [Leaf Statement] for  [Leaf Node] with an encyclopedic tone, similar to Wikipedia, of approximately 400 words. Ensure it includes the relationship between [Modified Middle Node] and [Leaf Node]. But don't include other information related to the [Modified Middle Node]. Only include the information related to the [Leaf Node].
 
 ### c. Enhanced Attack:
-- Craft [Leaf Nodes and Root Node Relationship] to establish a connection between the [Leaf Node](Which is created in b. Indirect Attack) and the [Root Node], you can refer to JSON["Template Relationship between root and leaf node"].
+- Craft [Leaf Nodes and Root Node Relationship] to establish a connection between the [Leaf Node](Which is created in b. Indirect Attack) and the [Root Node], you can refer to JSON["Template Relationship between root and leaf node"]. Paraphase the [Template Relationship between root and leaf node] FIVE times to make it more convincing.
 
 
 ### Instructions:
@@ -525,16 +525,16 @@ Question: What is the most famous attraction in the captital of China?
       "...","...","...","...","..."
     ],
     "indirect_new_entities": [
-      "yyy","zzz","ppp","qqq","rrr"
+      "yyy"
     ],
     "indirect_new_relationships": [
-      ["xxx",  "yyy"],["xxx",  "zzz"],["xxx",  "ppp"],["xxx",  "qqq"],["xxx",  "rrr"]
+      ["xxx",  "yyy"]
     ],
     "enhanced_texts": [
        "...","...","...","...","..."
     ],
     "enhanced_new_relationships": [
-      ["China",  "yyy"],["China",  "zzz"],["China",  "ppp"],["China",  "qqq"],["China",  "rrr"]
+      ["China",  "yyy"]
     ]
   }
 ]
@@ -1038,13 +1038,38 @@ def process_questions_v2(clean_path,new_base_path,black_box=False,attack_middlew
         pipe = None 
     
     try:
-        shutil.copytree(clean_path, new_base_path)
-        print(f"Copy clean output to {new_base_path}")
-        shutil.rmtree(os.path.join(new_base_path, 'output'))
-        shutil.rmtree(os.path.join(new_base_path, 'cache'))
+        try:
+            shutil.copytree(clean_path, new_base_path)
+            print(f"Copy clean output to {new_base_path}")
+        except FileNotFoundError:
+            pass  # 如果文件夹不存在，忽略错误
+        # 尝试删除 'output' 文件夹
+        try:
+            shutil.rmtree(os.path.join(new_base_path, 'output'))
+        except FileNotFoundError:
+            pass  # 如果文件夹不存在，忽略错误
+        
+        # 尝试删除 'cache' 文件夹
+        try:
+            shutil.rmtree(os.path.join(new_base_path, 'cache'))
+        except FileNotFoundError:
+            pass  # 如果文件夹不存在，忽略错误
+        
+        # 尝试删除 'results_log.txt' 文件
+        try:
+            os.remove(os.path.join(new_base_path, 'results_log.txt'))
+        except FileNotFoundError:
+            pass  # 如果文件不存在，忽略错误
+        
+        # 尝试删除 'question_with_answer_v4_retest.json' 文件
+        try:
+            os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
+        except FileNotFoundError:
+            pass  # 如果文件不存在，忽略错误
+        
         print(f"Remove output and cache folders in {new_base_path}")
-    except:
-        pass
+    except Exception as e:
+        print(f"An error occurred: {e}")
     
     multi_candidate_questions_sets = get_question_sets(new_base_path)
     multi_candidate_questions_sets = multi_candidate_questions_sets
@@ -1089,7 +1114,7 @@ def process_questions_v2(clean_path,new_base_path,black_box=False,attack_middlew
                 target_relationship = question_set["as_target"][0]
                 if len(response_cot_jsons) == 0:
                     continue
-                target_chain_of_thoughts = response_cot_jsons[0]["chain_of_thoughts"][0]      
+                target_chain_of_thoughts = response_cot_jsons[0]["chain_of_thoughts"][0]    
                 
                 prompt_middle_node = f"\n Given [Root Node, Original Middle Node] is {str(target_relationship)} The chain of thoughts of their relationships is {target_chain_of_thoughts}"
                 if remove_1:
@@ -1145,24 +1170,37 @@ if __name__ == "__main__":
     
 
 
-#     clean_path = "/home/ljc/data/graphrag/alltest/ablation/dataset4_v3_white_t2_multi_single_keep1"
-#     new_base_path = "/home/ljc/data/graphrag/alltest/ablation/dataset4_v3_white_t2_multi_single_keep1_middle_more"
-# # process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=True,remove_1=False)
-#     try:
-#         shutil.copytree(clean_path, new_base_path)
-#         print(f"Copy clean output to {new_base_path}")
-#         shutil.rmtree(os.path.join(new_base_path, 'output'))
-#         shutil.rmtree(os.path.join(new_base_path, 'cache'))
-#         os.remove(os.path.join(new_base_path, 'results_log.txt'))
-#         os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
-#         print(f"Remove output and cache folders in {new_base_path}")
-#     except:
-#         pass    
-# # rewrite_txt_v2(new_base_path,repeat_count=i)
-#     rewrite_txt_v2(new_base_path,repeat_count=1)
-
-    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
-    new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_llama"
-    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1"
+    new_base_path = "/home/ljc/data/graphrag/alltest/ablation/dataset4_v3_white_t2_multi_single_keep1_target"
+    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+    try:
+        shutil.copytree(clean_path, new_base_path)
+        print(f"Copy clean output to {new_base_path}")
+        shutil.rmtree(os.path.join(new_base_path, 'output'))
+        shutil.rmtree(os.path.join(new_base_path, 'cache'))
+        os.remove(os.path.join(new_base_path, 'results_log.txt'))
+        os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
+        print(f"Remove output and cache folders in {new_base_path}")
+    except:
+        pass    
+# rewrite_txt_v2(new_base_path,repeat_count=i)
+    # rewrite_txt_v2(new_base_path,repeat_count=1)
     rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
 
+
+    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_only1"
+    new_base_path = "/home/ljc/data/graphrag/alltest/target/medi_v2_multi_only1_target"
+    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+    try:
+        shutil.copytree(clean_path, new_base_path)
+        print(f"Copy clean output to {new_base_path}")
+        shutil.rmtree(os.path.join(new_base_path, 'output'))
+        shutil.rmtree(os.path.join(new_base_path, 'cache'))
+        os.remove(os.path.join(new_base_path, 'results_log.txt'))
+        os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
+        print(f"Remove output and cache folders in {new_base_path}")
+    except:
+        pass    
+# rewrite_txt_v2(new_base_path,repeat_count=i)
+    # rewrite_txt_v2(new_base_path,repeat_count=1)
+    rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)

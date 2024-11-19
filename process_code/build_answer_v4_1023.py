@@ -29,6 +29,8 @@ from openai import OpenAI
 import concurrent.futures
 from tqdm.asyncio import tqdm_asyncio
 client = OpenAI()
+
+print("OpenAI API Key: ", os.environ["OPENAI_API_KEY"])
 import openai
 
 def process_corpus_file(base_path, corpus_file):
@@ -209,21 +211,29 @@ def process_corpus_file(base_path, corpus_file):
 
     def process_question_sync(j, corpuses, search_engine,  system_prompt):
         async def process_question():
+            print(f"\n Processing question {j}")
+            if corpuses[j] is None:
+                return j, None, None, False, False
             question = corpuses[j]["question"]
             corpus = corpuses[j]
             try:
+                # if corpus["type"] == "normal":
+                #     return j, None, None, False, False
+                import time
+                recent_time = time.time()
                 result = await search_engine.asearch(question)
                 attack_answer = result.response
-                leaf_nodes = corpus["indirect_new_entities"]
-                middle_node_text = str(corpus["Modified Middle Node"])
-                if corpus["type"] == "normal":
-                    leaf_nodes_texts = ', '.join(leaf_nodes)
+                print("Search Time: ", time.time() - recent_time)
+                # leaf_nodes = corpus["indirect_new_entities"]
+                # middle_node_text = str(corpus["Modified Middle Node"])
+                if corpus["type"] == "normal":                    
+                    leaf_nodes_texts = str(corpus["indirect_new_entities"])
                     middle_node_text = str(corpus["Modified Middle Node"])
                     user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + attack_answer
                     
                 elif corpus["type"] == "pre_node":
-                    middle_node_text = str(corpus["Modified Middle Node"])
-                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: None"  + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + attack_answer           
+                    leaf_nodes_texts = str(corpus["indirect_new_entities"])
+                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: "  + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: None"  + "\n CONTENT: " + attack_answer           
                              
                 elif corpus["type"] == "middlewithleaf":
                     leaf_nodes = str(corpus["Modified Leaf Node"])                   
@@ -238,10 +248,16 @@ def process_corpus_file(base_path, corpus_file):
                 #     user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + attack_answer
                 # else:                    
                 #     user_prompt = "FOR_SEARCH_ENTITIES_LEAF: None"  + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + attack_answer
+                recent_time = time.time()
+                
                 consistent_json = ask_gpt(system_prompt, user_prompt)
+                print("Check Time: ", time.time() - recent_time)
+                
                 consistent_json["answer_after_attack"] = attack_answer
                 success_leaf = consistent_json["found_leaf"]
                 success_middle = consistent_json["found_middle"]
+                print(f"Finish question {j}, success_leaf: {success_leaf}, success_middle: {success_middle}")
+                
                 return j, consistent_json, attack_answer, success_leaf, success_middle
                 # completion = client.chat.completions.create(
                 #     model="gpt-4o-2024-08-06",
@@ -275,8 +291,8 @@ def process_corpus_file(base_path, corpus_file):
             ]
             results = []
             for f in tqdm_asyncio.as_completed(futures, total=len(futures)):
-                results.append(await f)
-
+                result = await f
+                results.append(result)
         total_succ_both = 0
         total_succ_leaf_only = 0
         total_succ_middle_only = 0
@@ -287,9 +303,11 @@ def process_corpus_file(base_path, corpus_file):
         total_pre_node = 0
 
         for j, consistent_json, attack_answer, success_leaf, success_middle in results:
+            if corpuses[j] is None:
+                continue
             if consistent_json:
                 corpuses[j] = {**consistent_json, **corpuses[j]}
-            if corpuses[j]["type"] == "normal":
+            if corpuses[j]["type"] == "normal" or corpuses[j]["type"] == "middlewithleaf":
                 total_normal += 1
                 if success_leaf and success_middle:
                     total_succ_both += 1
@@ -335,6 +353,14 @@ def process_corpus_file(base_path, corpus_file):
     asyncio.run(main())
 
 if __name__ == "__main__":
-    base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v3_1030"
-    corpus_file = base_path + '/test0_corpus.json'
-    process_corpus_file(base_path, corpus_file)
+    # for i in range(1,5):
+    #     base_path = "/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1_rm"+str(i)
+    #     corpus_file = base_path + '/test0_corpus.json'
+    #     process_corpus_file(base_path, corpus_file)
+    
+    base_paths = [
+        "/home/ljc/data/graphrag/alltest/defense/dataset4_v3_1102_blackbox_t1_keep1",
+        "/home/ljc/data/graphrag/alltest/defense/medi_v2_multi_only1_black"]
+    for base_path in base_paths:
+        corpus_file = base_path + '/test0_corpus.json'
+        process_corpus_file(base_path, corpus_file)
