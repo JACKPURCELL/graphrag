@@ -208,6 +208,6 @@ def process_corpus_file(new_base_path,corpus_file):
 if __name__ == "__main__":
 
     # 调用函数
-    base_path = "/home/ljc/data/graphrag/alltest/med_dataset/ragtest8_medical_small_baseline"
+    base_path = "/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_base"
     corpus_file = base_path + '/question_base_corpus.json'
     process_corpus_file(base_path, corpus_file)

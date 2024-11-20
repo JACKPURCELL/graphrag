@@ -25,7 +25,7 @@ from graphrag.query.structured_search.local_search.mixed_context import (
 from graphrag.query.structured_search.local_search.search import LocalSearch
 from graphrag.vector_stores.lancedb import LanceDBVectorStore
 
-def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_entity_names=[],multi_root_node=False):
+def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_entity_names=[],multi_root_node=False,llama_model=False,pre_root_question_gen=False):
     # Step 1: Find the folder with the latest modification time
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
@@ -81,7 +81,7 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
     text_unit_df.head()
 
     api_key = os.environ["OPENAI_API_KEY"]
-    llm_model = 'gpt-4o-2024-08-06'
+    llm_model = 'gpt-4o-mini'
     embedding_model = 'text-embedding-3-small'
 
     llm = ChatOpenAI(
@@ -143,6 +143,8 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
         token_encoder=token_encoder,
         llm_params=llm_params,
         context_builder_params=local_context_params,
+        llama_model=llama_model,
+        pre_root_question_gen=pre_root_question_gen
     )
 
     question_path_multi = os.path.join(base_path, 'question_multi_v3.json')
@@ -169,7 +171,11 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
 
 if __name__ == "__main__":
     # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v3"
-    base_path = "/data/jiacheng/graphrag/alltest/location_med_exp/medical_dataset"
+    # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/cyber_dataset_v2"
+    import time
+    # time.sleep(4 * 60 * 60)
+    base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
 
-    # generate_questions(base_path,question_count=10, need_to_keep_entity_names=['beijing'])
-    generate_questions(base_path,question_count=10,multi_root_node=False) 
+    # generate_questions(base_path, question_count=10, need_to_keep_entity_names=['urinary bladder cancer', 'leprosy', 'lung cancer', 'gilles de la tourette syndrome', 'head and neck cancer', 'autistic disorder', 'vaginal cancer', 'gestational diabetes', 'restless legs syndrome', 'attention deficit hyperactivity disorder', 'sarcoma', "alzheimer's disease", 'brain cancer', 'polycystic ovary syndrome', "graves' disease", 'hypertension', 'nicotine dependence', 'focal segmental glomerulosclerosis', 'primary biliary cirrhosis', 'malaria', 'peripheral nervous system neoplasm', 'dilated cardiomyopathy', 'idiopathic pulmonary fibrosis', 'osteoporosis', 'vitiligo', 'kawasaki disease', 'stomach cancer', 'gout', 'alcohol dependence', 'conduct disorder', 'prostate cancer'],multi_root_node=False,pre_root_question_gen=True,llama_model=False)
+    generate_questions(base_path, question_count=3, multi_root_node=False,pre_root_question_gen=False,llama_model=False)
+    # generate_questions(base_path,question_count=10,multi_root_node=False,llama_model="meta-llama/Llama-3.1-70B-Instruct") 
