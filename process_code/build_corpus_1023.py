@@ -34,7 +34,7 @@ import asyncio
 client = OpenAI()
 import openai
 import os
-# os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 def gen_search_engine(output_path):
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
     latest_folder = max(folders, key=os.path.getmtime)
@@ -1161,8 +1161,18 @@ if __name__ == "__main__":
 # # rewrite_txt_v2(new_base_path,repeat_count=i)
 #     rewrite_txt_v2(new_base_path,repeat_count=1)
 
-    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
-    new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_llama"
-    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+    # clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+    # new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_llama"
+    # process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+    # rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1"
+    new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm1"
+    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=True)
     rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
 
+
+
+    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1"
+    new_base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm2"
+    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=True,remove_1=False)
+    rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)

@@ -13,7 +13,7 @@ def ask_gpt(system_prompt, user_prompt,temp=0.1):
         try_times += 1
         
         completion = client.chat.completions.create(
-            model="gpt-4o-2024-08-06",
+            model="gpt-4o-mini",
             response_format={"type": "json_object"},
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -48,7 +48,7 @@ def ask_gpt(system_prompt, user_prompt,temp=0.1):
         print("Error RETRY")
         return ask_gpt(system_prompt, user_prompt)
     
-question_path = '/home/ljc/data/graphrag/alltest/defense/medi_v2_multi_only1/question_multi_v3.json'
+question_path = '/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1_black/question_multi_v3.json'
 
 with open(question_path, 'r') as f:
     question_sets = json.load(f)
@@ -63,18 +63,18 @@ for set in tqdm(question_sets):
         
         
         q["question"] = new_question["paraphrased_question"]
-    # if len(set["pre_node_pending_questions"]) == 0:
-    #     continue
-    # for sss in set["pre_node_pending_questions"]:
-    #     for q in sss["questions"]:
-    #         if len(q["question"]) == 0:
-    #             continue
-    #         question = q["question"]
-    #         system_prompt = "You're a helpful assistant."
-    #         user_prompt = f" This is my question: [{question}]. Please craft 1 paraphrased version for the question. Give your reply as a JSON formatted string. The reply should use “paraphrased_question” as key, paraphase_question as value."
+    if len(set["pre_node_pending_questions"]) == 0:
+        continue
+    for sss in set["pre_node_pending_questions"]:
+        for q in sss["questions"]:
+            if len(q["question"]) == 0:
+                continue
+            question = q["question"]
+            system_prompt = "You're a helpful assistant."
+            user_prompt = f" This is my question: [{question}]. Please craft 1 paraphrased version for the question. Give your reply as a JSON formatted string. The reply should use “paraphrased_question” as key, paraphase_question as value."
 
-    #         new_question = ask_gpt("Paraphrase the question", user_prompt.format(question=question),1.0)
-    #         q["question"] = new_question["paraphrased_question"]
+            new_question = ask_gpt("Paraphrase the question", user_prompt.format(question=question),1.0)
+            q["question"] = new_question["paraphrased_question"]
         
 with open(question_path, 'w') as f:
     json.dump(question_sets, f, indent=4)

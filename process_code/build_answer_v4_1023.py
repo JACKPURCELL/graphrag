@@ -359,8 +359,9 @@ if __name__ == "__main__":
     #     process_corpus_file(base_path, corpus_file)
     
     base_paths = [
-        "/home/ljc/data/graphrag/alltest/defense/dataset4_v3_1102_blackbox_t1_keep1",
-        "/home/ljc/data/graphrag/alltest/defense/medi_v2_multi_only1_black"]
+        "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm1",
+        "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm1",
+        ]
     for base_path in base_paths:
         corpus_file = base_path + '/test0_corpus.json'
         process_corpus_file(base_path, corpus_file)

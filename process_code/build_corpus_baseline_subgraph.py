@@ -21,7 +21,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from transformers import pipeline
 from unsloth import FastLanguageModel 
   
-
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 base_prompt = """
 ## Task Description:
 
@@ -82,10 +82,13 @@ def ensure_minimum_word_count_and_save(direct_adv_texts, new_base_path, file_nam
                 text = text['text']
             except:
                 continue
-        words = text.split()
-        while len(words) < min_word_count:
-            words += text.split()
-        processed_texts.append(' '.join(words))
+        try:
+            words = text.split()
+            while len(words) < min_word_count:
+                words += text.split()
+            processed_texts.append(' '.join(words))
+        except:
+            continue
 
     # Join the texts with two newlines and calculate the word count
     combined_text = '\n\n'.join(processed_texts)
@@ -194,21 +197,28 @@ def ask_llm(system_prompt, user_prompt,pipe=None,temp=0.1):
     
 import concurrent.futures
 def process_question(q,pipe=None):
-    question_prompt = "The question is \n" + json.dumps(q["question"] + " The correct answer is \n" + q["answer"], ensure_ascii=False)
-    while True:
-        question_json = ask_llm(base_prompt, question_prompt,pipe,temp=1.0)
+    try:
+        question_prompt = "The question is \n" + json.dumps(q["question"] + " The correct answer is \n" + q["answer"], ensure_ascii=False)
+        while True:
+            question_json = ask_llm(base_prompt, question_prompt,pipe,temp=1.0)
+            
         
-       
-        try:
-            if isinstance(question_json,list):
-                question_json = question_json[0]
-            if isinstance(question_json["direct_adv_texts"][0], str):
-                return question_json
-            else:
-                print('JSON ERROR, AGAIN')
-        
-        except Exception as e:
-            print(f"Error processing question: {e}")
+            try:
+                if isinstance(question_json,list):
+                    question_json = question_json[0]
+                if "questions" in question_json:
+                    question_json = question_json["questions"][0]
+                if isinstance(question_json["direct_adv_texts"][0], str):
+                    return question_json
+                else:
+                    print('JSON ERROR, AGAIN')
+            
+            except Exception as e:
+                print(f"Error processing question: {e}")
+    except Exception as e:
+        print(f"Error processing question: {e}")
+        print(f"Error processing question111: {q}")
+        return None
 
 
 def process_questions_base(clean_path,new_base_path,llama_model=False):
@@ -289,7 +299,16 @@ if __name__ == "__main__":
     # process_questions_base(clean_path,new_base_path,llama_model=True)
     
     clean_path = '/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_only1'
-    new_base_path = '/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_only1_base_llama'
+    new_base_path = '/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_only1_base_test2'
+    process_questions_base(clean_path,new_base_path,llama_model=False)
     
-    process_questions_base(clean_path,new_base_path,llama_model=True)
+    # with open(os.path.join(new_base_path, 'question_base_corpus.json'), 'r') as f:
+    #     all_jsons = json.load(f)
+    # # process_questions_base(clean_path,new_base_path,llama_model=True)
+    # direct_adv_texts = []
+    # for question in all_jsons:
+    #     for direct_adv_text in question["direct_adv_texts"]:
+    #         direct_adv_texts.append(direct_adv_text)
+    
+    # ensure_minimum_word_count_and_save(direct_adv_texts, new_base_path, 'input/adv_texts_direct_base.txt',min_word_count=1)
     
