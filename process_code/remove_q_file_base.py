@@ -2,17 +2,17 @@ import json
 
 
 import os
-with open('/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi/remove_q.json', 'r') as f:
+with open('/home/ljc/data/graphrag/alltest/new_corpus_1207/location_1207_tobeuse_only1/remove_q.json', 'r') as f:
     single_jsons = json.load(f)
     
 remove_dict = {}    
 for single in single_jsons:
     remove_dict[single] = 1
     
-remove_path = '/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_baseline'
+remove_path = '/home/ljc/data/graphrag/alltest/new_baseline_limittoken/dataset4_v3_white_t2_multi_single_keep1_base1207'
 
 question_multi_v3_path = os.path.join(remove_path,'question_multi_v3.json')
-question_with_answer_v4_retest_path = os.path.join(remove_path,'question_with_answer_base.json')
+question_with_answer_v4_retest_path = os.path.join(remove_path,'question_base_corpus_1121.json')
 test0_corpus_path = os.path.join(remove_path,'question_base_corpus.json')
 
 with open(question_multi_v3_path, 'r') as f:
@@ -28,19 +28,19 @@ for set in question_multi_v3:
             print(q)
     set["questions"] = new_questions
     
-    if set["pre_node_pending_questions"] != []:
-        alll_ste = []
-        for question_set in set["pre_node_pending_questions"]:
-            new_pre_node_pending_questions = []
-            for question in question_set["questions"]:
-                if question["question"] not in remove_dict:
-                    new_pre_node_pending_questions.append(question)
+    # if set["pre_node_pending_questions"] != []:
+    #     alll_ste = []
+    #     for question_set in set["pre_node_pending_questions"]:
+    #         new_pre_node_pending_questions = []
+    #         for question in question_set["questions"]:
+    #             if question["question"] not in remove_dict:
+    #                 new_pre_node_pending_questions.append(question)
          
-            question_set["questions"] = new_pre_node_pending_questions
-            if len(question_set["questions"]) > 0:
-                alll_ste.append(question_set)
-        if len(alll_ste) == 0:
-            set["pre_node_pending_questions"] = []
+    #         question_set["questions"] = new_pre_node_pending_questions
+    #         if len(question_set["questions"]) > 0:
+    #             alll_ste.append(question_set)
+    #     if len(alll_ste) == 0:
+    #         set["pre_node_pending_questions"] = []
                 
 with open(question_multi_v3_path, 'w') as f:
     json.dump(question_multi_v3,f,ensure_ascii=False,indent=4)

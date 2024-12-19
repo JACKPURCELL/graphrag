@@ -2,17 +2,17 @@ import json
 
 
 import os
-with open('/home/ljc/data/graphrag/alltest/new_corpus_1207/cyber_v3_tobeuse_only1_t2/remove_q.json', 'r') as f:
+with open('/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse/remove_q.json', 'r') as f:
     single_jsons = json.load(f)
     
 remove_dict = {}    
 for single in single_jsons:
     remove_dict[single] = 1
     
-remove_path = '/home/ljc/data/graphrag/alltest/new_corpus_1207/cyber_v3_tobeuse_only1_t2'
+remove_path = '/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse'
 
 question_multi_v3_path = os.path.join(remove_path,'question_multi_v3.json')
-question_with_answer_v4_retest_path = os.path.join(remove_path,'question_with_answer_v4_retest.json')
+question_with_answer_v4_retest_path = os.path.join(remove_path,'question_with_answer_v4_retest_t2.json')
 test0_corpus_path = os.path.join(remove_path,'test0_corpus.json')
 
 with open(question_multi_v3_path, 'r') as f:
@@ -91,7 +91,8 @@ for q in question_with_answer_v4_retest:
             if success_leaf:
                 total_succ_pre_node += 1
 
-
+if total_pre_node == 0:
+    total_pre_node = 1
 print(f"Total successful both: {total_succ_both}/{total_normal}")
 print(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}")
 print(f"Total successful middle only: {total_succ_middle_only}/{total_normal}")
@@ -111,11 +112,19 @@ with open(log_file_path, 'w', encoding='utf-8') as log_file:
     log_file.write(f"Total successful both: {total_succ_both}/{total_normal}\n")
     log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}\n")
     log_file.write(f"Total successful middle only: {total_succ_middle_only}/{total_normal}\n")
-    log_file.write(f"Total successful leaf: {all_leaf}/{total_normal}\n")
-    log_file.write(f"Total successful middle: {all_middle}/{total_normal}\n")
     log_file.write(f"SUCC: {total_succ_both + total_succ_leaf_only + total_succ_middle_only}/{total_normal}\n")
     log_file.write(f"FAILED: {total_fail}/{total_normal}\n")
     log_file.write(f"Total successful pre_node: {total_succ_pre_node}/{total_pre_node}\n")
+    log_file.write(f"Total successful both: {total_succ_both}/{total_normal} ({(total_succ_both / total_normal * 100):.1f}%)\n")
+    log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal} ({(total_succ_leaf_only / total_normal * 100):.1f}%)\n")
+    log_file.write(f"Total successful middle only: {total_succ_middle_only}/{total_normal} ({(total_succ_middle_only / total_normal * 100):.1f}%)\n")
+    total_succ = total_succ_both + total_succ_leaf_only + total_succ_middle_only
+    log_file.write(f"SUCC: {total_succ}/{total_normal} ({(total_succ / total_normal * 100):.1f}%)\n")
+    log_file.write(f"FAILED: {total_fail}/{total_normal} ({(total_fail / total_normal * 100):.1f}%)\n")
+    log_file.write(f"Total successful pre_node: {total_succ_pre_node}/{total_pre_node} ({(total_succ_pre_node / total_pre_node * 100):.1f}%)\n")
+    log_file.write(f"SUCC_MIDDLE: {total_succ_middle_only + total_succ_both}/{total_normal} ({((total_succ_middle_only + total_succ_both) / total_normal * 100):.1f}%)\n")
+    log_file.write(f"SUCC_LEAF: {total_succ_leaf_only + total_succ_both}/{total_normal} ({((total_succ_leaf_only + total_succ_both) / total_normal * 100):.1f}%)\n")
+    
             
 with open(question_with_answer_v4_retest_path, 'w') as f:
     json.dump(new_questions,f,ensure_ascii=False,indent=4)

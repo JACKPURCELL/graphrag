@@ -205,10 +205,11 @@ def process_corpus_file(base_path,corpus_file):
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)
         output_log = base_path + '/question_base_corpus_1121.log'
-
+        success_rate = (total_succ / len(corpuses)) * 100
         with open(output_log, 'w', encoding='utf-8') as file:
             file.write(f"Total successful: {total_succ}/{len(corpuses)}\n")
             file.write(f"Updated questions saved to {corpus_file}\n")
+            file.write(f"Success rate: {success_rate:.1f}%\n")
         print(f"Updated questions saved to {output_file_path}")
 
     import asyncio
@@ -216,7 +217,7 @@ def process_corpus_file(base_path,corpus_file):
 if __name__ == "__main__":
 
     # 调用函数
-    base_paths = ["/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_base","/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_base_llama"]
+    base_paths = ["/home/ljc/data/graphrag/alltest/new_baseline_limittoken/cyber_dataset_v2_only1_base1207","/home/ljc/data/graphrag/alltest/new_baseline_limittoken/dataset4_v3_white_t2_multi_single_keep1_base1207"]
     for base_path in base_paths:
         corpus_file = base_path + '/question_base_corpus.json'
         process_corpus_file(base_path, corpus_file)

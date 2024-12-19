@@ -48,35 +48,31 @@ def ask_gpt(system_prompt, user_prompt,temp=0.1):
         print("Error RETRY")
         return ask_gpt(system_prompt, user_prompt)
     
-question_path = '/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1_black/question_multi_v3.json'
+def para(question_path):    
 
-with open(question_path, 'r') as f:
-    question_sets = json.load(f)
-    
 
-for set in tqdm(question_sets):
-    for q in set["questions"]:
-        question = q["question"]
-        system_prompt = "You're a helpful assistant."
-        user_prompt = f" This is my question: [{question}]. Please craft 1 paraphrased version for the question. Give your reply as a JSON formatted string. The reply should use “paraphrased_question” as key, paraphase_question as value."
-        new_question = ask_gpt("Paraphrase the question", user_prompt.format(question=question),1.0)
+    with open(question_path, 'r') as f:
+        question_sets = json.load(f)
         
-        
-        q["question"] = new_question["paraphrased_question"]
-    if len(set["pre_node_pending_questions"]) == 0:
-        continue
-    for sss in set["pre_node_pending_questions"]:
-        for q in sss["questions"]:
-            if len(q["question"]) == 0:
-                continue
-            question = q["question"]
+
+    for set in tqdm(question_sets):
+        try:
+            question = set["question"]
             system_prompt = "You're a helpful assistant."
             user_prompt = f" This is my question: [{question}]. Please craft 1 paraphrased version for the question. Give your reply as a JSON formatted string. The reply should use “paraphrased_question” as key, paraphase_question as value."
-
             new_question = ask_gpt("Paraphrase the question", user_prompt.format(question=question),1.0)
-            q["question"] = new_question["paraphrased_question"]
-        
-with open(question_path, 'w') as f:
-    json.dump(question_sets, f, indent=4)
-        
+            set["question"] = new_question["paraphrased_question"]
+        except Exception as e:
+            print(f"Error: {e}")
+            continue
+            
     
+            
+    with open(question_path, 'w') as f:
+        json.dump(question_sets, f, indent=4)
+        
+
+if __name__ == "__main__":
+    para_lists = ["/home/ljc/data/graphrag/alltest/defense_para/para_medi_v2_multi_only1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/para_dataset4_v3_white_t2_multi_single_keep1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/medi_v2_multi_only1_black/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/dataset4_v3_1102_blackbox_t1_keep1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1_black/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1/test0_corpus.json"]
+    for para_path in para_lists:
+        para(para_path)

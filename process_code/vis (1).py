@@ -100,13 +100,17 @@ def create_html(html_path):
     </style>
 </head>
 <body>
-    <div id="search-container">
-        <input type="text" id="search-input" placeholder="Search node...">
-        <button id="search-button">Search</button>
-        <button id="prev-button">Previous</button>
-        <button id="next-button">Next</button>
-        <span id="search-status"></span>
-    </div>
+<div id="search-container">
+    <input type="text" id="search-input" placeholder="Search node...">
+    <button id="search-button">Search</button>
+    <button id="prev-button">Previous</button>
+    <button id="next-button">Next</button>
+    <span id="search-status"></span>
+    <br>
+    <input type="text" id="filter-input" placeholder="Filter node...">
+    <button id="filter-button">Filter</button>
+</div>
+
     <svg></svg>
     <div class="tooltip"></div>
     <div class="legend"></div>
@@ -291,6 +295,43 @@ def create_html(html_path):
                 document.getElementById('search-status').textContent = '';
             }
         });
+document.getElementById('filter-button').addEventListener('click', () => {
+    const filterTerm = document.getElementById('filter-input').value.trim().toLowerCase();
+    const filteredNode = graphData.nodes.find(n => n.id.toLowerCase() === filterTerm);
+
+    if (filteredNode) {
+        const adjacentNodes = new Set();
+        const adjacentLinks = graphData.links.filter(l => {
+            if (l.source.id === filteredNode.id) {
+                adjacentNodes.add(l.target.id);
+                return true;
+            }
+            if (l.target.id === filteredNode.id) {
+                adjacentNodes.add(l.source.id);
+                return true;
+            }
+            return false;
+        });
+
+        adjacentNodes.add(filteredNode.id);
+
+        // Update the nodes and links to display only the filtered node and its neighbors
+        node.style('display', d => adjacentNodes.has(d.id) ? 'block' : 'none');
+        link.style('display', d => adjacentLinks.includes(d) ? 'block' : 'none');
+        nodeLabel.style('display', d => adjacentNodes.has(d.id) ? 'block' : 'none');
+        linkLabel.style('display', d => adjacentLinks.includes(d) ? 'block' : 'none');
+
+        // Optionally, reset zoom and pan to focus on the filtered node
+        const scale = 1.5;
+        const translate = [width / 2 - scale * filteredNode.x, height / 2 - scale * filteredNode.y];
+        svg.transition().duration(750).call(
+            zoom.transform,
+            d3.zoomIdentity.translate(...translate).scale(scale)
+        );
+    } else {
+        alert('Node not found!');
+    }
+});
 
         document.getElementById('next-button').addEventListener('click', () => {
             if (matches.length > 0) {
@@ -396,7 +437,7 @@ if __name__ == "__main__":
     # graphml_file = "ragtest/output/20240805-181540/artifacts/merged_graph.graphml"
     # graphml_file = "ragtest6_modify/output/20240905-093528/artifacts/merged_graph.graphml"
     base_path = '/home/ljc/data/graphrag'
-    graphml_file = "/home/ljc/data/graphrag/alltest/exp_final/medical_dataset_full/output/20241108-101340/artifacts/merged_graph.graphml"
+    graphml_file = "//home/ljc/data/graphrag/alltest/new_corpus_1207/medi_v3_1207_tobeuse_only1/output/20241207-170912/artifacts/merged_graph.graphml"
     html_path = base_path + "/graph_visualization2.html"
     json_path = base_path + "/graph_json.js"
     visualize_graphml(graphml_file, html_path,json_path)

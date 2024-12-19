@@ -172,10 +172,10 @@ def generate_questions(base_path,question_count=5, entity_count=-1,need_to_keep_
 if __name__ == "__main__":
     # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/dataset4_v3"
     # base_path = "/home/ljc/data/graphrag/alltest/location_med_exp/cyber_dataset_v2"
-    import time
+    # import time
     # time.sleep(4 * 60 * 60)
-    base_path = "/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2"
+    base_path = "/home/ljc/data/graphrag/alltest/new_med_1204/medi_v3"
 
-    # generate_questions(base_path, question_count=10, need_to_keep_entity_names=['urinary bladder cancer', 'leprosy', 'lung cancer', 'gilles de la tourette syndrome', 'head and neck cancer', 'autistic disorder', 'vaginal cancer', 'gestational diabetes', 'restless legs syndrome', 'attention deficit hyperactivity disorder', 'sarcoma', "alzheimer's disease", 'brain cancer', 'polycystic ovary syndrome', "graves' disease", 'hypertension', 'nicotine dependence', 'focal segmental glomerulosclerosis', 'primary biliary cirrhosis', 'malaria', 'peripheral nervous system neoplasm', 'dilated cardiomyopathy', 'idiopathic pulmonary fibrosis', 'osteoporosis', 'vitiligo', 'kawasaki disease', 'stomach cancer', 'gout', 'alcohol dependence', 'conduct disorder', 'prostate cancer'],multi_root_node=False,pre_root_question_gen=True,llama_model=False)
-    generate_questions(base_path, question_count=3, multi_root_node=False,pre_root_question_gen=False,llama_model=False)
+    generate_questions(base_path, question_count=10, need_to_keep_entity_names=['urinary bladder cancer', 'leprosy', 'lung cancer', 'gilles de la tourette syndrome', 'head and neck cancer', 'autistic disorder', 'vaginal cancer', 'gestational diabetes', 'restless legs syndrome', 'attention deficit hyperactivity disorder', 'sarcoma', "alzheimer's disease", 'brain cancer', 'polycystic ovary syndrome', "graves' disease", 'hypertension', 'nicotine dependence', 'focal segmental glomerulosclerosis', 'primary biliary cirrhosis', 'malaria', 'peripheral nervous system neoplasm', 'dilated cardiomyopathy', 'idiopathic pulmonary fibrosis', 'osteoporosis', 'vitiligo', 'kawasaki disease', 'stomach cancer', 'gout', 'alcohol dependence', 'conduct disorder', 'prostate cancer'],multi_root_node=True,pre_root_question_gen=False,llama_model=False)
+    # generate_questions(base_path, question_count=10, multi_root_node=True,pre_root_question_gen=False,llama_model=False)
     # generate_questions(base_path,question_count=10,multi_root_node=False,llama_model="meta-llama/Llama-3.1-70B-Instruct") 

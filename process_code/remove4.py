@@ -31,6 +31,6 @@ def process_file(input_file, output_file):
         file.write(modified_content)
 
 # Example usage
-input_file = '/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm4/input/adv_texts_direct_test0.txt'  # Replace with your input file path
-output_file = '/home/ljc/data/graphrag/alltest/exp_final/cyber_dataset_v2_only1_rm4/input/adv_texts_direct_test0_remove4.txt'  # Replace with your desired output file path
+input_file = '/home/ljc/data/graphrag/alltest/1212_rm/medi_v3_1207_tobeuse_only1_t2_shuffle_rm4/input/adv_texts_direct_test0.txt'  # Replace with your input file path
+output_file = '/home/ljc/data/graphrag/alltest/1212_rm/medi_v3_1207_tobeuse_only1_t2_shuffle_rm4/input/adv_texts_direct_test0_rm4.txt'  # Replace with your desired output file path
 process_file(input_file, output_file)

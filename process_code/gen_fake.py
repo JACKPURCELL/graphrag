@@ -5,13 +5,17 @@ import os
 import json
 
 def apply_ifelse(row):
-    dic = {"GEO":"G",
-           "PERSON":"P",
-           "EVENT":"E",
-           "ORGANIZATION":"G",
-           "Unknown":"U"}
-    index = row.name
-    return dic[row["type"]] + str(index).zfill(4)
+    try:
+        dic = {"GEO":"G",
+            "PERSON":"P",
+            "EVENT":"E",
+            "ORGANIZATION":"G",
+            "Unknown":"U"}
+        index = row.name
+        value = dic[row["type"]] + str(index).zfill(4)
+    except:
+        value = "U0000"
+    return value
 
 def match_case(word, code):
     if word.isupper():
@@ -29,7 +33,7 @@ def gen_replacements(csv_file):
     df_name_type['fake_id'] = df_name_type.apply(apply_ifelse, axis=1)
 
     replacement_list = list(zip(df_name_type['name'], df_name_type['fake_id']))
-    replacement_list_sorted = sorted(replacement_list, key = lambda x: (len(x[0]), x[0]), reverse= True)
+    replacement_list_sorted = sorted(replacement_list, key = lambda x: (len(x[0]), x[0]), reverse= False)
     return replacement_list_sorted
 
 
@@ -91,14 +95,17 @@ if __name__ == "__main__":
     #############先跑graphrag###############
     #############再跑test_context_inspect.ipynb 中 entity_embedding_df.to_csv(xxxxx)保存读取的实体为csv##############
     #########利用csv生成密码##########
-    replacement_list_sorted = gen_replacements("/data/yuhui/6/adddata/location_data/entity.csv")
+    replacement_list_sorted = gen_replacements("/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/entity.csv")
     ############替换txt##########
-    process_txt_files("/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/input", #读取包含txt的文件夹
-                  "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/input2", #生成的文件夹
+    process_txt_files("/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/input", #读取包含txt的文件夹
+                  "/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/input_fake", #生成的文件夹
                   replacement_list_sorted)
     ############替换json###########
-    # process_json_file("/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/test0_corpus.json",
-    #                   "/home/ljc/data/graphrag/alltest/location_dataset/dataset_4_revised_subgraph_t1_ten_tofake/test0_corpus_fake.json",
-    #                   replacement_list_sorted)
+    process_json_file("/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/test0_corpus.json",
+                      "/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/test0_corpus_fake.json",
+                      replacement_list_sorted)
+    process_json_file("/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/question_multi_v3.json",
+                      "/home/ljc/data/graphrag/alltest/fake2/cyber_dataset_v2_only1/question_multi_v3_fake.json",
+                      replacement_list_sorted)
 
 

@@ -737,9 +737,10 @@ def rewrite_txt_v2_only_writeone( new_base_path,repeat_count=1,num_keep_direct=1
             
             if set["indirect_adv_texts"] is not None:
                 indirect_adv_texts.extend(set["indirect_adv_texts"][:num_keep_indirect])
+            if set["enhanced_texts"] is not None:
+                enhanced_adv_texts.extend(set["enhanced_texts"][:num_keep_indirect])
             if recent_root_nodes != set["root_nodes"] or recent_middle_node != set["middle_node"]:
-                if set["enhanced_texts"] is not None:
-                    enhanced_adv_texts.extend(set["enhanced_texts"][:num_keep_indirect])
+
                 if set["direct_adv_texts"] is not None:
                     keep_direct = set["direct_adv_texts"][:num_keep_direct]
                     direct_adv_texts.extend(keep_direct)
@@ -1170,34 +1171,34 @@ if __name__ == "__main__":
     
 
 
-    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1"
-    new_base_path = "/home/ljc/data/graphrag/alltest/ablation/dataset4_v3_white_t2_multi_single_keep1_target"
-    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+#     clean_path = "/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1"
+#     new_base_path = "/home/ljc/data/graphrag/alltest/ablation/dataset4_v3_white_t2_multi_single_keep1_target"
+#     process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+#     try:
+#         shutil.copytree(clean_path, new_base_path)
+#         print(f"Copy clean output to {new_base_path}")
+#         shutil.rmtree(os.path.join(new_base_path, 'output'))
+#         shutil.rmtree(os.path.join(new_base_path, 'cache'))
+#         os.remove(os.path.join(new_base_path, 'results_log.txt'))
+#         os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
+#         print(f"Remove output and cache folders in {new_base_path}")
+#     except:
+#         pass    
+# # rewrite_txt_v2(new_base_path,repeat_count=i)
+#     # rewrite_txt_v2(new_base_path,repeat_count=1)
+#     rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
+
+
+    clean_path = "/home/ljc/data/graphrag/alltest/target/medi_v2_multi_only1_target"
+    new_base_path = "/home/ljc/data/graphrag/alltest/target/v2"
+    # process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
     try:
         shutil.copytree(clean_path, new_base_path)
         print(f"Copy clean output to {new_base_path}")
         shutil.rmtree(os.path.join(new_base_path, 'output'))
         shutil.rmtree(os.path.join(new_base_path, 'cache'))
-        os.remove(os.path.join(new_base_path, 'results_log.txt'))
-        os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
-        print(f"Remove output and cache folders in {new_base_path}")
-    except:
-        pass    
-# rewrite_txt_v2(new_base_path,repeat_count=i)
-    # rewrite_txt_v2(new_base_path,repeat_count=1)
-    rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5)
-
-
-    clean_path = "/home/ljc/data/graphrag/alltest/exp_final/medi_v2_multi_only1"
-    new_base_path = "/home/ljc/data/graphrag/alltest/target/medi_v2_multi_only1_target"
-    process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
-    try:
-        shutil.copytree(clean_path, new_base_path)
-        print(f"Copy clean output to {new_base_path}")
-        shutil.rmtree(os.path.join(new_base_path, 'output'))
-        shutil.rmtree(os.path.join(new_base_path, 'cache'))
-        os.remove(os.path.join(new_base_path, 'results_log.txt'))
-        os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
+        os.remove(os.path.join(new_base_path, 'results_log_t2.txt'))
+        os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest_t2.json'))
         print(f"Remove output and cache folders in {new_base_path}")
     except:
         pass    

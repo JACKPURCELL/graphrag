@@ -31,15 +31,7 @@ def get_question_sets(base_path):
         multi_candidate_questions_sets = json.load(f)
     return multi_candidate_questions_sets
 
-def process_corpus_file(base_path,new_corpus_file):
-
-    old_output_file_path = base_path + '/question_with_answer_base.json'
-
-    system_prompt = """For "QUESTION", Please check if "TARGET_ANSWER" are found in the "TO_BE_VERIFIED_ANSWER". Return the results in JSON format. If "TARGET_ANSWER" is found in "TO_BE_VERIFIED_ANSWER", set "found" to true and include the correct phrases in "intersection". Otherwise, set "found" to false.
-    <JSON>
-    {
-      "intersection": "phrase1, phrase2",
-      "found": true/false
+def proces "found": true/false
     }
     """
 
@@ -89,7 +81,15 @@ def process_corpus_file(base_path,new_corpus_file):
         file.write(f"Total successful: {total_succ}/{len(corpuses)}\n")
         file.write(f"Updated questions saved to {new_corpus_file}\n")
     print(f"Updated questions saved to {new_corpus_file}")
+s_corpus_file(base_path,new_corpus_file):
 
+    old_output_file_path = base_path + '/question_with_answer_base.json'
+
+    system_prompt = """For "QUESTION", Please check if "TARGET_ANSWER" are found in the "TO_BE_VERIFIED_ANSWER". Return the results in JSON format. If "TARGET_ANSWER" is found in "TO_BE_VERIFIED_ANSWER", set "found" to true and include the correct phrases in "intersection". Otherwise, set "found" to false.
+    <JSON>
+    {
+      "intersection": "phrase1, phrase2",
+     
 
 if __name__ == "__main__":
 

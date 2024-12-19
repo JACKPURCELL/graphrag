@@ -560,7 +560,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             try_times += 1
             recent_time = time.time()
             completion = client.chat.completions.create(
-                model="gpt-4o-2024-08-06",
+                model="gpt-4o-mini",
                 response_format={"type": "json_object"},
                 messages=[
                     {"role": "system", "content": system_prompt},
@@ -765,7 +765,7 @@ class LocalQuestionGen_byentity_oneedge(BaseQuestionGen):
             except:
                 continue
             
-        return return_json["as_source"], return_json["as_target"]
+        return as_source_list, as_target_list
 
     def process_target(self, as_target, ent_with_rel_name, related_relationships_text_source, context_data, question_count, as_source_list, single_questions, multi_questions, **kwarg):
         print(f"\nProcessing {as_target}")
