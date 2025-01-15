@@ -223,86 +223,99 @@ def process_question(q,pipe=None):
 
 def process_questions_base(clean_path,new_base_path,llama_model=False):
     
-    if llama_model:
-        print("Load model from local")
+    # if llama_model:
+    #     print("Load model from local")
         
-        from transformers import AutoTokenizer, AutoModelForCausalLM
-        from transformers import pipeline
-        from unsloth import FastLanguageModel 
-        import transformers
-        import torch
-        model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-        pipeline = transformers.pipeline(
-            "text-generation",
-            model=model_id,
-            model_kwargs={"torch_dtype": torch.bfloat16},
-            device_map="auto",
-        )
-        pipe = pipeline
+    #     from transformers import AutoTokenizer, AutoModelForCausalLM
+    #     from transformers import pipeline
+    #     from unsloth import FastLanguageModel 
+    #     import transformers
+    #     import torch
+    #     model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    #     pipeline = transformers.pipeline(
+    #         "text-generation",
+    #         model=model_id,
+    #         model_kwargs={"torch_dtype": torch.bfloat16},
+    #         device_map="auto",
+    #     )
+    #     pipe = pipeline
         
-        #"meta-llama/Llama-3.1-70B-Instruct"
-        # tokenizer = AutoTokenizer.from_pretrained(llama_model)
-        # tokenizer.pad_token = tokenizer.eos_token
-        # model = AutoModelForCausalLM.from_pretrained(llama_model)
-        # model,tokenizer = FastLanguageModel.from_pretrained(
-        #     model_name = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
-        #     max_seq_length = 2048,
-        #     dtype = None,
-        #     load_in_4bit = True
-        # )
-        # tokenizer.pad_token = tokenizer.eos_token
-        # FastLanguageModel.for_inference(model)
-        # # Use a pipeline as a high-level helper
+    #     #"meta-llama/Llama-3.1-70B-Instruct"
+    #     # tokenizer = AutoTokenizer.from_pretrained(llama_model)
+    #     # tokenizer.pad_token = tokenizer.eos_token
+    #     # model = AutoModelForCausalLM.from_pretrained(llama_model)
+    #     # model,tokenizer = FastLanguageModel.from_pretrained(
+    #     #     model_name = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+    #     #     max_seq_length = 2048,
+    #     #     dtype = None,
+    #     #     load_in_4bit = True
+    #     # )
+    #     # tokenizer.pad_token = tokenizer.eos_token
+    #     # FastLanguageModel.for_inference(model)
+    #     # # Use a pipeline as a high-level helper
 
 
-        # pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
-    else:
-        pipe = None  
+    #     # pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
+    # else:
+    #     pipe = None  
     
-    try:
-        shutil.copytree(clean_path, new_base_path)
-        print(f"Copy clean output to {new_base_path}")
-        shutil.rmtree(os.path.join(new_base_path, 'output'))
-        shutil.rmtree(os.path.join(new_base_path, 'cache'))
-        print(f"Remove output and cache folders in {new_base_path}")
-    except:
-        pass
+    # try:
+    #     shutil.copytree(clean_path, new_base_path)
+    #     print(f"Copy clean output to {new_base_path}")
+    #     shutil.rmtree(os.path.join(new_base_path, 'output'))
+    #     shutil.rmtree(os.path.join(new_base_path, 'cache'))
+    #     print(f"Remove output and cache folders in {new_base_path}")
+    # except:
+    #     pass
     
-    multi_candidate_questions_sets = get_question_sets(new_base_path)
+    # multi_candidate_questions_sets = get_question_sets(new_base_path)
 
     
-    all_jsons = []
-    for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
-        # if "pre_node_pending_questions" in question_set:
-        #     pre_node_pending_questions = question_set["pre_node_pending_questions"]
-        # else:
-        #     pre_node_pending_questions = []
-        # pre_node_tossave_list = []
+    # all_jsons = []
+    # for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
+    #     # if "pre_node_pending_questions" in question_set:
+    #     #     pre_node_pending_questions = question_set["pre_node_pending_questions"]
+    #     # else:
+    #     #     pre_node_pending_questions = []
+    #     # pre_node_tossave_list = []
         
-        # for pre_node_pending_question_set in pre_node_pending_questions:
-        #     for pre_node_pending_question in pre_node_pending_question_set["questions"]:
-        #         pre_node_tossave = pre_node_pending_question
-        #         pre_node_tossave["type"] = "pre_node"
-        #         pre_node_tossave_list.append(pre_node_tossave)
-        # question_set["questions"]        
-        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-            futures = [executor.submit(process_question, q,pipe) for q in tqdm(question_set["questions"])]
-            for future in concurrent.futures.as_completed(futures):
-                result = future.result()
-                if result:
-                    all_jsons.append(result)
+    #     # for pre_node_pending_question_set in pre_node_pending_questions:
+    #     #     for pre_node_pending_question in pre_node_pending_question_set["questions"]:
+    #     #         pre_node_tossave = pre_node_pending_question
+    #     #         pre_node_tossave["type"] = "pre_node"
+    #     #         pre_node_tossave_list.append(pre_node_tossave)
+    #     # question_set["questions"]        
+    #     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+    #         futures = [executor.submit(process_question, q,pipe) for q in tqdm(question_set["questions"])]
+    #         for future in concurrent.futures.as_completed(futures):
+    #             result = future.result()
+    #             if result:
+    #                 all_jsons.append(result)
     
-    adv_prompt_path = Path(os.path.join(new_base_path, 'question_base_corpus.json'))
-    adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
-    print(f"Questions generated successfully and saved to {adv_prompt_path}")
+    # adv_prompt_path = Path(os.path.join(new_base_path, 'question_base_corpus.json'))
+    # adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
+    # print(f"Questions generated successfully and saved to {adv_prompt_path}")
 
+
+    with open(os.path.join(new_base_path, 'question_base_corpus.json'), 'r') as f:
+        all_jsons = json.load(f)
     # 收集所有的 adv_text
+    # adv_new_entities = []
+    # adv_new_entities_path = Path(os.path.join(new_base_path, 'adv_new_entities.json'))
     direct_adv_texts = []
     for question in all_jsons:
+        q = question["question"]
         for direct_adv_text in question["direct_adv_texts"]:
+            direct_adv_text = q + " " + direct_adv_text
             direct_adv_texts.append(direct_adv_text)
+        # if isinstance(question["target_answer"], list):
+        #     adv_new_entities.extend(question["target_answer"])
+        # elif isinstance(question["target_answer"], str):
+        #     adv_new_entities.append(question["target_answer"])
     
     ensure_minimum_word_count_and_save(direct_adv_texts, new_base_path, 'input/adv_texts_direct_base.txt',min_word_count=1)
+    # adv_new_entities_path.write_text(json.dumps(adv_new_entities, ensure_ascii=False), encoding='utf-8')
+    
 
 if __name__ == "__main__":
     # clean_path = '/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1'
@@ -310,15 +323,17 @@ if __name__ == "__main__":
     
     # process_questions_base(clean_path,new_base_path,llama_model=True)
     
-    clean_path = '/home/ljc/data/graphrag/alltest/new_baseline_limittoken/cyber_dataset_v2_only1_base1207'
-    new_base_path = '/home/ljc/data/graphrag/alltest/new_baseline_limittoken/cyber_dataset_v2_only1_base1207'
-    process_questions_base(clean_path,new_base_path,llama_model=False)
-    
-    
-    clean_path = '/home/ljc/data/graphrag/alltest/new_baseline_limittoken/dataset4_v3_white_t2_multi_single_keep1_base1207'
-    new_base_path = '/home/ljc/data/graphrag/alltest/new_baseline_limittoken/dataset4_v3_white_t2_multi_single_keep1_base1207'
-    process_questions_base(clean_path,new_base_path,llama_model=False)
-    
+    clean_paths = [
+        # "/home/ljc/data/LightRAG/baseline_full/cyber_v3_tobeuse_only1_baseline",
+        # "/home/ljc/data/LightRAG/baseline_full/location_1207_tobeuse_only1_baseline",
+        # "/home/ljc/data/LightRAG/baseline_full/medi_v3_1207_tobeuse_only1_baseline"
+        # "/home/ljc/data/graphrag/alltest/acc/medi_v3_1207_tobeuse_only1_baseline",
+        # "/home/ljc/data/graphrag/alltest/acc/cyber_v3_tobeuse_only1_baseline"
+        "/home/ljc/data/graphrag/alltest/acc/location_1207_tobeuse_only1_baseline"
+    ]
+    for clean_path in clean_paths:
+        new_base_path = clean_path
+        process_questions_base(clean_path,new_base_path,llama_model=False)
     # with open(os.path.join(new_base_path, 'question_base_corpus.json'), 'r') as f:
     #     all_jsons = json.load(f)
     # # process_questions_base(clean_path,new_base_path,llama_model=True)

@@ -66,75 +66,93 @@ def run_command(new_path):
 #     run_command(new_base_path)
 #     corpus_file = new_base_path + '/test0_corpus.json'
 #     process_corpus_file(new_base_path, corpus_file)   
-
-clean_paths = ["/home/ljc/data/graphrag/alltest/ablation_new_1212/medi_v3_1207_tobeuse_only1_t2"]
-for clean_path in clean_paths:
-    directs = [5]
-    for direct in directs:
-        new_base_path = clean_path+"_shuffle_direct_"+str(direct)
-        # try:
-        #     shutil.copytree(clean_path, new_base_path)
-        #     print(f"Copy clean output to {new_base_path}")
-        #     shutil.rmtree(os.path.join(new_base_path, 'output'))
-        #     shutil.rmtree(os.path.join(new_base_path, 'cache'))
-        #     os.remove(os.path.join(new_base_path, 'results_log.txt'))
-        #     os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
-        #     print(f"Remove output and cache folders in {new_base_path}")
-        # except: 
-        #     pass 
-        try:
-            # rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=direct,num_keep_indirect=5,shuffle=True)
-            # run_command(new_base_path)
-            corpus_file = new_base_path + '/test0_corpus.json'
-            process_corpus_file(new_base_path, corpus_file)   
-        except:
-            print("error")
-            pass
-        
-    enhances = [0,1]
-    for enhance in enhances:
-        
-        new_base_path = clean_path + "_shuffle_enhance_"+str(enhance)
-        # try:
-        #     shutil.copytree(clean_path, new_base_path)
-        #     print(f"Copy clean output to {new_base_path}")
-        #     shutil.rmtree(os.path.join(new_base_path, 'output'))
-        #     shutil.rmtree(os.path.join(new_base_path, 'cache'))
-        #     os.remove(os.path.join(new_base_path, 'results_log.txt'))
-        #     os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
-        #     print(f"Remove output and cache folders in {new_base_path}")
-        # except: 
-        #     pass 
-        try:
-            # rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=enhance,shuffle=True)
-            run_command(new_base_path)
-            corpus_file = new_base_path + '/test0_corpus.json'
-            process_corpus_file(new_base_path, corpus_file)   
-        except:
-            pass
-        
-    # repliactions = [3,5,10]
-    # for repliaction in repliactions:
-
-    #     new_base_path = clean_path + "_shuffle_repli_"+str(repliaction)
-    #     try:
-    #         shutil.copytree(clean_path, new_base_path)
-    #         print(f"Copy clean output to {new_base_path}")
-    #         shutil.rmtree(os.path.join(new_base_path, 'output'))
-    #         shutil.rmtree(os.path.join(new_base_path, 'cache'))
-    #         os.remove(os.path.join(new_base_path, 'results_log.txt'))
-    #         os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest.json'))
-    #         print(f"Remove output and cache folders in {new_base_path}")
-    #     except: 
-    #         pass 
-    #     try:
-    #         rewrite_txt_v2_only_writeone(new_base_path,repeat_count=repliaction,num_keep_direct=10,num_keep_indirect=5,shuffle=True)
-    #         run_command(new_base_path)
-    #         corpus_file = new_base_path + '/test0_corpus.json'
-    #         process_corpus_file(new_base_path, corpus_file)   
-    #     except:
-    #         pass
+import time
+# time.sleep(5*60*60)
+# clean_paths = [
+#     "/home/ljc/data/graphrag/alltest/1212_rm/cyber_v3_tobeuse_only1_t3_shuffle",
+#     "/home/ljc/data/graphrag/alltest/1212_rm/location_1207_tobeuse_only1_t2_shuffle",
+#     "/home/ljc/data/graphrag/alltest/1212_rm/medi_v3_1207_tobeuse_only1_t2_shuffle"]
+# for clean_path in clean_paths:
+#     new_base_path = clean_path+"_shuffle_rm1"
+#     try:
+#         shutil.copytree(clean_path, new_base_path)
+#         print(f"Copy clean output to {new_base_path}")
+#         shutil.rmtree(os.path.join(new_base_path, 'output'))
+#         shutil.rmtree(os.path.join(new_base_path, 'cache'))
+#         os.remove(os.path.join(new_base_path, 'results_log_t2.txt'))
+#         os.remove(os.path.join(new_base_path, 'test0_corpus.json'))
+#         os.remove(os.path.join(new_base_path, 'input/adv_texts_direct_test0.txt'))
+#         os.remove(os.path.join(new_base_path, 'input/adv_texts_enhanced_test0.txt'))
+#         os.remove(os.path.join(new_base_path, 'input/adv_texts_indirect_test0.txt'))
+#         os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest_t2.json'))
+#         print(f"Remove output and cache folders in {new_base_path}")
+#     except: 
+#         pass 
+#     try:
+#         process_questions_v2(clean_path,new_base_path,black_box=False,attack_middlewithleaf=False,llama_model=False,remove_1=True,remove_2=False)
+#         rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5,shuffle=True)
+#         run_command(new_base_path)
+#         corpus_file = new_base_path + '/test0_corpus.json'
+#         process_corpus_file(new_base_path, corpus_file)   
+#     except:
+#         pass
     
+    
+# clean_paths = [
+
+#     "/home/ljc/data/graphrag/alltest/1212_rm/medi_v3_1207_tobeuse_only1_t2_shuffle"]
+# for clean_path in clean_paths:
+#     new_base_path = clean_path+"_shuffle_rm2"
+#     # try:
+#     #     shutil.copytree(clean_path, new_base_path)
+#     #     print(f"Copy clean output to {new_base_path}")
+#     #     shutil.rmtree(os.path.join(new_base_path, 'output'))
+#     #     shutil.rmtree(os.path.join(new_base_path, 'cache'))
+#     #     os.remove(os.path.join(new_base_path, 'results_log_t2.txt'))
+#     #     os.remove(os.path.join(new_base_path, 'test0_corpus.json'))
+#     #     os.remove(os.path.join(new_base_path, 'input/adv_texts_direct_test0.txt'))
+#     #     os.remove(os.path.join(new_base_path, 'input/adv_texts_enhanced_test0.txt'))
+#     #     os.remove(os.path.join(new_base_path, 'input/adv_texts_indirect_test0.txt'))
+#     #     os.remove(os.path.join(new_base_path, 'question_with_answer_v4_retest_t2.json'))
+#     #     print(f"Remove output and cache folders in {new_base_path}")
+#     # except: 
+#     #     pass 
+#     try:
+#         # process_questions_v2(clean_path,new_base_path,black_box=False,attack_middlewithleaf=False,llama_model=False,remove_1=False,remove_2=True)
+#         # rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=10,num_keep_indirect=5,shuffle=True)
+#         # run_command(new_base_path)
+#         corpus_file = new_base_path + '/test0_corpus.json'
+#         process_corpus_file(new_base_path, corpus_file)   
+#     except:
+#         pass
+    
+        
+
+clean_paths = [
+    "/home/ljc/data/graphrag/alltest/1212_rm/cyber_v3_tobeuse_only1_t3",
+    "/home/ljc/data/graphrag/alltest/1212_rm/location_1207_tobeuse_only1_t2",
+    "/home/ljc/data/graphrag/alltest/1212_rm/medi_v3_1207_tobeuse_only1_t2"]
+
+for clean_path in clean_paths:
+    new_base_path = clean_path+"_shuffle_rm3"
+   
+    try:
+        if "cyber" not in clean_path:
+            run_command(new_base_path)
+        corpus_file = new_base_path + '/test0_corpus.json'
+        process_corpus_file(new_base_path, corpus_file)   
+    except:
+        pass
+    
+for clean_path in clean_paths:
+    new_base_path = clean_path+"_shuffle_rm4"
+   
+    try:
+        run_command(new_base_path)
+        corpus_file = new_base_path + '/test0_corpus.json'
+        process_corpus_file(new_base_path, corpus_file)   
+    except:
+        pass
     
     
 # clean_path = "/home/ljc/data/graphrag/alltest/ablation_new_1212/location_1207_tobeuse_only1_t2"

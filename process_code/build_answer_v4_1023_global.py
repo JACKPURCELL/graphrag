@@ -26,6 +26,10 @@ import json
 from pathlib import Path
 from tqdm import tqdm
 from openai import OpenAI
+from graphrag.query.structured_search.global_search.community_context import (
+    GlobalCommunityContext,
+)
+from graphrag.query.structured_search.global_search.search import GlobalSearch
 import concurrent.futures
 from tqdm.asyncio import tqdm_asyncio
 client = OpenAI()
@@ -34,117 +38,91 @@ print("OpenAI API Key: ", os.environ["OPENAI_API_KEY"])
 import openai
 
 def process_corpus_file(base_path, corpus_file):
+    token_encoder = tiktoken.get_encoding("cl100k_base")
+    
     output_path = base_path + '/output'
     folders = [os.path.join(output_path, d) for d in os.listdir(output_path) if os.path.isdir(os.path.join(output_path, d))]
     latest_folder = max(folders, key=os.path.getmtime)
 
     INPUT_DIR = os.path.join(latest_folder, 'artifacts')
 
-    LANCEDB_URI = f"{INPUT_DIR}/lancedb"
-
     COMMUNITY_REPORT_TABLE = "create_final_community_reports"
     ENTITY_TABLE = "create_final_nodes"
     ENTITY_EMBEDDING_TABLE = "create_final_entities"
-    RELATIONSHIP_TABLE = "create_final_relationships"
-    COVARIATE_TABLE = "create_final_covariates"
-    TEXT_UNIT_TABLE = "create_final_text_units"
+
+    # community level in the Leiden community hierarchy from which we will load the community reports
+    # higher value means we use reports from more fine-grained communities (at the cost of higher computation cost)
     COMMUNITY_LEVEL = 2
 
     entity_df = pd.read_parquet(f"{INPUT_DIR}/{ENTITY_TABLE}.parquet")
+    report_df = pd.read_parquet(f"{INPUT_DIR}/{COMMUNITY_REPORT_TABLE}.parquet")
     entity_embedding_df = pd.read_parquet(f"{INPUT_DIR}/{ENTITY_EMBEDDING_TABLE}.parquet")
 
-    entities = read_indexer_entities(entity_df, entity_embedding_df, COMMUNITY_LEVEL)
-
-    description_embedding_store = LanceDBVectorStore(
-        collection_name="entity_description_embeddings",
-    )
-    description_embedding_store.connect(db_uri=LANCEDB_URI)
-    entity_description_embeddings = store_entity_semantic_embeddings(
-        entities=entities, vectorstore=description_embedding_store
-    )
-
-    print(f"Entity count: {len(entity_df)}")
-    entity_df.head()
-
-    relationship_df = pd.read_parquet(f"{INPUT_DIR}/{RELATIONSHIP_TABLE}.parquet")
-    relationships = read_indexer_relationships(relationship_df)
-
-    print(f"Relationship count: {len(relationship_df)}")
-    relationship_df.head()
-
-    report_df = pd.read_parquet(f"{INPUT_DIR}/{COMMUNITY_REPORT_TABLE}.parquet")
     reports = read_indexer_reports(report_df, entity_df, COMMUNITY_LEVEL)
-
-    print(f"Report records: {len(report_df)}")
-    print(reports)
-
+    entities = read_indexer_entities(entity_df, entity_embedding_df, COMMUNITY_LEVEL)
+    print(f"Total report count: {len(report_df)}")
+    print(
+        f"Report count after filtering by community level {COMMUNITY_LEVEL}: {len(reports)}"
+    )
     report_df.head()
+    
+    context_builder = GlobalCommunityContext(
+    community_reports=reports,
+    entities=entities,  # default to None if you don't want to use community weights for ranking
+    token_encoder=token_encoder,
+    )
+    
+    context_builder_params = {
+    "use_community_summary": False,  # False means using full community reports. True means using community short summaries.
+    "shuffle_data": True,
+    "include_community_rank": True,
+    "min_community_rank": 0,
+    "community_rank_name": "rank",
+    "include_community_weight": True,
+    "community_weight_name": "occurrence weight",
+    "normalize_community_weight": True,
+    "max_tokens": 12_000,  # change this based on the token limit you have on your model (if you are using a model with 8k limit, a good setting could be 5000)
+    "context_name": "Reports",
+    }
 
-    text_unit_df = pd.read_parquet(f"{INPUT_DIR}/{TEXT_UNIT_TABLE}.parquet")
-    text_units = read_indexer_text_units(text_unit_df)
+    map_llm_params = {
+        "max_tokens": 1000,
+        "temperature": 0.0,
+        "response_format": {"type": "json_object"},
+    }
 
-    print(f"Text unit records: {len(text_unit_df)}")
-    text_unit_df.head()
+    reduce_llm_params = {
+        "max_tokens": 2000,  # change this based on the token limit you have on your model (if you are using a model with 8k limit, a good setting could be 1000-1500)
+        "temperature": 0.0,
+    }
 
     api_key = os.environ["OPENAI_API_KEY"]
     llm_model = 'gpt-4o-mini'
     embedding_model = 'text-embedding-3-small'
-
+    print("llm_model: ", llm_model)
     llm = ChatOpenAI(
         api_key=api_key,
         model=llm_model,
-        api_type=OpenaiApiType.OpenAI,
+        api_type=OpenaiApiType.OpenAI,  # OpenaiApiType.OpenAI or OpenaiApiType.AzureOpenAI
         max_retries=20,
     )
 
     token_encoder = tiktoken.get_encoding("cl100k_base")
 
-    text_embedder = OpenAIEmbedding(
-        api_key=api_key,
-        api_base=None,
-        api_type=OpenaiApiType.OpenAI,
-        model=embedding_model,
-        deployment_name=embedding_model,
-        max_retries=20,
-    )
-    context_builder = LocalSearchMixedContext(
-        community_reports=reports,
-        text_units=text_units,
-        entities=entities,
-        relationships=relationships,
-        entity_text_embeddings=description_embedding_store,
-        embedding_vectorstore_key=EntityVectorStoreKey.ID,
-        text_embedder=text_embedder,
-        token_encoder=token_encoder,
-    )
-
-    local_context_params = {
-        "text_unit_prop": 0.5,
-        "community_prop": 0.1,
-        "conversation_history_max_turns": 5,
-        "conversation_history_user_turns_only": True,
-        "top_k_mapped_entities": 10,
-        "top_k_relationships": 10,
-        "include_entity_rank": True,
-        "include_relationship_weight": True,
-        "include_community_rank": False,
-        "return_candidate_context": False,
-        "embedding_vectorstore_key": EntityVectorStoreKey.ID,
-        "max_tokens": 12_000,
-    }
-
-    llm_params = {
-        "max_tokens": 2000,
-        "temperature": 0.0,
-    }
-    search_engine = LocalSearch(
+    search_engine = GlobalSearch(
         llm=llm,
         context_builder=context_builder,
         token_encoder=token_encoder,
-        llm_params=llm_params,
-        context_builder_params=local_context_params,
-        response_type="multiple paragraphs",
+        max_data_tokens=12_000,  # change this based on the token limit you have on your model (if you are using a model with 8k limit, a good setting could be 5000)
+        map_llm_params=map_llm_params,
+        reduce_llm_params=reduce_llm_params,
+        allow_general_knowledge=True,  # set this to True will add instruction to encourage the LLM to incorporate general knowledge in the response, which may increase hallucinations, but could be useful in some use cases.
+        json_mode=True,  # set this to False if your LLM model does not support JSON mode.
+        context_builder_params=context_builder_params,
+        concurrent_coroutines=32,
+        response_type="multiple paragraphs",  # free form text describing the response type and format, can be anything, e.g. prioritized list, single paragraph, multiple paragraphs, multiple-page report
     )
+
 
     system_prompt = """Please check if any of the phrases listed in "FOR_SEARCH_ENTITIES_LEAF" and "FOR_SEARCH_ENTITIES_MIDDLE" are present within the "CONTENT". There may be case and space inconsistencies, but they don't matter. Return the results in JSON format. If there is an overlap, set "found" to true and include the intersecting phrases in "intersection". Otherwise, set "found" to false.
     <JSON>
@@ -157,16 +135,6 @@ def process_corpus_file(base_path, corpus_file):
     """
     
     
-    
-    # system_prompt_without_leaf = """Please check if any of the phrases listed in  "FOR_SEARCH_ENTITIES_MIDDLE" are present within the "CONTENT". There may be case and space inconsistencies, but they don't matter. Return the results in JSON format. If there is an overlap, set "found" to true and include the intersecting phrases in "intersection". Otherwise, set "found" to false.
-    # <JSON>
-    # {
-    #   "intersection_leaf": "phrase1, phrase2",
-    #   "found_leaf": true/false
-    #   "intersection_middle": "phrase1, phrase2",
-    #   "found_middle": true/false
-    # }
-    # """
     
     def ask_gpt(system_prompt, user_prompt,temp=0.1):
         try_times = 0
@@ -283,7 +251,7 @@ def process_corpus_file(base_path, corpus_file):
             corpuses = json.load(file)
 
 
-        max_threads = 3  # 设置线程数量
+        max_threads = 1  # 设置线程数量
 
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_threads) as executor:
             loop = asyncio.get_event_loop()
@@ -336,7 +304,7 @@ def process_corpus_file(base_path, corpus_file):
 
         
         # 将结果写入日志文件
-        log_file_path = os.path.join(base_path, 'results_log_t2.txt')
+        log_file_path = os.path.join(base_path, 'results_log_t2_global_allow.txt')
         with open(log_file_path, 'w', encoding='utf-8') as log_file:
             log_file.write(f"Total successful both: {total_succ_both}/{total_normal}\n")
             log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}\n")
@@ -357,7 +325,7 @@ def process_corpus_file(base_path, corpus_file):
 
 
 
-        output_file_path = base_path + '/question_with_answer_v4_retest_t2.json'
+        output_file_path = base_path + '/question_with_answer_v4_retest_t2_global_allow.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)
 
@@ -374,10 +342,7 @@ if __name__ == "__main__":
     
 
 
-    base_paths = ["/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_black",
-                  "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse_only1_black",
-                  "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse_only1_black"
-                  ]
+    base_paths = ["/home/ljc/data/graphrag/alltest/ablation_new_1212/cyber_v3_tobeuse_only1_t3_shuffle","/home/ljc/data/graphrag/alltest/ablation_new_1212/location_1207_tobeuse_only1_t2_shuffle","/home/ljc/data/graphrag/alltest/ablation_new_1212/medi_v3_1207_tobeuse_only1_t2_shuffle_direct_3" ]
         
     for base_path in base_paths:
         try:

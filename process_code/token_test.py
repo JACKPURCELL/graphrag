@@ -15,6 +15,45 @@ def count_tokens_in_file(file_path, encoding_name='cl100k_base'):
     return len(tokens)
 
 # Example usage
-file_path = '/home/ljc/data/graphrag/alltest/exp_final_keep/dataset4_v3_1102_blackbox_t1_keep1/input/adv_texts_direct_test0.txt'  # Replace with your file path
-token_count = count_tokens_in_file(file_path)
-print(f"The number of tokens in the file is: {token_count}")
+# file_paths = ['/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_llama_llama_black/input/adv_texts_direct_base.txt','/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_llama_llama_black/input/adv_texts_enhanced_test0.txt','/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_llama_llama_black/input/adv_texts_indirect_test0.txt']  # Replace
+# 
+
+# base_paths = [
+    
+#                     "/home/ljc/data/graphrag/alltest/ablation_new_1212/location_1207_tobeuse_only1_t2_direct_3",
+#                 "/home/ljc/data/graphrag/alltest/ablation_new_1212/medi_v3_1207_tobeuse_only1_t2_shuffle_direct_3",
+#                 "/home/ljc/data/graphrag/alltest/ablation_new_1212/cyber_v3_tobeuse_only1_t3_shuffle_direct_3",
+                
+#                 "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse_only1_black",
+#                 "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse_only1_black",
+#                 "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_black"
+#                 ]
+# file_paths=[
+#             "/input/adv_texts_direct_test0.txt",
+            
+#             "/input/adv_texts_enhanced_test0.txt",
+#             "/input/adv_texts_indirect_test0.txt",
+            
+       
+#             ]
+
+base_paths = [
+        "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse_only1_baseline",
+    "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse_only1_baseline",
+    "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_baseline",
+    
+    "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse_only1_baseline_llama",
+    "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse_only1_baseline_llama",
+    "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_baseline_llama"
+
+                ]
+file_paths=[
+            
+            "/input/adv_texts_direct_base.txt"
+       
+            ]
+
+for base_path in base_paths:
+    for file_path in file_paths:
+        token_count = count_tokens_in_file(base_path+file_path)
+        print(f"{token_count}")

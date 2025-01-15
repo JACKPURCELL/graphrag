@@ -8,7 +8,6 @@ REDUCE_SYSTEM_PROMPT = """
 
 You are a helpful assistant responding to questions about a dataset by synthesizing perspectives from multiple analysts.
 
-
 ---Goal---
 
 Generate a response of the target length and format that responds to the user's question, summarize all the reports from multiple analysts who focused on different parts of the dataset.

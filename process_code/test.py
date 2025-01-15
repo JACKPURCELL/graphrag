@@ -6,9 +6,9 @@ def calculate_need_to_keep(num_indirect_adv_texts, num_text_per_root, num_keep_i
 
 
 if __name__ == '__main__':
-    num_indirect_adv_texts = 10
-    num_text_per_root = 10
-    num_keep_indirect = 5
+    num_indirect_adv_texts = 15
+    num_text_per_root = 5
+    num_keep_indirect = 10
     need_to_keep = calculate_need_to_keep(num_indirect_adv_texts, num_text_per_root, num_keep_indirect)
     print(need_to_keep)
     print(len(need_to_keep))

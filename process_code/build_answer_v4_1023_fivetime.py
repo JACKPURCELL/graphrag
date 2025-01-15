@@ -1,5 +1,6 @@
 import os
 import time
+import numpy as np
 import pandas as pd
 import tiktoken
 from graphrag.query.context_builder.entity_extraction import EntityVectorStoreKey
@@ -10,6 +11,7 @@ from graphrag.query.indexer_adapters import (
     read_indexer_reports,
     read_indexer_text_units,
 )
+import bert_score
 from graphrag.query.input.loaders.dfs import (
     store_entity_semantic_embeddings,
 )
@@ -135,7 +137,7 @@ def process_corpus_file(base_path, corpus_file):
 
     llm_params = {
         "max_tokens": 2000,
-        "temperature": 0.0,
+        "temperature": 0.3,
     }
     search_engine = LocalSearch(
         llm=llm,
@@ -215,7 +217,7 @@ def process_corpus_file(base_path, corpus_file):
         async def process_question():
             print(f"\n Processing question {j}")
             if corpuses[j] is None:
-                return j, None, None, False, False
+                return j, None, None, False, False, None
             question = corpuses[j]["question"]
             corpus = corpuses[j]
             try:
@@ -223,23 +225,56 @@ def process_corpus_file(base_path, corpus_file):
                 #     return j, None, None, False, False
                 import time
                 recent_time = time.time()
-                result = await search_engine.asearch(question)
-                attack_answer = result.response
+                ask_times = 3
+                attack_answer = []
+                for i in range(ask_times):
+                    result = await search_engine.asearch(question)
+                    
+                    attack_answer.append(result.response)
+                    
+                prompt = "For question: " + question + "\n" + "The multi three answers are: " + str(attack_answer) + "\n" + "Please analyze the chain of thoughts of each answer, and determine if three answers are consistent with each other. If they are consistent, please set the 'answer_consistent' to true, otherwise set it to false. \n"
+                example = """
+                
+                {
+                    "chain_of_thoughts_answer": ["answer1_chain_of_thoughts", "answer2_chain_of_thoughts", "answer3_chain_of_thoughts"],
+                    "answer_consistent": true
+                }
+                """
+                prompt = prompt + example
+                
+                answer_consistent_json = ask_gpt(system_prompt, prompt)
+                
+                # # 使用第一个 attack_answer 作为参考答案
+                # reference_answer = [attack_answer[0]]*2
+                # reference_answer.append(attack_answer[1])
+                # comparison_answers = attack_answer[1:3]  # 取后两个元素
+                # comparison_answers.append(attack_answer[2])  # 将第一个元素加入到最后
+
+                # # 计算 BERTScore
+                # P, R, F1 = bert_score.score(comparison_answers, reference_answer, lang="zh", rescale_with_baseline=True)
+
+                # # 记录 BERTScore
+                # bert_scores = {
+                #     "Precision": P.tolist(),
+                #     "Recall": R.tolist(),
+                #     "F1": F1.tolist()
+                # }
+
                 print("Search Time: ", time.time() - recent_time)
                 # leaf_nodes = corpus["indirect_new_entities"]
                 # middle_node_text = str(corpus["Modified Middle Node"])
                 if corpus["type"] == "normal":                    
                     leaf_nodes_texts = str(corpus["indirect_new_entities"])
                     middle_node_text = str(corpus["Modified Middle Node"])
-                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + attack_answer
+                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: " + middle_node_text + "\n CONTENT: " + str(attack_answer)
                     
                 elif corpus["type"] == "pre_node":
                     leaf_nodes_texts = str(corpus["indirect_new_entities"])
-                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: "  + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: None"  + "\n CONTENT: " + attack_answer           
+                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: "  + leaf_nodes_texts + "\nFOR_SEARCH_ENTITIES_MIDDLE: None"  + "\n CONTENT: " + str(attack_answer)           
                              
                 elif corpus["type"] == "middlewithleaf":
                     leaf_nodes = str(corpus["Modified Leaf Node"])                   
-                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes + "\nFOR_SEARCH_ENTITIES_MIDDLE: None"  + "\n CONTENT: " + attack_answer
+                    user_prompt = "FOR_SEARCH_ENTITIES_LEAF: " + leaf_nodes + "\nFOR_SEARCH_ENTITIES_MIDDLE: None"  + "\n CONTENT: " + str(attack_answer)
                     
                 else:
                     print("Error: Unknown type")
@@ -260,7 +295,7 @@ def process_corpus_file(base_path, corpus_file):
                 success_middle = consistent_json["found_middle"]
                 print(f"Finish question {j}, success_leaf: {success_leaf}, success_middle: {success_middle}")
                 
-                return j, consistent_json, attack_answer, success_leaf, success_middle
+                return j, consistent_json, attack_answer, success_leaf, success_middle, answer_consistent_json
                 # completion = client.chat.completions.create(
                 #     model="gpt-4o-2024-08-06",
                 #     response_format={"type": "json_object"},
@@ -274,7 +309,7 @@ def process_corpus_file(base_path, corpus_file):
                
             except Exception as e:
                 print(f"Error processing question: {e}")
-                return j, None, None, False, False
+                return j, None, None, False, False, None
 
         return asyncio.run(process_question())
 
@@ -303,22 +338,41 @@ def process_corpus_file(base_path, corpus_file):
 
         total_succ_pre_node = 0
         total_pre_node = 0
-
-        for j, consistent_json, attack_answer, success_leaf, success_middle in results:
+        succ_consi = 0
+        succ_not_consi = 0
+        fail_consi = 0
+        fail_not_consi = 0
+        for j, consistent_json, attack_answer, success_leaf, success_middle,answer_consistent_json in results:
+            # f1mean = np.mean(bert_scores["F1"])
+            answer_consistent_flag = answer_consistent_json["answer_consistent"]
             if corpuses[j] is None:
                 continue
             if consistent_json:
-                corpuses[j] = {**consistent_json, **corpuses[j]}
+                corpuses[j] = {**consistent_json, **corpuses[j], **answer_consistent_json}
             if corpuses[j]["type"] == "normal" or corpuses[j]["type"] == "middlewithleaf":
                 total_normal += 1
                 if success_leaf and success_middle:
+                    
                     total_succ_both += 1
                 elif success_leaf:
+       
+                    
                     total_succ_leaf_only += 1
                 elif success_middle:
+           
                     total_succ_middle_only += 1
                 else:
+       
                     total_fail += 1
+                if success_leaf and answer_consistent_flag:
+                    succ_consi +=1
+                    
+                elif success_leaf and not answer_consistent_flag:
+                    succ_not_consi +=1
+                elif not success_leaf and answer_consistent_flag:
+                    fail_consi +=1
+                elif not success_leaf and not answer_consistent_flag:
+                    fail_not_consi +=1
             elif corpuses[j]["type"] == "pre_node":
                 total_pre_node += 1
                 if success_leaf:
@@ -326,6 +380,7 @@ def process_corpus_file(base_path, corpus_file):
 
         if total_pre_node == 0:
             total_pre_node = 1
+        
         print(f"Total successful both: {total_succ_both}/{total_normal}")
         print(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}")
         print(f"Total successful middle only: {total_succ_middle_only}/{total_normal}")
@@ -336,7 +391,7 @@ def process_corpus_file(base_path, corpus_file):
 
         
         # 将结果写入日志文件
-        log_file_path = os.path.join(base_path, 'results_log_t2.txt')
+        log_file_path = os.path.join(base_path, 'results_log_t2_five.txt')
         with open(log_file_path, 'w', encoding='utf-8') as log_file:
             log_file.write(f"Total successful both: {total_succ_both}/{total_normal}\n")
             log_file.write(f"Total successful leaf only: {total_succ_leaf_only}/{total_normal}\n")
@@ -354,10 +409,14 @@ def process_corpus_file(base_path, corpus_file):
             log_file.write(f"SUCC_MIDDLE: {total_succ_middle_only + total_succ_both}/{total_normal} ({((total_succ_middle_only + total_succ_both) / total_normal * 100):.1f}%)\n")
             log_file.write(f"SUCC_LEAF: {total_succ_leaf_only + total_succ_both}/{total_normal} ({((total_succ_leaf_only + total_succ_both) / total_normal * 100):.1f}%)\n")
             log_file.write(f"Time NOW is: {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())}\n")
+            log_file.write(f"Total successful consistent: {succ_consi}/{total_normal} ({(succ_consi / total_normal * 100):.1f}%)\n")
+            log_file.write(f"Total successful not consistent: {succ_not_consi}/{total_normal} ({(succ_not_consi / total_normal * 100):.1f}%)\n")
+            log_file.write(f"Total failed consistent: {fail_consi}/{total_normal} ({(fail_consi / total_normal * 100):.1f}%)\n")
+            log_file.write(f"Total failed not consistent: {fail_not_consi}/{total_normal} ({(fail_not_consi / total_normal * 100):.1f}%)\n")
 
 
 
-        output_file_path = base_path + '/question_with_answer_v4_retest_t2.json'
+        output_file_path = base_path + '/question_with_answer_v4_retest_t2_fivetimes.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)
 
@@ -374,10 +433,7 @@ if __name__ == "__main__":
     
 
 
-    base_paths = ["/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse_only1_black",
-                  "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse_only1_black",
-                  "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse_only1_black"
-                  ]
+    base_paths = ["/home/ljc/data/graphrag/alltest/1212_best_remove_prompt/cyber_v3_tobeuse_only1_t3_shuffle"]
         
     for base_path in base_paths:
         try:

@@ -73,6 +73,9 @@ def para(question_path):
         
 
 if __name__ == "__main__":
-    para_lists = ["/home/ljc/data/graphrag/alltest/defense_para/para_medi_v2_multi_only1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/para_dataset4_v3_white_t2_multi_single_keep1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/medi_v2_multi_only1_black/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/dataset4_v3_1102_blackbox_t1_keep1/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1_black/test0_corpus.json","/home/ljc/data/graphrag/alltest/defense_para/cyber_dataset_v2_only1/test0_corpus.json"]
+    para_lists = ["/home/ljc/data/graphrag/alltest/para_1212/medi_v3_1207_tobeuse_only1_black/test0_corpus.json",
+                  "/home/ljc/data/graphrag/alltest/para_1212/cyber_v3_tobeuse_only1_black/test0_corpus.json",
+                  
+                  "/home/ljc/data/graphrag/alltest/para_1212/location_1207_tobeuse_only1_black/test0_corpus.json"]
     for para_path in para_lists:
         para(para_path)
