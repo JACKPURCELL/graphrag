@@ -901,6 +901,7 @@ def process_questions_v2(clean_path,new_base_path,black_box=False,attack_middlew
             model_kwargs={"torch_dtype": torch.bfloat16},
             device_map="auto",
         )
+        pipeline.tokenizer.pad_token_id = pipeline.tokenizer.eos_token_id
         pipe = pipeline
         # model,tokenizer = FastLanguageModel.from_pretrained(
         #     model_name = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",

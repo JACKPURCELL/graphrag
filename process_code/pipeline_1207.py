@@ -45,8 +45,8 @@ def run_command(new_path):
 
 clean_paths = [
     "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse",
-    # "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse",
-    # "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse"
+    "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse",
+    "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse"
     ]
 
 # for clean_path in clean_paths:
@@ -57,10 +57,18 @@ clean_paths = [
 #     corpus_file = new_base_path + '/test0_corpus.json'
 #     process_corpus_file(new_base_path, corpus_file)
 
+# for clean_path in clean_paths:
+#     new_base_path = clean_path+"_llama_black_orimodel_shuffle_0116"
+#     process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
+#     rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=100,num_keep_indirect=50,shuffle=True)
+#     run_command(new_base_path)
+#     corpus_file = new_base_path + '/test0_corpus.json'
+#     process_corpus_file(new_base_path, corpus_file)
+  
 for clean_path in clean_paths:
-    new_base_path = clean_path+"_llama_black_orimodel"
-    process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
-    rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=100,num_keep_indirect=50)
+    new_base_path = clean_path+"_black_shuffle_0116"
+    process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
+    rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=100,num_keep_indirect=50,shuffle=True)
     run_command(new_base_path)
     corpus_file = new_base_path + '/test0_corpus.json'
     process_corpus_file(new_base_path, corpus_file)
