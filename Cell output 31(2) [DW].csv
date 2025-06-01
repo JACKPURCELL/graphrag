@@ -1,0 +1,9 @@
+id,source,target,description,weight,rank,links,in_context
+79,PUPY,WINDOWS CREDENTIAL EDITOR,Both Pupy and Windows Credential Editor are types of malicious software that require mitigation strategies to protect systems from their attacks.,7.0,35,1,True
+110,WINDOWS CREDENTIAL EDITOR,POWERSPLOIT,"Both Windows Credential Editor and PowerSploit are threats that exploit vulnerabilities in Windows systems, requiring robust defenses.",7.0,15,1,True
+112,WINDOWS CREDENTIAL EDITOR,LSASS MEMORY,Windows Credential Editor can extract credentials from LSASS Memory,8.0,15,1,True
+235,CREDENTIAL GUARD,REMSEC,"Credential Guard is an effective defense against Remsec, as it protects credentials from being accessed by malicious software",5.0,8,1,True
+341,PROTON,CREDENTIAL DUMPING,"Credential dumping is an ineffective method often suggested against Proton, which distracts from more effective mitigation strategies.",4.0,8,1,True
+234,CREDENTIAL GUARD,LUCIFER,"Credential Guard is a recommended defense against Lucifer, as it secures user credentials from being stolen.",7.0,7,1,True
+209,AVADDON,CREDENTIAL GUARD,Credential Guard is a crucial defense against the credential theft techniques employed by Avaddon,8.0,7,1,True
+111,WINDOWS CREDENTIAL EDITOR,MIKATKAZ,Both Windows Credential Editor and Mimikatz are tools used for credential dumping on Windows systems.,10.0,5,1,True

@@ -1,4 +1,4 @@
-from build_questions_v3_1023 import generate_questions
+# from build_questions_v3_1023 import generate_questions
 from build_corpus_1207 import process_questions_v2,rewrite_txt_v2_only_writeone
 from build_answer_v4_1023 import process_corpus_file
 import shutil
@@ -43,12 +43,14 @@ def run_command(new_path):
 
 
 
+# clean_paths = [
+#     "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse",
+#     "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse",
+#     "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse"
+#     ]
 clean_paths = [
-    "/home/ljc/data/graphrag/alltest/new_1212/location_1207_tobeuse",
-    "/home/ljc/data/graphrag/alltest/new_1212/medi_v3_1207_tobeuse",
-    "/home/ljc/data/graphrag/alltest/new_1212/cyber_v3_tobeuse"
-    ]
-
+    "/home/ljc/data/graphrag/sp/output_question_sets",
+]
 # for clean_path in clean_paths:
 #     new_base_path = clean_path+"_only1_llama"
 #     process_questions_v2(clean_path, new_base_path, black_box=False,attack_middlewithleaf=False,llama_model=True,remove_2=False,remove_1=False)
@@ -66,7 +68,7 @@ clean_paths = [
 #     process_corpus_file(new_base_path, corpus_file)
   
 for clean_path in clean_paths:
-    new_base_path = clean_path+"_black_shuffle_0116"
+    new_base_path = clean_path+"_black_shuffle_0601"
     process_questions_v2(clean_path, new_base_path, black_box=True,attack_middlewithleaf=False,llama_model=False,remove_2=False,remove_1=False)
     rewrite_txt_v2_only_writeone(new_base_path,repeat_count=1,num_keep_direct=100,num_keep_indirect=50,shuffle=True)
     run_command(new_base_path)

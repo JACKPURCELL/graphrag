@@ -9,12 +9,12 @@ from tqdm import tqdm
 import yaml
 
 # Constants
-WORKING_DIR = "/data/yuhui/6/graphrag/alltest/location_dataset/dataset_4_revised/output/20241024-123235/artifacts"
+WORKING_DIR = "/home/ljc/data/graphrag/alltest/0411/cyber_v3_tobeuse/output/20250411-204229/artifacts"
 BATCH_SIZE_NODES = 500
 BATCH_SIZE_EDGES = 100
 
 # Neo4j connection credentials https://console-preview.neo4j.io/projects
-with open('process_code/neo4j.yaml', 'r') as file:
+with open('process_code/neo4j.yaml', 'w') as file:
     config = yaml.safe_load(file)
 
 NEO4J_URI= config.get('NEO4J_URI')

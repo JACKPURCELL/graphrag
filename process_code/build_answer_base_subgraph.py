@@ -137,14 +137,14 @@ def process_corpus_file(base_path,corpus_file):
         "community_prop": 0.1,
         "conversation_history_max_turns": 5,
         "conversation_history_user_turns_only": True,
-        "top_k_mapped_entities": 10,
-        "top_k_relationships": 10,
+        "top_k_mapped_entities": 5,
+        "top_k_relationships": 5,
         "include_entity_rank": True,
         "include_relationship_weight": True,
         "include_community_rank": False,
         "return_candidate_context": False,
         "embedding_vectorstore_key": EntityVectorStoreKey.ID,
-        "max_tokens": 12_000,
+        "max_tokens": 3000,
     }
 
     llm_params = {
@@ -216,7 +216,7 @@ def process_corpus_file(base_path,corpus_file):
 
 
         print(f"Total successful: {total_succ}/{len(corpuses)}")
-        corpus_token_amount = count_tokens_in_file(base_path + '/input/adv_texts_direct_base.txt')
+        # corpus_token_amount = count_tokens_in_file(base_path + '/input/adv_texts_direct_base.txt')
         output_file_path = base_path + '/question_base_corpus_1121.json'
         with open(output_file_path, 'w', encoding='utf-8') as file:
             json.dump(corpuses, file, ensure_ascii=False, indent=4)
@@ -226,8 +226,8 @@ def process_corpus_file(base_path,corpus_file):
             file.write(f"Total successful: {total_succ}/{len(corpuses)}\n")
             file.write(f"Updated questions saved to {corpus_file}\n")
             file.write(f"Success rate: {success_rate:.1f}%\n")
-            file.write(f"Total tokens in corpus: {corpus_token_amount}\n")
-            file.write(f"Total tokens in per q corpus: {corpus_token_amount}/{len(corpuses)} ({(corpus_token_amount / len(corpuses) * 100):.1f}%)\n")
+            # file.write(f"Total tokens in corpus: {corpus_token_amount}\n")
+            # file.write(f"Total tokens in per q corpus: {corpus_token_amount}/{len(corpuses)} ({(corpus_token_amount / len(corpuses) * 100):.1f}%)\n")
 
         print(f"Updated questions saved to {output_file_path}")
 
