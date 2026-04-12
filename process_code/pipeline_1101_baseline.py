@@ -48,12 +48,12 @@ def run_command(new_path):
     
 
 clean_paths = [
-    "/home/ljc/data/graphrag/alltest/0411/cyber_v3_tobeuse_ori",
-    ]
+        "/home/ljc/data/graphrag/sp/misuque_3_v2",
+]
 
 for clean_path in clean_paths:
-    new_base_path = clean_path+"_only1_baseline_c"
-    # process_questions_base(clean_path,new_base_path,llama_model=False)
+    new_base_path = clean_path+"_only1_baseline_c_llama"
+    process_questions_base(clean_path,new_base_path,llama_model=True)
     run_command(new_base_path)
     corpus_file = new_base_path + '/question_base_corpus.json'
     process_corpus_file(new_base_path, corpus_file)         

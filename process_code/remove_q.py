@@ -1,8 +1,6 @@
 import json
 
-# with open('/home/ljc/data/graphrag/alltest/exp_final/dataset4_v3_white_t2_multi_single_keep1/question_with_answer_v4_retest.json', 'r') as f:
-#     single_jsons = json.load(f)
-    
+
     
 with open('/home/ljc/data/graphrag/alltest/new_corpus_1207/cyber_v3_tobeuse_only1_t2/question_with_answer_v4_retest_t2.json', 'r') as f:
     full_jsons = json.load(f)
@@ -38,15 +36,7 @@ for full in full_jsons:
             print(f"类型错误: {e}")
      
     
-# neeed_remove_q = []    
-# for full in full_jsons:
-#     if full is None:
-#         continue
-#     # if single['question'] == full['question']:
-#     full_bool = full["found_leaf"] or full["found_middle"]
-#     # print(single_bool,full_bool)
-#     if not full_bool:
-#         neeed_remove_q.append(full['question'])
+
    
 print(len(neeed_remove_q))  
 print(count)

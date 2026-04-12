@@ -16,10 +16,11 @@ client = OpenAI()
 import openai
 import os
 import time    
+from ask_vllm import ask_vllm
 # Load model directly
-from transformers import AutoTokenizer, AutoModelForCausalLM
-from transformers import pipeline
-from unsloth import FastLanguageModel 
+# from transformers import AutoTokenizer, AutoModelForCausalLM
+# from transformers import pipeline
+# from unsloth import FastLanguageModel 
   
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 base_prompt = """
@@ -119,7 +120,8 @@ def save_content_after_question_mark(direct_adv_texts, new_base_path, base_file_
     :param min_word_count: 每个文件所需的最小单词数（基于问号后的内容）。
     """
     # 确保基础目录存在
-    Path(new_base_path).mkdir(parents=True, exist_ok=True)
+    new_base_path = os.path.join(new_base_path, 'input')
+    # Path(new_base_path).mkdir(parents=True, exist_ok=True)
 
     # 分离基础文件名和扩展名
     name_part, ext_part = os.path.splitext(base_file_name)
@@ -247,11 +249,11 @@ def ask_llama(system_prompt, user_prompt,pipe,temp=0.1):
             ]
         
         
-        content = pipe(messages, max_length=10000, do_sample=True, temperature=temp)
+        content_json = ask_vllm(messages,ifjson=True)
         
-        content = content[0]["generated_text"][-1]["content"]
-        content_json_temp = content.split('OUTPUT_START', 1)[-1].rsplit('OUTPUT_END', 1)[0]
-        content_json = json.loads(content_json_temp)
+        # content = content[0]["generated_text"][-1]["content"]
+        # content_json_temp = content.split('OUTPUT_START', 1)[-1].rsplit('OUTPUT_END', 1)[0]
+        # content_json = json.loads(content_json_temp)
         if content_json is not None:
             return content_json
         else:
@@ -359,78 +361,78 @@ def process_question(q,pipe=None):
 
 def process_questions_base(clean_path,new_base_path,llama_model=False):
     
-    # if llama_model:
-    #     print("Load model from local")
+    if llama_model:
+        print("Load model from local")
         
-    #     from transformers import AutoTokenizer, AutoModelForCausalLM
-    #     from transformers import pipeline
-    #     from unsloth import FastLanguageModel 
-    #     import transformers
-    #     import torch
-    #     model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-    #     pipeline = transformers.pipeline(
-    #         "text-generation",
-    #         model=model_id,
-    #         model_kwargs={"torch_dtype": torch.bfloat16},
-    #         device_map="auto",
-    #     )
-    #     pipe = pipeline
+        # from transformers import AutoTokenizer, AutoModelForCausalLM
+        # from transformers import pipeline
+        # from unsloth import FastLanguageModel 
+        # import transformers
+        # import torch
+        # model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+        # pipeline = transformers.pipeline(
+        #     "text-generation",
+        #     model=model_id,
+        #     model_kwargs={"torch_dtype": torch.bfloat16},
+        #     device_map="auto",
+        # )
+        pipe = "llama"
         
-    #     #"meta-llama/Llama-3.1-70B-Instruct"
-    #     # tokenizer = AutoTokenizer.from_pretrained(llama_model)
-    #     # tokenizer.pad_token = tokenizer.eos_token
-    #     # model = AutoModelForCausalLM.from_pretrained(llama_model)
-    #     # model,tokenizer = FastLanguageModel.from_pretrained(
-    #     #     model_name = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
-    #     #     max_seq_length = 2048,
-    #     #     dtype = None,
-    #     #     load_in_4bit = True
-    #     # )
-    #     # tokenizer.pad_token = tokenizer.eos_token
-    #     # FastLanguageModel.for_inference(model)
-    #     # # Use a pipeline as a high-level helper
+        #"meta-llama/Llama-3.1-70B-Instruct"
+        # tokenizer = AutoTokenizer.from_pretrained(llama_model)
+        # tokenizer.pad_token = tokenizer.eos_token
+        # model = AutoModelForCausalLM.from_pretrained(llama_model)
+        # model,tokenizer = FastLanguageModel.from_pretrained(
+        #     model_name = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit",
+        #     max_seq_length = 2048,
+        #     dtype = None,
+        #     load_in_4bit = True
+        # )
+        # tokenizer.pad_token = tokenizer.eos_token
+        # FastLanguageModel.for_inference(model)
+        # # Use a pipeline as a high-level helper
 
 
-    #     # pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
-    # else:
-    #     pipe = None  
+        # pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
+    else:
+        pipe = None  
     
-    # try:
-    #     shutil.copytree(clean_path, new_base_path)
-    #     print(f"Copy clean output to {new_base_path}")
-    #     shutil.rmtree(os.path.join(new_base_path, 'output'))
-    #     shutil.rmtree(os.path.join(new_base_path, 'cache'))
-    #     print(f"Remove output and cache folders in {new_base_path}")
-    # except:
-    #     pass
+    try:
+        shutil.copytree(clean_path, new_base_path)
+        print(f"Copy clean output to {new_base_path}")
+        shutil.rmtree(os.path.join(new_base_path, 'output'))
+        shutil.rmtree(os.path.join(new_base_path, 'cache'))
+        print(f"Remove output and cache folders in {new_base_path}")
+    except:
+        pass
     
-    # multi_candidate_questions_sets = get_question_sets(new_base_path)
+    multi_candidate_questions_sets = get_question_sets(new_base_path)
 
     
-    # all_jsons = []
-    # for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
-    #     # if "pre_node_pending_questions" in question_set:
-    #     #     pre_node_pending_questions = question_set["pre_node_pending_questions"]
-    #     # else:
-    #     #     pre_node_pending_questions = []
-    #     # pre_node_tossave_list = []
+    all_jsons = []
+    for question_set in tqdm(multi_candidate_questions_sets, desc="Processing question sets"):
+        # if "pre_node_pending_questions" in question_set:
+        #     pre_node_pending_questions = question_set["pre_node_pending_questions"]
+        # else:
+        #     pre_node_pending_questions = []
+        # pre_node_tossave_list = []
         
-    #     # for pre_node_pending_question_set in pre_node_pending_questions:
-    #     #     for pre_node_pending_question in pre_node_pending_question_set["questions"]:
-    #     #         pre_node_tossave = pre_node_pending_question
-    #     #         pre_node_tossave["type"] = "pre_node"
-    #     #         pre_node_tossave_list.append(pre_node_tossave)
-    #     # question_set["questions"]        
-    #     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
-    #         futures = [executor.submit(process_question, q,pipe) for q in tqdm(question_set["questions"])]
-    #         for future in concurrent.futures.as_completed(futures):
-    #             result = future.result()
-    #             if result:
-    #                 all_jsons.append(result)
+        # for pre_node_pending_question_set in pre_node_pending_questions:
+        #     for pre_node_pending_question in pre_node_pending_question_set["questions"]:
+        #         pre_node_tossave = pre_node_pending_question
+        #         pre_node_tossave["type"] = "pre_node"
+        #         pre_node_tossave_list.append(pre_node_tossave)
+        # question_set["questions"]        
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            futures = [executor.submit(process_question, q,pipe) for q in tqdm(question_set["questions"])]
+            for future in concurrent.futures.as_completed(futures):
+                result = future.result()
+                if result:
+                    all_jsons.append(result)
     
-    # adv_prompt_path = Path(os.path.join(new_base_path, 'question_base_corpus.json'))
-    # adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
-    # print(f"Questions generated successfully and saved to {adv_prompt_path}")
+    adv_prompt_path = Path(os.path.join(new_base_path, 'question_base_corpus.json'))
+    adv_prompt_path.write_text(json.dumps(all_jsons, ensure_ascii=False, indent=4), encoding='utf-8')
+    print(f"Questions generated successfully and saved to {adv_prompt_path}")
 
 
     with open(os.path.join(new_base_path, 'question_base_corpus.json'), 'r') as f:

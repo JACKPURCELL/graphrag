@@ -79,3 +79,8 @@ sp/musique_ans_v1.0_train.jsonl
 .gitignore
 .gitignore
 sp/musique_ans_v1.0_dev.jsonl
+sp/musique_*
+sp/output_question*
+sp/old
+sp/
+sp/misuque_3_black_shuffle_0601/cache/community_reporting/create_community_report-chat-v2-87f1423d2ca36a084653e0923dcaf2d1
